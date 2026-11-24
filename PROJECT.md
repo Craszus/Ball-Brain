@@ -134,3 +134,5 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Spillerbilder med synlige klubbmerker, sponsor-/produsentlogoer eller barn i bakgrunnen tas ikke med; stadionbilder med store sponsorlogoer (f.eks. Deutsche Bank, Bayer, Red Bull, AVIVA) er fjernet.
 - Ingen kvinnefotball i spillet (Jon, 2026-11-24): ingen spørsmål eller spillerbilder av kvinner.
 - Supabase i bruk (2026-11-24): anonym innlogging, profil og poeng på serveren; spørsmål fra lokal seed inntil videre; slett-data fjerner også serverdata.
+
+- GitHub (2026-11-24): prosjektet ligger offentlig på https://github.com/Craszus/Ball-Brain (gren main). Ingen nøkler i repoet; supabase.env.json er utelatt. Commits bruker GitHubs noreply-adresse. Ingen lisens er valgt ennå (alle rettigheter forbeholdt). Avatar 31–33 er med etter eget valg.

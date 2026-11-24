@@ -238,3 +238,7 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 ## 2026-11-24 (økt 14)
 - «Del appen» i Innstillinger (lib/share_screen.dart): viser en QR-kode som vennene kan skanne, lenken under, og «Kopier lenke» (kopierer en invitasjonstekst med lenken). Lenken er som standard appens side i Google Play (`https://play.google.com/store/apps/details?id=no.ballbrain.ball_brain`) og kan byttes ved bygging med `--dart-define=APP_SHARE_URL=https://...` (f.eks. en nettside som sender iPhone-brukere til App Store og Android-brukere til Google Play). Pakken qr_flutter er lagt til; oversatt til alle språk; 3 nye tester.
 - Merk: Lenken virker først når appen er publisert i Google Play. Det finnes ingen App Store-lenke ennå (krever eget nettsted/lenke når iOS-versjonen er ute).
+
+## 2026-11-24 (økt 15)
+- Prosjektet er lagt ut offentlig på GitHub: https://github.com/Craszus/Ball-Brain (første commit, gren main). Sjekket på forhånd at det ikke ligger nøkler, passord eller e-postadresser i filene; supabase.env.json er i .gitignore. Commit-adressen er GitHubs noreply-adresse, ikke en privat e-post.
+- Åpne punkter: velg lisens (uten lisens har andre ikke lov til å gjenbruke koden), og vurder igjen avatar 31–33 (ligner deg og barna) siden repoet er offentlig.
