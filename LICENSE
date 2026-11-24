@@ -1,0 +1,18 @@
+Copyright (c) 2026 Craszus. Alle rettigheter forbeholdt / All rights reserved.
+
+Koden og innholdet i dette repoet (spørsmål, design, avatarer, trofeer, lyder og tekster) er
+publisert slik at du kan se og prøve appen. Du har ikke lov til å kopiere, endre, videreselge
+eller dele ut koden eller innholdet uten skriftlig tillatelse fra eieren.
+
+The code and content in this repository (questions, design, avatars, trophies, sounds and
+texts) are published so that you can view and try the app. You may not copy, modify, resell or
+redistribute the code or content without written permission from the owner.
+
+Unntak / Exceptions:
+- Spiller- og stadionbilder under assets/media kommer fra Wikimedia Commons og har sine egne
+  frie lisenser (CC BY, CC BY-SA, CC0 eller offentlig eiendom). Fotograf, lisens og lenke står i
+  assets/media/*.json og i appens «Bildekreditering». Disse lisensene gjelder for bildene.
+  Photos under assets/media come from Wikimedia Commons under their own free licenses; the
+  credits are in assets/media/*.json and in the app's "Image credits" screen.
+- Landegrenser i assets/geo er fra Natural Earth (offentlig eiendom).
+  Country borders in assets/geo are from Natural Earth (public domain).

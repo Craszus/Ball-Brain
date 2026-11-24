@@ -136,3 +136,5 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Supabase i bruk (2026-11-24): anonym innlogging, profil og poeng på serveren; spørsmål fra lokal seed inntil videre; slett-data fjerner også serverdata.
 
 - GitHub (2026-11-24): prosjektet ligger offentlig på https://github.com/Craszus/Ball-Brain (gren main). Ingen nøkler i repoet; supabase.env.json er utelatt. Commits bruker GitHubs noreply-adresse. Ingen lisens er valgt ennå (alle rettigheter forbeholdt). Avatar 31–33 er med etter eget valg.
+
+- Lisens (2026-11-24): ingen åpen lisens; alle rettigheter forbeholdt (filen LICENSE), med unntak for bilder (Wikimedia Commons, egne lisenser) og landegrenser (Natural Earth).
