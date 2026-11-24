@@ -29,11 +29,27 @@ android {
         versionName = flutter.versionName
     }
 
+    // Signering: android/key.properties (ikke i git) lager en stabil nøkkel, slik at nye versjoner
+    // kan oppdatere den installerte appen. Uten filen brukes debug-nøkkelen (lokal utvikling).
+    val keyProps = java.util.Properties()
+    val keyFile = rootProject.file("key.properties")
+    if (keyFile.exists()) keyFile.inputStream().use { keyProps.load(it) }
+
+    signingConfigs {
+        if (keyFile.exists()) {
+            create("release") {
+                storeFile = file(keyProps.getProperty("storeFile"))
+                storePassword = keyProps.getProperty("storePassword")
+                keyAlias = keyProps.getProperty("keyAlias")
+                keyPassword = keyProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = if (keyFile.exists()) signingConfigs.getByName("release")
+                            else signingConfigs.getByName("debug")
         }
     }
 }

@@ -7,12 +7,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../l10n/l10n.dart';
 import '../services/feedback.dart';
 import '../services/profile.dart';
-import '../services/stats.dart';
 import '../ui/football.dart';
 import '../ui/gold_button.dart';
 import '../ui/icon_tile.dart';
 import '../ui/theme.dart';
 import 'duel_api.dart';
+import 'duel_sync.dart';
 
 const _secondsPerQuestion = 15;
 
@@ -24,6 +24,12 @@ String duelError(String key) => switch (key) {
       'daily_limit' => 'Du har spilt maks antall oppgjør i dag.',
       'no_profile' => 'Lagre profilen din først.',
       'cancelled' => 'Kampen ble avbrutt.',
+      'self' => 'Du kan ikke utfordre deg selv.',
+      'not_shared' => 'Dere må være i samme gruppe for å utfordre.',
+      'not_accepting' => 'Spilleren tar ikke imot utfordringer.',
+      'too_many' => 'Du har allerede fem åpne utfordringer.',
+      'already' => 'Du har allerede en åpen utfordring til denne spilleren.',
+      'already_played' => 'Du har allerede spilt denne utfordringen.',
       _ => 'Krever internett. Sjekk nettet og prøv igjen.',
     };
 
@@ -46,7 +52,8 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
   DateTime _qStart = DateTime.now();
   int _remainingMs = _secondsPerQuestion * 1000;
   bool _answering = false;
-  bool _recorded = false;
+  List<DuelListItem> _items = const [];
+  Timer? _listTimer;
 
   Timer? _ticker;
   Timer? _poll;
@@ -54,9 +61,44 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
   bool _refreshing = false;
 
   @override
+  void initState() {
+    super.initState();
+    _loadList();
+    // Utfordringer kan komme eller bli ferdige mens menyen er åpen
+    _listTimer = Timer.periodic(const Duration(seconds: 6), (_) {
+      if (_phase == _Phase.menu) _loadList();
+    });
+  }
+
+  @override
   void dispose() {
+    _listTimer?.cancel();
     _stopAll();
     super.dispose();
+  }
+
+  Future<void> _loadList() async {
+    try {
+      final items = await DuelApi.myDuels();
+      if (!mounted) return;
+      setState(() => _items = items);
+      await recordFinished(ref, items);
+    } on DuelError {
+      // uten nett: ingen liste
+    }
+  }
+
+  Future<void> _playChallenge(DuelListItem item) async {
+    await _begin(() => DuelApi.startMine(item.id));
+  }
+
+  Future<void> _removeChallenge(DuelListItem item, {bool decline = false}) async {
+    if (decline) {
+      await DuelApi.decline(item.id);
+    } else {
+      await DuelApi.remove(item.id);
+    }
+    await _loadList();
   }
 
   void _stopAll() {
@@ -79,9 +121,9 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
       _result = null;
       _myScore = 0;
       _answering = false;
-      _recorded = false;
     });
     if (errorKey != null) _snack(duelError(errorKey));
+    _loadList();
   }
 
   void _snack(String text) {
@@ -146,6 +188,7 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
       setState(() {
         _d = d;
         _qs = qs;
+        _myScore = d.me.score;
         _phase = _Phase.countdown;
       });
     } on DuelError catch (e) {
@@ -158,7 +201,15 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
       if (dd == null || !mounted) return;
       if (dd.msUntilStart() <= 0) {
         _ticker?.cancel();
-        _showQuestion(0, startedAt: DateTime.now().subtract(Duration(milliseconds: -dd.msUntilStart())));
+        // Gjenopptatt kamp: fortsett på første ubesvarte spørsmål; tiden går fra forrige svar + 1 s
+        final i = dd.me.answered;
+        final late = -dd.msUntilStart() - (i > 0 ? 1000 : 0);
+        if (i >= _qs.length) {
+          setState(() => _phase = _Phase.waitOpp);
+        } else {
+          _showQuestion(i,
+              startedAt: DateTime.now().subtract(Duration(milliseconds: late > 0 ? late : 0)));
+        }
       } else {
         setState(() {});
       }
@@ -259,11 +310,8 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
     _ticker?.cancel();
     final d = _d;
     if (d == null) return;
-    if (!_recorded) {
-      _recorded = true;
-      if (d.result != null) {
-        ref.read(statsProvider.notifier).recordPvp(won: d.result == 'win');
-      }
+    if (_phase != _Phase.done) {
+      recordDuelResult(ref, d.id, d.result);
       ref.read(feedbackProvider).play(d.result == 'win' ? Effect.levelUp : Effect.finish);
     }
     setState(() => _phase = _Phase.done);
@@ -296,7 +344,10 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final canLeave = _phase == _Phase.menu || _phase == _Phase.done || _phase == _Phase.joining;
+    final canLeave = _phase == _Phase.menu ||
+        _phase == _Phase.done ||
+        _phase == _Phase.joining ||
+        (_phase == _Phase.waitOpp && (_d?.isChallenge ?? false));
     return PopScope(
       canPop: canLeave,
       onPopInvokedWithResult: (didPop, _) {
@@ -328,6 +379,7 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
     return ListView(
       padding: const EdgeInsets.all(20),
       children: [
+        ..._challengeSection(),
         const Text('Utfordre en annen spiller',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
@@ -362,6 +414,67 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
           child: const Text('Bli med med kode'),
         ),
       ],
+    );
+  }
+
+  List<Widget> _challengeSection() {
+    if (_items.isEmpty) return const [];
+    return [
+      const Text('Utfordringer',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: AppColors.gold)),
+      const SizedBox(height: 6),
+      for (final i in _items.take(8)) _challengeTile(i),
+      const SizedBox(height: 18),
+    ];
+  }
+
+  Widget _challengeTile(DuelListItem i) {
+    final String title;
+    String? sub;
+    final actions = <Widget>[];
+    Widget btn(String label, VoidCallback onTap, {bool filled = false}) => filled
+        ? FilledButton(onPressed: onTap, child: Text(label))
+        : TextButton(onPressed: onTap, child: Text(label));
+
+    if (i.isDeclined) {
+      title = '${i.opponent} avslo utfordringen.';
+      actions.add(btn('Fjern', () => _removeChallenge(i)));
+    } else if (i.isFinished) {
+      title = switch (i.result) {
+        'win' => 'Seier mot ${i.opponent}',
+        'loss' => 'Tap mot ${i.opponent}',
+        _ => 'Uavgjort mot ${i.opponent}',
+      };
+      sub = '${i.myScore} – ${i.theirScore}';
+      actions.add(btn('Fjern', () => _removeChallenge(i)));
+    } else if (i.needsMyAnswer) {
+      title = '${i.opponent} utfordrer deg';
+      final left = i.timeLeft();
+      if (left != null) sub = 'Utløper om ${left.inHours.clamp(0, 48)} t';
+      actions
+        ..add(btn('Avslå', () => _removeChallenge(i, decline: true)))
+        ..add(btn('Spill', () => _playChallenge(i), filled: true));
+    } else if (!i.myDone) {
+      title = 'Din tur mot ${i.opponent}';
+      actions
+        ..add(btn('Avslutt', () => _removeChallenge(i)))
+        ..add(btn('Spill', () => _playChallenge(i), filled: true));
+    } else {
+      title = 'Venter på ${i.opponent}';
+      sub = '${i.myScore} poeng';
+      actions.add(btn('Avslutt', () => _removeChallenge(i)));
+    }
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 3),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(14, 8, 8, 4),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(title, style: const TextStyle(fontWeight: FontWeight.w800)),
+          if (sub != null)
+            Text(sub, style: const TextStyle(color: AppColors.textSecondary, fontSize: 13)),
+          Row(mainAxisAlignment: MainAxisAlignment.end, children: actions),
+        ]),
+      ),
     );
   }
 
@@ -516,6 +629,25 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
 
   Widget _waiting() {
     final opp = _d?.opp;
+    if (_d?.isChallenge ?? false) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Text('$_myScore',
+                style:
+                    const TextStyle(fontSize: 64, fontWeight: FontWeight.w900, color: AppColors.gold)),
+            const Text('poeng', style: TextStyle(color: AppColors.textSecondary)),
+            const SizedBox(height: 20),
+            Text('Resultatet kommer når ${opp?.name ?? ''} har spilt.',
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+            const SizedBox(height: 20),
+            GoldButton(label: 'Tilbake til 1v1', onPressed: _toMenu),
+          ]),
+        ),
+      );
+    }
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),

@@ -116,8 +116,11 @@ class _Message extends StatelessWidget {
 }
 
 class LeaderboardTile extends StatelessWidget {
-  const LeaderboardTile(this.r, {super.key});
+  const LeaderboardTile(this.r, {super.key, this.trailingAction});
   final LeaderboardRow r;
+
+  /// Valgfri knapp helt til høyre (f.eks. «utfordre» i en gruppe).
+  final Widget? trailingAction;
 
   @override
   Widget build(BuildContext context) {
@@ -149,8 +152,11 @@ class LeaderboardTile extends StatelessWidget {
         title: Text(r.isMe ? '${r.username} (${'Deg'.tr})' : r.username,
             maxLines: 1, overflow: TextOverflow.ellipsis),
         subtitle: Text(countryName(r.country)),
-        trailing: Text('${r.total} poeng',
-            style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.gold)),
+        trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+          Text('${r.total} poeng',
+              style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.gold)),
+          ?trailingAction,
+        ]),
       ),
     );
   }

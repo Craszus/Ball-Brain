@@ -58,17 +58,18 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [ ] Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
 
 ## Andre filer i mappen
+- `LICENSE` (1 kB)
 - `README.md` (1 kB)
 - `analysis_options.yaml` (2 kB)
-- `android/app/build.gradle.kts` (2 kB)
+- `android/app/build.gradle.kts` (3 kB)
 - `android/ball_brain_android.iml` (2 kB)
 - `android/build.gradle.kts` (1 kB)
 - `android/gradle.properties` (1 kB)
 - `android/gradlew` (5 kB)
 - `android/gradlew.bat` (2 kB)
+- `android/key.properties` (1 kB)
 - `android/local.properties` (1 kB)
 - `android/settings.gradle.kts` (1 kB)
-- `assets/avatars/README.txt` (1 kB)
 - `assets/avatars/avatar_01.png` (276 kB)
 - `assets/avatars/avatar_02.png` (304 kB)
 - `assets/avatars/avatar_03.png` (276 kB)
@@ -113,9 +114,8 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - `assets/avatars/avatar_42.png` (296 kB)
 - `assets/avatars/avatar_43.png` (305 kB)
 - `assets/avatars/avatar_44.png` (281 kB)
-- `assets/avatars/avatar_45.png` (298 kB)
 - `ball_brain.iml` (1 kB)
-- `pubspec.lock` (30 kB)
+- `pubspec.lock` (31 kB)
 - `pubspec.yaml` (5 kB)
 - `supabase.env.json` (1 kB)
 
@@ -138,3 +138,4 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - GitHub (2026-11-24): prosjektet ligger offentlig på https://github.com/Craszus/Ball-Brain (gren main). Ingen nøkler i repoet; supabase.env.json er utelatt. Commits bruker GitHubs noreply-adresse. Ingen lisens er valgt ennå (alle rettigheter forbeholdt). Avatar 31–33 er med etter eget valg.
 
 - Lisens (2026-11-24): ingen åpen lisens; alle rettigheter forbeholdt (filen LICENSE), med unntak for bilder (Wikimedia Commons, egne lisenser) og landegrenser (Natural Earth).
+- Utgivelser (2026-11-24): som i Logica, bygges lokalt og legges ut med `python tools/release.py` (ingen hemmeligheter på GitHub).

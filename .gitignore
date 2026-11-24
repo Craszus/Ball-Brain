@@ -49,3 +49,6 @@ app.*.map.json
 
 # Lokal Supabase-konfig
 supabase.env.json
+
+# Utgaver bygget lokalt
+/release/

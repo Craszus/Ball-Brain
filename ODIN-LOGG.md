@@ -242,3 +242,19 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 ## 2026-11-24 (økt 15)
 - Prosjektet er lagt ut offentlig på GitHub: https://github.com/Craszus/Ball-Brain (første commit, gren main). Sjekket på forhånd at det ikke ligger nøkler, passord eller e-postadresser i filene; supabase.env.json er i .gitignore. Commit-adressen er GitHubs noreply-adresse, ikke en privat e-post.
 - Åpne punkter: velg lisens (uten lisens har andre ikke lov til å gjenbruke koden), og vurder igjen avatar 31–33 (ligner deg og barna) siden repoet er offentlig.
+
+## 2026-11-24 (økt 16)
+- Varsel om ny versjon: ved oppstart (bare Android, ikke i feilsøking) spør appen GitHub om siste utgave (`releases/latest`). Står det et høyere byggnummer enn det som er installert («Bygg N» i utgavebeskrivelsen), vises dialogen «Ny versjon tilgjengelig» med «Last ned» (åpner APK-en i nettleseren; Android spør så om installasjon) og «Senere». I Innstillinger finnes «Se etter oppdatering» som også viser installert versjon. Koden: lib/services/update_check.dart og lib/update_prompt.dart; 8 nye tekster på alle språk; 5 nye tester (tolking av utgavesvaret, dialogen).
+- Automatisk bygg ved push (forberedt, ikke aktivert): .github/workflows/android.yml kjører analyse og tester, bygger signert APK med byggnummer = kjøringsnummer og oppdaterer utgaven «siste-bygg» (QR-lenken /releases/latest). Krever fire GitHub-hemmeligheter (Supabase-adresse og -nøkkel, signeringsnøkkel og passord); legges inn med tools/set_github_secrets.ps1 som Jon kjører selv.
+- Signering: egen nøkkel i C:\Users\jbi_2\.ballbrain-signing\ (utenfor repoet; android/key.properties er ignorert av git). Android-bygget bruker den når key.properties finnes. Sikkerhetskopier nøkkelen: mister vi den, kan ikke installerte apper oppdateres.
+- OBS: telefonen har en versjon signert med debug-nøkkel. Den første versjonen signert med den nye nøkkelen kan ikke installeres over den: avinstaller først (lokal fremgang og anonym innlogging forsvinner).
+
+## 2026-11-24 (økt 17)
+- Utfordringer til venner, etter mønster fra Logica: knapp «Utfordre til 1v1» ved hver venn i en gruppe. Utfordringen spilles når det passer (innen 48 timer); begge får de samme 10 spørsmålene, serveren måler tid og avgjør vinner. 1v1-skjermen viser listen «Utfordringer»: Spill / Avslå (innkommende), Din tur / Venter på (egne), Seier/Tap/Uavgjort og avslåtte, med «Fjern»/«Avslutt».
+- Varsel i appen: «Du er utfordret!» ved oppstart (Spill nå / Senere / Avslå) og banner mens appen er åpen (ny utfordring, avslag, resultat klart). Innstillinger: «Ta imot 1v1-utfordringer» (av: ingen kan utfordre deg).
+- Server (supabase/challenges.sql): modus live/challenge, status declined, accepts_challenges på profilen, create_challenge / duel_start_mine / my_duels / duel_decline / duel_remove / set_accepts_challenges. Bare venner i samme gruppe kan utfordres; maks 5 åpne, én åpen pr. venn, 40 pr. døgn. python tools/test_duel.py: 38 kontroller OK mot serveren.
+- Push når appen er lukket: serverkoden er forberedt etter Logica (supabase/push.sql, push_duel_trigger.sql, functions/notify-duel), men IKKE kjørt eller testet. Krever Firebase-prosjekt og tjenestekontonøkkel fra Jon (docs/PUSH.md).
+- 58 tester grønne, analyze rent. Ikke prøvd på telefon.
+
+## 2026-11-24 (økt 18)
+- Utgivelser gjøres nå som i Logica: `python tools/release.py` øker byggnummeret, bygger signert APK lokalt og oppdaterer GitHub-utgaven «siste-bygg» med gh. Appen varsler om ny versjon. GitHub Actions-flyten og hemmelighetsskriptet er fjernet (ingen nøkler trenger å ligge på GitHub). Erstatter punktet om automatisk bygg ved push i økt 16.

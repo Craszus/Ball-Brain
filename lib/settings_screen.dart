@@ -3,10 +3,13 @@ import 'package:flutter/material.dart' as m show Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'avatar_picker_screen.dart';
+import 'duel/duel_prefs.dart';
 import 'legal_screens.dart';
 import 'media/credits_screen.dart';
 import 'services/feedback.dart';
+import 'services/update_check.dart';
 import 'share_screen.dart';
+import 'update_prompt.dart';
 import 'services/language.dart';
 import 'services/profile.dart';
 import 'services/settings.dart';
@@ -51,6 +54,16 @@ class SettingsScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 16),
           Card(
+            child: SwitchListTile(
+              secondary: const Icon(Icons.sports_mma),
+              title: const Text('Ta imot 1v1-utfordringer'),
+              subtitle: const Text('Venner i gruppene dine kan utfordre deg'),
+              value: ref.watch(acceptsChallengesProvider),
+              onChanged: (v) => ref.read(acceptsChallengesProvider.notifier).set(v),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Card(
             child: ListTile(
               leading: const Icon(Icons.language),
               title: const Text('Språk'),
@@ -58,6 +71,20 @@ class SettingsScreen extends ConsumerWidget {
                   ? '${'Automatisk (etter land)'.tr} · ${L10n.nativeNames[ref.watch(effectiveLangProvider)]}'
                   : L10n.nativeNames[ref.watch(languageProvider)]!),
               onTap: () => _pickLanguage(context, ref),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Card(
+            child: FutureBuilder<String?>(
+              future: installedVersionLabel(),
+              builder: (context, snap) => ListTile(
+                leading: const Icon(Icons.system_update),
+                title: const Text('Se etter oppdatering'),
+                subtitle: Text(snap.data == null
+                    ? 'Sjekker om det finnes en ny versjon'
+                    : '${'Versjon'.tr} ${snap.data}'),
+                onTap: () => _checkUpdate(context),
+              ),
             ),
           ),
           const SizedBox(height: 8),
@@ -128,6 +155,17 @@ class SettingsScreen extends ConsumerWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _checkUpdate(BuildContext context) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final update = await checkForUpdate(force: true);
+    if (!context.mounted) return;
+    if (update == null) {
+      messenger.showSnackBar(SnackBar(content: Text('Du har den nyeste versjonen.')));
+    } else {
+      await showUpdateDialog(context, update);
+    }
   }
 
   Future<void> _pickLanguage(BuildContext context, WidgetRef ref) async {

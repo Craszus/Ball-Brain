@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart';
 
+import 'duel/duel_api.dart';
+import 'duel/duel_screen.dart' show duelError;
 import 'l10n/l10n.dart';
 import 'leaderboard_screen.dart';
 import 'services/cloud.dart';
@@ -147,6 +149,16 @@ class GroupScreen extends StatefulWidget {
 class _GroupScreenState extends State<GroupScreen> {
   late final Future<List<LeaderboardRow>?> _future = Cloud.groupLeaderboard(widget.group.id);
 
+  Future<void> _challenge(LeaderboardRow r) async {
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      await DuelApi.createChallenge(r.userId);
+      messenger.showSnackBar(SnackBar(content: Text('Utfordring sendt til ${r.username}.')));
+    } on DuelError catch (e) {
+      messenger.showSnackBar(SnackBar(content: Text(duelError(e.key))));
+    }
+  }
+
   Future<void> _leave() async {
     final ok = await showDialog<bool>(
       context: context,
@@ -205,7 +217,17 @@ class _GroupScreenState extends State<GroupScreen> {
               }
               return ListView(
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                children: [for (final r in rows) LeaderboardTile(r)],
+                children: [
+                  for (final r in rows)
+                    LeaderboardTile(r,
+                        trailingAction: r.isMe || r.userId.isEmpty
+                            ? null
+                            : IconButton(
+                                icon: const Icon(Icons.sports_mma, color: AppColors.gold),
+                                tooltip: 'Utfordre til 1v1'.tr,
+                                onPressed: () => _challenge(r),
+                              )),
+                ],
               );
             },
           ),

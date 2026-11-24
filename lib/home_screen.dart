@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'geo/geo_quiz_screen.dart';
 import 'quiz/photo_quiz_screen.dart';
+import 'duel/challenge_gate.dart';
 import 'duel/duel_screen.dart';
 import 'leaderboard_screen.dart';
 import 'profile_screen.dart';
@@ -18,6 +19,7 @@ import 'ui/football.dart';
 import 'ui/icon_tile.dart';
 import 'ui/level_card.dart';
 import 'ui/theme.dart';
+import 'update_prompt.dart';
 import 'l10n/l10n.dart';
 
 /// Hovedmeny i stilen «Premium Nattkamp / Stadion-gull».
@@ -31,7 +33,9 @@ class HomeScreen extends ConsumerWidget {
     void open(Widget screen) =>
         Navigator.of(context).push(MaterialPageRoute(builder: (_) => screen));
 
-    return PitchScaffold(
+    return UpdateGate(
+      child: ChallengeGate(
+      child: PitchScaffold(
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
@@ -234,6 +238,8 @@ class HomeScreen extends ConsumerWidget {
           ),
         ],
       ),
+    ),
+    ),
     );
   }
 }

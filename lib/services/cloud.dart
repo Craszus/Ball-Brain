@@ -8,7 +8,9 @@ class LeaderboardRow {
       required this.username,
       required this.country,
       required this.total,
-      required this.isMe});
+      required this.isMe,
+      this.userId = ''});
+  final String userId;
   final int rank;
   final String username;
   final String country;
@@ -223,7 +225,8 @@ class Cloud {
               username: j['username'] as String,
               country: (j['country_code'] as String?) ?? '',
               total: (j['total'] as num).toInt(),
-              isMe: j['user_id'] == me)
+              isMe: j['user_id'] == me,
+              userId: (j['user_id'] as String?) ?? '')
       ];
     } catch (_) {
       return null;

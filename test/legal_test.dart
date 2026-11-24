@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> _pump(WidgetTester tester, Widget home) async {
-  tester.view.physicalSize = const Size(375, 812);
+  tester.view.physicalSize = const Size(375, 1800);
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
   await tester.pumpWidget(ProviderScope(
