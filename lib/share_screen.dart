@@ -6,10 +6,11 @@ import 'l10n/l10n.dart';
 import 'ui/football.dart';
 import 'ui/theme.dart';
 
-/// Lenken QR-koden peker til. Standard er appens side i Google Play; endres ved bygging med
-/// `--dart-define=APP_SHARE_URL=https://...` (f.eks. en egen nettside som velger riktig butikk).
+/// Lenken QR-koden peker til. Standard er siste utgave på GitHub (med APK til Android); den
+/// byttes til appens side i Google Play/App Store når appen er publisert, ved bygging med
+/// `--dart-define=APP_SHARE_URL=https://...`.
 const appShareUrl = String.fromEnvironment('APP_SHARE_URL',
-    defaultValue: 'https://play.google.com/store/apps/details?id=no.ballbrain.ball_brain');
+    defaultValue: 'https://github.com/Craszus/Ball-Brain/releases/latest');
 
 /// «Del appen»: en QR-kode vennene kan skanne, og en lenke som kan kopieres.
 class ShareScreen extends StatelessWidget {

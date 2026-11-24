@@ -21,9 +21,9 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  test('standardlenken er appens side i Google Play', () {
+  test('standardlenken peker til siste utgave på GitHub', () {
     expect(appShareUrl, startsWith('https://'));
-    expect(appShareUrl, contains('no.ballbrain.ball_brain'));
+    expect(appShareUrl, contains('github.com/Craszus/Ball-Brain/releases'));
   });
 
   testWidgets('Innstillinger har «Del appen» som åpner QR-skjermen', (tester) async {
