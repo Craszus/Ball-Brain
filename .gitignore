@@ -52,3 +52,6 @@ supabase.env.json
 
 # Utgaver bygget lokalt
 /release/
+
+# Gradle-rapporter
+/android/build/
