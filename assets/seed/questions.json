@@ -1,0 +1,8479 @@
+[
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan en spiller bli satt offside direkte fra et innkast?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "31763a779c11"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan en spiller bli satt offside direkte fra et målspark?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "84aa8cf71f3b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan en spiller bli satt offside direkte fra et hjørnespark?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "b3d8ea75de3f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan det scores direkte mål på avspark?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "e5f54426b058"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan det scores direkte mål på hjørnespark?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "2912eb229f59"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan en spiller være i offside-posisjon i sin egen banehalvdel?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "e7778b951094"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor mange spillere må et lag minst ha på banen for at kampen skal kunne spilles?",
+  "options": [
+   "8",
+   "6",
+   "9",
+   "7"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "e8320f5c1864"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor bredt er et fotballmål (innvendig)?",
+  "options": [
+   "8,00 meter",
+   "7,50 meter",
+   "7,32 meter",
+   "7,00 meter"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "58bd9f6fcc07"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor høyt er et fotballmål (innvendig)?",
+  "options": [
+   "2,30 meter",
+   "2,60 meter",
+   "2,50 meter",
+   "2,44 meter"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "6b4027597ffc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor langt fra mållinja ligger straffemerket?",
+  "options": [
+   "9 meter",
+   "10 meter",
+   "11 meter",
+   "12 meter"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "62099006ca65"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor langt unna ballen må muren stå ved et frispark?",
+  "options": [
+   "7 meter",
+   "8 meter",
+   "10 meter",
+   "9,15 meter"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "8451a2404d2f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor stort er målfeltet ut fra mållinja?",
+  "options": [
+   "4,5 meter",
+   "7,5 meter",
+   "6,5 meter",
+   "5,5 meter"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "b3641408d23c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor langt ut fra mållinja går straffefeltet?",
+  "options": [
+   "18 meter",
+   "11 meter",
+   "16,5 meter",
+   "20 meter"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "030c1f999ce6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva er tillatt banelengde i internasjonale kamper?",
+  "options": [
+   "90–100 meter",
+   "85–95 meter",
+   "100–110 meter",
+   "110–120 meter"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "5ca4bb50e2cb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor lang er ordinær spilletid i en seniorkamp?",
+  "options": [
+   "2 × 45 minutter",
+   "2 × 50 minutter",
+   "2 × 40 minutter",
+   "3 × 30 minutter"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "c8b4e0bcefe8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor lang er hver omgang av forlengning?",
+  "options": [
+   "20 minutter",
+   "5 minutter",
+   "15 minutter",
+   "10 minutter"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "bb09832f5644"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor lang kan pausen mellom omgangene maksimalt være?",
+  "options": [
+   "20 minutter",
+   "10 minutter",
+   "25 minutter",
+   "15 minutter"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "33123d73da00"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor mange spillere har hvert lag på banen, inkludert keeper?",
+  "options": [
+   "9",
+   "12",
+   "10",
+   "11"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "ea025e431718"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor mange spark får hvert lag først i en straffesparkkonkurranse?",
+  "options": [
+   "7",
+   "3",
+   "5",
+   "4"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "ec30bf83b0e9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva skjer når en spiller får to gule kort i samme kamp?",
+  "options": [
+   "Frispark mot laget",
+   "Spilleren må bytte plass med keeperen",
+   "Bare en ny advarsel",
+   "Utvisning (rødt kort)"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "54f4980028ff"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilken farge har kortet for advarsel?",
+  "options": [
+   "Gult",
+   "Rødt",
+   "Oransje",
+   "Grønt"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "e6a27fc877ee"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva er straffen når en utespiller bevisst håndsfeste ballen i eget straffefelt?",
+  "options": [
+   "Innkast",
+   "Straffespark",
+   "Dommerball",
+   "Indirekte frispark"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "fee7a4611611"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvem får innkast når ballen går ut over sidelinjen?",
+  "options": [
+   "Laget som berørte ballen sist",
+   "Laget med færrest spillere",
+   "Hjemmelaget",
+   "Motstanderen til laget som berørte ballen sist"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "6d46450b81eb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva er straffen når keeperen tar opp en bevisst tilbakepasning fra en medspiller med foten?",
+  "options": [
+   "Direkte frispark",
+   "Gult kort",
+   "Indirekte frispark",
+   "Straffespark"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "87fb0cfe590f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva kreves av keeperen ved et straffespark?",
+  "options": [
+   "Stå én meter foran mållinja",
+   "Stå i målfeltet",
+   "Begge føttene på mållinja",
+   "Minst én fot på eller over mållinja"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "1ace3a988f12"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva kjennetegner et indirekte frispark?",
+  "options": [
+   "Ballen må berøres av en annen spiller før det kan bli mål",
+   "Bare keeperen kan ta det",
+   "Det kan bare tas i straffefeltet",
+   "Muren kan stå nærmere enn 5 meter"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "049b640e75ed"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva får en spiller som tar av seg trøya under målfeiring?",
+  "options": [
+   "Gult kort",
+   "Ingenting",
+   "Frispark mot laget",
+   "Rødt kort"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "e3fd4e2f058d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor mange motstandere må være like nær eller nærmere mållinja enn en angriper, for at angriperen ikke skal være i offside-posisjon?",
+  "options": [
+   "To",
+   "Ingen",
+   "Tre",
+   "En"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "28c001ba1dfe"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva brukes for å gjenoppta spillet når dommeren stanser det uten at det har skjedd et regelbrudd?",
+  "options": [
+   "Frispark",
+   "Straffespark",
+   "Innkast",
+   "Dommerball"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "e3cf63234648"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Ballen går ut over mållinja etter at en forsvarsspiller berørte den sist. Hva dømmes?",
+  "options": [
+   "Innkast",
+   "Dommerball",
+   "Hjørnespark",
+   "Målspark"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "eb03db05d0b2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Ballen går ut over mållinja etter at en angriper berørte den sist. Hva dømmes?",
+  "options": [
+   "Innkast",
+   "Målspark",
+   "Hjørnespark",
+   "Frispark"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "a8ab0725bf6a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvem tar avspark etter at et lag har scoret?",
+  "options": [
+   "Laget som scoret",
+   "Keeperen til laget som scoret",
+   "Laget som slapp inn målet",
+   "Det avgjøres ved myntkast"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "c9f0a4ca73dc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan et lag erstatte en spiller som er vist rødt kort?",
+  "options": [
+   "Ja, etter ti minutter",
+   "Ja, med en innbytter",
+   "Nei, laget må spille med færre"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "927bc4561035"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilket kort får en spiller som i eget straffefelt hindrer en åpenbar målsjanse ved å felle en motspiller, mens han forsøker å spille ballen?",
+  "options": [
+   "Ingen kort",
+   "Gult kort",
+   "Rødt kort",
+   "Grønt kort"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "fdf10508dda2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Når regnes en ball som mål?",
+  "options": [
+   "Hele ballen har passert hele mållinja mellom stolpene og under tverrliggeren",
+   "Ballen har rørt stolpen",
+   "Halve ballen har passert mållinja",
+   "Ballen har rørt nettet"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "9c75b2068ca0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Må et straffespark sparkes fremover?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "6b680782c553"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilken situasjon kan VAR ikke gripe inn i?",
+  "options": [
+   "Vanlig gult kort",
+   "Direkte rødt kort",
+   "Straffespark",
+   "Mål"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "4e7eea632f71"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvem tar den endelige avgjørelsen etter en VAR-sjekk?",
+  "options": [
+   "Kampens hoveddommer",
+   "VAR-dommeren",
+   "Fjerdedommeren",
+   "Ligaens kampleder"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "a5ffec497d26"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Når er ballen i spill ved et frispark?",
+  "options": [
+   "Når ballen har rørt en annen spiller",
+   "Når den er sparket og beveger seg",
+   "Etter tre sekunder",
+   "Når dommeren fløyter"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "c52d6c28b70b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan keeperen ta ballen med hendene utenfor eget straffefelt?",
+  "options": [
+   "Ja, hvis ingen motstander er nær",
+   "Ja, så lenge han er i egen banehalvdel",
+   "Nei, da er det håndsregelbrudd"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "edc06e741638"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan dommeren vise gult kort til en innbytter på benken?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "f72ce31b09df"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Må ballen ligge i ro når et frispark tas?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "7dde8aae6730"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva betyr «fordel» (advantage) når dommeren viser det?",
+  "options": [
+   "Spillet får gå videre fordi laget som ble utsatt for regelbrudd har nytte av det",
+   "Laget får et ekstra frispark",
+   "Laget får en ekstra innbytter",
+   "Dommeren stopper klokka"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "5b846bdd3099"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvordan skal et innkast utføres?",
+  "options": [
+   "Med én hånd fra siden",
+   "Med hodet",
+   "Med begge hender, bak og over hodet, med begge føtter på bakken",
+   "Med foten"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "2c441c0439e5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Må ballen forlate straffefeltet etter et målspark før en lagkamerat kan røre den?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "0862f7919cf2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva er riktig om hjørnespark og offside?",
+  "options": [
+   "Offside gjelder alltid",
+   "Bare keeperen kan stå offside",
+   "Det er ingen offside direkte fra hjørnespark",
+   "Offside gjelder bare i andre omgang"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "a71898c3e32c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i fotball for menn i 2022?",
+  "options": [
+   "Frankrike",
+   "Kroatia",
+   "Marokko",
+   "Argentina"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "85cca75dcb12"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 2018?",
+  "options": [
+   "Kroatia",
+   "Frankrike",
+   "Belgia",
+   "England"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "dc56d9134377"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 2014?",
+  "options": [
+   "Tyskland",
+   "Nederland",
+   "Argentina",
+   "Brasil"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "ef5dc4be2114"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 2010?",
+  "options": [
+   "Nederland",
+   "Spania",
+   "Uruguay",
+   "Tyskland"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "f4bc90c7e897"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 2006?",
+  "options": [
+   "Portugal",
+   "Frankrike",
+   "Tyskland",
+   "Italia"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "533743cc3367"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 2002?",
+  "options": [
+   "Sør-Korea",
+   "Tyskland",
+   "Brasil",
+   "Tyrkia"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "556c3736ced9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1998?",
+  "options": [
+   "Kroatia",
+   "Brasil",
+   "Frankrike",
+   "Italia"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "b05a32819478"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1990?",
+  "options": [
+   "England",
+   "Argentina",
+   "Italia",
+   "Vest-Tyskland"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "de60e4670322"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1986?",
+  "options": [
+   "England",
+   "Argentina",
+   "Belgia",
+   "Vest-Tyskland"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "a92aa380c1f4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1966?",
+  "options": [
+   "Vest-Tyskland",
+   "England",
+   "Portugal",
+   "Brasil"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "59e5ebd8b663"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land vant det første VM i 1930?",
+  "options": [
+   "Brasil",
+   "Uruguay",
+   "Italia",
+   "Argentina"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "3cdce6358006"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land har flest VM-titler hos menn?",
+  "options": [
+   "Argentina",
+   "Tyskland",
+   "Italia",
+   "Brasil"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "847cdba36d57"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem er VM-historiens toppscorer hos menn med 16 mål?",
+  "options": [
+   "Ronaldo Nazário",
+   "Gerd Müller",
+   "Miroslav Klose",
+   "Lionel Messi"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "bddf3bc1c553"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret 13 mål i VM 1958, en rekord for én turnering?",
+  "options": [
+   "Eusébio",
+   "Just Fontaine",
+   "Pelé",
+   "Gerd Müller"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "c501f9105bd7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilke land er VM-verter i 2026?",
+  "options": [
+   "Mexico, Brasil og Argentina",
+   "USA, Canada og Costa Rica",
+   "Spania, Portugal og Marokko",
+   "USA, Canada og Mexico"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "1e5ceec1d449"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret «Guds hånd»-målet mot England i VM 1986?",
+  "options": [
+   "Diego Simeone",
+   "Jorge Valdano",
+   "Mario Kempes",
+   "Diego Maradona"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "c23f4e8016a5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble utvist for et hodestøt mot Marco Materazzi i VM-finalen 2006?",
+  "options": [
+   "Thierry Henry",
+   "Franck Ribéry",
+   "Patrick Vieira",
+   "Zinedine Zidane"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "cae480e20235"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land slo Brasil i den avgjørende VM-kampen i 1950 på Maracanã?",
+  "options": [
+   "Uruguay",
+   "Sverige",
+   "Italia",
+   "Argentina"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "07a9c1e26c25"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Brasil tapte 1–7 i VM-semifinalen 2014. Mot hvem?",
+  "options": [
+   "Tyskland",
+   "Nederland",
+   "Frankrike",
+   "Argentina"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "c4a045d91685"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 2024?",
+  "options": [
+   "Tyskland",
+   "Spania",
+   "Frankrike",
+   "England"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "1b3d334dba9f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM som ble spilt i 2021 (EM 2020)?",
+  "options": [
+   "Italia",
+   "Danmark",
+   "England",
+   "Spania"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "279b68b50c91"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 2016?",
+  "options": [
+   "Portugal",
+   "Frankrike",
+   "Tyskland",
+   "Wales"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "93518dd8cd76"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 2004?",
+  "options": [
+   "Portugal",
+   "Tsjekkia",
+   "Frankrike",
+   "Hellas"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "470d01416615"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1992?",
+  "options": [
+   "Sverige",
+   "Nederland",
+   "Tyskland",
+   "Danmark"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "7dcfabef554b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1988?",
+  "options": [
+   "Vest-Tyskland",
+   "Nederland",
+   "Italia",
+   "Sovjetunionen"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "5a9205a91a9c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag vant Champions League-finalen 2005 etter å ha ligget under 0–3 i pausen?",
+  "options": [
+   "AC Milan",
+   "Chelsea",
+   "Barcelona",
+   "Liverpool"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "f69c8cd80e3a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag vant Champions League-finalen 1999 med to mål på tilleggstid?",
+  "options": [
+   "Real Madrid",
+   "Juventus",
+   "Manchester United",
+   "Bayern München"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "57c37f72c157"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag gikk ubeseiret gjennom Premier League-sesongen 2003–04?",
+  "options": [
+   "Chelsea",
+   "Liverpool",
+   "Arsenal",
+   "Manchester United"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "3ef1dd2b131a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag sensasjonsvant Premier League i 2015–16?",
+  "options": [
+   "Leicester City",
+   "Tottenham",
+   "Southampton",
+   "Everton"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "791b152843fd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb signerte Erling Haaland fra Borussia Dortmund i 2022?",
+  "options": [
+   "Chelsea",
+   "Manchester City",
+   "Manchester United",
+   "Real Madrid"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "528e27747a7b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvor mange Premier League-mål scoret Haaland i sesongen 2022–23 (rekord)?",
+  "options": [
+   "32",
+   "34",
+   "36",
+   "38"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "7f1aa0150a43"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb har flest Champions League-/europacuptitler?",
+  "options": [
+   "AC Milan",
+   "Liverpool",
+   "Real Madrid",
+   "Bayern München"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "b04f0180b653"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem har vunnet flest Ballon d'Or hos menn?",
+  "options": [
+   "Johan Cruyff",
+   "Cristiano Ronaldo",
+   "Michel Platini",
+   "Lionel Messi"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "4d4bbd9bd925"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Ballon d'Or i 2024?",
+  "options": [
+   "Rodri",
+   "Erling Haaland",
+   "Vinícius Júnior",
+   "Jude Bellingham"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "d26ac9a8c06a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Ballon d'Or i 2022?",
+  "options": [
+   "Kylian Mbappé",
+   "Karim Benzema",
+   "Sadio Mané",
+   "Robert Lewandowski"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "482cc585437e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken italiensk klubb vant Serie A med Maradona i 1987 og 1990?",
+  "options": [
+   "AC Milan",
+   "Juventus",
+   "Roma",
+   "Napoli"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "3bb547697624"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem er tidenes toppscorer på landslagsnivå blant menn?",
+  "options": [
+   "Lionel Messi",
+   "Robert Lewandowski",
+   "Cristiano Ronaldo",
+   "Ali Daei"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "fe13a9402752"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb vant Champions League i 2016, 2017 og 2018?",
+  "options": [
+   "Bayern München",
+   "Juventus",
+   "Real Madrid",
+   "Barcelona"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "402ac80b91dd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Norge slo Brasil 2–1 i VM i Frankrike. Hvilket år var det?",
+  "options": [
+   "2002",
+   "1998",
+   "1990",
+   "1994"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "6e03c4111fac"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Rosenborg slo et storlag 2–1 på bortebane i Champions League i 1996 og gikk videre til kvartfinalen. Hvilket lag?",
+  "options": [
+   "Barcelona",
+   "AC Milan",
+   "Juventus",
+   "Real Madrid"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "3d9ef338cf92"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken nordmann scoret vinnermålet i Champions League-finalen 1999?",
+  "options": [
+   "Ronny Johnsen",
+   "Henning Berg",
+   "Tore André Flo",
+   "Ole Gunnar Solskjær"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "02e866c53337"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken klubb har flest norske seriemesterskap i herrenes toppdivisjon?",
+  "options": [
+   "Brann",
+   "Lillestrøm",
+   "Vålerenga",
+   "Rosenborg"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "e69fc6b3a38c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvor ligger Lerkendal stadion?",
+  "options": [
+   "Bergen",
+   "Oslo",
+   "Stavanger",
+   "Trondheim"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "2423ad41a3f9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvor ligger Brann stadion?",
+  "options": [
+   "Bergen",
+   "Stavanger",
+   "Trondheim",
+   "Tromsø"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "ff203f4245be"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Ullevaal stadion?",
+  "options": [
+   "Drammen",
+   "Oslo",
+   "Lillestrøm",
+   "Bergen"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "5fce0590a2b6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Anfield?",
+  "options": [
+   "Manchester United",
+   "Liverpool",
+   "Newcastle",
+   "Everton"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "87e4a0a90649"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Camp Nou?",
+  "options": [
+   "Barcelona",
+   "Atlético Madrid",
+   "Real Madrid",
+   "Valencia"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "051bab3fb32b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Santiago Bernabéu?",
+  "options": [
+   "Real Madrid",
+   "Sevilla",
+   "Barcelona",
+   "Atlético Madrid"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "f8bc7df72351"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Old Trafford?",
+  "options": [
+   "Liverpool",
+   "Leeds",
+   "Manchester United",
+   "Manchester City"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "12415a9f7e91"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Allianz Arena?",
+  "options": [
+   "RB Leipzig",
+   "Schalke 04",
+   "Bayern München",
+   "Borussia Dortmund"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "e42cc7938f74"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Signal Iduna Park?",
+  "options": [
+   "Schalke 04",
+   "VfB Stuttgart",
+   "Borussia Dortmund",
+   "Bayer Leverkusen"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "73fb92e65632"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på La Bombonera?",
+  "options": [
+   "River Plate",
+   "Boca Juniors",
+   "Independiente",
+   "Racing"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "5b754b1d224c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Maracanã?",
+  "options": [
+   "São Paulo",
+   "Buenos Aires",
+   "Brasília",
+   "Rio de Janeiro"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "31982e829023"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilke to klubber deler San Siro?",
+  "options": [
+   "Napoli og Salernitana",
+   "Roma og Lazio",
+   "AC Milan og Inter",
+   "Juventus og Torino"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "1e146e3dcb18"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken by hører Galatasaray til?",
+  "options": [
+   "Izmir",
+   "Istanbul",
+   "Bursa",
+   "Ankara"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "881a3a711d52"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken by hører Benfica til?",
+  "options": [
+   "Faro",
+   "Lisboa",
+   "Braga",
+   "Porto"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "29526a5d17bc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken by hører Celtic til?",
+  "options": [
+   "Belfast",
+   "Dublin",
+   "Edinburgh",
+   "Glasgow"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "57e288fe6873"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken by hører Ajax til?",
+  "options": [
+   "Eindhoven",
+   "Rotterdam",
+   "Amsterdam",
+   "Utrecht"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "a4d69b8466e4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1934?",
+  "options": [
+   "Italia",
+   "Ungarn",
+   "Vest-Tyskland",
+   "Tsjekkoslovakia"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "214bd61c7bb1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1938?",
+  "options": [
+   "Italia",
+   "Sverige",
+   "Brasil",
+   "Ungarn"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "1796d2d9add7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1950?",
+  "options": [
+   "Sverige",
+   "Uruguay",
+   "Brasil",
+   "Spania"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "d31da877ecda"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1954?",
+  "options": [
+   "Østerrike",
+   "Uruguay",
+   "Ungarn",
+   "Vest-Tyskland"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "ce15123b2c98"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1958?",
+  "options": [
+   "Sverige",
+   "Vest-Tyskland",
+   "Frankrike",
+   "Brasil"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "aedd2d5d20c8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1962?",
+  "options": [
+   "Jugoslavia",
+   "Tsjekkoslovakia",
+   "Brasil",
+   "Chile"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "d86fd6c607e2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1970?",
+  "options": [
+   "Vest-Tyskland",
+   "Italia",
+   "Uruguay",
+   "Brasil"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "6b896cfde6d2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1974?",
+  "options": [
+   "Brasil",
+   "Nederland",
+   "Vest-Tyskland",
+   "Polen"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "6110e6f2d95d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1978?",
+  "options": [
+   "Nederland",
+   "Argentina",
+   "Italia",
+   "Brasil"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "fdc26314e847"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1982?",
+  "options": [
+   "Vest-Tyskland",
+   "Italia",
+   "Frankrike",
+   "Polen"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "71552415f373"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem vant VM i 1994?",
+  "options": [
+   "Sverige",
+   "Brasil",
+   "Bulgaria",
+   "Italia"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "b476bd0c0dfe"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1934?",
+  "options": [
+   "Frankrike",
+   "Spania",
+   "Sveits",
+   "Italia"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "768dbfd15803"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1954?",
+  "options": [
+   "Vest-Tyskland",
+   "Sveits",
+   "Østerrike",
+   "Sverige"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "35d7c65e855c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1958?",
+  "options": [
+   "England",
+   "Norge",
+   "Sverige",
+   "Danmark"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "0519f1e75aad"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1962?",
+  "options": [
+   "Peru",
+   "Chile",
+   "Argentina",
+   "Mexico"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "2a19ee09d270"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1970?",
+  "options": [
+   "Spania",
+   "Brasil",
+   "Argentina",
+   "Mexico"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "60e23e2ba9db"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1974?",
+  "options": [
+   "Nederland",
+   "Italia",
+   "Vest-Tyskland",
+   "Østerrike"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "16ded90552b5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1978?",
+  "options": [
+   "Brasil",
+   "Uruguay",
+   "Argentina",
+   "Chile"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "483c204198e9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1982?",
+  "options": [
+   "Spania",
+   "Portugal",
+   "Frankrike",
+   "Italia"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "10970646c085"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1990?",
+  "options": [
+   "Spania",
+   "Italia",
+   "Vest-Tyskland",
+   "Frankrike"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "0f49a5eeb991"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 1994?",
+  "options": [
+   "Mexico",
+   "Canada",
+   "Brasil",
+   "USA"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "039a0de9f947"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 2006?",
+  "options": [
+   "Italia",
+   "Nederland",
+   "Frankrike",
+   "Tyskland"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "d22e513db8b0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land arrangerte VM i 2014?",
+  "options": [
+   "Argentina",
+   "Mexico",
+   "Brasil",
+   "Colombia"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "828e089625ba"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 2022?",
+  "options": [
+   "Julián Álvarez",
+   "Kylian Mbappé",
+   "Lionel Messi",
+   "Olivier Giroud"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "1700523083cf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 2018?",
+  "options": [
+   "Romelu Lukaku",
+   "Cristiano Ronaldo",
+   "Harry Kane",
+   "Antoine Griezmann"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "a7d2efac609b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 2014?",
+  "options": [
+   "Lionel Messi",
+   "Neymar",
+   "Thomas Müller",
+   "James Rodríguez"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "168f966ff1b0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 2006?",
+  "options": [
+   "Ronaldo Nazário",
+   "Thierry Henry",
+   "Miroslav Klose",
+   "Hernán Crespo"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "f0a525ad122d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 2002?",
+  "options": [
+   "Miroslav Klose",
+   "Ronaldo Nazário",
+   "Christian Vieri",
+   "Rivaldo"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "4bddfc3c0e77"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 1998?",
+  "options": [
+   "Davor Šuker",
+   "Ronaldo Nazário",
+   "Christian Vieri",
+   "Gabriel Batistuta"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "eabcfb5cc5cc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 1990?",
+  "options": [
+   "Gary Lineker",
+   "Salvatore Schillaci",
+   "Lothar Matthäus",
+   "Roberto Baggio"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "7585f5599fce"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 1986?",
+  "options": [
+   "Diego Maradona",
+   "Careca",
+   "Gary Lineker",
+   "Emilio Butragueño"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "5ccae1e17990"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 1982?",
+  "options": [
+   "Zico",
+   "Karl-Heinz Rummenigge",
+   "Paolo Rossi",
+   "Zbigniew Boniek"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "f99fa45ee68a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 1970?",
+  "options": [
+   "Jairzinho",
+   "Teófilo Cubillas",
+   "Gerd Müller",
+   "Pelé"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "51675c5c5f71"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble toppscorer i VM 1966?",
+  "options": [
+   "Pelé",
+   "Eusébio",
+   "Bobby Charlton",
+   "Geoff Hurst"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "c91d8fb45778"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble kåret til turneringens beste spiller i VM 2022?",
+  "options": [
+   "Antoine Griezmann",
+   "Luka Modrić",
+   "Lionel Messi",
+   "Kylian Mbappé"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "901fbb9ee9f5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble kåret til turneringens beste spiller i VM 2018?",
+  "options": [
+   "Luka Modrić",
+   "Antoine Griezmann",
+   "Eden Hazard",
+   "Kylian Mbappé"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "425edfb06641"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble kåret til turneringens beste spiller i VM 2014?",
+  "options": [
+   "James Rodríguez",
+   "Arjen Robben",
+   "Thomas Müller",
+   "Lionel Messi"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "142e37f4f4e6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble kåret til turneringens beste spiller i VM 2010?",
+  "options": [
+   "Diego Forlán",
+   "Wesley Sneijder",
+   "David Villa",
+   "Andrés Iniesta"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "2c21b73efa0e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble kåret til turneringens beste spiller i VM 2006?",
+  "options": [
+   "Andrea Pirlo",
+   "Fabio Cannavaro",
+   "Miroslav Klose",
+   "Zinedine Zidane"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "67b11100e20d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble kåret til turneringens beste spiller i VM 2002?",
+  "options": [
+   "Oliver Kahn",
+   "Hong Myung-bo",
+   "Rivaldo",
+   "Ronaldo Nazário"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "623e21ed990c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble kåret til turneringens beste spiller i VM 1998?",
+  "options": [
+   "Lilian Thuram",
+   "Davor Šuker",
+   "Zinedine Zidane",
+   "Ronaldo Nazário"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "9e3cbac91f35"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret vinnermålet i VM-finalen 2010?",
+  "options": [
+   "Andrés Iniesta",
+   "David Villa",
+   "Xavi",
+   "Fernando Torres"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "dda316436c39"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret vinnermålet i VM-finalen 2014?",
+  "options": [
+   "Thomas Müller",
+   "Mario Götze",
+   "André Schürrle",
+   "Miroslav Klose"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "1e7ad7f054af"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret vinnermålet i VM-finalen 1990?",
+  "options": [
+   "Lothar Matthäus",
+   "Andreas Brehme",
+   "Rudi Völler",
+   "Jürgen Klinsmann"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "a1ade456244d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret vinnermålet i VM-finalen 1986?",
+  "options": [
+   "José Luis Brown",
+   "Diego Maradona",
+   "Jorge Burruchaga",
+   "Jorge Valdano"
+  ],
+  "correct": 2,
+  "difficulty": 5,
+  "key": "a359c29f1fc6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har Brasil for menn?",
+  "options": [
+   "3",
+   "6",
+   "4",
+   "5"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "1e7f88042b01"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har Tyskland for menn?",
+  "options": [
+   "5",
+   "4",
+   "2",
+   "3"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "1c99d6c0bbfe"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har Italia for menn?",
+  "options": [
+   "4",
+   "2",
+   "5",
+   "3"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "c0eebafbfef0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har Argentina for menn?",
+  "options": [
+   "4",
+   "1",
+   "2",
+   "3"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "6081099d20cd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har Frankrike for menn?",
+  "options": [
+   "2",
+   "1",
+   "4",
+   "3"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "ecae061a41cd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har Uruguay for menn?",
+  "options": [
+   "2",
+   "3",
+   "0",
+   "1"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "2bc462a01367"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har England for menn?",
+  "options": [
+   "2",
+   "3",
+   "1",
+   "0"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "61aa2fb32413"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor mange VM-titler har Spania for menn?",
+  "options": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "a9841fa38712"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret hattrick i VM-finalen 1966?",
+  "options": [
+   "Martin Peters",
+   "Geoff Hurst",
+   "Bobby Charlton",
+   "Roger Hunt"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "1a5bc032bdfc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret hattrick i VM-finalen 2022?",
+  "options": [
+   "Olivier Giroud",
+   "Kylian Mbappé",
+   "Lionel Messi",
+   "Ángel Di María"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "a8b119bf0ae7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret to mål for Frankrike i VM-finalen 1998?",
+  "options": [
+   "Zinedine Zidane",
+   "Thierry Henry",
+   "Emmanuel Petit",
+   "Youri Djorkaeff"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "433c2704b1b3"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem scoret det avgjørende straffesparket da Italia vant VM-finalen i 2006?",
+  "options": [
+   "Fabio Grosso",
+   "Alessandro Del Piero",
+   "Andrea Pirlo",
+   "Francesco Totti"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "69c0f2fe67b1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem bommet på det siste, avgjørende straffesparket i VM-finalen 1994?",
+  "options": [
+   "Roberto Baggio",
+   "Gianfranco Zola",
+   "Alessandro Del Piero",
+   "Paolo Maldini"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "5473a253c581"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilken målvakt fikk prisen som turneringens beste målvakt i VM 2022?",
+  "options": [
+   "Dominik Livaković",
+   "Emiliano Martínez",
+   "Yassine Bounou",
+   "Hugo Lloris"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "24eb6214a08a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilken spiller har vunnet VM tre ganger?",
+  "options": [
+   "Pelé",
+   "Diego Maradona",
+   "Cafu",
+   "Franz Beckenbauer"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "f6fc0d8218de"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvor gammel var Pelé da han vant VM i 1958?",
+  "options": [
+   "19",
+   "16",
+   "21",
+   "17"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "12085b14dce5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem ble den første spilleren som scoret i fem ulike VM-sluttspill?",
+  "options": [
+   "Pelé",
+   "Miroslav Klose",
+   "Cristiano Ronaldo",
+   "Lionel Messi"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "06fe49c40d51"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvem var Spanias kaptein da de vant VM i 2010?",
+  "options": [
+   "Carles Puyol",
+   "Xavi",
+   "Sergio Ramos",
+   "Iker Casillas"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "3e2a669dd984"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land har deltatt i alle VM-sluttspill for menn?",
+  "options": [
+   "Tyskland",
+   "Brasil",
+   "Italia",
+   "Argentina"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "36d4270d77c4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "VM-historie",
+  "prompt": "Hvilket land ble i 2026 det første som har vært VM-vert for menn tre ganger?",
+  "options": [
+   "Brasil",
+   "Mexico",
+   "Italia",
+   "Tyskland"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "c7d244f76a50"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1960?",
+  "options": [
+   "Sovjetunionen",
+   "Tsjekkoslovakia",
+   "Jugoslavia",
+   "Frankrike"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "1502b0668dee"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1964?",
+  "options": [
+   "Danmark",
+   "Ungarn",
+   "Spania",
+   "Sovjetunionen"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "100764860c5b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1968?",
+  "options": [
+   "England",
+   "Sovjetunionen",
+   "Jugoslavia",
+   "Italia"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "9d351b606935"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1972?",
+  "options": [
+   "Vest-Tyskland",
+   "Ungarn",
+   "Belgia",
+   "Sovjetunionen"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "09faaab55c81"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1976?",
+  "options": [
+   "Vest-Tyskland",
+   "Jugoslavia",
+   "Nederland",
+   "Tsjekkoslovakia"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "54171a777a07"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1980?",
+  "options": [
+   "Italia",
+   "Tsjekkoslovakia",
+   "Belgia",
+   "Vest-Tyskland"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "10813a6f7d54"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1984?",
+  "options": [
+   "Frankrike",
+   "Spania",
+   "Portugal",
+   "Danmark"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "3cc8e8b91692"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 1996?",
+  "options": [
+   "Tyskland",
+   "Tsjekkia",
+   "England",
+   "Frankrike"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "dc948293b697"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 2000?",
+  "options": [
+   "Nederland",
+   "Italia",
+   "Frankrike",
+   "Portugal"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "04e78ad0c9df"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 2008?",
+  "options": [
+   "Russland",
+   "Spania",
+   "Tyskland",
+   "Tyrkia"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "e04ee41dd24c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem vant EM i 2012?",
+  "options": [
+   "Spania",
+   "Italia",
+   "Portugal",
+   "Tyskland"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "3a1ad206bfa9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 1964?",
+  "options": [
+   "Spania",
+   "Frankrike",
+   "Sovjetunionen",
+   "Italia"
+  ],
+  "correct": 0,
+  "difficulty": 5,
+  "key": "2b23cc68e902"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 1976?",
+  "options": [
+   "Vest-Tyskland",
+   "Italia",
+   "Belgia",
+   "Jugoslavia"
+  ],
+  "correct": 3,
+  "difficulty": 5,
+  "key": "3be03662f9d9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 1984?",
+  "options": [
+   "Frankrike",
+   "Italia",
+   "Vest-Tyskland",
+   "Spania"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "d4e517c9052a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 1988?",
+  "options": [
+   "Nederland",
+   "Vest-Tyskland",
+   "Sverige",
+   "Italia"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "4ea9b0cf0e6f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 1992?",
+  "options": [
+   "England",
+   "Norge",
+   "Sverige",
+   "Danmark"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "30cdd4788d25"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 1996?",
+  "options": [
+   "Frankrike",
+   "England",
+   "Nederland",
+   "Spania"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "1b579c5786e5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 2004?",
+  "options": [
+   "Hellas",
+   "Italia",
+   "Portugal",
+   "Spania"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "6287ee03a06a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 2016?",
+  "options": [
+   "Frankrike",
+   "Italia",
+   "Tyskland",
+   "Belgia"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "7fe8d6ad7fb1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilket land arrangerte EM i 2024?",
+  "options": [
+   "Frankrike",
+   "England",
+   "Tyskland",
+   "Italia"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "3dbb508caf5b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem scoret vinnermålet i EM-finalen 2024?",
+  "options": [
+   "Lamine Yamal",
+   "Mikel Oyarzabal",
+   "Nico Williams",
+   "Dani Olmo"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "029376db23f0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem scoret vinnermålet i EM-finalen 2016?",
+  "options": [
+   "Nani",
+   "Éder",
+   "Cristiano Ronaldo",
+   "Ricardo Quaresma"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "c55f6bf179f6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem scoret vinnermålet i EM-finalen 2008?",
+  "options": [
+   "Fernando Torres",
+   "Cesc Fàbregas",
+   "David Villa",
+   "Xavi"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "5df05682b2e2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem scoret vinnermålet i EM-finalen 2004?",
+  "options": [
+   "Theodoros Zagorakis",
+   "Angelos Charisteas",
+   "Traianos Dellas",
+   "Giorgos Karagounis"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "fa79227e3434"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem scoret vinnermålet i EM-finalen 2000?",
+  "options": [
+   "Thierry Henry",
+   "Sylvain Wiltord",
+   "David Trezeguet",
+   "Robert Pires"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "45a441218209"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem scoret vinnermålet i EM-finalen 1996?",
+  "options": [
+   "Matthias Sammer",
+   "Oliver Bierhoff",
+   "Jürgen Klinsmann",
+   "Andreas Möller"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "2cbc1bc57ec1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvor mange EM-titler har Spania for menn?",
+  "options": [
+   "4",
+   "3",
+   "2",
+   "5"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "472ce6341aef"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvor mange EM-titler har Tyskland for menn?",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "1"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "60b82543b5ab"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvor mange EM-titler har Italia for menn?",
+  "options": [
+   "3",
+   "4",
+   "1",
+   "2"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "c84c15443a6f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvor mange EM-titler har Frankrike for menn?",
+  "options": [
+   "0",
+   "1",
+   "3",
+   "2"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "cfb3601a338d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvor mange EM-titler har Portugal for menn?",
+  "options": [
+   "2",
+   "1",
+   "3",
+   "0"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "f5e891a89d73"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem har scoret flest mål i EM-sluttspill for menn?",
+  "options": [
+   "Alan Shearer",
+   "Antoine Griezmann",
+   "Michel Platini",
+   "Cristiano Ronaldo"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "f020f6c44f2c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem scoret ni mål i EM 1984, rekord for ett sluttspill?",
+  "options": [
+   "Preben Elkjær",
+   "Marco van Basten",
+   "Michel Platini",
+   "Karl-Heinz Rummenigge"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "5115babf04f0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvem ble EM-historiens yngste målscorer i 2024?",
+  "options": [
+   "Lamine Yamal",
+   "Arda Güler",
+   "Jude Bellingham",
+   "Jamal Musiala"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "53ec5e562549"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvilken spiller ga navn til det myke «Panenka»-straffesparket i EM-finalen 1976?",
+  "options": [
+   "Antonín Panenka",
+   "Ivo Viktor",
+   "Pavel Nedvěd",
+   "Josef Masopust"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "b95ed49e2655"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Hvor mange lag deltok i EM 2024?",
+  "options": [
+   "20",
+   "32",
+   "16",
+   "24"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "c3ea78289558"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "EM-historie",
+  "prompt": "Danmark vant EM i 1992 selv om de først ikke var kvalifisert. Hvilket land tok de plassen til?",
+  "options": [
+   "Tsjekkoslovakia",
+   "Norge",
+   "Sovjetunionen",
+   "Jugoslavia"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "ed9f16837cbf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 1993?",
+  "options": [
+   "AC Milan",
+   "Ajax",
+   "Barcelona",
+   "Marseille"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "00ed1d48f267"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 1995?",
+  "options": [
+   "AC Milan",
+   "Bayern München",
+   "Juventus",
+   "Ajax"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "279a47aa4f2e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 1997?",
+  "options": [
+   "Juventus",
+   "Manchester United",
+   "Ajax",
+   "Borussia Dortmund"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "4841ef003ddf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2003?",
+  "options": [
+   "Real Madrid",
+   "Inter",
+   "AC Milan",
+   "Juventus"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "ecf8556e560a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2004?",
+  "options": [
+   "Monaco",
+   "Deportivo La Coruña",
+   "Chelsea",
+   "Porto"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "2fe8fc96c7bc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2006?",
+  "options": [
+   "Barcelona",
+   "Arsenal",
+   "AC Milan",
+   "Villarreal"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "641a83c9cade"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2008?",
+  "options": [
+   "Chelsea",
+   "Barcelona",
+   "Manchester United",
+   "Liverpool"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "e2153d4a405e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2010?",
+  "options": [
+   "Barcelona",
+   "Inter",
+   "Lyon",
+   "Bayern München"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "b9f5fa5236b5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2012?",
+  "options": [
+   "Barcelona",
+   "Real Madrid",
+   "Bayern München",
+   "Chelsea"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "ecd9d21aa54b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2013?",
+  "options": [
+   "Borussia Dortmund",
+   "Bayern München",
+   "Real Madrid",
+   "Barcelona"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "eeb43ea310fe"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2014?",
+  "options": [
+   "Atlético Madrid",
+   "Chelsea",
+   "Bayern München",
+   "Real Madrid"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "20df8b564971"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2015?",
+  "options": [
+   "Bayern München",
+   "Juventus",
+   "Real Madrid",
+   "Barcelona"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "762868d0818d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2019?",
+  "options": [
+   "Tottenham",
+   "Barcelona",
+   "Ajax",
+   "Liverpool"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "4afbc672ff7c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2020?",
+  "options": [
+   "Bayern München",
+   "Paris Saint-Germain",
+   "RB Leipzig",
+   "Lyon"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "efc0e4c8a2cf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2021?",
+  "options": [
+   "Paris Saint-Germain",
+   "Manchester City",
+   "Chelsea",
+   "Real Madrid"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "6bdb1c2640ea"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2022?",
+  "options": [
+   "Villarreal",
+   "Manchester City",
+   "Liverpool",
+   "Real Madrid"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "a1ba1aa64542"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2023?",
+  "options": [
+   "AC Milan",
+   "Real Madrid",
+   "Inter",
+   "Manchester City"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "de059f5bcca1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2024?",
+  "options": [
+   "Borussia Dortmund",
+   "Real Madrid",
+   "Bayern München",
+   "Paris Saint-Germain"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "70f192401ce5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Champions League i 2025?",
+  "options": [
+   "Arsenal",
+   "Inter",
+   "Paris Saint-Germain",
+   "Barcelona"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "4bf898c53057"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Europa League i 2025?",
+  "options": [
+   "Tottenham",
+   "Athletic Bilbao",
+   "Manchester United",
+   "Bodø/Glimt"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "c0ae52d6052f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Europa League i 2024?",
+  "options": [
+   "Marseille",
+   "Atalanta",
+   "Bayer Leverkusen",
+   "Roma"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "1000f1253393"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Conference League i 2022?",
+  "options": [
+   "Marseille",
+   "Leicester City",
+   "Feyenoord",
+   "Roma"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "517e502c5567"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Conference League i 2023?",
+  "options": [
+   "West Ham United",
+   "AZ Alkmaar",
+   "Basel",
+   "Fiorentina"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "f5eb97cf8039"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Conference League i 2024?",
+  "options": [
+   "Club Brugge",
+   "Fiorentina",
+   "Olympiakos",
+   "Aston Villa"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "4880391c24de"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvem vant Conference League i 2025?",
+  "options": [
+   "Djurgården",
+   "Real Betis",
+   "Chelsea",
+   "Fiorentina"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "d7307d0b7c50"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Galatasaray?",
+  "options": [
+   "Tyrkia",
+   "Bulgaria",
+   "Kroatia",
+   "Hellas"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "0017af8b06dc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Olympiakos?",
+  "options": [
+   "Hellas",
+   "Romania",
+   "Tyrkia",
+   "Bulgaria"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "87a816bfc215"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Crvena zvezda?",
+  "options": [
+   "Kroatia",
+   "Tsjekkia",
+   "Bulgaria",
+   "Serbia"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "a909f5ef6949"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Dinamo Zagreb?",
+  "options": [
+   "Slovenia",
+   "Serbia",
+   "Ungarn",
+   "Kroatia"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "f12433f65ce1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Club Brugge?",
+  "options": [
+   "Nederland",
+   "Belgia",
+   "Frankrike",
+   "Danmark"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "2767b5695d68"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Boca Juniors?",
+  "options": [
+   "Argentina",
+   "Uruguay",
+   "Brasil",
+   "Chile"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "2c883625434d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Flamengo?",
+  "options": [
+   "Argentina",
+   "Portugal",
+   "Brasil",
+   "Colombia"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "24df950a8b61"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Al-Hilal?",
+  "options": [
+   "Marokko",
+   "Qatar",
+   "Saudi-Arabia",
+   "Egypt"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "c75ea75f61ee"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Shakhtar Donetsk?",
+  "options": [
+   "Ukraina",
+   "Polen",
+   "Romania",
+   "Russland"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "6431c2f5072c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Ferencváros?",
+  "options": [
+   "Ungarn",
+   "Østerrike",
+   "Slovenia",
+   "Tsjekkia"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "422906508e57"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Sparta Praha?",
+  "options": [
+   "Tsjekkia",
+   "Polen",
+   "Ungarn",
+   "Østerrike"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "4ac6aaf4f363"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Malmö FF?",
+  "options": [
+   "Sverige",
+   "Danmark",
+   "Finland",
+   "Norge"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "0a55dd731168"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben FC Midtjylland?",
+  "options": [
+   "Danmark",
+   "Nederland",
+   "Sverige",
+   "Norge"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "1e1a3dff2d84"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Peñarol?",
+  "options": [
+   "Paraguay",
+   "Chile",
+   "Uruguay",
+   "Argentina"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "3b7e179dba86"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Al Ahly?",
+  "options": [
+   "Marokko",
+   "Algerie",
+   "Egypt",
+   "Saudi-Arabia"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "7268340c6c75"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "I hvilket land spiller klubben Ludogorets?",
+  "options": [
+   "Serbia",
+   "Hellas",
+   "Bulgaria",
+   "Romania"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "40b8bc767385"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb vant VM for klubblag i USA i 2025?",
+  "options": [
+   "Chelsea",
+   "Paris Saint-Germain",
+   "Bayern München",
+   "Real Madrid"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "79d124b47842"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb kjøpte Neymar fra Barcelona for 222 millioner euro i 2017?",
+  "options": [
+   "Manchester City",
+   "Real Madrid",
+   "Chelsea",
+   "Paris Saint-Germain"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "86dd6d7d8bee"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag snudde 0–3 til 4–0 mot Barcelona i Champions League-semifinalen 2019?",
+  "options": [
+   "Ajax",
+   "Liverpool",
+   "Roma",
+   "Tottenham"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "c27004d027a5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag tapte 2–8 for Bayern München i Champions League-kvartfinalen 2020?",
+  "options": [
+   "Chelsea",
+   "Real Madrid",
+   "Barcelona",
+   "Lyon"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "688eca0312d1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket engelsk lag vant europacupen to år på rad i 1979 og 1980?",
+  "options": [
+   "Liverpool",
+   "Leeds United",
+   "Nottingham Forest",
+   "Aston Villa"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "fd2bafc58400"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag ble i 1967 det første britiske som vant europacupen?",
+  "options": [
+   "Manchester United",
+   "Celtic",
+   "Rangers",
+   "Liverpool"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "48c83ff7906f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilket lag vant de fem første europacupene (1956–1960)?",
+  "options": [
+   "Benfica",
+   "AC Milan",
+   "Real Madrid",
+   "Barcelona"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "e12f6eb6c3df"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb har vunnet UEFA-cupen/Europa League flest ganger?",
+  "options": [
+   "Sevilla",
+   "Atlético Madrid",
+   "Inter",
+   "Liverpool"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "4a14869c1f8b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb kalles «La Vecchia Signora» (den gamle damen)?",
+  "options": [
+   "Inter",
+   "Juventus",
+   "AC Milan",
+   "Roma"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "ab77f54607c1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb har kallenavnet «The Toffees»?",
+  "options": [
+   "Aston Villa",
+   "Fulham",
+   "Liverpool",
+   "Everton"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "a1b1eb69df57"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Klubbfotball",
+  "prompt": "Hvilken klubb har kallenavnet «Die Werkself»?",
+  "options": [
+   "Schalke 04",
+   "VfL Wolfsburg",
+   "RB Leipzig",
+   "Bayer Leverkusen"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "d87e980718d5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 1994–95?",
+  "options": [
+   "Manchester United",
+   "Newcastle United",
+   "Blackburn Rovers",
+   "Liverpool"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "a5b9d469a0d1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 1997–98?",
+  "options": [
+   "Liverpool",
+   "Chelsea",
+   "Arsenal",
+   "Manchester United"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "8ddb61b8b53f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2001–02?",
+  "options": [
+   "Liverpool",
+   "Manchester United",
+   "Newcastle United",
+   "Arsenal"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "89fee4b69a7a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2004–05?",
+  "options": [
+   "Arsenal",
+   "Chelsea",
+   "Manchester United",
+   "Liverpool"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "1f266231e384"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2009–10?",
+  "options": [
+   "Chelsea",
+   "Arsenal",
+   "Manchester United",
+   "Tottenham"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "4ecd4a986d33"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2011–12?",
+  "options": [
+   "Manchester City",
+   "Manchester United",
+   "Tottenham",
+   "Arsenal"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "47911ae662d3"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2012–13?",
+  "options": [
+   "Manchester City",
+   "Manchester United",
+   "Arsenal",
+   "Chelsea"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "03e74def3228"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2013–14?",
+  "options": [
+   "Liverpool",
+   "Chelsea",
+   "Arsenal",
+   "Manchester City"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "8065e77716fb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2016–17?",
+  "options": [
+   "Tottenham",
+   "Chelsea",
+   "Liverpool",
+   "Manchester City"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "ff94f5673147"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2019–20?",
+  "options": [
+   "Chelsea",
+   "Manchester United",
+   "Liverpool",
+   "Manchester City"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "14e185070c26"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2022–23?",
+  "options": [
+   "Arsenal",
+   "Manchester United",
+   "Newcastle United",
+   "Manchester City"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "f80b1bdf7e25"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Premier League i sesongen 2024–25?",
+  "options": [
+   "Liverpool",
+   "Manchester City",
+   "Arsenal",
+   "Chelsea"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "95c5354a2c8a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 1999–2000?",
+  "options": [
+   "Barcelona",
+   "Real Madrid",
+   "Deportivo La Coruña",
+   "Valencia"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "91e68a0f2aff"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 2003–04?",
+  "options": [
+   "Valencia",
+   "Barcelona",
+   "Real Madrid",
+   "Deportivo La Coruña"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "736a30a32a28"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 2008–09?",
+  "options": [
+   "Real Madrid",
+   "Sevilla",
+   "Barcelona",
+   "Atlético Madrid"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "b11f4b4f784b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 2011–12?",
+  "options": [
+   "Barcelona",
+   "Real Madrid",
+   "Málaga",
+   "Valencia"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "c0140f09770d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 2013–14?",
+  "options": [
+   "Barcelona",
+   "Real Madrid",
+   "Atlético Madrid",
+   "Athletic Bilbao"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "61f16456b378"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 2020–21?",
+  "options": [
+   "Barcelona",
+   "Atlético Madrid",
+   "Sevilla",
+   "Real Madrid"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "f261b59b6a84"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 2023–24?",
+  "options": [
+   "Barcelona",
+   "Girona",
+   "Atlético Madrid",
+   "Real Madrid"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "0b960d3707eb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant La Liga i sesongen 2024–25?",
+  "options": [
+   "Barcelona",
+   "Real Madrid",
+   "Athletic Bilbao",
+   "Atlético Madrid"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "08547e022af2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 1999–2000?",
+  "options": [
+   "AC Milan",
+   "Juventus",
+   "Lazio",
+   "Inter"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "cb87dd0e63ec"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 2000–01?",
+  "options": [
+   "Roma",
+   "Juventus",
+   "Parma",
+   "Lazio"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "a2007bd5f3c7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 2009–10?",
+  "options": [
+   "Inter",
+   "Roma",
+   "Sampdoria",
+   "AC Milan"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "4ada49a54004"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 2019–20?",
+  "options": [
+   "Inter",
+   "Atalanta",
+   "Juventus",
+   "Lazio"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "d6a1118e2531"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 2021–22?",
+  "options": [
+   "AC Milan",
+   "Inter",
+   "Napoli",
+   "Juventus"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "d26aee84273f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 2022–23?",
+  "options": [
+   "Lazio",
+   "AC Milan",
+   "Napoli",
+   "Inter"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "c4cde056beec"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 2023–24?",
+  "options": [
+   "Atalanta",
+   "Inter",
+   "Juventus",
+   "AC Milan"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "5a0decf33bd2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Serie A i sesongen 2024–25?",
+  "options": [
+   "Inter",
+   "Napoli",
+   "Juventus",
+   "Atalanta"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "31e310ccd080"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 1997–98?",
+  "options": [
+   "1. FC Kaiserslautern",
+   "Bayer Leverkusen",
+   "Schalke 04",
+   "Bayern München"
+  ],
+  "correct": 0,
+  "difficulty": 5,
+  "key": "d022e24b4245"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 2003–04?",
+  "options": [
+   "VfB Stuttgart",
+   "Bayern München",
+   "Werder Bremen",
+   "Bayer Leverkusen"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "0a688ad1e708"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 2006–07?",
+  "options": [
+   "Werder Bremen",
+   "Schalke 04",
+   "VfB Stuttgart",
+   "Bayern München"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "55a634458e81"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 2008–09?",
+  "options": [
+   "VfL Wolfsburg",
+   "Hertha BSC",
+   "Bayern München",
+   "VfB Stuttgart"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "863a50736ebc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 2010–11?",
+  "options": [
+   "Bayer Leverkusen",
+   "Borussia Dortmund",
+   "Hannover 96",
+   "Bayern München"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "9910fd3192e9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 2011–12?",
+  "options": [
+   "Borussia Dortmund",
+   "Schalke 04",
+   "Borussia Mönchengladbach",
+   "Bayern München"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "f9147cd29ec9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 2023–24?",
+  "options": [
+   "Bayer Leverkusen",
+   "VfB Stuttgart",
+   "Bayern München",
+   "RB Leipzig"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "b7f6f3b0ff48"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvem vant Bundesliga i sesongen 2024–25?",
+  "options": [
+   "Eintracht Frankfurt",
+   "Borussia Dortmund",
+   "Bayer Leverkusen",
+   "Bayern München"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "103f07eda5c7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Premier League?",
+  "options": [
+   "Manchester United",
+   "Arsenal",
+   "Manchester City",
+   "Chelsea"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "802b86390c60"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i La Liga?",
+  "options": [
+   "Atlético Madrid",
+   "Athletic Bilbao",
+   "Barcelona",
+   "Real Madrid"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "51e7c9a03ece"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Serie A?",
+  "options": [
+   "AC Milan",
+   "Juventus",
+   "Inter",
+   "Roma"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "03e852ea5c07"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Bundesliga?",
+  "options": [
+   "Bayern München",
+   "Werder Bremen",
+   "Borussia Mönchengladbach",
+   "Borussia Dortmund"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "80b48a1c11d2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Ligue 1?",
+  "options": [
+   "Paris Saint-Germain",
+   "Marseille",
+   "Lyon",
+   "Monaco"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "cb995cdf0c26"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Eredivisie?",
+  "options": [
+   "Feyenoord",
+   "PSV Eindhoven",
+   "AZ Alkmaar",
+   "Ajax"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "1db4160bf5c7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Portugal?",
+  "options": [
+   "Benfica",
+   "Sporting",
+   "Braga",
+   "Porto"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "d8c11cb5afb6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Sverige?",
+  "options": [
+   "IFK Göteborg",
+   "AIK",
+   "Malmö FF",
+   "Djurgården"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "fed0dc364a5d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb har flest seriemesterskap i Tyrkia?",
+  "options": [
+   "Trabzonspor",
+   "Galatasaray",
+   "Beşiktaş",
+   "Fenerbahçe"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "86b2f3c14ee8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvor mange Serie A-titler på rad vant Juventus fra 2012 til 2020?",
+  "options": [
+   "6",
+   "9",
+   "11",
+   "7"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "6e1b8b48044d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvor mange Bundesliga-titler på rad vant Bayern München fra 2013 til 2023?",
+  "options": [
+   "8",
+   "9",
+   "11",
+   "13"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "f55bb3d6be2d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilket lag gikk ubeseiret gjennom Bundesliga-sesongen 2023–24?",
+  "options": [
+   "Borussia Dortmund",
+   "RB Leipzig",
+   "Bayern München",
+   "Bayer Leverkusen"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "05d963f9e356"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilken klubb vant den franske ligaen sju ganger på rad fra 2002 til 2008?",
+  "options": [
+   "Lyon",
+   "Bordeaux",
+   "Paris Saint-Germain",
+   "Marseille"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "75aaddeeebb7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Ligaer",
+  "prompt": "Hvilket lag tok 100 poeng i Premier League-sesongen 2017–18?",
+  "options": [
+   "Manchester City",
+   "Manchester United",
+   "Liverpool",
+   "Chelsea"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "1a817e0fc36b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem er toppscorer gjennom tidene i Premier League?",
+  "options": [
+   "Wayne Rooney",
+   "Harry Kane",
+   "Alan Shearer",
+   "Thierry Henry"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "3d6fe3e251cd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem er toppscorer gjennom tidene i La Liga?",
+  "options": [
+   "Telmo Zarra",
+   "Lionel Messi",
+   "Hugo Sánchez",
+   "Cristiano Ronaldo"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "55375072a6e7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem er toppscorer gjennom tidene i Bundesliga?",
+  "options": [
+   "Klaus Fischer",
+   "Jupp Heynckes",
+   "Gerd Müller",
+   "Robert Lewandowski"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "876d08921efa"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem er toppscorer gjennom tidene i Serie A?",
+  "options": [
+   "Silvio Piola",
+   "Gunnar Nordahl",
+   "Francesco Totti",
+   "Giuseppe Meazza"
+  ],
+  "correct": 0,
+  "difficulty": 5,
+  "key": "23460ca1cdcb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2025?",
+  "options": [
+   "Mohamed Salah",
+   "Vitinha",
+   "Lamine Yamal",
+   "Ousmane Dembélé"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "daf6d49e52cf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2023?",
+  "options": [
+   "Kylian Mbappé",
+   "Erling Haaland",
+   "Lionel Messi",
+   "Kevin De Bruyne"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "36484aced500"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2018?",
+  "options": [
+   "Luka Modrić",
+   "Antoine Griezmann",
+   "Cristiano Ronaldo",
+   "Kylian Mbappé"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "c7691e04b2a2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2013?",
+  "options": [
+   "Cristiano Ronaldo",
+   "Franck Ribéry",
+   "Lionel Messi",
+   "Zlatan Ibrahimović"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "1e6aa7b55974"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2009?",
+  "options": [
+   "Andrés Iniesta",
+   "Lionel Messi",
+   "Xavi",
+   "Cristiano Ronaldo"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "98f80aa2b6f9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2008?",
+  "options": [
+   "Fernando Torres",
+   "Lionel Messi",
+   "Cristiano Ronaldo",
+   "Kaká"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "04669181172f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2007?",
+  "options": [
+   "Didier Drogba",
+   "Lionel Messi",
+   "Cristiano Ronaldo",
+   "Kaká"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "9a34be1c8132"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2006?",
+  "options": [
+   "Thierry Henry",
+   "Fabio Cannavaro",
+   "Gianluigi Buffon",
+   "Ronaldinho"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "e547686df510"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2005?",
+  "options": [
+   "Frank Lampard",
+   "Steven Gerrard",
+   "Ronaldinho",
+   "Thierry Henry"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "be32002c8a18"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2004?",
+  "options": [
+   "Thierry Henry",
+   "Deco",
+   "Andrij Sjevtsjenko",
+   "Ronaldinho"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "b56f8fb42938"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2003?",
+  "options": [
+   "Andrij Sjevtsjenko",
+   "Thierry Henry",
+   "Paolo Maldini",
+   "Pavel Nedvěd"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "e3205ce19d53"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2002?",
+  "options": [
+   "Roberto Carlos",
+   "Zinedine Zidane",
+   "Oliver Kahn",
+   "Ronaldo Nazário"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "4044964c295a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2001?",
+  "options": [
+   "Raúl",
+   "Michael Owen",
+   "Oliver Kahn",
+   "David Beckham"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "25b178cce044"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 2000?",
+  "options": [
+   "Thierry Henry",
+   "Andrij Sjevtsjenko",
+   "Zinedine Zidane",
+   "Luís Figo"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "6f5993044e49"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 1999?",
+  "options": [
+   "Rivaldo",
+   "David Beckham",
+   "Gabriel Batistuta",
+   "Andrij Sjevtsjenko"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "e0856426d84e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 1998?",
+  "options": [
+   "Michael Owen",
+   "Ronaldo Nazário",
+   "Davor Šuker",
+   "Zinedine Zidane"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "a562c8ed9697"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem vant Ballon d'Or i 1995?",
+  "options": [
+   "George Weah",
+   "Jürgen Klinsmann",
+   "Alessandro Del Piero",
+   "Jari Litmanen"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "58e263f40b23"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem har spilt flest landskamper for et herrelandslag?",
+  "options": [
+   "Lionel Messi",
+   "Luka Modrić",
+   "Sergio Ramos",
+   "Cristiano Ronaldo"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "50c31de7b6b4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem har scoret flest mål i Champions League?",
+  "options": [
+   "Cristiano Ronaldo",
+   "Karim Benzema",
+   "Robert Lewandowski",
+   "Lionel Messi"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "3a1c70cc7d7a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem scoret 91 mål i kalenderåret 2012?",
+  "options": [
+   "Robin van Persie",
+   "Lionel Messi",
+   "Radamel Falcao",
+   "Cristiano Ronaldo"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "236cf6e3bf78"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem scoret 50 mål i La Liga-sesongen 2011–12, en rekord?",
+  "options": [
+   "Cristiano Ronaldo",
+   "Radamel Falcao",
+   "Lionel Messi",
+   "Gonzalo Higuaín"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "6fdd1d9c47fd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem scoret fem mål på ni minutter i en Bundesliga-kamp i 2015?",
+  "options": [
+   "Pierre-Emerick Aubameyang",
+   "Thomas Müller",
+   "Robert Lewandowski",
+   "Arjen Robben"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "b21eb1c1fddb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem er den eneste målvakten som har vunnet Ballon d'Or?",
+  "options": [
+   "Oliver Kahn",
+   "Gianluigi Buffon",
+   "Dino Zoff",
+   "Lev Jasjin"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "1124baea7f2a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem er den eneste afrikaneren som har vunnet Ballon d'Or for menn?",
+  "options": [
+   "Abedi Pelé",
+   "Didier Drogba",
+   "Samuel Eto'o",
+   "George Weah"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "bc7b37fbd386"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilket draktnummer er Johan Cruyff mest kjent for?",
+  "options": [
+   "7",
+   "14",
+   "10",
+   "9"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "b270d0eef570"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvem har vunnet flest Premier League-titler som spiller?",
+  "options": [
+   "Ryan Giggs",
+   "Fernandinho",
+   "Gary Neville",
+   "Paul Scholes"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "c245d585b48c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken spiller kalles «Il Fenomeno»?",
+  "options": [
+   "Ronaldinho",
+   "Romário",
+   "Ronaldo Nazário",
+   "Rivaldo"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "7dcf8aa1ae00"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken spiller kalles «Der Kaiser»?",
+  "options": [
+   "Karl-Heinz Rummenigge",
+   "Gerd Müller",
+   "Lothar Matthäus",
+   "Franz Beckenbauer"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "6d582bf88796"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken spiller kalles «Der Bomber»?",
+  "options": [
+   "Rudi Völler",
+   "Gerd Müller",
+   "Uwe Seeler",
+   "Franz Beckenbauer"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "25b38a92d3b7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken spiller kalles «El Pibe de Oro» (gullgutten)?",
+  "options": [
+   "Diego Maradona",
+   "Juan Román Riquelme",
+   "Gabriel Batistuta",
+   "Lionel Messi"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "78bd1e391573"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken spiller kalles «King Kenny»?",
+  "options": [
+   "Ian Rush",
+   "Kenny Dalglish",
+   "Kevin Keegan",
+   "Kenny Miller"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "23e26476aaf9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken spiller kalles «Il Divin Codino» (den guddommelige hestehalen)?",
+  "options": [
+   "Francesco Totti",
+   "Roberto Baggio",
+   "Alessandro Del Piero",
+   "Andrea Pirlo"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "bf5a38309425"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken spiller ble solgt for verdensrekordsummen 222 millioner euro i 2017?",
+  "options": [
+   "Paul Pogba",
+   "Philippe Coutinho",
+   "Kylian Mbappé",
+   "Neymar"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "e48e7c974b4a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Spillere og rekorder",
+  "prompt": "Hvilken tidligere fotballspiller ble president i Liberia i 2018?",
+  "options": [
+   "George Weah",
+   "Samuel Eto'o",
+   "Jay-Jay Okocha",
+   "Didier Drogba"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "6ed3e3ff33c2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Liverpool da de vant Champions League i 2019?",
+  "options": [
+   "Jürgen Klopp",
+   "Arne Slot",
+   "Rafael Benítez",
+   "Brendan Rodgers"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "5f3827375605"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Liverpool da de vant Champions League i 2005?",
+  "options": [
+   "Rafael Benítez",
+   "Kenny Dalglish",
+   "Roy Hodgson",
+   "Gérard Houllier"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "0959cfd09296"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Chelsea da de vant Champions League i 2012?",
+  "options": [
+   "André Villas-Boas",
+   "José Mourinho",
+   "Carlo Ancelotti",
+   "Roberto Di Matteo"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "ea4de796e300"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Chelsea da de vant Champions League i 2021?",
+  "options": [
+   "Thomas Tuchel",
+   "Frank Lampard",
+   "Maurizio Sarri",
+   "Antonio Conte"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "f22fac3bbe62"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Porto da de vant Champions League i 2004?",
+  "options": [
+   "Sérgio Conceição",
+   "André Villas-Boas",
+   "José Mourinho",
+   "Jesualdo Ferreira"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "ea4aee83ed6c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Inter da de vant Champions League i 2010?",
+  "options": [
+   "Roberto Mancini",
+   "Leonardo",
+   "José Mourinho",
+   "Simone Inzaghi"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "eafd3c60594e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Barcelona da de vant Champions League i 2006?",
+  "options": [
+   "Louis van Gaal",
+   "Frank Rijkaard",
+   "Pep Guardiola",
+   "Johan Cruyff"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "278c7f0e191d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Barcelona da de vant Champions League i 2009?",
+  "options": [
+   "Frank Rijkaard",
+   "Tito Vilanova",
+   "Pep Guardiola",
+   "Luis Enrique"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "7ecbfb479890"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Manchester City da de vant Champions League i 2023?",
+  "options": [
+   "Manuel Pellegrini",
+   "Pep Guardiola",
+   "Mikel Arteta",
+   "Roberto Mancini"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "130da507bc0b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Bayern München da de vant Champions League i 2013?",
+  "options": [
+   "Pep Guardiola",
+   "Carlo Ancelotti",
+   "Louis van Gaal",
+   "Jupp Heynckes"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "baa1475381bf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Bayern München da de vant Champions League i 2020?",
+  "options": [
+   "Thomas Tuchel",
+   "Hansi Flick",
+   "Niko Kovač",
+   "Julian Nagelsmann"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "aa28f29d5c98"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Paris Saint-Germain da de vant Champions League i 2025?",
+  "options": [
+   "Mauricio Pochettino",
+   "Luis Enrique",
+   "Christophe Galtier",
+   "Thomas Tuchel"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "db394f99432d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Manchester United da de vant Champions League i 1999?",
+  "options": [
+   "David Moyes",
+   "Ole Gunnar Solskjær",
+   "Ron Atkinson",
+   "Alex Ferguson"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "34b93c8be824"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Real Madrid da de vant Champions League i 2016?",
+  "options": [
+   "Carlo Ancelotti",
+   "Rafael Benítez",
+   "Zinedine Zidane",
+   "José Mourinho"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "2b08492a34ea"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Real Madrid da de vant Champions League i 2024?",
+  "options": [
+   "Carlo Ancelotti",
+   "Santiago Solari",
+   "Xabi Alonso",
+   "Zinedine Zidane"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "6a6a7b1c5610"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente AC Milan da de vant Champions League i 1994?",
+  "options": [
+   "Cesare Maldini",
+   "Arrigo Sacchi",
+   "Fabio Capello",
+   "Carlo Ancelotti"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "f2fd11af25b3"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Borussia Dortmund da de vant Champions League i 1997?",
+  "options": [
+   "Ottmar Hitzfeld",
+   "Matthias Sammer",
+   "Jürgen Klopp",
+   "Thomas Tuchel"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "cddb7487dd1d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Ajax da de vant Champions League i 1995?",
+  "options": [
+   "Rinus Michels",
+   "Leo Beenhakker",
+   "Johan Cruyff",
+   "Louis van Gaal"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "a439959d1eb4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Spanias landslagstrener da de vant VM i 2010?",
+  "options": [
+   "Luis Enrique",
+   "Javier Clemente",
+   "Vicente del Bosque",
+   "Luis Aragonés"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "a8d8f449afa4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Argentinas landslagstrener da de vant VM i 2022?",
+  "options": [
+   "Gerardo Martino",
+   "Jorge Sampaoli",
+   "Lionel Scaloni",
+   "Diego Maradona"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "3efff2fc440e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Frankrikes landslagstrener da de vant VM i 2018?",
+  "options": [
+   "Zinedine Zidane",
+   "Raymond Domenech",
+   "Laurent Blanc",
+   "Didier Deschamps"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "15bc88beda7a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Tysklands landslagstrener da de vant VM i 2014?",
+  "options": [
+   "Joachim Löw",
+   "Hansi Flick",
+   "Jürgen Klinsmann",
+   "Rudi Völler"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "8ed0de2f897c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Italias landslagstrener da de vant VM i 2006?",
+  "options": [
+   "Marcello Lippi",
+   "Giovanni Trapattoni",
+   "Roberto Donadoni",
+   "Cesare Prandelli"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "b64ee86cac20"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Frankrikes landslagstrener da de vant VM i 1998?",
+  "options": [
+   "Roger Lemerre",
+   "Raymond Domenech",
+   "Michel Platini",
+   "Aimé Jacquet"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "6105b6d170c4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Brasils landslagstrener da de vant VM i 2002?",
+  "options": [
+   "Dunga",
+   "Carlos Alberto Parreira",
+   "Luiz Felipe Scolari",
+   "Mário Zagallo"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "23b47aebd208"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Hellas da de vant EM i 2004?",
+  "options": [
+   "Berti Vogts",
+   "Otto Rehhagel",
+   "Felix Magath",
+   "Fernando Santos"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "a83a2aa4a1a2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Danmark da de vant EM i 1992?",
+  "options": [
+   "Richard Møller Nielsen",
+   "Sepp Piontek",
+   "Morten Olsen",
+   "Åge Hareide"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "42c4d894af87"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Portugal da de vant EM i 2016?",
+  "options": [
+   "Luiz Felipe Scolari",
+   "Paulo Bento",
+   "Fernando Santos",
+   "Roberto Martínez"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "28c8d16e789a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Spania da de vant EM i 2024?",
+  "options": [
+   "Vicente del Bosque",
+   "Luis Enrique",
+   "Julen Lopetegui",
+   "Luis de la Fuente"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "9bdf025c9233"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Italia da de vant EM i 2021?",
+  "options": [
+   "Antonio Conte",
+   "Gian Piero Ventura",
+   "Roberto Mancini",
+   "Luciano Spalletti"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "4955803cfca4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Arsenals manager i den ubeseirede sesongen 2003–04?",
+  "options": [
+   "Unai Emery",
+   "Arsène Wenger",
+   "Bruce Rioch",
+   "George Graham"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "0f44b6e46948"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Leicesters manager da klubben vant Premier League i 2016?",
+  "options": [
+   "Claudio Ranieri",
+   "Brendan Rodgers",
+   "Nigel Pearson",
+   "Craig Shakespeare"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "f5f55fbb0a6a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem trente Bayer Leverkusen da de gikk ubeseiret gjennom Bundesliga 2023–24?",
+  "options": [
+   "Gerardo Seoane",
+   "Xabi Alonso",
+   "Peter Bosz",
+   "Roger Schmidt"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "3d571460692f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem var Manchester Uniteds manager fra 1986 til 2013?",
+  "options": [
+   "Matt Busby",
+   "Alex Ferguson",
+   "Ron Atkinson",
+   "David Moyes"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "59d194c720e3"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvilken manager har vunnet flest Premier League-titler?",
+  "options": [
+   "Alex Ferguson",
+   "Pep Guardiola",
+   "Arsène Wenger",
+   "José Mourinho"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "9dfe197e5628"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvilken trener har vunnet flest Champions League-/europacuptitler?",
+  "options": [
+   "Bob Paisley",
+   "Pep Guardiola",
+   "Carlo Ancelotti",
+   "Zinedine Zidane"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "e2a728cd5d79"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvilken trener kalte seg selv «The Special One»?",
+  "options": [
+   "José Mourinho",
+   "Jürgen Klopp",
+   "Antonio Conte",
+   "Pep Guardiola"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "813f49749366"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem vant VM som kaptein i 1998 og som landslagstrener i 2018?",
+  "options": [
+   "Laurent Blanc",
+   "Didier Deschamps",
+   "Marcel Desailly",
+   "Zinedine Zidane"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "6f3e671902d3"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem vant VM som kaptein i 1974 og som landslagstrener i 1990?",
+  "options": [
+   "Franz Beckenbauer",
+   "Berti Vogts",
+   "Jupp Derwall",
+   "Sepp Maier"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "f3e1a0c67f41"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvilken tysker ble Englands landslagssjef fra januar 2025?",
+  "options": [
+   "Julian Nagelsmann",
+   "Hansi Flick",
+   "Jürgen Klopp",
+   "Thomas Tuchel"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "d64a50309fd2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvem tok over som Liverpool-manager etter Jürgen Klopp i 2024?",
+  "options": [
+   "Ruben Amorim",
+   "Roberto De Zerbi",
+   "Arne Slot",
+   "Xabi Alonso"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "673c0feba23d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Trenere",
+  "prompt": "Hvilket landslag ble Carlo Ancelotti trener for i 2025?",
+  "options": [
+   "Italia",
+   "Argentina",
+   "Portugal",
+   "Brasil"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "376f50e51a48"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2024?",
+  "options": [
+   "Molde",
+   "Brann",
+   "Viking",
+   "Bodø/Glimt"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "ceba0e0448e6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2023?",
+  "options": [
+   "Viking",
+   "Tromsø",
+   "Bodø/Glimt",
+   "Brann"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "ad68d8660a48"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2022?",
+  "options": [
+   "Bodø/Glimt",
+   "Lillestrøm",
+   "Rosenborg",
+   "Molde"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "8b06ea5989f7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2020?",
+  "options": [
+   "Vålerenga",
+   "Rosenborg",
+   "Bodø/Glimt",
+   "Molde"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "3c9b1ef282da"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2018?",
+  "options": [
+   "Haugesund",
+   "Rosenborg",
+   "Brann",
+   "Molde"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "444cfe2066b4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2013?",
+  "options": [
+   "Rosenborg",
+   "Aalesund",
+   "Strømsgodset",
+   "Haugesund"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "67898ae33efe"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2011?",
+  "options": [
+   "Tromsø",
+   "Brann",
+   "Molde",
+   "Rosenborg"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "26f5a08cd3fe"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2008?",
+  "options": [
+   "Fredrikstad",
+   "Tromsø",
+   "Brann",
+   "Stabæk"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "b6b5d94a42e7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2007?",
+  "options": [
+   "Lillestrøm",
+   "Stabæk",
+   "Brann",
+   "Viking"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "3360e4e31f6f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble norsk seriemester for herrer i 2005?",
+  "options": [
+   "Lyn",
+   "Start",
+   "Rosenborg",
+   "Vålerenga"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "97ee9676c6ea"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem var Norges landslagstrener i VM 1994 og VM 1998?",
+  "options": [
+   "Åge Hareide",
+   "Nils Johan Semb",
+   "Ståle Solbakken",
+   "Egil Olsen"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "053ac2786047"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem ble Norges landslagssjef for herrer i 2020?",
+  "options": [
+   "Lars Lagerbäck",
+   "Per-Mathias Høgmo",
+   "Åge Hareide",
+   "Ståle Solbakken"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "3c77ad0e8b6f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilket år spilte Norges herrer sitt første VM-sluttspill?",
+  "options": [
+   "1938",
+   "1966",
+   "1954",
+   "1994"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "9450e02c77c5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilket land tapte Norge mot etter ekstraomganger i VM 1938?",
+  "options": [
+   "Tyskland",
+   "Brasil",
+   "Frankrike",
+   "Italia"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "a19a4eced21e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Norge tok bronse i fotball i OL 1936. Hvilket vertsland slo Norge 2–0 i kvartfinalen?",
+  "options": [
+   "Sverige",
+   "Italia",
+   "Østerrike",
+   "Tyskland"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "e1aae3f8e199"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem scoret på straffe da Norge slo Brasil 2–1 i VM 1998?",
+  "options": [
+   "Tore André Flo",
+   "Kjetil Rekdal",
+   "Ole Gunnar Solskjær",
+   "Øyvind Leonhardsen"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "590c582f722f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem scoret Norges første mål da Norge slo Brasil 2–1 i VM 1998?",
+  "options": [
+   "Stig Inge Bjørnebye",
+   "Håvard Flo",
+   "Kjetil Rekdal",
+   "Tore André Flo"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "c6bc11244fd5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilket år slo Norge England 2–1 på Ullevaal, kampen med «Your boys took a hell of a beating»?",
+  "options": [
+   "1977",
+   "1981",
+   "1985",
+   "1993"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "7b1996c1258c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken kommentator ropte «Your boys took a hell of a beating»?",
+  "options": [
+   "Bjørge Lillelien",
+   "Arne Scheie",
+   "Knut Bjørnsen",
+   "Davy Wathne"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "bcc4dc77f4fa"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilket år spilte Norges herrer sitt første VM-sluttspill siden 1998?",
+  "options": [
+   "2018",
+   "2010",
+   "2022",
+   "2026"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "5bef381d7fa2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken norsk klubb nådde semifinalen i Europa League 2024–25?",
+  "options": [
+   "Brann",
+   "Rosenborg",
+   "Bodø/Glimt",
+   "Molde"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "cfc7a02210c7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Bodø/Glimt slo et italiensk storlag 6–1 i Conference League i 2021. Hvilket lag?",
+  "options": [
+   "Roma",
+   "Lazio",
+   "Napoli",
+   "Juventus"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "cf078f25aee4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken norsk klubb nådde kvartfinalen i Champions League 1996–97?",
+  "options": [
+   "Rosenborg",
+   "Molde",
+   "Brann",
+   "Lillestrøm"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "18d0791ff13a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken norsk klubb kvalifiserte seg til Champions League-sesongen 2025–26?",
+  "options": [
+   "Bodø/Glimt",
+   "Brann",
+   "Molde",
+   "Rosenborg"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "6f904b08f458"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvor mange seriegull på rad vant Rosenborg fra 1992 til 2004?",
+  "options": [
+   "10",
+   "15",
+   "11",
+   "13"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "5a2dd94fbcd8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem er Norges mestscorende landslagsspiller for herrer?",
+  "options": [
+   "Erling Haaland",
+   "Ole Gunnar Solskjær",
+   "John Carew",
+   "Jørgen Juve"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "13b7536d228d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvem har spilt flest landskamper for Norges herrer?",
+  "options": [
+   "John Arne Riise",
+   "Henning Berg",
+   "Brede Hangeland",
+   "Thorbjørn Svenssen"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "6db592ac43bf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Fra hvilken norsk klubb kom Martin Ødegaard til Real Madrid i 2015?",
+  "options": [
+   "Strømsgodset",
+   "Molde",
+   "Rosenborg",
+   "Vålerenga"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "b01f48f23ded"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken norsk klubb spilte Erling Haaland for rett før han gikk til Red Bull Salzburg?",
+  "options": [
+   "Viking",
+   "Rosenborg",
+   "Bryne",
+   "Molde"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "56a458a8f40d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "I hvilken by er Erling Haaland født?",
+  "options": [
+   "Leeds",
+   "Bryne",
+   "Molde",
+   "Stavanger"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "2849177a60cd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken klubb var Ole Gunnar Solskjær manager for fra 2018 til 2021?",
+  "options": [
+   "Beşiktaş",
+   "Cardiff City",
+   "Manchester United",
+   "Molde"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "cd251ae5b210"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Med hvilken norsk klubb vant Solskjær seriegull som trener i 2011 og 2012?",
+  "options": [
+   "Rosenborg",
+   "Brann",
+   "Strømsgodset",
+   "Molde"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "822081c827fe"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken nordmann ble kåret til sesongens spiller i Premier League 2022–23?",
+  "options": [
+   "Alexander Sørloth",
+   "Sander Berge",
+   "Martin Ødegaard",
+   "Erling Haaland"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "119c78ca9556"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken nordmann ble Arsenals kaptein i 2022?",
+  "options": [
+   "Erling Haaland",
+   "Alexander Sørloth",
+   "Martin Ødegaard",
+   "Sander Berge"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "8737bd93c4f1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvilken nordmann spilte for Liverpool i Champions League-finalen 2005?",
+  "options": [
+   "Bjørn Tore Kvarme",
+   "John Arne Riise",
+   "Vegard Heggem",
+   "Stig Inge Bjørnebye"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "9ed508a26f9e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Norge",
+  "prompt": "Hvor spiller Norges herrelandslag vanligvis hjemmekampene sine?",
+  "options": [
+   "Ullevaal stadion",
+   "Brann stadion",
+   "Lerkendal",
+   "Viking stadion"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "abf20e1082ca"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Emirates Stadium?",
+  "options": [
+   "West Ham United",
+   "Tottenham",
+   "Chelsea",
+   "Arsenal"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "101eb6548df8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Stamford Bridge?",
+  "options": [
+   "Fulham",
+   "Crystal Palace",
+   "Chelsea",
+   "Arsenal"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "a4ce1e168ce8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Etihad Stadium?",
+  "options": [
+   "Manchester City",
+   "Newcastle United",
+   "Everton",
+   "Manchester United"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "0eed49537765"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på St James' Park?",
+  "options": [
+   "Middlesbrough",
+   "Leeds United",
+   "Newcastle United",
+   "Sunderland"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "2d14571cba5b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Villa Park?",
+  "options": [
+   "Nottingham Forest",
+   "Wolverhampton Wanderers",
+   "Aston Villa",
+   "Leicester City"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "8f4050a71d05"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Celtic Park?",
+  "options": [
+   "Hearts",
+   "Celtic",
+   "Aberdeen",
+   "Rangers"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "63cdedae3c5c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Ibrox?",
+  "options": [
+   "Celtic",
+   "Aberdeen",
+   "Rangers",
+   "Hibernian"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "579a68c8be46"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Mestalla?",
+  "options": [
+   "Valencia",
+   "Villarreal",
+   "Real Betis",
+   "Sevilla"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "f2e3bfef9999"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Veltins-Arena?",
+  "options": [
+   "1. FC Köln",
+   "Schalke 04",
+   "Borussia Dortmund",
+   "Bayer Leverkusen"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "f21f9551a222"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Parc des Princes?",
+  "options": [
+   "Lyon",
+   "Monaco",
+   "Paris Saint-Germain",
+   "Marseille"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "c4d1c5724c02"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Stade Vélodrome?",
+  "options": [
+   "Paris Saint-Germain",
+   "Nice",
+   "Lyon",
+   "Marseille"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "d55629398013"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Johan Cruyff Arena?",
+  "options": [
+   "PSV Eindhoven",
+   "AZ Alkmaar",
+   "Feyenoord",
+   "Ajax"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "b05e508f5243"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på De Kuip?",
+  "options": [
+   "Feyenoord",
+   "PSV Eindhoven",
+   "Ajax",
+   "Utrecht"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "05d53953b53e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Estádio da Luz?",
+  "options": [
+   "Braga",
+   "Sporting",
+   "Benfica",
+   "Porto"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "f20af097fa77"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Estádio do Dragão?",
+  "options": [
+   "Porto",
+   "Benfica",
+   "Braga",
+   "Sporting"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "920ec938a3b4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Elland Road?",
+  "options": [
+   "Sheffield United",
+   "Bradford City",
+   "Huddersfield Town",
+   "Leeds United"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "40f10213d654"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Craven Cottage?",
+  "options": [
+   "Queens Park Rangers",
+   "Fulham",
+   "Brentford",
+   "Chelsea"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "d81e2b74bb32"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Philips Stadion?",
+  "options": [
+   "Twente",
+   "Feyenoord",
+   "Ajax",
+   "PSV Eindhoven"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "768d9382e994"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på San Mamés?",
+  "options": [
+   "Athletic Bilbao",
+   "Osasuna",
+   "Real Sociedad",
+   "Alavés"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "3e8995506fbb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Ramón Sánchez Pizjuán?",
+  "options": [
+   "Málaga",
+   "Sevilla",
+   "Real Betis",
+   "Cádiz"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "a8a3aa81bca2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Benito Villamarín?",
+  "options": [
+   "Granada",
+   "Málaga",
+   "Sevilla",
+   "Real Betis"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "cf7af50b50a0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Metropolitano?",
+  "options": [
+   "Rayo Vallecano",
+   "Getafe",
+   "Real Madrid",
+   "Atlético Madrid"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "a182d570ac06"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på BayArena?",
+  "options": [
+   "1. FC Köln",
+   "Fortuna Düsseldorf",
+   "Bayer Leverkusen",
+   "Borussia Mönchengladbach"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "5fc429088acf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Aspmyra stadion?",
+  "options": [
+   "Tromsø",
+   "Bodø/Glimt",
+   "Rosenborg",
+   "Molde"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "2832be56c98e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Aker stadion?",
+  "options": [
+   "Kristiansund",
+   "Aalesund",
+   "Rosenborg",
+   "Molde"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "a9b26d426ac6"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Intility Arena?",
+  "options": [
+   "Stabæk",
+   "Lillestrøm",
+   "Vålerenga",
+   "Lyn"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "31b728ecde2a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Molineux?",
+  "options": [
+   "Birmingham City",
+   "Wolverhampton Wanderers",
+   "Aston Villa",
+   "West Bromwich Albion"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "238c15b0aeeb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Allianz Stadium?",
+  "options": [
+   "AC Milan",
+   "Bayern München",
+   "Torino",
+   "Juventus"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "a747aac8195a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Stadio Diego Armando Maradona?",
+  "options": [
+   "Lazio",
+   "Juventus",
+   "Napoli",
+   "Roma"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "1c91f1baf0f8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Şükrü Saracoğlu?",
+  "options": [
+   "Fenerbahçe",
+   "Trabzonspor",
+   "Beşiktaş",
+   "Galatasaray"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "ac2ff148068f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Parken?",
+  "options": [
+   "FC Midtjylland",
+   "AGF",
+   "Brøndby",
+   "FC København"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "4d6b9c1a6e2a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Anoeta?",
+  "options": [
+   "Osasuna",
+   "Athletic Bilbao",
+   "Real Sociedad",
+   "Eibar"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "aa01b5047cd9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Selhurst Park?",
+  "options": [
+   "Charlton Athletic",
+   "Brentford",
+   "Fulham",
+   "Crystal Palace"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "36d68c21fe3a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på City Ground?",
+  "options": [
+   "Nottingham Forest",
+   "Notts County",
+   "Derby County",
+   "Leicester City"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "a13e3e9d0c81"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på London Stadium?",
+  "options": [
+   "Crystal Palace",
+   "Tottenham",
+   "West Ham United",
+   "Arsenal"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "2e431a439533"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på Weserstadion?",
+  "options": [
+   "Hannover 96",
+   "VfL Wolfsburg",
+   "Hamburger SV",
+   "Werder Bremen"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "c939c712c0d2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "Hvilken klubb spiller på El Monumental?",
+  "options": [
+   "River Plate",
+   "Boca Juniors",
+   "Independiente",
+   "Racing Club"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "1ed83926d722"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Signal Iduna Park?",
+  "options": [
+   "Essen",
+   "Bochum",
+   "Gelsenkirchen",
+   "Dortmund"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "399c094349d9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Veltins-Arena?",
+  "options": [
+   "Gelsenkirchen",
+   "Bochum",
+   "Essen",
+   "Dortmund"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "349c0ad8538b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Stade Vélodrome?",
+  "options": [
+   "Bordeaux",
+   "Toulouse",
+   "Lyon",
+   "Marseille"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "8f0ad47c207c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger De Kuip?",
+  "options": [
+   "Eindhoven",
+   "Amsterdam",
+   "Rotterdam",
+   "Utrecht"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "56ffbc02da07"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Estádio do Dragão?",
+  "options": [
+   "Coimbra",
+   "Braga",
+   "Porto",
+   "Lisboa"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "398c65252700"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger San Mamés?",
+  "options": [
+   "Bilbao",
+   "Pamplona",
+   "Santander",
+   "San Sebastián"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "05af9e164159"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Mestalla?",
+  "options": [
+   "Zaragoza",
+   "Murcia",
+   "Valencia",
+   "Alicante"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "6de5cca9dad9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Philips Stadion?",
+  "options": [
+   "Utrecht",
+   "Eindhoven",
+   "Amsterdam",
+   "Rotterdam"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "8845667c7fa5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Aspmyra stadion?",
+  "options": [
+   "Mo i Rana",
+   "Bodø",
+   "Narvik",
+   "Tromsø"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "a16d6a34f36f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Aker stadion?",
+  "options": [
+   "Kristiansund",
+   "Ålesund",
+   "Trondheim",
+   "Molde"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "b4f36be4f5bf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Viking stadion?",
+  "options": [
+   "Stavanger",
+   "Bergen",
+   "Haugesund",
+   "Sandnes"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "b43b775085b2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Alfheim stadion?",
+  "options": [
+   "Tromsø",
+   "Bodø",
+   "Harstad",
+   "Alta"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "6d27eb4b285b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Marienlyst stadion?",
+  "options": [
+   "Tønsberg",
+   "Drammen",
+   "Skien",
+   "Sandefjord"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "2c52d4d79dc2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Estadio Centenario?",
+  "options": [
+   "Montevideo",
+   "Asunción",
+   "Buenos Aires",
+   "Santiago"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "cf010afc6dfa"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Hampden Park?",
+  "options": [
+   "Edinburgh",
+   "Glasgow",
+   "Dundee",
+   "Aberdeen"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "7ac1df513528"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilken by ligger Mineirão?",
+  "options": [
+   "São Paulo",
+   "Belo Horizonte",
+   "Salvador",
+   "Porto Alegre"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "5b8eb5a53576"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Estadio Azteca?",
+  "options": [
+   "Mexico",
+   "Spania",
+   "Argentina",
+   "Colombia"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "6bbf6f9626ad"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Celtic Park?",
+  "options": [
+   "England",
+   "Irland",
+   "Wales",
+   "Skottland"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "90c777513bd3"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Luzhniki?",
+  "options": [
+   "Ukraina",
+   "Serbia",
+   "Russland",
+   "Polen"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "516c0cc19735"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Puskás Aréna?",
+  "options": [
+   "Tsjekkia",
+   "Ungarn",
+   "Østerrike",
+   "Romania"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "87e62f9b41a1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Maksimir?",
+  "options": [
+   "Serbia",
+   "Kroatia",
+   "Slovenia",
+   "Bosnia-Hercegovina"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "13ac4a4e4b9a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Ernst-Happel-Stadion?",
+  "options": [
+   "Østerrike",
+   "Tyskland",
+   "Ungarn",
+   "Sveits"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "8936cc29cfbd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger St. Jakob-Park?",
+  "options": [
+   "Østerrike",
+   "Frankrike",
+   "Sveits",
+   "Tyskland"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "ac8b2790c96e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Karaiskakis?",
+  "options": [
+   "Italia",
+   "Bulgaria",
+   "Tyrkia",
+   "Hellas"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "4e0cc34593b4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Aviva Stadium?",
+  "options": [
+   "England",
+   "Wales",
+   "Irland",
+   "Skottland"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "699246ae223b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Millennium Stadium?",
+  "options": [
+   "Skottland",
+   "Wales",
+   "England",
+   "Irland"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "d2192be31de4"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Estadio Hernando Siles?",
+  "options": [
+   "Bolivia",
+   "Colombia",
+   "Peru",
+   "Ecuador"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "00eb01a685d1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Stade Louis II?",
+  "options": [
+   "Monaco",
+   "Italia",
+   "Frankrike",
+   "Sveits"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "5d2ef892124f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Rose Bowl?",
+  "options": [
+   "Brasil",
+   "Mexico",
+   "Canada",
+   "USA"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "0ab03f1dced0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger BMO Field?",
+  "options": [
+   "Mexico",
+   "England",
+   "USA",
+   "Canada"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "a2aa211bc71e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Saitama Stadium 2002?",
+  "options": [
+   "Japan",
+   "Kina",
+   "Sør-Korea",
+   "Qatar"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "a5ae35ebb7cc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Soccer City?",
+  "options": [
+   "Ghana",
+   "Sør-Afrika",
+   "Kamerun",
+   "Nigeria"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "4eb35391045a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Lusail Stadium?",
+  "options": [
+   "Qatar",
+   "Egypt",
+   "Marokko",
+   "Saudi-Arabia"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "26e31765b734"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Stadioner",
+  "prompt": "I hvilket land ligger Rajko Mitić?",
+  "options": [
+   "Kroatia",
+   "Bulgaria",
+   "Serbia",
+   "Romania"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "c1dd3e456356"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvor mange lag deltar i VM 2026?",
+  "options": [
+   "48",
+   "32",
+   "64",
+   "40"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "7cd260c7bfe1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvor mange lag deltok i VM 2022?",
+  "options": [
+   "24",
+   "48",
+   "32",
+   "36"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "36ba7635eec0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket år ble VAR brukt i et VM for første gang?",
+  "options": [
+   "2018",
+   "2010",
+   "2014",
+   "2022"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "04a6ee85e19b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket år ble mållinjeteknologi brukt i et VM for første gang?",
+  "options": [
+   "2018",
+   "2010",
+   "2006",
+   "2014"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "616e0387f5d5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "I hvilket VM ble gule og røde kort tatt i bruk for første gang?",
+  "options": [
+   "1966",
+   "1982",
+   "1970",
+   "1958"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "3736d3541541"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket landslag kalles «Les Bleus»?",
+  "options": [
+   "Italia",
+   "Belgia",
+   "Frankrike",
+   "Skottland"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "0d426acc5efa"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket landslag kalles «La Albiceleste»?",
+  "options": [
+   "Chile",
+   "Paraguay",
+   "Argentina",
+   "Uruguay"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "f0366ccfd571"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket landslag kalles «Oranje»?",
+  "options": [
+   "Belgia",
+   "Danmark",
+   "Nederland",
+   "Elfenbenskysten"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "8cbc5c09430b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket landslag kalles «Gli Azzurri»?",
+  "options": [
+   "Frankrike",
+   "Italia",
+   "Uruguay",
+   "Argentina"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "8ff57400b4d5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket landslag har tre løver på drakta og kalles «Three Lions»?",
+  "options": [
+   "Wales",
+   "Skottland",
+   "England",
+   "Nederland"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "21da105fd290"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket land har vunnet flest Afrikamesterskap for menn?",
+  "options": [
+   "Nigeria",
+   "Egypt",
+   "Ghana",
+   "Kamerun"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "f19eff0f7c21"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket land har vunnet flest Copa América-titler?",
+  "options": [
+   "Brasil",
+   "Uruguay",
+   "Argentina",
+   "Chile"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "81c4e61e3ae2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hva kalles det når en spiller scorer tre mål i samme kamp?",
+  "options": [
+   "Dobbelttrekk",
+   "Hattrick",
+   "Grand slam",
+   "Trippel"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "cbf0874a8c49"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvilket land kalles fotballens moderland, der de første moderne reglene ble skrevet i 1863?",
+  "options": [
+   "England",
+   "Skottland",
+   "Italia",
+   "Brasil"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "b8f5b380ec49"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Copa América i 2024?",
+  "options": [
+   "Colombia",
+   "Uruguay",
+   "Argentina",
+   "Canada"
+  ],
+  "correct": 2,
+  "difficulty": 1,
+  "key": "b81021980f2b"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Copa América i 2021?",
+  "options": [
+   "Peru",
+   "Argentina",
+   "Brasil",
+   "Colombia"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "1f08c517e91c"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Copa América i 2019?",
+  "options": [
+   "Brasil",
+   "Peru",
+   "Chile",
+   "Argentina"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "1d2cbdc466f7"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Copa América i 2016?",
+  "options": [
+   "Chile",
+   "Colombia",
+   "Argentina",
+   "USA"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "abc1caf9e8e1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Copa América i 2015?",
+  "options": [
+   "Argentina",
+   "Peru",
+   "Chile",
+   "Paraguay"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "12d88308be46"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Copa América i 2011?",
+  "options": [
+   "Peru",
+   "Uruguay",
+   "Venezuela",
+   "Paraguay"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "402bd1a32b26"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Afrikamesterskapet i 2019?",
+  "options": [
+   "Nigeria",
+   "Algerie",
+   "Senegal",
+   "Tunisia"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "4f73e4ec1c16"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Afrikamesterskapet i 2017?",
+  "options": [
+   "Burkina Faso",
+   "Ghana",
+   "Egypt",
+   "Kamerun"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "436a09e11151"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Afrikamesterskapet i 2015?",
+  "options": [
+   "Elfenbenskysten",
+   "DR Kongo",
+   "Ekvatorial-Guinea",
+   "Ghana"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "b030f3f01524"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Afrikamesterskapet i 2013?",
+  "options": [
+   "Mali",
+   "Nigeria",
+   "Ghana",
+   "Burkina Faso"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "389c774e9d2e"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Visste du at?",
+  "prompt": "Hvem vant Afrikamesterskapet i 2012?",
+  "options": [
+   "Zambia",
+   "Mali",
+   "Ghana",
+   "Elfenbenskysten"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "9c0e73fa15f5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor mange innbyttere kan et lag bruke i en ordinær kamp på toppnivå i dag?",
+  "options": [
+   "4",
+   "6",
+   "3",
+   "5"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "30d236450df0"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Med fem bytter tillatt: hvor mange byttevinduer har et lag i ordinær tid (i tillegg til pausen)?",
+  "options": [
+   "3",
+   "2",
+   "4",
+   "5"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "a9a10c45950d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor mange ekstra vanlige bytter får et lag i forlengning når fem bytter er tillatt?",
+  "options": [
+   "2",
+   "1",
+   "3",
+   "0"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "4f1a80f4b8ec"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor mange sekunder kan keeperen holde ballen i hendene før dommeren griper inn (regel fra 2025)?",
+  "options": [
+   "6",
+   "12",
+   "8",
+   "10"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "707b5f9bb4e2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva dømmes når keeperen holder ballen i hendene i mer enn åtte sekunder (regel fra 2025)?",
+  "options": [
+   "Gult kort",
+   "Indirekte frispark",
+   "Hjørnespark",
+   "Straffespark"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "46f4588152ed"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva er omkretsen på en vanlig fotball (størrelse 5)?",
+  "options": [
+   "72–74 cm",
+   "64–66 cm",
+   "68–70 cm",
+   "60–62 cm"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "b3ca3e86b4cf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan det scores direkte mål på innkast?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "f3bf5ca34f78"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva dømmes hvis et innkast kastes direkte i motstanderens mål?",
+  "options": [
+   "Nytt innkast",
+   "Målspark",
+   "Mål",
+   "Hjørnespark"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "9099d99369fb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva dømmes hvis et frispark sparkes direkte i eget mål?",
+  "options": [
+   "Målspark",
+   "Hjørnespark",
+   "Mål",
+   "Frisparket tas på nytt"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "6c585176d2cf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan det scores direkte på et indirekte frispark?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "91cb36654dbc"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan det scores direkte mål på målspark?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "289383bf61b1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor langt unna ballen må motspillerne være ved et hjørnespark?",
+  "options": [
+   "7 meter",
+   "5 meter",
+   "11 meter",
+   "9,15 meter"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "d99e450fd6f1"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilken radius har midtsirkelen?",
+  "options": [
+   "10 meter",
+   "11 meter",
+   "9,15 meter",
+   "7,32 meter"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "c70780183801"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilken radius har hjørnebuen?",
+  "options": [
+   "1,5 meter",
+   "2 meter",
+   "0,5 meter",
+   "1 meter"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "0de31a978534"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor høye må hjørneflaggstengene minst være?",
+  "options": [
+   "1 meter",
+   "2,5 meter",
+   "1,5 meter",
+   "2 meter"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "de8d5648d9c2"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor brede kan linjene på banen maksimalt være?",
+  "options": [
+   "12 cm",
+   "15 cm",
+   "20 cm",
+   "8 cm"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "3ff9e0493ba9"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva er tillatt banebredde i internasjonale kamper?",
+  "options": [
+   "70–80 meter",
+   "50–60 meter",
+   "75–90 meter",
+   "64–75 meter"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "0bad4cd136bb"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva betyr det når dommeren tegner en firkant (en TV-skjerm) med hendene?",
+  "options": [
+   "Et innbytte",
+   "Indirekte frispark",
+   "Tilleggstid",
+   "En VAR-gjennomgang"
+  ],
+  "correct": 3,
+  "difficulty": 1,
+  "key": "be1fe3467c95"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva betyr det når hoveddommeren går til skjermen ved sidelinjen?",
+  "options": [
+   "Dommeren ser selv på situasjonen før den endelige avgjørelsen",
+   "Dommeren sjekker tilleggstiden",
+   "Dommeren skal advare en trener",
+   "Kampen er avbrutt"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "ebfad37b389a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilke situasjoner kan VAR gripe inn i?",
+  "options": [
+   "Hjørnespark, gule kort og innkast",
+   "Alle frispark og innkast",
+   "Bare mål",
+   "Mål, straffespark, direkte rødt kort og feil spiller"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "82ba0b7ee465"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor tydelig må feilen være for at VAR skal anbefale å endre en avgjørelse?",
+  "options": [
+   "Klar og åpenbar feil",
+   "Når begge lagene ber om det",
+   "Når publikum protesterer",
+   "Enhver liten feil"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "b657a1614b65"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilke kroppsdeler teller ikke når offside vurderes?",
+  "options": [
+   "Skuldrene",
+   "Hender og armer",
+   "Føttene",
+   "Hodet"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "9b6020581979"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva dømmes når en spiller straffes for offside?",
+  "options": [
+   "Direkte frispark",
+   "Hjørnespark",
+   "Indirekte frispark",
+   "Dommerball"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "6c66a55f9edf"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan en trener få gult og rødt kort?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 2,
+  "key": "05da9743dcab"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Godkjennes et mål en angriper scorer direkte med hånden eller armen, selv om det var et uhell?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "f16e445a56a8"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva får en spiller som spytter på en motspiller?",
+  "options": [
+   "Ingenting",
+   "Rødt kort",
+   "Gult kort",
+   "Advarsel uten kort"
+  ],
+  "correct": 1,
+  "difficulty": 1,
+  "key": "3a44dcea7246"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva får en spiller som hindrer en åpenbar scoringsmulighet med bevisst håndsspill?",
+  "options": [
+   "Rødt kort",
+   "Ingen kort",
+   "Gult kort",
+   "Grønt kort"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "00182002fb5a"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva får en spiller som filmer (simulerer) for å lure dommeren?",
+  "options": [
+   "Ingenting",
+   "Grønt kort",
+   "Rødt kort",
+   "Gult kort"
+  ],
+  "correct": 3,
+  "difficulty": 2,
+  "key": "e757f27c4d96"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor langt unna ballen må motspillerne være ved avspark?",
+  "options": [
+   "5 meter",
+   "11 meter",
+   "9,15 meter",
+   "7 meter"
+  ],
+  "correct": 2,
+  "difficulty": 2,
+  "key": "bd1989b7038d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "En forsvarer løper for tidlig inn i straffefeltet ved et straffespark, men ballen går i mål. Hva skjer?",
+  "options": [
+   "Straffesparket tas på nytt",
+   "Dommerball",
+   "Målet godkjennes",
+   "Indirekte frispark"
+  ],
+  "correct": 2,
+  "difficulty": 4,
+  "key": "b362ca4b1c7d"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Keeperen går for tidlig av streken og redder straffesparket. Hva skjer?",
+  "options": [
+   "Straffesparket tas på nytt",
+   "Målspark",
+   "Indirekte frispark",
+   "Hjørnespark"
+  ],
+  "correct": 0,
+  "difficulty": 3,
+  "key": "80014cd19496"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Straffeskytteren treffer stolpen og skyter returen i mål selv, uten at noen andre har rørt ballen. Hva dømmes?",
+  "options": [
+   "Indirekte frispark til motstanderen",
+   "Målspark",
+   "Straffesparket tas på nytt",
+   "Mål"
+  ],
+  "correct": 0,
+  "difficulty": 4,
+  "key": "899c89071c43"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvor langt unna en mur på tre eller flere forsvarere må angripende spillere stå (regel fra 2019)?",
+  "options": [
+   "0,5 meter",
+   "1 meter",
+   "2 meter",
+   "9,15 meter"
+  ],
+  "correct": 1,
+  "difficulty": 4,
+  "key": "220abcaec7dd"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Ballen treffer dommeren og går rett i mål. Hva dømmes?",
+  "options": [
+   "Målspark",
+   "Hjørnespark",
+   "Dommerball",
+   "Mål"
+  ],
+  "correct": 2,
+  "difficulty": 3,
+  "key": "8ce9f9d2526f"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Spillet stoppes og skal startes med dommerball utenfor straffefeltet. Hvem får ballen?",
+  "options": [
+   "Hjemmelaget",
+   "Laget som ligger under",
+   "Begge lag kjemper om den",
+   "En spiller fra laget som sist berørte ballen"
+  ],
+  "correct": 3,
+  "difficulty": 4,
+  "key": "8f1f635b0c55"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Må spillerne bruke leggbeskyttere?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "eb22707e59b5"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hva får en spiller som bevisst forlater banen uten dommerens tillatelse?",
+  "options": [
+   "Rødt kort",
+   "Ingenting",
+   "Frispark mot laget",
+   "Gult kort"
+  ],
+  "correct": 3,
+  "difficulty": 3,
+  "key": "9055dfc1dd84"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Det står likt etter fem straffespark hver. Hva skjer?",
+  "options": [
+   "Ett spark hver til ett lag scorer og det andre bommer",
+   "Begge lag går videre",
+   "Myntkast avgjør",
+   "Kampen spilles om"
+  ],
+  "correct": 0,
+  "difficulty": 1,
+  "key": "dfcc09e24c84"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Kan dommeren endre en avgjørelse etter at spillet er satt i gang igjen?",
+  "options": [
+   "Ja",
+   "Nei"
+  ],
+  "correct": 1,
+  "difficulty": 3,
+  "key": "12e858f1dcda"
+ },
+ {
+  "type": "rules_quiz",
+  "era": "Regler",
+  "prompt": "Hvilken farge må keeperdrakten ha?",
+  "options": [
+   "Alltid gul",
+   "En farge som skiller seg fra de andre spillerne og dommerne",
+   "Alltid svart",
+   "Samme farge som laget"
+  ],
+  "correct": 1,
+  "difficulty": 2,
+  "key": "a78212d8a344"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter VM-finalene fra eldst til nyest",
+  "options": [
+   "Spania – Nederland",
+   "Brasil – Italia",
+   "Tyskland – Argentina",
+   "Italia – Frankrike",
+   "Frankrike – Brasil"
+  ],
+  "correct": [
+   1,
+   4,
+   3,
+   0,
+   2
+  ],
+  "difficulty": 2,
+  "key": "1a0d8079a2ad"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter VM-finalene fra eldst til nyest",
+  "options": [
+   "Frankrike – Brasil",
+   "Vest-Tyskland – Nederland",
+   "England – Vest-Tyskland",
+   "Spania – Nederland",
+   "Argentina – Vest-Tyskland"
+  ],
+  "correct": [
+   2,
+   1,
+   4,
+   0,
+   3
+  ],
+  "difficulty": 3,
+  "key": "4d034e635298"
+ },
+ {
+  "type": "image_sort",
+  "era": "EM-historie",
+  "prompt": "Sorter EM-finalene fra eldst til nyest",
+  "options": [
+   "Danmark – Tyskland",
+   "Hellas – Portugal",
+   "Spania – Tyskland",
+   "Italia – England",
+   "Portugal – Frankrike"
+  ],
+  "correct": [
+   0,
+   1,
+   2,
+   4,
+   3
+  ],
+  "difficulty": 3,
+  "key": "d3f87106dccd"
+ },
+ {
+  "type": "image_sort",
+  "era": "Klubbfotball",
+  "prompt": "Sorter Champions League-finalene fra eldst til nyest",
+  "options": [
+   "Man City – Inter",
+   "Bayern – PSG",
+   "Liverpool – Tottenham",
+   "Chelsea – Man City",
+   "Real Madrid – Liverpool"
+  ],
+  "correct": [
+   2,
+   1,
+   3,
+   4,
+   0
+  ],
+  "difficulty": 3,
+  "key": "c9bc5bc18a2b"
+ },
+ {
+  "type": "image_sort",
+  "era": "Klubbfotball",
+  "prompt": "Sorter Ballon d'Or-vinnerne fra eldst til nyest",
+  "options": [
+   "Kaká",
+   "Cristiano Ronaldo",
+   "Karim Benzema",
+   "Lionel Messi",
+   "Luka Modrić"
+  ],
+  "correct": [
+   0,
+   1,
+   3,
+   4,
+   2
+  ],
+  "difficulty": 3,
+  "key": "7e2bef67fcfd"
+ },
+ {
+  "type": "image_sort",
+  "era": "Klubbfotball",
+  "prompt": "Sorter Premier League-mesterne fra eldst til nyest",
+  "options": [
+   "Leicester (eventyret)",
+   "Chelsea (Mourinho)",
+   "Man City (Guardiola)",
+   "Liverpool (Klopp)",
+   "Man United (Ferguson tar farvel)"
+  ],
+  "correct": [
+   4,
+   1,
+   0,
+   3,
+   2
+  ],
+  "difficulty": 3,
+  "key": "aa3da96b7a23"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter VM-vertene fra eldst til nyest",
+  "options": [
+   "USA",
+   "Sør-Afrika",
+   "Tyskland",
+   "Frankrike",
+   "Russland"
+  ],
+  "correct": [
+   0,
+   3,
+   2,
+   1,
+   4
+  ],
+  "difficulty": 2,
+  "key": "d5249138f71c"
+ },
+ {
+  "type": "image_sort",
+  "era": "Stadioner",
+  "prompt": "Sorter stadionene fra størst til minst kapasitet",
+  "options": [
+   "Wembley",
+   "Anfield",
+   "Camp Nou",
+   "Old Trafford"
+  ],
+  "correct": [
+   2,
+   0,
+   3,
+   1
+  ],
+  "difficulty": 3,
+  "key": "7212df3bdacf"
+ },
+ {
+  "type": "image_sort",
+  "era": "Klubbfotball",
+  "prompt": "Sorter klubbene fra flest til færrest Premier League-titler",
+  "options": [
+   "Man United",
+   "Man City",
+   "Arsenal",
+   "Chelsea"
+  ],
+  "correct": [
+   0,
+   1,
+   3,
+   2
+  ],
+  "difficulty": 3,
+  "key": "84230bec9dda"
+ },
+ {
+  "type": "image_sort",
+  "era": "Regler",
+  "prompt": "Sorter fra kortest til lengst avstand",
+  "options": [
+   "Målfeltet fra mållinja",
+   "Straffefeltet fra mållinja",
+   "Muren fra ballen ved frispark",
+   "Straffemerket fra mållinja"
+  ],
+  "correct": [
+   0,
+   2,
+   3,
+   1
+  ],
+  "difficulty": 3,
+  "key": "dec5bba85469"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter hendelsene fra eldst til nyest",
+  "options": [
+   "Maracanazo",
+   "Norge slår Brasil",
+   "Argentina vinner VM i Qatar",
+   "Zidanes hodestøt",
+   "«Guds hånd»"
+  ],
+  "correct": [
+   0,
+   4,
+   1,
+   3,
+   2
+  ],
+  "difficulty": 3,
+  "key": "05df3c494d72"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter VM-finalene fra eldst til nyest",
+  "options": [
+   "Argentina – Nederland",
+   "Vest-Tyskland – Ungarn",
+   "England – Vest-Tyskland",
+   "Brasil – Sverige",
+   "Uruguay – Argentina"
+  ],
+  "correct": [
+   4,
+   1,
+   3,
+   2,
+   0
+  ],
+  "difficulty": 4,
+  "key": "79abc46c04fb"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter VM-finalene fra eldst til nyest",
+  "options": [
+   "Argentina – Frankrike",
+   "Argentina – Vest-Tyskland",
+   "Frankrike – Kroatia",
+   "Italia – Vest-Tyskland",
+   "Brasil – Tyskland"
+  ],
+  "correct": [
+   3,
+   1,
+   4,
+   2,
+   0
+  ],
+  "difficulty": 3,
+  "key": "3135a289d991"
+ },
+ {
+  "type": "image_sort",
+  "era": "EM-historie",
+  "prompt": "Sorter EM-finalene fra eldst til nyest",
+  "options": [
+   "Tyskland – Tsjekkia",
+   "Frankrike – Italia",
+   "Vest-Tyskland – Belgia",
+   "Frankrike – Spania",
+   "Nederland – Sovjetunionen"
+  ],
+  "correct": [
+   2,
+   3,
+   4,
+   0,
+   1
+  ],
+  "difficulty": 4,
+  "key": "1b8e868a8e03"
+ },
+ {
+  "type": "image_sort",
+  "era": "EM-historie",
+  "prompt": "Sorter EM-finalene fra eldst til nyest",
+  "options": [
+   "Spania – Italia",
+   "Portugal – Frankrike",
+   "Hellas – Portugal",
+   "Italia – England",
+   "Spania – England"
+  ],
+  "correct": [
+   2,
+   0,
+   1,
+   3,
+   4
+  ],
+  "difficulty": 2,
+  "key": "563ed7bbf430"
+ },
+ {
+  "type": "image_sort",
+  "era": "Klubbfotball",
+  "prompt": "Sorter Champions League-finalene fra eldst til nyest",
+  "options": [
+   "PSG – Inter",
+   "Barcelona – Juventus",
+   "Bayern – Dortmund",
+   "Inter – Bayern",
+   "Liverpool – AC Milan"
+  ],
+  "correct": [
+   4,
+   3,
+   2,
+   1,
+   0
+  ],
+  "difficulty": 3,
+  "key": "e9feac3aac82"
+ },
+ {
+  "type": "image_sort",
+  "era": "Klubbfotball",
+  "prompt": "Sorter Champions League-finalene fra eldst til nyest",
+  "options": [
+   "Real Madrid – Dortmund",
+   "Man United – Chelsea",
+   "Chelsea – Bayern",
+   "Real Madrid – Juventus"
+  ],
+  "correct": [
+   1,
+   2,
+   3,
+   0
+  ],
+  "difficulty": 3,
+  "key": "e5e77f557e28"
+ },
+ {
+  "type": "image_sort",
+  "era": "Spillere og rekorder",
+  "prompt": "Sorter Ballon d'Or-vinnerne fra eldst til nyest",
+  "options": [
+   "George Weah",
+   "Pavel Nedvěd",
+   "Luís Figo",
+   "Zinedine Zidane",
+   "Fabio Cannavaro"
+  ],
+  "correct": [
+   0,
+   3,
+   2,
+   1,
+   4
+  ],
+  "difficulty": 4,
+  "key": "7aa09dcd9044"
+ },
+ {
+  "type": "image_sort",
+  "era": "Spillere og rekorder",
+  "prompt": "Sorter Ballon d'Or-vinnerne fra eldst til nyest",
+  "options": [
+   "Kaká",
+   "Michael Owen",
+   "Andrij Sjevtsjenko",
+   "Rodri",
+   "Ronaldinho"
+  ],
+  "correct": [
+   1,
+   2,
+   4,
+   0,
+   3
+  ],
+  "difficulty": 3,
+  "key": "1144f18e303b"
+ },
+ {
+  "type": "image_sort",
+  "era": "Ligaer",
+  "prompt": "Sorter Premier League-mesterne fra eldst til nyest",
+  "options": [
+   "Blackburn Rovers",
+   "Man City (første tittel)",
+   "Chelsea (første tittel)",
+   "Arsenal (de ubeseirede)",
+   "Leicester City"
+  ],
+  "correct": [
+   0,
+   3,
+   2,
+   1,
+   4
+  ],
+  "difficulty": 3,
+  "key": "f1d034e4fac4"
+ },
+ {
+  "type": "image_sort",
+  "era": "Norge",
+  "prompt": "Sorter hendelsene i norsk fotball fra eldst til nyest",
+  "options": [
+   "Norge tar OL-bronse i Berlin",
+   "«Your boys took a hell of a beating»",
+   "Norge kvalifiserer seg til VM 2026",
+   "Norge slår Brasil",
+   "Bodø/Glimt slår Roma 6–1"
+  ],
+  "correct": [
+   0,
+   1,
+   3,
+   4,
+   2
+  ],
+  "difficulty": 3,
+  "key": "87ad5321ef19"
+ },
+ {
+  "type": "image_sort",
+  "era": "Visste du at?",
+  "prompt": "Sorter hendelsene fra eldst til nyest",
+  "options": [
+   "Messi vinner VM",
+   "Leicester vinner Premier League",
+   "VAR brukes i VM for første gang",
+   "Første VM i Uruguay",
+   "Englands eneste VM-gull"
+  ],
+  "correct": [
+   3,
+   4,
+   1,
+   2,
+   0
+  ],
+  "difficulty": 2,
+  "key": "a71163062d10"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter landene fra flest til færrest VM-titler",
+  "options": [
+   "Brasil",
+   "Argentina",
+   "Frankrike",
+   "Spania"
+  ],
+  "correct": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "difficulty": 2,
+  "key": "39ca6171dbd3"
+ },
+ {
+  "type": "image_sort",
+  "era": "Klubbfotball",
+  "prompt": "Sorter klubbene fra flest til færrest Champions League-titler",
+  "options": [
+   "Inter",
+   "Barcelona",
+   "AC Milan",
+   "Real Madrid"
+  ],
+  "correct": [
+   3,
+   2,
+   1,
+   0
+  ],
+  "difficulty": 3,
+  "key": "8b0cda484ed4"
+ },
+ {
+  "type": "image_sort",
+  "era": "Spillere og rekorder",
+  "prompt": "Sorter spillerne fra flest til færrest Ballon d'Or",
+  "options": [
+   "Michel Platini",
+   "Cristiano Ronaldo",
+   "Lionel Messi",
+   "Luka Modrić"
+  ],
+  "correct": [
+   2,
+   1,
+   0,
+   3
+  ],
+  "difficulty": 2,
+  "key": "0a73d4a8cde1"
+ },
+ {
+  "type": "image_sort",
+  "era": "Spillere og rekorder",
+  "prompt": "Sorter Premier League-toppscorerne fra flest til færrest mål",
+  "options": [
+   "Harry Kane",
+   "Wayne Rooney",
+   "Alan Shearer",
+   "Thierry Henry"
+  ],
+  "correct": [
+   2,
+   0,
+   1,
+   3
+  ],
+  "difficulty": 4,
+  "key": "ac08d59c6709"
+ },
+ {
+  "type": "image_sort",
+  "era": "Stadioner",
+  "prompt": "Sorter stadionene fra nord til sør",
+  "options": [
+   "Parken",
+   "Allianz Arena",
+   "Camp Nou",
+   "Lerkendal",
+   "Ullevaal stadion"
+  ],
+  "correct": [
+   3,
+   4,
+   0,
+   1,
+   2
+  ],
+  "difficulty": 2,
+  "key": "10475e83c706"
+ },
+ {
+  "type": "image_sort",
+  "era": "Stadioner",
+  "prompt": "Sorter stadionene fra nord til sør",
+  "options": [
+   "Stade Vélodrome",
+   "Anfield",
+   "Wembley",
+   "Celtic Park",
+   "Parc des Princes"
+  ],
+  "correct": [
+   3,
+   1,
+   2,
+   4,
+   0
+  ],
+  "difficulty": 3,
+  "key": "98cbbbe62e06"
+ },
+ {
+  "type": "image_sort",
+  "era": "Regler",
+  "prompt": "Sorter fra kortest til lengst avstand",
+  "options": [
+   "Målets høyde",
+   "Hjørnebuens radius",
+   "Midtsirkelens radius",
+   "Målets bredde"
+  ],
+  "correct": [
+   1,
+   0,
+   3,
+   2
+  ],
+  "difficulty": 3,
+  "key": "1597f1bbd633"
+ },
+ {
+  "type": "image_sort",
+  "era": "Regler",
+  "prompt": "Sorter fra kortest til lengst tid",
+  "options": [
+   "En hel kamp med forlengning",
+   "Så lenge keeperen kan holde ballen",
+   "Én omgang i forlengning",
+   "Én ordinær omgang"
+  ],
+  "correct": [
+   1,
+   2,
+   3,
+   0
+  ],
+  "difficulty": 2,
+  "key": "fa73be0fb751"
+ },
+ {
+  "type": "image_sort",
+  "era": "VM-historie",
+  "prompt": "Sorter VM-vertene fra eldst til nyest",
+  "options": [
+   "Argentina",
+   "Uruguay",
+   "Chile",
+   "Sverige",
+   "Sveits"
+  ],
+  "correct": [
+   1,
+   4,
+   3,
+   2,
+   0
+  ],
+  "difficulty": 4,
+  "key": "3437324074e1"
+ },
+ {
+  "type": "image_sort",
+  "era": "EM-historie",
+  "prompt": "Sorter EM-vinnerne fra eldst til nyest",
+  "options": [
+   "Hellas",
+   "Danmark",
+   "Portugal",
+   "Tsjekkoslovakia",
+   "Sovjetunionen"
+  ],
+  "correct": [
+   4,
+   3,
+   1,
+   0,
+   2
+  ],
+  "difficulty": 3,
+  "key": "1a7c4b78d9df"
+ },
+ {
+  "type": "image_sort",
+  "era": "Trenere",
+  "prompt": "Sorter Manchester United-managerne fra først til sist",
+  "options": [
+   "Ole Gunnar Solskjær",
+   "David Moyes",
+   "Alex Ferguson",
+   "Matt Busby",
+   "José Mourinho"
+  ],
+  "correct": [
+   3,
+   2,
+   1,
+   4,
+   0
+  ],
+  "difficulty": 2,
+  "key": "7b63d39af298"
+ }
+]

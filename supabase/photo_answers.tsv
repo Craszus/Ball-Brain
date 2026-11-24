@@ -1,0 +1,908 @@
+player:erling-haaland	name	Erling Haaland
+player:erling-haaland	country	Norge
+player:martin-ødegaard	name	Martin Ødegaard
+player:martin-ødegaard	country	Norge
+player:alexander-sørloth	name	Alexander Sørloth
+player:alexander-sørloth	country	Norge
+player:ole-gunnar-solskjær	name	Ole Gunnar Solskjær
+player:ole-gunnar-solskjær	country	Norge
+player:lionel-messi	name	Lionel Messi
+player:lionel-messi	country	Argentina
+player:cristiano-ronaldo	name	Cristiano Ronaldo
+player:cristiano-ronaldo	country	Portugal
+player:kylian-mbappé	name	Kylian Mbappé
+player:kylian-mbappé	country	Frankrike
+player:mohamed-salah	name	Mohamed Salah
+player:mohamed-salah	country	Egypt
+player:kevin-de-bruyne	name	Kevin De Bruyne
+player:kevin-de-bruyne	country	Belgia
+player:harry-kane	name	Harry Kane
+player:harry-kane	country	England
+player:luka-modrić	name	Luka Modrić
+player:luka-modrić	country	Kroatia
+player:robert-lewandowski	name	Robert Lewandowski
+player:robert-lewandowski	country	Polen
+player:neymar	name	Neymar
+player:neymar	country	Brasil
+player:vinícius-júnior	name	Vinícius Júnior
+player:vinícius-júnior	country	Brasil
+player:jude-bellingham	name	Jude Bellingham
+player:jude-bellingham	country	England
+player:virgil-van-dijk	name	Virgil van Dijk
+player:virgil-van-dijk	country	Nederland
+player:son-heung-min	name	Son Heung-min
+player:son-heung-min	country	Sør-Korea
+player:karim-benzema	name	Karim Benzema
+player:karim-benzema	country	Frankrike
+player:sadio-mané	name	Sadio Mané
+player:sadio-mané	country	Senegal
+player:antoine-griezmann	name	Antoine Griezmann
+player:antoine-griezmann	country	Frankrike
+player:manuel-neuer	name	Manuel Neuer
+player:manuel-neuer	country	Tyskland
+player:thibaut-courtois	name	Thibaut Courtois
+player:thibaut-courtois	country	Belgia
+player:pelé	name	Pelé
+player:pelé	country	Brasil
+player:diego-maradona	name	Diego Maradona
+player:diego-maradona	country	Argentina
+player:zinedine-zidane	name	Zinedine Zidane
+player:zinedine-zidane	country	Frankrike
+player:ronaldinho	name	Ronaldinho
+player:ronaldinho	country	Brasil
+player:thierry-henry	name	Thierry Henry
+player:thierry-henry	country	Frankrike
+player:rodri	name	Rodri
+player:rodri	country	Spania
+player:lamine-yamal	name	Lamine Yamal
+player:lamine-yamal	country	Spania
+player:bukayo-saka	name	Bukayo Saka
+player:bukayo-saka	country	England
+player:pedri	name	Pedri
+player:pedri	country	Spania
+player:phil-foden	name	Phil Foden
+player:phil-foden	country	England
+player:declan-rice	name	Declan Rice
+player:declan-rice	country	England
+player:marcus-rashford	name	Marcus Rashford
+player:marcus-rashford	country	England
+player:bruno-fernandes	name	Bruno Fernandes
+player:bruno-fernandes	country	Portugal
+player:sergio-ramos	name	Sergio Ramos
+player:sergio-ramos	country	Spania
+player:andrés-iniesta	name	Andrés Iniesta
+player:andrés-iniesta	country	Spania
+player:zlatan-ibrahimović	name	Zlatan Ibrahimović
+player:zlatan-ibrahimović	country	Sverige
+player:gareth-bale	name	Gareth Bale
+player:gareth-bale	country	Wales
+player:wayne-rooney	name	Wayne Rooney
+player:wayne-rooney	country	England
+player:david-beckham	name	David Beckham
+player:david-beckham	country	England
+player:johan-cruyff	name	Johan Cruyff
+player:johan-cruyff	country	Nederland
+player:franz-beckenbauer	name	Franz Beckenbauer
+player:franz-beckenbauer	country	Tyskland
+player:alisson	name	Alisson
+player:alisson	country	Brasil
+player:achraf-hakimi	name	Achraf Hakimi
+player:achraf-hakimi	country	Marokko
+player:victor-osimhen	name	Victor Osimhen
+player:victor-osimhen	country	Nigeria
+player:ederson	name	Ederson
+player:ederson	country	Brasil
+player:jan-oblak	name	Jan Oblak
+player:jan-oblak	country	Slovenia
+player:marc-andré-ter-stegen	name	Marc-André ter Stegen
+player:marc-andré-ter-stegen	country	Tyskland
+player:mike-maignan	name	Mike Maignan
+player:mike-maignan	country	Frankrike
+player:hugo-lloris	name	Hugo Lloris
+player:hugo-lloris	country	Frankrike
+player:gianluigi-buffon	name	Gianluigi Buffon
+player:gianluigi-buffon	country	Italia
+player:iker-casillas	name	Iker Casillas
+player:iker-casillas	country	Spania
+player:oliver-kahn	name	Oliver Kahn
+player:oliver-kahn	country	Tyskland
+player:peter-schmeichel	name	Peter Schmeichel
+player:peter-schmeichel	country	Danmark
+player:kasper-schmeichel	name	Kasper Schmeichel
+player:kasper-schmeichel	country	Danmark
+player:emiliano-martínez	name	Emiliano Martínez
+player:emiliano-martínez	country	Argentina
+player:andré-onana	name	André Onana
+player:andré-onana	country	Kamerun
+player:david-raya	name	David Raya
+player:david-raya	country	Spania
+player:jordan-pickford	name	Jordan Pickford
+player:jordan-pickford	country	England
+player:keylor-navas	name	Keylor Navas
+player:keylor-navas	country	Costa Rica
+player:kepa-arrizabalaga	name	Kepa Arrizabalaga
+player:kepa-arrizabalaga	country	Spania
+player:yann-sommer	name	Yann Sommer
+player:yann-sommer	country	Sveits
+player:edwin-van-der-sar	name	Edwin van der Sar
+player:edwin-van-der-sar	country	Nederland
+player:petr-čech	name	Petr Čech
+player:petr-čech	country	Tsjekkia
+player:dominik-livaković	name	Dominik Livaković
+player:dominik-livaković	country	Kroatia
+player:yassine-bounou	name	Yassine Bounou
+player:yassine-bounou	country	Marokko
+player:lev-jasjin	name	Lev Jasjin
+player:lev-jasjin	country	Sovjetunionen
+player:dino-zoff	name	Dino Zoff
+player:dino-zoff	country	Italia
+player:kaká	name	Kaká
+player:kaká	country	Brasil
+player:ronaldo-nazário	name	Ronaldo Nazário
+player:ronaldo-nazário	country	Brasil
+player:rodrygo	name	Rodrygo
+player:rodrygo	country	Brasil
+player:casemiro	name	Casemiro
+player:casemiro	country	Brasil
+player:andrea-pirlo	name	Andrea Pirlo
+player:andrea-pirlo	country	Italia
+player:francesco-totti	name	Francesco Totti
+player:francesco-totti	country	Italia
+player:paolo-maldini	name	Paolo Maldini
+player:paolo-maldini	country	Italia
+player:roberto-baggio	name	Roberto Baggio
+player:roberto-baggio	country	Italia
+player:lorenzo-insigne	name	Lorenzo Insigne
+player:lorenzo-insigne	country	Italia
+player:eric-cantona	name	Eric Cantona
+player:eric-cantona	country	Frankrike
+player:n-golo-kanté	name	N'Golo Kanté
+player:n-golo-kanté	country	Frankrike
+player:paul-pogba	name	Paul Pogba
+player:paul-pogba	country	Frankrike
+player:marco-van-basten	name	Marco van Basten
+player:marco-van-basten	country	Nederland
+player:ruud-gullit	name	Ruud Gullit
+player:ruud-gullit	country	Nederland
+player:dennis-bergkamp	name	Dennis Bergkamp
+player:dennis-bergkamp	country	Nederland
+player:frenkie-de-jong	name	Frenkie de Jong
+player:frenkie-de-jong	country	Nederland
+player:memphis-depay	name	Memphis Depay
+player:memphis-depay	country	Nederland
+player:paul-scholes	name	Paul Scholes
+player:paul-scholes	country	England
+player:frank-lampard	name	Frank Lampard
+player:frank-lampard	country	England
+player:john-terry	name	John Terry
+player:john-terry	country	England
+player:alan-shearer	name	Alan Shearer
+player:alan-shearer	country	England
+player:trent-alexander-arnold	name	Trent Alexander-Arnold
+player:trent-alexander-arnold	country	England
+player:jack-grealish	name	Jack Grealish
+player:jack-grealish	country	England
+player:sergio-agüero	name	Sergio Agüero
+player:sergio-agüero	country	Argentina
+player:ángel-di-maría	name	Ángel Di María
+player:ángel-di-maría	country	Argentina
+player:paulo-dybala	name	Paulo Dybala
+player:paulo-dybala	country	Argentina
+player:lautaro-martínez	name	Lautaro Martínez
+player:lautaro-martínez	country	Argentina
+player:julián-álvarez	name	Julián Álvarez
+player:julián-álvarez	country	Argentina
+player:enzo-fernández	name	Enzo Fernández
+player:enzo-fernández	country	Argentina
+player:rúben-dias	name	Rúben Dias
+player:rúben-dias	country	Portugal
+player:bernardo-silva	name	Bernardo Silva
+player:bernardo-silva	country	Portugal
+player:rafael-leão	name	Rafael Leão
+player:rafael-leão	country	Portugal
+player:luís-figo	name	Luís Figo
+player:luís-figo	country	Portugal
+player:toni-kroos	name	Toni Kroos
+player:toni-kroos	country	Tyskland
+player:thomas-müller	name	Thomas Müller
+player:thomas-müller	country	Tyskland
+player:jamal-musiala	name	Jamal Musiala
+player:jamal-musiala	country	Tyskland
+player:florian-wirtz	name	Florian Wirtz
+player:florian-wirtz	country	Tyskland
+player:joshua-kimmich	name	Joshua Kimmich
+player:joshua-kimmich	country	Tyskland
+player:mesut-özil	name	Mesut Özil
+player:mesut-özil	country	Tyskland
+player:romelu-lukaku	name	Romelu Lukaku
+player:romelu-lukaku	country	Belgia
+player:eden-hazard	name	Eden Hazard
+player:eden-hazard	country	Belgia
+player:christian-pulisic	name	Christian Pulisic
+player:christian-pulisic	country	USA
+player:alphonso-davies	name	Alphonso Davies
+player:alphonso-davies	country	Canada
+player:takefusa-kubo	name	Takefusa Kubo
+player:takefusa-kubo	country	Japan
+player:kaoru-mitoma	name	Kaoru Mitoma
+player:kaoru-mitoma	country	Japan
+player:alexander-isak	name	Alexander Isak
+player:alexander-isak	country	Sverige
+player:dejan-kulusevski	name	Dejan Kulusevski
+player:dejan-kulusevski	country	Sverige
+player:christian-eriksen	name	Christian Eriksen
+player:christian-eriksen	country	Danmark
+player:rasmus-højlund	name	Rasmus Højlund
+player:rasmus-højlund	country	Danmark
+player:sander-berge	name	Sander Berge
+player:sander-berge	country	Norge
+player:riyad-mahrez	name	Riyad Mahrez
+player:riyad-mahrez	country	Algerie
+player:didier-drogba	name	Didier Drogba
+player:didier-drogba	country	Elfenbenskysten
+player:samuel-eto-o	name	Samuel Eto'o
+player:samuel-eto-o	country	Kamerun
+player:yaya-touré	name	Yaya Touré
+player:yaya-touré	country	Elfenbenskysten
+player:darwin-núñez	name	Darwin Núñez
+player:darwin-núñez	country	Uruguay
+player:edinson-cavani	name	Edinson Cavani
+player:edinson-cavani	country	Uruguay
+player:alexis-sánchez	name	Alexis Sánchez
+player:alexis-sánchez	country	Chile
+player:robin-van-persie	name	Robin van Persie
+player:robin-van-persie	country	Nederland
+player:xabi-alonso	name	Xabi Alonso
+player:xabi-alonso	country	Spania
+player:sergio-busquets	name	Sergio Busquets
+player:sergio-busquets	country	Spania
+player:gerard-piqué	name	Gerard Piqué
+player:gerard-piqué	country	Spania
+player:david-villa	name	David Villa
+player:david-villa	country	Spania
+player:fernando-torres	name	Fernando Torres
+player:fernando-torres	country	Spania
+player:nico-williams	name	Nico Williams
+player:nico-williams	country	Spania
+player:unai-simón	name	Unai Simón
+player:unai-simón	country	Spania
+player:diogo-costa	name	Diogo Costa
+player:diogo-costa	country	Portugal
+player:gregor-kobel	name	Gregor Kobel
+player:gregor-kobel	country	Sveits
+player:kevin-trapp	name	Kevin Trapp
+player:kevin-trapp	country	Tyskland
+player:lukáš-hrádecký	name	Lukáš Hrádecký
+player:lukáš-hrádecký	country	Finland
+player:samir-handanović	name	Samir Handanović
+player:samir-handanović	country	Slovenia
+player:víctor-valdés	name	Víctor Valdés
+player:víctor-valdés	country	Spania
+player:david-de-gea	name	David de Gea
+player:david-de-gea	country	Spania
+player:joe-hart	name	Joe Hart
+player:joe-hart	country	England
+player:david-seaman	name	David Seaman
+player:david-seaman	country	England
+player:gordon-banks	name	Gordon Banks
+player:gordon-banks	country	England
+player:peter-shilton	name	Peter Shilton
+player:peter-shilton	country	England
+player:rinat-dasajev	name	Rinat Dasajev
+player:rinat-dasajev	country	Sovjetunionen
+player:sepp-maier	name	Sepp Maier
+player:sepp-maier	country	Tyskland
+player:claudio-bravo	name	Claudio Bravo
+player:claudio-bravo	country	Chile
+player:guillermo-ochoa	name	Guillermo Ochoa
+player:guillermo-ochoa	country	Mexico
+player:tim-howard	name	Tim Howard
+player:tim-howard	country	USA
+player:shay-given	name	Shay Given
+player:shay-given	country	Irland
+player:jerzy-dudek	name	Jerzy Dudek
+player:jerzy-dudek	country	Polen
+player:dida	name	Dida
+player:dida	country	Brasil
+player:santiago-cañizares	name	Santiago Cañizares
+player:santiago-cañizares	country	Spania
+player:andoni-zubizarreta	name	Andoni Zubizarreta
+player:andoni-zubizarreta	country	Spania
+player:rené-higuita	name	René Higuita
+player:rené-higuita	country	Colombia
+player:josé-luis-chilavert	name	José Luis Chilavert
+player:josé-luis-chilavert	country	Paraguay
+player:erik-thorstvedt	name	Erik Thorstvedt
+player:erik-thorstvedt	country	Norge
+player:frode-grodås	name	Frode Grodås
+player:frode-grodås	country	Norge
+player:francesco-toldo	name	Francesco Toldo
+player:francesco-toldo	country	Italia
+player:łukasz-fabiański	name	Łukasz Fabiański
+player:łukasz-fabiański	country	Polen
+player:édouard-mendy	name	Édouard Mendy
+player:édouard-mendy	country	Senegal
+player:alphonse-areola	name	Alphonse Areola
+player:alphonse-areola	country	Frankrike
+player:bobby-charlton	name	Bobby Charlton
+player:bobby-charlton	country	England
+player:bobby-moore	name	Bobby Moore
+player:bobby-moore	country	England
+player:gary-lineker	name	Gary Lineker
+player:gary-lineker	country	England
+player:michael-owen	name	Michael Owen
+player:michael-owen	country	England
+player:rio-ferdinand	name	Rio Ferdinand
+player:rio-ferdinand	country	England
+player:george-best	name	George Best
+player:george-best	country	Nord-Irland
+player:kenny-dalglish	name	Kenny Dalglish
+player:kenny-dalglish	country	Skottland
+player:roy-keane	name	Roy Keane
+player:roy-keane	country	Irland
+player:robbie-keane	name	Robbie Keane
+player:robbie-keane	country	Irland
+player:gerd-müller	name	Gerd Müller
+player:gerd-müller	country	Tyskland
+player:lothar-matthäus	name	Lothar Matthäus
+player:lothar-matthäus	country	Tyskland
+player:jürgen-klinsmann	name	Jürgen Klinsmann
+player:jürgen-klinsmann	country	Tyskland
+player:miroslav-klose	name	Miroslav Klose
+player:miroslav-klose	country	Tyskland
+player:philipp-lahm	name	Philipp Lahm
+player:philipp-lahm	country	Tyskland
+player:michael-ballack	name	Michael Ballack
+player:michael-ballack	country	Tyskland
+player:fabio-cannavaro	name	Fabio Cannavaro
+player:fabio-cannavaro	country	Italia
+player:giorgio-chiellini	name	Giorgio Chiellini
+player:giorgio-chiellini	country	Italia
+player:gennaro-gattuso	name	Gennaro Gattuso
+player:gennaro-gattuso	country	Italia
+player:filippo-inzaghi	name	Filippo Inzaghi
+player:filippo-inzaghi	country	Italia
+player:patrick-vieira	name	Patrick Vieira
+player:patrick-vieira	country	Frankrike
+player:claude-makélélé	name	Claude Makélélé
+player:claude-makélélé	country	Frankrike
+player:olivier-giroud	name	Olivier Giroud
+player:olivier-giroud	country	Frankrike
+player:wesley-sneijder	name	Wesley Sneijder
+player:wesley-sneijder	country	Nederland
+player:clarence-seedorf	name	Clarence Seedorf
+player:clarence-seedorf	country	Nederland
+player:ruud-van-nistelrooy	name	Ruud van Nistelrooy
+player:ruud-van-nistelrooy	country	Nederland
+player:eusébio	name	Eusébio
+player:eusébio	country	Portugal
+player:deco	name	Deco
+player:deco	country	Portugal
+player:thiago-silva	name	Thiago Silva
+player:thiago-silva	country	Brasil
+player:dani-alves	name	Dani Alves
+player:dani-alves	country	Brasil
+player:gabriel-batistuta	name	Gabriel Batistuta
+player:gabriel-batistuta	country	Argentina
+player:javier-zanetti	name	Javier Zanetti
+player:javier-zanetti	country	Argentina
+player:juan-román-riquelme	name	Juan Román Riquelme
+player:juan-román-riquelme	country	Argentina
+player:javier-mascherano	name	Javier Mascherano
+player:javier-mascherano	country	Argentina
+player:diego-forlán	name	Diego Forlán
+player:diego-forlán	country	Uruguay
+player:davor-šuker	name	Davor Šuker
+player:davor-šuker	country	Kroatia
+player:michael-laudrup	name	Michael Laudrup
+player:michael-laudrup	country	Danmark
+player:brian-laudrup	name	Brian Laudrup
+player:brian-laudrup	country	Danmark
+player:andrij-sjevtsjenko	name	Andrij Sjevtsjenko
+player:andrij-sjevtsjenko	country	Ukraina
+player:hristo-stoitsjkov	name	Hristo Stoitsjkov
+player:hristo-stoitsjkov	country	Bulgaria
+player:gheorghe-hagi	name	Gheorghe Hagi
+player:gheorghe-hagi	country	Romania
+player:george-weah	name	George Weah
+player:george-weah	country	Liberia
+player:jay-jay-okocha	name	Jay-Jay Okocha
+player:jay-jay-okocha	country	Nigeria
+player:michael-essien	name	Michael Essien
+player:michael-essien	country	Ghana
+player:park-ji-sung	name	Park Ji-sung
+player:park-ji-sung	country	Sør-Korea
+player:hidetoshi-nakata	name	Hidetoshi Nakata
+player:hidetoshi-nakata	country	Japan
+player:hakan-şükür	name	Hakan Şükür
+player:hakan-şükür	country	Tyrkia
+player:jari-litmanen	name	Jari Litmanen
+player:jari-litmanen	country	Finland
+player:carlos-valderrama	name	Carlos Valderrama
+player:carlos-valderrama	country	Colombia
+player:landon-donovan	name	Landon Donovan
+player:landon-donovan	country	USA
+player:rafael-márquez	name	Rafael Márquez
+player:rafael-márquez	country	Mexico
+player:tore-andré-flo	name	Tore André Flo
+player:tore-andré-flo	country	Norge
+player:john-carew	name	John Carew
+player:john-carew	country	Norge
+player:steffen-iversen	name	Steffen Iversen
+player:steffen-iversen	country	Norge
+player:i-lkay-gündoğan	name	İlkay Gündoğan
+player:i-lkay-gündoğan	country	Tyskland
+player:kai-havertz	name	Kai Havertz
+player:kai-havertz	country	Tyskland
+player:leroy-sané	name	Leroy Sané
+player:leroy-sané	country	Tyskland
+player:antonio-rüdiger	name	Antonio Rüdiger
+player:antonio-rüdiger	country	Tyskland
+player:ousmane-dembélé	name	Ousmane Dembélé
+player:ousmane-dembélé	country	Frankrike
+player:aurélien-tchouaméni	name	Aurélien Tchouaméni
+player:aurélien-tchouaméni	country	Frankrike
+player:william-saliba	name	William Saliba
+player:william-saliba	country	Frankrike
+player:nicolò-barella	name	Nicolò Barella
+player:nicolò-barella	country	Italia
+player:dani-olmo	name	Dani Olmo
+player:dani-olmo	country	Spania
+player:álvaro-morata	name	Álvaro Morata
+player:álvaro-morata	country	Spania
+player:cole-palmer	name	Cole Palmer
+player:cole-palmer	country	England
+player:john-stones	name	John Stones
+player:john-stones	country	England
+player:kyle-walker	name	Kyle Walker
+player:kyle-walker	country	England
+player:raheem-sterling	name	Raheem Sterling
+player:raheem-sterling	country	England
+player:joão-félix	name	João Félix
+player:joão-félix	country	Portugal
+player:joão-cancelo	name	João Cancelo
+player:joão-cancelo	country	Portugal
+player:vitinha	name	Vitinha
+player:vitinha	country	Portugal
+player:raphinha	name	Raphinha
+player:raphinha	country	Brasil
+player:gabriel-martinelli	name	Gabriel Martinelli
+player:gabriel-martinelli	country	Brasil
+player:joško-gvardiol	name	Joško Gvardiol
+player:joško-gvardiol	country	Kroatia
+player:mateo-kovačić	name	Mateo Kovačić
+player:mateo-kovačić	country	Kroatia
+player:jérémy-doku	name	Jérémy Doku
+player:jérémy-doku	country	Belgia
+player:viktor-gyökeres	name	Viktor Gyökeres
+player:viktor-gyökeres	country	Sverige
+player:antonio-nusa	name	Antonio Nusa
+player:antonio-nusa	country	Norge
+player:oscar-bobb	name	Oscar Bobb
+player:oscar-bobb	country	Norge
+player:leo-østigård	name	Leo Østigård
+player:leo-østigård	country	Norge
+player:kalidou-koulibaly	name	Kalidou Koulibaly
+player:kalidou-koulibaly	country	Senegal
+player:hakim-ziyech	name	Hakim Ziyech
+player:hakim-ziyech	country	Marokko
+player:mehdi-taremi	name	Mehdi Taremi
+player:mehdi-taremi	country	Iran
+player:arda-güler	name	Arda Güler
+player:arda-güler	country	Tyrkia
+player:hakan-çalhanoğlu	name	Hakan Çalhanoğlu
+player:hakan-çalhanoğlu	country	Tyrkia
+player:dušan-vlahović	name	Dušan Vlahović
+player:dušan-vlahović	country	Serbia
+player:aleksandar-mitrović	name	Aleksandar Mitrović
+player:aleksandar-mitrović	country	Serbia
+player:edin-džeko	name	Edin Džeko
+player:edin-džeko	country	Bosnia-Hercegovina
+player:khvitsja-kvaratskhelia	name	Khvitsja Kvaratskhelia
+player:khvitsja-kvaratskhelia	country	Georgia
+player:granit-xhaka	name	Granit Xhaka
+player:granit-xhaka	country	Sveits
+player:david-alaba	name	David Alaba
+player:david-alaba	country	Østerrike
+player:andrew-robertson	name	Andrew Robertson
+player:andrew-robertson	country	Skottland
+player:moisés-caicedo	name	Moisés Caicedo
+player:moisés-caicedo	country	Ecuador
+player:pierre-emerick-aubameyang	name	Pierre-Emerick Aubameyang
+player:pierre-emerick-aubameyang	country	Gabon
+stadium:anfield	name	Anfield
+stadium:anfield	country	England
+stadium:anfield	club	Liverpool
+stadium:old-trafford	name	Old Trafford
+stadium:old-trafford	country	England
+stadium:old-trafford	club	Manchester United
+stadium:emirates-stadium	name	Emirates Stadium
+stadium:emirates-stadium	country	England
+stadium:emirates-stadium	club	Arsenal
+stadium:stamford-bridge	name	Stamford Bridge
+stadium:stamford-bridge	country	England
+stadium:stamford-bridge	club	Chelsea
+stadium:etihad-stadium	name	Etihad Stadium
+stadium:etihad-stadium	country	England
+stadium:etihad-stadium	club	Manchester City
+stadium:tottenham-hotspur-stadium	name	Tottenham Hotspur Stadium
+stadium:tottenham-hotspur-stadium	country	England
+stadium:tottenham-hotspur-stadium	club	Tottenham
+stadium:st-james-park	name	St James' Park
+stadium:st-james-park	country	England
+stadium:st-james-park	club	Newcastle United
+stadium:goodison-park	name	Goodison Park
+stadium:goodison-park	country	England
+stadium:goodison-park	club	Everton
+stadium:villa-park	name	Villa Park
+stadium:villa-park	country	England
+stadium:villa-park	club	Aston Villa
+stadium:wembley-stadium	name	Wembley Stadium
+stadium:wembley-stadium	country	England
+stadium:wembley-stadium	club	Landslaget (England)
+stadium:celtic-park	name	Celtic Park
+stadium:celtic-park	country	Skottland
+stadium:celtic-park	club	Celtic
+stadium:ibrox	name	Ibrox
+stadium:ibrox	country	Skottland
+stadium:ibrox	club	Rangers
+stadium:camp-nou	name	Camp Nou
+stadium:camp-nou	country	Spania
+stadium:camp-nou	club	Barcelona
+stadium:santiago-bernabéu	name	Santiago Bernabéu
+stadium:santiago-bernabéu	country	Spania
+stadium:santiago-bernabéu	club	Real Madrid
+stadium:metropolitano	name	Metropolitano
+stadium:metropolitano	country	Spania
+stadium:metropolitano	club	Atlético Madrid
+stadium:allianz-arena	name	Allianz Arena
+stadium:allianz-arena	country	Tyskland
+stadium:allianz-arena	club	Bayern München
+stadium:signal-iduna-park	name	Signal Iduna Park
+stadium:signal-iduna-park	country	Tyskland
+stadium:signal-iduna-park	club	Borussia Dortmund
+stadium:veltins-arena	name	Veltins-Arena
+stadium:veltins-arena	country	Tyskland
+stadium:veltins-arena	club	Schalke 04
+stadium:san-siro	name	San Siro
+stadium:san-siro	country	Italia
+stadium:san-siro	club	AC Milan og Inter
+stadium:allianz-stadium	name	Allianz Stadium
+stadium:allianz-stadium	country	Italia
+stadium:allianz-stadium	club	Juventus
+stadium:stadio-diego-armando-maradona	name	Stadio Diego Armando Maradona
+stadium:stadio-diego-armando-maradona	country	Italia
+stadium:stadio-diego-armando-maradona	club	Napoli
+stadium:stade-vélodrome	name	Stade Vélodrome
+stadium:stade-vélodrome	country	Frankrike
+stadium:stade-vélodrome	club	Marseille
+stadium:johan-cruyff-arena	name	Johan Cruyff Arena
+stadium:johan-cruyff-arena	country	Nederland
+stadium:johan-cruyff-arena	club	Ajax
+stadium:de-kuip	name	De Kuip
+stadium:de-kuip	country	Nederland
+stadium:de-kuip	club	Feyenoord
+stadium:estádio-da-luz	name	Estádio da Luz
+stadium:estádio-da-luz	country	Portugal
+stadium:estádio-da-luz	club	Benfica
+stadium:estádio-do-dragão	name	Estádio do Dragão
+stadium:estádio-do-dragão	country	Portugal
+stadium:estádio-do-dragão	club	Porto
+stadium:rams-park	name	RAMS Park
+stadium:rams-park	country	Tyrkia
+stadium:rams-park	club	Galatasaray
+stadium:luzhniki	name	Luzhniki
+stadium:luzhniki	country	Russland
+stadium:luzhniki	club	Landslaget (Russland)
+stadium:ullevaal-stadion	name	Ullevaal stadion
+stadium:ullevaal-stadion	country	Norge
+stadium:ullevaal-stadion	club	Landslaget (Norge)
+stadium:lerkendal	name	Lerkendal
+stadium:lerkendal	country	Norge
+stadium:lerkendal	club	Rosenborg
+stadium:brann-stadion	name	Brann stadion
+stadium:brann-stadion	country	Norge
+stadium:brann-stadion	club	Brann
+stadium:maracanã	name	Maracanã
+stadium:maracanã	country	Brasil
+stadium:maracanã	club	Flamengo og Fluminense
+stadium:el-monumental	name	El Monumental
+stadium:el-monumental	country	Argentina
+stadium:el-monumental	club	River Plate
+stadium:estadio-azteca	name	Estadio Azteca
+stadium:estadio-azteca	country	Mexico
+stadium:estadio-azteca	club	Club América
+stadium:lusail-stadium	name	Lusail Stadium
+stadium:lusail-stadium	country	Qatar
+stadium:lusail-stadium	club	VM 2022-finalen
+stadium:metlife-stadium	name	MetLife Stadium
+stadium:metlife-stadium	country	USA
+stadium:metlife-stadium	club	VM 2026-finalen
+stadium:soccer-city	name	Soccer City
+stadium:soccer-city	country	Sør-Afrika
+stadium:soccer-city	club	VM 2010-finalen
+stadium:elland-road	name	Elland Road
+stadium:elland-road	country	England
+stadium:elland-road	club	Leeds United
+stadium:craven-cottage	name	Craven Cottage
+stadium:craven-cottage	country	England
+stadium:craven-cottage	club	Fulham
+stadium:london-stadium	name	London Stadium
+stadium:london-stadium	country	England
+stadium:london-stadium	club	West Ham United
+stadium:selhurst-park	name	Selhurst Park
+stadium:selhurst-park	country	England
+stadium:selhurst-park	club	Crystal Palace
+stadium:molineux	name	Molineux
+stadium:molineux	country	England
+stadium:molineux	club	Wolverhampton Wanderers
+stadium:king-power-stadium	name	King Power Stadium
+stadium:king-power-stadium	country	England
+stadium:king-power-stadium	club	Leicester City
+stadium:city-ground	name	City Ground
+stadium:city-ground	country	England
+stadium:city-ground	club	Nottingham Forest
+stadium:bramall-lane	name	Bramall Lane
+stadium:bramall-lane	country	England
+stadium:bramall-lane	club	Sheffield United
+stadium:hillsborough	name	Hillsborough
+stadium:hillsborough	country	England
+stadium:hillsborough	club	Sheffield Wednesday
+stadium:stadium-of-light	name	Stadium of Light
+stadium:stadium-of-light	country	England
+stadium:stadium-of-light	club	Sunderland
+stadium:riverside-stadium	name	Riverside Stadium
+stadium:riverside-stadium	country	England
+stadium:riverside-stadium	club	Middlesbrough
+stadium:st-mary-s-stadium	name	St Mary's Stadium
+stadium:st-mary-s-stadium	country	England
+stadium:st-mary-s-stadium	club	Southampton
+stadium:amex-stadium	name	Amex Stadium
+stadium:amex-stadium	country	England
+stadium:amex-stadium	club	Brighton & Hove Albion
+stadium:ewood-park	name	Ewood Park
+stadium:ewood-park	country	England
+stadium:ewood-park	club	Blackburn Rovers
+stadium:portman-road	name	Portman Road
+stadium:portman-road	country	England
+stadium:portman-road	club	Ipswich Town
+stadium:carrow-road	name	Carrow Road
+stadium:carrow-road	country	England
+stadium:carrow-road	club	Norwich City
+stadium:dean-court	name	Dean Court
+stadium:dean-court	country	England
+stadium:dean-court	club	Bournemouth
+stadium:tynecastle-park	name	Tynecastle Park
+stadium:tynecastle-park	country	Skottland
+stadium:tynecastle-park	club	Hearts
+stadium:pittodrie	name	Pittodrie
+stadium:pittodrie	country	Skottland
+stadium:pittodrie	club	Aberdeen
+stadium:millennium-stadium	name	Millennium Stadium
+stadium:millennium-stadium	country	Wales
+stadium:millennium-stadium	club	Landslaget (Wales)
+stadium:ramón-sánchez-pizjuán	name	Ramón Sánchez Pizjuán
+stadium:ramón-sánchez-pizjuán	country	Spania
+stadium:ramón-sánchez-pizjuán	club	Sevilla
+stadium:benito-villamarín	name	Benito Villamarín
+stadium:benito-villamarín	country	Spania
+stadium:benito-villamarín	club	Real Betis
+stadium:san-mamés	name	San Mamés
+stadium:san-mamés	country	Spania
+stadium:san-mamés	club	Athletic Bilbao
+stadium:anoeta	name	Anoeta
+stadium:anoeta	country	Spania
+stadium:anoeta	club	Real Sociedad
+stadium:estadio-de-la-cerámica	name	Estadio de la Cerámica
+stadium:estadio-de-la-cerámica	country	Spania
+stadium:estadio-de-la-cerámica	club	Villarreal
+stadium:mestalla	name	Mestalla
+stadium:mestalla	country	Spania
+stadium:mestalla	club	Valencia
+stadium:riazor	name	Riazor
+stadium:riazor	country	Spania
+stadium:riazor	club	Deportivo La Coruña
+stadium:balaídos	name	Balaídos
+stadium:balaídos	country	Spania
+stadium:balaídos	club	Celta Vigo
+stadium:olympiastadion-berlin	name	Olympiastadion Berlin
+stadium:olympiastadion-berlin	country	Tyskland
+stadium:olympiastadion-berlin	club	Hertha BSC
+stadium:volksparkstadion	name	Volksparkstadion
+stadium:volksparkstadion	country	Tyskland
+stadium:volksparkstadion	club	Hamburger SV
+stadium:mhparena	name	MHPArena
+stadium:mhparena	country	Tyskland
+stadium:mhparena	club	VfB Stuttgart
+stadium:rheinenergiestadion	name	RheinEnergieStadion
+stadium:rheinenergiestadion	country	Tyskland
+stadium:rheinenergiestadion	club	1. FC Köln
+stadium:borussia-park	name	Borussia-Park
+stadium:borussia-park	country	Tyskland
+stadium:borussia-park	club	Borussia Mönchengladbach
+stadium:weserstadion	name	Weserstadion
+stadium:weserstadion	country	Tyskland
+stadium:weserstadion	club	Werder Bremen
+stadium:volkswagen-arena	name	Volkswagen Arena
+stadium:volkswagen-arena	country	Tyskland
+stadium:volkswagen-arena	club	VfL Wolfsburg
+stadium:millerntor-stadion	name	Millerntor-Stadion
+stadium:millerntor-stadion	country	Tyskland
+stadium:millerntor-stadion	club	St. Pauli
+stadium:stadion-an-der-alten-försterei	name	Stadion An der Alten Försterei
+stadium:stadion-an-der-alten-försterei	country	Tyskland
+stadium:stadion-an-der-alten-försterei	club	Union Berlin
+stadium:olympiastadion-münchen	name	Olympiastadion München
+stadium:olympiastadion-münchen	country	Tyskland
+stadium:olympiastadion-münchen	club	VM-finalen 1974
+stadium:stadio-olimpico	name	Stadio Olimpico
+stadium:stadio-olimpico	country	Italia
+stadium:stadio-olimpico	club	Roma og Lazio
+stadium:stadio-artemio-franchi	name	Stadio Artemio Franchi
+stadium:stadio-artemio-franchi	country	Italia
+stadium:stadio-artemio-franchi	club	Fiorentina
+stadium:stadio-luigi-ferraris	name	Stadio Luigi Ferraris
+stadium:stadio-luigi-ferraris	country	Italia
+stadium:stadio-luigi-ferraris	club	Genoa og Sampdoria
+stadium:stadio-renato-dall-ara	name	Stadio Renato Dall'Ara
+stadium:stadio-renato-dall-ara	country	Italia
+stadium:stadio-renato-dall-ara	club	Bologna
+stadium:stadio-olimpico-grande-torino	name	Stadio Olimpico Grande Torino
+stadium:stadio-olimpico-grande-torino	country	Italia
+stadium:stadio-olimpico-grande-torino	club	Torino
+stadium:stadio-marc-antonio-bentegodi	name	Stadio Marc'Antonio Bentegodi
+stadium:stadio-marc-antonio-bentegodi	country	Italia
+stadium:stadio-marc-antonio-bentegodi	club	Hellas Verona
+stadium:parc-des-princes	name	Parc des Princes
+stadium:parc-des-princes	country	Frankrike
+stadium:parc-des-princes	club	Paris Saint-Germain
+stadium:stade-de-france	name	Stade de France
+stadium:stade-de-france	country	Frankrike
+stadium:stade-de-france	club	Landslaget (Frankrike)
+stadium:parc-olympique-lyonnais	name	Parc Olympique Lyonnais
+stadium:parc-olympique-lyonnais	country	Frankrike
+stadium:parc-olympique-lyonnais	club	Lyon
+stadium:stade-pierre-mauroy	name	Stade Pierre-Mauroy
+stadium:stade-pierre-mauroy	country	Frankrike
+stadium:stade-pierre-mauroy	club	Lille
+stadium:allianz-riviera	name	Allianz Riviera
+stadium:allianz-riviera	country	Frankrike
+stadium:allianz-riviera	club	Nice
+stadium:stade-geoffroy-guichard	name	Stade Geoffroy-Guichard
+stadium:stade-geoffroy-guichard	country	Frankrike
+stadium:stade-geoffroy-guichard	club	Saint-Étienne
+stadium:stade-de-la-beaujoire	name	Stade de la Beaujoire
+stadium:stade-de-la-beaujoire	country	Frankrike
+stadium:stade-de-la-beaujoire	club	Nantes
+stadium:stade-louis-ii	name	Stade Louis II
+stadium:stade-louis-ii	country	Monaco
+stadium:stade-louis-ii	club	AS Monaco
+stadium:philips-stadion	name	Philips Stadion
+stadium:philips-stadion	country	Nederland
+stadium:philips-stadion	club	PSV Eindhoven
+stadium:estádio-josé-alvalade	name	Estádio José Alvalade
+stadium:estádio-josé-alvalade	country	Portugal
+stadium:estádio-josé-alvalade	club	Sporting
+stadium:estádio-municipal-de-braga	name	Estádio Municipal de Braga
+stadium:estádio-municipal-de-braga	country	Portugal
+stadium:estádio-municipal-de-braga	club	Braga
+stadium:jan-breydel-stadion	name	Jan Breydel Stadion
+stadium:jan-breydel-stadion	country	Belgia
+stadium:jan-breydel-stadion	club	Club Brugge og Cercle Brugge
+stadium:kong-baudouin-stadion	name	Kong Baudouin-stadion
+stadium:kong-baudouin-stadion	country	Belgia
+stadium:kong-baudouin-stadion	club	Landslaget (Belgia)
+stadium:constant-vanden-stock-stadion	name	Constant Vanden Stock Stadion
+stadium:constant-vanden-stock-stadion	country	Belgia
+stadium:constant-vanden-stock-stadion	club	Anderlecht
+stadium:şükrü-saracoğlu	name	Şükrü Saracoğlu
+stadium:şükrü-saracoğlu	country	Tyrkia
+stadium:şükrü-saracoğlu	club	Fenerbahçe
+stadium:tüpraş-stadium	name	Tüpraş Stadium
+stadium:tüpraş-stadium	country	Tyrkia
+stadium:tüpraş-stadium	club	Beşiktaş
+stadium:atatürk-olympiske-stadion	name	Atatürk olympiske stadion
+stadium:atatürk-olympiske-stadion	country	Tyrkia
+stadium:atatürk-olympiske-stadion	club	Champions League-finalen 2005
+stadium:krestovskij-stadion	name	Krestovskij-stadion
+stadium:krestovskij-stadion	country	Russland
+stadium:krestovskij-stadion	club	Zenit St. Petersburg
+stadium:maksimir	name	Maksimir
+stadium:maksimir	country	Kroatia
+stadium:maksimir	club	Dinamo Zagreb
+stadium:rajko-mitić	name	Rajko Mitić
+stadium:rajko-mitić	country	Serbia
+stadium:rajko-mitić	club	Crvena zvezda
+stadium:ernst-happel-stadion	name	Ernst-Happel-Stadion
+stadium:ernst-happel-stadion	country	Østerrike
+stadium:ernst-happel-stadion	club	Landslaget (Østerrike)
+stadium:st-jakob-park	name	St. Jakob-Park
+stadium:st-jakob-park	country	Sveits
+stadium:st-jakob-park	club	Basel
+stadium:nasjonalstadion-i-warszawa	name	Nasjonalstadion i Warszawa
+stadium:nasjonalstadion-i-warszawa	country	Polen
+stadium:nasjonalstadion-i-warszawa	club	Landslaget (Polen)
+stadium:puskás-aréna	name	Puskás Aréna
+stadium:puskás-aréna	country	Ungarn
+stadium:puskás-aréna	club	Landslaget (Ungarn)
+stadium:strawberry-arena	name	Strawberry Arena
+stadium:strawberry-arena	country	Sverige
+stadium:strawberry-arena	club	Landslaget (Sverige)
+stadium:parken	name	Parken
+stadium:parken	country	Danmark
+stadium:parken	club	FC København
+stadium:aker-stadion	name	Aker stadion
+stadium:aker-stadion	country	Norge
+stadium:aker-stadion	club	Molde
+stadium:intility-arena	name	Intility Arena
+stadium:intility-arena	country	Norge
+stadium:intility-arena	club	Vålerenga
+stadium:aspmyra-stadion	name	Aspmyra stadion
+stadium:aspmyra-stadion	country	Norge
+stadium:aspmyra-stadion	club	Bodø/Glimt
+stadium:åråsen-stadion	name	Åråsen stadion
+stadium:åråsen-stadion	country	Norge
+stadium:åråsen-stadion	club	Lillestrøm
+stadium:fredrikstad-stadion	name	Fredrikstad stadion
+stadium:fredrikstad-stadion	country	Norge
+stadium:fredrikstad-stadion	club	Fredrikstad
+stadium:marienlyst-stadion	name	Marienlyst stadion
+stadium:marienlyst-stadion	country	Norge
+stadium:marienlyst-stadion	club	Strømsgodset
+stadium:alfheim-stadion	name	Alfheim stadion
+stadium:alfheim-stadion	country	Norge
+stadium:alfheim-stadion	club	Tromsø
+stadium:morumbi	name	Morumbi
+stadium:morumbi	country	Brasil
+stadium:morumbi	club	São Paulo FC
+stadium:arena-corinthians	name	Arena Corinthians
+stadium:arena-corinthians	country	Brasil
+stadium:arena-corinthians	club	Corinthians
+stadium:mineirão	name	Mineirão
+stadium:mineirão	country	Brasil
+stadium:mineirão	club	Cruzeiro
+stadium:la-bombonera	name	La Bombonera
+stadium:la-bombonera	country	Argentina
+stadium:la-bombonera	club	Boca Juniors
+stadium:estadio-centenario	name	Estadio Centenario
+stadium:estadio-centenario	country	Uruguay
+stadium:estadio-centenario	club	Landslaget (Uruguay)
+stadium:estadio-nacional	name	Estadio Nacional
+stadium:estadio-nacional	country	Chile
+stadium:estadio-nacional	club	Landslaget (Chile)
+stadium:estadio-hernando-siles	name	Estadio Hernando Siles
+stadium:estadio-hernando-siles	country	Bolivia
+stadium:estadio-hernando-siles	club	Landslaget (Bolivia)
+stadium:rose-bowl	name	Rose Bowl
+stadium:rose-bowl	country	USA
+stadium:rose-bowl	club	VM-finalen 1994
+stadium:estadio-bbva	name	Estadio BBVA
+stadium:estadio-bbva	country	Mexico
+stadium:estadio-bbva	club	Monterrey
+stadium:nissan-stadium	name	Nissan Stadium
+stadium:nissan-stadium	country	Japan
+stadium:nissan-stadium	club	VM-finalen 2002
+stadium:saitama-stadium-2002	name	Saitama Stadium 2002
+stadium:saitama-stadium-2002	country	Japan
+stadium:saitama-stadium-2002	club	Urawa Red Diamonds
+stadium:seoul-world-cup-stadium	name	Seoul World Cup Stadium
+stadium:seoul-world-cup-stadium	country	Sør-Korea
+stadium:seoul-world-cup-stadium	club	FC Seoul
+stadium:king-fahd-international-stadium	name	King Fahd International Stadium
+stadium:king-fahd-international-stadium	country	Saudi-Arabia
+stadium:king-fahd-international-stadium	club	Landslaget (Saudi-Arabia)
+stadium:al-awwal-park	name	Al-Awwal Park
+stadium:al-awwal-park	country	Saudi-Arabia
+stadium:al-awwal-park	club	Al-Nassr
+stadium:cairo-international-stadium	name	Cairo International Stadium
+stadium:cairo-international-stadium	country	Egypt
+stadium:cairo-international-stadium	club	Landslaget (Egypt)
+stadium:stade-mohammed-v	name	Stade Mohammed V
+stadium:stade-mohammed-v	country	Marokko
+stadium:stade-mohammed-v	club	Wydad og Raja
+stadium:cape-town-stadium	name	Cape Town Stadium
+stadium:cape-town-stadium	country	Sør-Afrika
+stadium:cape-town-stadium	club	VM 2010
+stadium:stadium-australia	name	Stadium Australia
+stadium:stadium-australia	country	Australia
+stadium:stadium-australia	club	Landslaget (Australia)
