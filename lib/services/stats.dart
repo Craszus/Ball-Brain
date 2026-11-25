@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart' show IconData, Icons;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -129,12 +128,9 @@ class Stats {
 enum TrophyGroup { general, levels, rules, sort, photo, geo, pvp, daily, club, party, practice }
 
 class Trophy {
-  const Trophy(this.id, this.title, this.description, this.tier, this.group, this.earned,
-      {this.icon});
+  const Trophy(this.id, this.title, this.description, this.tier, this.group, this.earned);
   final String id; // = filnavn i assets/trophies/
 
-  /// Vises i ringen for pokaler som ikke har fått eget bilde ennå.
-  final IconData? icon;
   final String title;
   final String description;
   final TrophyTier tier;
@@ -146,7 +142,7 @@ class Trophy {
 const groupTitles = {
   TrophyGroup.general: 'Generelt',
   TrophyGroup.levels: 'Nivåer',
-  TrophyGroup.rules: 'Regler-quiz',
+  TrophyGroup.rules: 'Fotballquiz',
   TrophyGroup.sort: 'Sorter rekkefølgen',
   TrophyGroup.photo: 'Gjett fra bilde',
   TrophyGroup.geo: 'Geografi',
@@ -175,7 +171,7 @@ final trophies = <Trophy>[
   Trophy('points_1000', 'Ballkjenner', 'Samle 1 000 poeng totalt', _s, _g, (s) => s.totalPoints >= 1000),
   Trophy('perfect_any', 'Perfekt runde', 'Svar riktig på alt i én runde', _gold, _g,
       (s) => s.perfects >= 1),
-  Trophy('allrounder', 'Allrounder', 'Spill regler, sortering, bilde og geografi', _s, _g,
+  Trophy('allrounder', 'Allrounder', 'Spill quiz, sortering, bilde og geografi', _s, _g,
       (s) => ['rules_quiz', 'image_sort', 'geo'].every((m) => s.mode(m).games > 0) && s.photoGames > 0),
   Trophy('lvl_5', 'Kaptein', 'Nå nivå 5', _s, TrophyGroup.levels,
       (s) => levelFor(s.totalPoints).level >= 5),
@@ -183,11 +179,11 @@ final trophies = <Trophy>[
       (s) => levelFor(s.totalPoints).level >= 9),
   Trophy('lvl_10', 'Legende', 'Nå nivå 10', _gold, TrophyGroup.levels,
       (s) => levelFor(s.totalPoints).level >= 10),
-  Trophy('rules_10', 'Dommerlærling', '10 poeng i én regler-runde', _b, TrophyGroup.rules,
+  Trophy('rules_10', 'Dommerlærling', '10 poeng i én quizrunde', _b, TrophyGroup.rules,
       (s) => s.bestRules >= 10),
-  Trophy('rules_16', 'Regelekspert', '16 poeng i én regler-runde', _s, TrophyGroup.rules,
+  Trophy('rules_16', 'Regelekspert', '16 poeng i én quizrunde', _s, TrophyGroup.rules,
       (s) => s.bestRules >= 16),
-  Trophy('rules_perfect', 'Ingen kort', 'Alt riktig i regler-quizen', _gold, TrophyGroup.rules,
+  Trophy('rules_perfect', 'Ingen kort', 'Alt riktig i fotballquizen', _gold, TrophyGroup.rules,
       (s) => s.mode('rules_quiz').perfects >= 1),
   Trophy('sort_10', 'Pallplass', '10 poeng i én sorteringsrunde', _b, TrophyGroup.sort,
       (s) => s.bestSort >= 10),
@@ -223,38 +219,37 @@ final trophies = <Trophy>[
   Trophy('pvp_king', 'Kongen av banen', 'Vinn 25 oppgjør', _gold, TrophyGroup.pvp,
       (s) => s.pvpWins >= 25),
   Trophy('geo_20', 'Stamgjest på kartet', 'Spill 20 geografi-runder', _s, TrophyGroup.geo,
-      (s) => s.mode('geo').games >= 20, icon: Icons.map),
+      (s) => s.mode('geo').games >= 20),
   Trophy('photo_perfect', 'Feilfri linse', 'Alt riktig i en bilderunde', _gold, TrophyGroup.photo,
-      (s) => s.modes.entries.any((e) => e.key.startsWith('photo_') && e.value.perfects > 0),
-      icon: Icons.camera),
+      (s) => s.modes.entries.any((e) => e.key.startsWith('photo_') && e.value.perfects > 0)),
   Trophy('daily_first', 'Dagens mann', 'Spill dagens utfordring', _b, TrophyGroup.daily,
-      (s) => s.count('dailyPlayed') >= 1, icon: Icons.today),
+      (s) => s.count('dailyPlayed') >= 1),
   Trophy('daily_7', 'Ukesform', '7 dager på rad', _s, TrophyGroup.daily,
-      (s) => s.count('dailyBestStreak') >= 7, icon: Icons.local_fire_department),
+      (s) => s.count('dailyBestStreak') >= 7),
   Trophy('daily_30', 'Fast i startelleveren', '30 dager på rad', _gold, TrophyGroup.daily,
-      (s) => s.count('dailyBestStreak') >= 30, icon: Icons.calendar_month),
+      (s) => s.count('dailyBestStreak') >= 30),
   Trophy('daily_perfect', 'Ti av ti', 'Alt riktig i dagens utfordring', _gold, TrophyGroup.daily,
-      (s) => s.count('dailyPerfect') >= 1, icon: Icons.star),
+      (s) => s.count('dailyPerfect') >= 1),
   Trophy('club_joined', 'Signert', 'Bli med i en klubb', _b, TrophyGroup.club,
-      (s) => s.count('clubJoined') >= 1, icon: Icons.draw),
+      (s) => s.count('clubJoined') >= 1),
   Trophy('club_first', 'Debutant', 'Spill din første klubbkamp', _b, TrophyGroup.club,
-      (s) => s.count('clubPlayed') >= 1, icon: Icons.shield),
+      (s) => s.count('clubPlayed') >= 1),
   Trophy('club_win', 'Tre poeng', 'Vinn en klubbkamp', _s, TrophyGroup.club,
-      (s) => s.count('clubWins') >= 1, icon: Icons.military_tech),
+      (s) => s.count('clubWins') >= 1),
   Trophy('club_10', 'Lagspiller', 'Spill 10 klubbkamper', _gold, TrophyGroup.club,
-      (s) => s.count('clubPlayed') >= 10, icon: Icons.groups),
+      (s) => s.count('clubPlayed') >= 10),
   Trophy('party_join', 'På gjestelisten', 'Bli med på en quizkveld', _b, TrophyGroup.party,
-      (s) => s.count('partyPlayed') >= 1, icon: Icons.celebration),
+      (s) => s.count('partyPlayed') >= 1),
   Trophy('party_win', 'Kveldens vinner', 'Vinn en quizkveld med minst 3 deltakere', _gold,
-      TrophyGroup.party, (s) => s.count('partyWins') >= 1, icon: Icons.emoji_events),
+      TrophyGroup.party, (s) => s.count('partyWins') >= 1),
   Trophy('party_host', 'Kveldens vert', 'Arranger en quizkveld med minst 3 deltakere', _s,
-      TrophyGroup.party, (s) => s.count('partyHosted') >= 1, icon: Icons.mic),
+      TrophyGroup.party, (s) => s.count('partyHosted') >= 1),
   Trophy('party_host_10', 'Stamvert', 'Arranger 10 quizkvelder', _gold, TrophyGroup.party,
-      (s) => s.count('partyHosted') >= 10, icon: Icons.sports_bar),
+      (s) => s.count('partyHosted') >= 10),
   Trophy('practice_5', 'Ekstratrening', 'Fullfør 5 øvingsrunder', _b, TrophyGroup.practice,
-      (s) => s.count('practiceRounds') >= 5, icon: Icons.fitness_center),
+      (s) => s.count('practiceRounds') >= 5),
   Trophy('practice_packs', 'Pakkesamler', 'Spill alle fire spørsmålspakkene', _s,
-      TrophyGroup.practice, (s) => s.count('packsPlayed') >= 4, icon: Icons.library_books),
+      TrophyGroup.practice, (s) => s.count('packsPlayed') >= 4),
 ];
 
 class StatsController extends Notifier<Stats> {
@@ -321,6 +316,7 @@ class StatsController extends Notifier<Stats> {
       final streak = last != null && day.difference(last).inDays == 1
           ? (counts['dailyStreak'] ?? 0) + 1
           : 1;
+      counts['dailyDay'] = dayNumber(day);
       counts['dailyPlayed'] = (counts['dailyPlayed'] ?? 0) + 1;
       counts['dailyStreak'] = streak;
       if (streak > (counts['dailyBestStreak'] ?? 0)) counts['dailyBestStreak'] = streak;
@@ -330,6 +326,9 @@ class StatsController extends Notifier<Stats> {
       await p.setString('counts', jsonEncode(counts));
     } catch (_) {}
   }
+
+  /// Datoen som tall (20261125), slik den lagres i tellerne.
+  static int dayNumber(DateTime d) => d.year * 10000 + d.month * 100 + d.day;
 
   static Map<String, int> _decodeCounts(String? raw) {
     if (raw == null) return {};

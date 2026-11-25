@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../club/club_api.dart';
 import '../l10n/l10n.dart';
 import '../services/push.dart';
 import '../services/cloud.dart';
+import 'challenge_alerts.dart';
 import 'duel_api.dart';
 import 'duel_prefs.dart';
 import 'duel_screen.dart';
@@ -38,11 +40,12 @@ class ChallengeGate extends ConsumerStatefulWidget {
   ConsumerState<ChallengeGate> createState() => _ChallengeGateState();
 }
 
-class _ChallengeGateState extends ConsumerState<ChallengeGate> {
+class _ChallengeGateState extends ConsumerState<ChallengeGate> with WidgetsBindingObserver {
   static bool _shownThisStart = false;
 
   void Function()? _unwatch;
   Timer? _debounce;
+  Timer? _poll; // reserve hvis sanntidsvarslingen ikke kommer fram
   final Set<String> _known = {}; // innkommende vi allerede har sagt fra om
   final Set<String> _announced = {}; // resultater/avslag vi allerede har sagt fra om
   bool _primed = false;
@@ -50,15 +53,23 @@ class _ChallengeGateState extends ConsumerState<ChallengeGate> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _start();
     Push.start();
   }
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _debounce?.cancel();
+    _poll?.cancel();
     _unwatch?.call();
     super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed && _primed) _check();
   }
 
   Future<void> _start() async {
@@ -73,6 +84,7 @@ class _ChallengeGateState extends ConsumerState<ChallengeGate> {
       _debounce = Timer(const Duration(milliseconds: 500), _check);
     });
     await _check();
+    if (mounted) _poll = Timer.periodic(const Duration(seconds: 30), (_) => _check());
   }
 
   Future<void> _check() async {
@@ -87,6 +99,8 @@ class _ChallengeGateState extends ConsumerState<ChallengeGate> {
     if (!mounted) return;
 
     final incoming = [for (final i in items) if (i.needsMyAnswer) i];
+    ref.read(challengeAlertsProvider.notifier).setDuels(incoming.length);
+    _checkClubs();
     final fresh = [for (final i in incoming) if (!_known.contains(i.id)) i];
     _known.addAll(incoming.map((i) => i.id));
 
@@ -113,6 +127,16 @@ class _ChallengeGateState extends ConsumerState<ChallengeGate> {
     }
   }
 
+  /// Klubbkamper klubben min er utfordret til og ikke har svart på.
+  Future<void> _checkClubs() async {
+    try {
+      final games = await ClubApi.games();
+      if (!mounted) return;
+      ref.read(challengeAlertsProvider.notifier).setClubs(
+          games.where((g) => g.status == 'invited' && g.away.mine && !g.home.mine).length);
+    } catch (_) {}
+  }
+
   Future<void> _ask(List<DuelListItem> incoming) async {
     final choice = await showChallengeDialog(context, [for (final i in incoming) i.opponent]);
     if (!mounted) return;
@@ -122,6 +146,7 @@ class _ChallengeGateState extends ConsumerState<ChallengeGate> {
       for (final i in incoming) {
         await DuelApi.decline(i.id);
       }
+      await _check();
     }
   }
 

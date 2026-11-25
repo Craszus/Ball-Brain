@@ -22,8 +22,8 @@ void main() {
     expect(find.text('LVL'), findsOneWidget);
     expect(find.text('Benkesliter'), findsOneWidget);
     expect(find.text('0 / 50 XP'), findsOneWidget);
-    expect(find.text('SPILLMODE'), findsOneWidget);
-    expect(find.text('Regler-quiz'), findsOneWidget);
+    expect(find.text('Fotballquiz'), findsOneWidget);
+    expect(find.text('Dagens utfordring'), findsOneWidget);
     expect(find.text('Sorter rekkefølgen'), findsOneWidget);
     expect(find.text('Geografi-quiz'), findsOneWidget);
     expect(find.text('Kamper'), findsOneWidget);
@@ -42,7 +42,7 @@ void main() {
     await tester.pumpWidget(const SizedBox());
   });
 
-  testWidgets('Regler-quiz og Geografi-quiz har valgmeny', (tester) async {
+  testWidgets('Fotballquiz og Geografi-quiz har valgmeny', (tester) async {
     SharedPreferences.setMockInitialValues({});
     tester.view.physicalSize = const Size(375, 812);
     tester.view.devicePixelRatio = 1;

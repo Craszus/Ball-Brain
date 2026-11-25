@@ -43,7 +43,9 @@ Kryss av `[x]` når noe er ferdig. Nye oppgaver legges nederst som `- [ ] tekst`
 - [ ] (#298) Quizkveld: verten starter en quiz, alle svarer på mobilen (under «Kamper»)
 - [ ] (#299) Nye pokaler for dagens utfordring, klubbkamp, quizkveld og øving, og ryddigere innstillinger og menyer
 - [ ] (#300) Test quizkveld med flere ekte telefoner (gjerne en pubkveld)
-- [ ] (#301) Tegne pokalbilder til de 16 nye pokalene (viser et enkelt ikon nå)
-- [ ] (#302) Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
+- [x] (#301) Tegne pokalbilder til de 16 nye pokalene (viser et enkelt ikon nå)
+- [x] (#302) Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
 - [ ] (#303) Quizkveld i nettleser, så pubgjester slipper å installere appen
 - [ ] (#304) Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
+- [ ] (#305) Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
+- [ ] (#306) Dagens utfordring på forsiden, «Regler-quiz» heter «Fotballquiz», varsel med gult kort på «Kamper»

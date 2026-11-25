@@ -148,7 +148,7 @@ class StatsScreen extends ConsumerWidget {
             stat(Icons.star, 'Poeng totalt', stats.totalPoints),
           ]),
           Row(children: [
-            stat(Icons.assignment_turned_in_outlined, 'Beste regler-runde',
+            stat(Icons.assignment_turned_in_outlined, 'Beste quizrunde',
                 stats.bestRules),
             const SizedBox(width: 8),
             stat(Icons.layers_outlined, 'Beste sortering', stats.bestSort),
@@ -240,7 +240,6 @@ class _TrophyCard extends StatelessWidget {
             TrophyBadge(
                 tier: trophy.tier,
                 asset: trophy.asset,
-                icon: trophy.icon,
                 earned: got,
                 size: 92),
             const SizedBox(height: 8),
@@ -381,7 +380,7 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                 for (final t in unlocked.take(3)) ...[
                   const SizedBox(height: 10),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    TrophyBadge(tier: t.tier, asset: t.asset, icon: t.icon, size: 48),
+                    TrophyBadge(tier: t.tier, asset: t.asset, size: 48),
                     const SizedBox(width: 10),
                     Flexible(
                         child: Text('Ny pokal: ${t.title}',

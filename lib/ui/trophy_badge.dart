@@ -20,11 +20,7 @@ class TrophyBadge extends StatelessWidget {
     required this.asset,
     this.earned = true,
     this.size = 72,
-    this.icon,
   });
-
-  /// Brukes i stedet for bildet når pokalen ikke har eget bilde.
-  final IconData? icon;
 
   final TrophyTier tier;
   final String asset;
@@ -40,12 +36,10 @@ class TrophyBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget img = icon != null
-        ? ColoredBox(
-            color: AppColors.card, child: Icon(icon, size: size * 0.46, color: AppColors.gold))
-        : Image.asset(asset,
-            fit: BoxFit.cover,
-            errorBuilder: (_, _, _) => const Icon(Icons.emoji_events, color: AppColors.gold));
+    Widget img = Image.asset(asset,
+        fit: BoxFit.cover,
+        errorBuilder: (_, _, _) =>
+            const Icon(Icons.emoji_events, color: AppColors.gold));
     if (!earned) img = ColorFiltered(colorFilter: _gray, child: img);
     return SizedBox(
       width: size,

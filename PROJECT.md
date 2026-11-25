@@ -24,7 +24,7 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Plan (12/37 ferdige)
+## Plan (14/39 ferdige)
 
 **Fase 1: Grunnmur & MVP-prototyp**
 - [x] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
@@ -66,10 +66,12 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [ ] Quizkveld: verten starter en quiz, alle svarer på mobilen (under «Kamper»)
 - [ ] Nye pokaler for dagens utfordring, klubbkamp, quizkveld og øving, og ryddigere innstillinger og menyer
 - [ ] Test quizkveld med flere ekte telefoner (gjerne en pubkveld)
-- [ ] Tegne pokalbilder til de 16 nye pokalene (viser et enkelt ikon nå)
-- [ ] Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
+- [x] Tegne pokalbilder til de 16 nye pokalene (viser et enkelt ikon nå)
+- [x] Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
 - [ ] Quizkveld i nettleser, så pubgjester slipper å installere appen
 - [ ] Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
+- [ ] Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
+- [ ] Dagens utfordring på forsiden, «Regler-quiz» heter «Fotballquiz», varsel med gult kort på «Kamper»
 
 ## Andre filer i mappen
 - `LICENSE` (1 kB)
@@ -161,3 +163,5 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Ball Brain Pro (2026-11-25): klargjort i testmodus (`proMode` i lib/services/pro.dart), prøves uten betaling. Planlagt pris 39 kr/mnd eller 249 kr/år (forslag). Pro gir aldri fordeler på rangeringene: øvingsrunder gir verken XP eller poeng. Statistikk og bom lagres bare på telefonen. Spørsmålspakkene (tools/make_packs.py) finnes på norsk og engelsk.
 - Quizkveld (2026-11-25): ligger under «Kamper». Serveren (supabase/quiznight.sql) styrer spørsmål, tid og poeng; verten går videre mellom spørsmålene; opptil 100 deltakere; gratis for alle foreløpig. Poengene teller ikke på rangeringene.
 - Menyer (2026-11-25): gjennomgått av en egen agent. Innstillinger delt i grupper, handlingsknappene øverst i 1v1, reglene under valgene, «Klubber»-fanen i rangeringen byttet med klubbtabellen.
+- Forside (2026-11-25): «Regler-quiz» heter nå «Fotballquiz». Dagens utfordring ligger som en gullstripe over spillknappene (overskriften «SPILLMODE» fjernet for å få plass). Ved utfordring viser «Kamper» et gult kort med antall og pulserer i gull.
+- Pokaler lages i Blender (tools/make_trophies.py + tools/compose_trophies.py), så nye kan lages i samme stil.

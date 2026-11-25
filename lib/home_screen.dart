@@ -11,9 +11,11 @@ import 'quiz/rules_quiz_screen.dart';
 import 'services/pro.dart';
 import 'services/profile.dart';
 import 'services/stats.dart';
+import 'duel/challenge_alerts.dart';
 import 'settings_screen.dart';
 import 'quiz/quiz_controller.dart';
 import 'ui/avatar_view.dart';
+import 'ui/challenge_alert.dart';
 import 'ui/choice_screen.dart';
 import 'ui/football.dart';
 import 'ui/icon_tile.dart';
@@ -31,6 +33,7 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final profile = ref.watch(profileProvider);
     final stats = ref.watch(statsProvider);
+    final alerts = ref.watch(challengeAlertsProvider);
     void open(Widget screen) =>
         Navigator.of(context).push(MaterialPageRoute(builder: (_) => screen));
 
@@ -78,13 +81,13 @@ class HomeScreen extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Center(child: BrandMark(width: 66)),
+                const Center(child: BrandMark(width: 56)),
                 const SizedBox(height: 8),
                 const Text(
                   'BALL BRAIN',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 33,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0.5,
                     color: Colors.white,
@@ -107,14 +110,14 @@ class HomeScreen extends ConsumerWidget {
                   child: LevelCard(xp: stats.totalPoints),
                 ),
                 const SizedBox(height: 8),
-                const Text(
-                  'SPILLMODE',
-                  style: TextStyle(
-                    color: AppColors.textSecondary,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 0.6,
-                  ),
+                _DailyStrip(
+                  done: stats.count('dailyDay') == StatsController.dayNumber(DateTime.now()),
+                  streak: stats.count('dailyStreak'),
+                  onTap: () {
+                    ref.read(quizEraProvider.notifier).set(dailyChallenge);
+                    ref.invalidate(quizControllerProvider);
+                    open(const RulesQuizScreen());
+                  },
                 ),
               ],
             ),
@@ -130,10 +133,10 @@ class HomeScreen extends ConsumerWidget {
                 children: [
                 _ModeCard(
                   icon: const Icon(Icons.assignment_turned_in_outlined),
-                  title: 'Regler-quiz',
+                  title: 'Fotballquiz',
                   onTap: () => open(ChoiceScreen(
-                    title: 'Regler-quiz',
-                    heading: 'Test regelkunnskapen din.',
+                    title: 'Fotballquiz',
+                    heading: 'Test fotballkunnskapen din.',
                     rules: const [
                       '10 spørsmål per runde. Velg riktig av fire alternativer.',
                       'Riktig svar gir +2 poeng, feil svar gir −1 poeng.',
@@ -234,7 +237,8 @@ class HomeScreen extends ConsumerWidget {
                 _ModeCard(
                   icon: const Icon(Icons.sports_mma),
                   title: 'Kamper',
-                  onTap: () => open(const DuelScreen()),
+                  alerts: alerts.total,
+                  onTap: () => open(DuelScreen(initialTab: alerts.tab)),
                 ),
                 ],
               ),
@@ -276,7 +280,11 @@ class _ModeCard extends StatelessWidget {
     required this.icon,
     required this.title,
     required this.onTap,
+    this.alerts = 0,
   });
+
+  /// Antall utfordringer som venter (gult kort og gullpuls).
+  final int alerts;
 
   final Widget icon;
   final String title;
@@ -288,7 +296,9 @@ class _ModeCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 4),
         child: SizedBox.expand(
-          child: Card(
+          child: ChallengeAlert(
+            count: alerts,
+            child: Card(
             clipBehavior: Clip.antiAlias,
             elevation: 8,
             margin: EdgeInsets.zero,
@@ -324,8 +334,63 @@ class _ModeCard extends StatelessWidget {
               ),
             ),
           ),
+          ),
         ),
       ),
     );
   }
+}
+
+/// Snarveien til dagens utfordring: gullkantet stripe mellom nivåkortet og spillknappene.
+class _DailyStrip extends StatelessWidget {
+  const _DailyStrip({required this.done, required this.streak, required this.onTap});
+
+  final bool done;
+  final int streak;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) => Material(
+        color: Colors.transparent,
+        child: Ink(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+              AppColors.gold.withValues(alpha: done ? 0.10 : 0.34),
+              AppColors.gold.withValues(alpha: done ? 0.04 : 0.12),
+            ]),
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppColors.gold, width: done ? 1 : 2),
+          ),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(14),
+            onTap: onTap,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+              child: Row(children: [
+                Icon(done ? Icons.check_circle : Icons.today, color: AppColors.gold, size: 24),
+                const SizedBox(width: 10),
+                const Expanded(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text('Dagens utfordring',
+                        maxLines: 1,
+                        style: TextStyle(
+                            color: Colors.white, fontSize: 17, fontWeight: FontWeight.w900)),
+                  ),
+                ),
+                if (streak > 1) ...[
+                  const Icon(Icons.local_fire_department, color: Color(0xFFFF8F00), size: 20),
+                  Text('$streak',
+                      style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.white)),
+                  const SizedBox(width: 10),
+                ],
+                Text(done ? 'Spilt i dag' : 'Spill',
+                    style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.gold)),
+                const Icon(Icons.chevron_right, color: AppColors.gold),
+              ]),
+            ),
+          ),
+        ),
+      );
 }

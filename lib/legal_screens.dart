@@ -5,7 +5,7 @@ import 'ui/theme.dart';
 import 'l10n/l10n.dart';
 
 /// Sist oppdatert (vises øverst i begge dokumentene).
-const legalUpdated = '24. november 2026';
+const legalUpdated = '25. november 2026';
 
 class _Section {
   const _Section(this.title, this.body);
@@ -65,55 +65,33 @@ class PrivacyScreen extends StatelessWidget {
             'lagrer, hvorfor, og hvilke rettigheter du har.',
         sections: [
           _Section('Hva vi lagrer',
-              'Spillernavn (kallenavn), land, valgt avatar, poeng, XP, nivå, '
-                  'rekorder og troféer. Vi ber ikke om ekte navn, e-post, '
-                  'telefonnummer, posisjon eller bilder av deg. Når du spiller 1v1, '
-                  'lagres også resultatet av kampen.'),
+              'Spillernavn (kallenavn), land, valgt avatar, poeng, XP, nivå, rekorder og troféer. Vi ber ikke om ekte navn, e-post, telefonnummer, posisjon eller bilder av deg. Når du spiller mot andre (1v1, klubbkamp, dagens utfordring eller quizkveld), lagres svarene og resultatet. Er du med i en klubb, lagres medlemskapet.'),
           _Section('Hvor dataene ligger',
-              'Kallenavn, land og poeng (også resultater fra 1v1, klubbkamper og dagens utfordring) lagres hos vår '
-                  'databaseleverandør (Supabase) på servere i London (Storbritannia). '
-                  'Avataren, XP, nivå og troféer ligger bare på din egen enhet. Appen '
-                  'logger deg inn anonymt, uten e-post eller passord. «Slett all min '
-                  'data» i Innstillinger sletter profilen din, poengene og kampene '
-                  'dine på serveren, og alt på enheten. Slår du på varsler, lagres '
-                  'også enhetens varsel-id, og varslene sendes via Google (Firebase).'),
+              'Kallenavn, land, poeng, klubbmedlemskap og resultater fra kamper, dagens utfordring og quizkvelder lagres hos vår databaseleverandør (Supabase) på servere i London (Storbritannia). Appen logger deg inn anonymt, uten e-post eller passord. Slår du på varsler, lagres også enhetens varsel-id, og varslene sendes via Google (Firebase).'),
+          _Section('Hva som bare ligger på telefonen',
+              'Avataren, XP, nivå, troféer, statistikken per tema, listen over spørsmål du har bommet på, innstillingene, om Pro er slått på og hvilke annonsevalg du har gjort ligger bare på din egen enhet.'),
+          _Section('Quizkveld',
+              'Når du blir med på en quizkveld, ser verten og de andre deltakerne kallenavnet og poengene dine. Verten får ikke andre opplysninger om deg. Quizkvelder som er eldre enn sju dager slettes løpende. Del bare koden med dem du vil ha med.'),
           _Section('Hvorfor vi lagrer det',
-              'For at spillet skal fungere: å vise profilen din, holde '
-                  'styr på framgang og troféer, og vise deg på '
-                  'rangeringslister og i kamper mot andre spillere. Grunnlaget er '
-                  'at det er nødvendig for å levere tjenesten du bruker.'),
+              'For at spillet skal fungere: å vise profilen din, holde styr på framgang og troféer, og vise deg på rangeringslister og i kamper mot andre spillere. Grunnlaget er at det er nødvendig for å levere tjenesten du bruker.'),
           _Section('Hva andre kan se',
-              'Andre spillere kan se kallenavn, land og poeng på rangeringslister, '
-                  'i grupper du er med i og i 1v1-kamper. Velg et kallenavn som ikke '
-                  'avslører hvem du er.'),
+              'Andre spillere kan se kallenavn, land og poeng på rangeringslister, i klubber du er med i, i 1v1, klubbkamper og quizkvelder. Velg et kallenavn som ikke avslører hvem du er.'),
+          _Section('Annonser og Pro',
+              'Annonsene i denne testutgaven er bare plassholdere: ingen annonseleverandør er koblet til, og ingen data deles. Du velger selv om du vil se dem. Ball Brain Pro er foreløpig en test uten betaling, så ingen betalingsopplysninger samles inn. Før ekte annonser eller kjøp tas i bruk, oppdaterer vi denne teksten og ber om samtykke der det kreves.'),
           _Section('Barn',
-              'Appen er laget for fotballfans i alle aldre. Barn under 13 år '
-                  'bør bruke appen sammen med en voksen. Vi samler ikke inn '
-                  'mer data om barn enn om andre, og de skal ikke oppgi ekte '
-                  'navn.'),
+              'Appen er laget for fotballfans i alle aldre. Barn under 13 år bør bruke appen sammen med en voksen. Vi samler ikke inn mer data om barn enn om andre, og de skal ikke oppgi ekte navn.'),
           _Section('Avatarene',
-              'Avatarene er tegnede figurer. Noen kan likne på ekte personer, '
-                  'og er brukt med samtykke.'),
+              'Avatarene er tegnede figurer. Noen kan likne på ekte personer, og er brukt med samtykke.'),
           _Section('Kartet og bilder',
-              'Kartet vises fra data som ligger i appen og krever ingen '
-                  'posisjon fra deg. Bilder av spillere og stadioner kommer fra '
-                  'Wikimedia Commons med fri lisens (se Bildekreditering).'),
+              'Kartet vises fra data som ligger i appen og krever ingen posisjon fra deg. Bilder av spillere og stadioner kommer fra Wikimedia Commons med fri lisens (se Bildekreditering).'),
           _Section('Deling med tredjeparter',
-              'Vi selger ikke data og viser ikke personrettet reklame. '
-                  'Feilrapportering og ytelsesmåling (planlagt via Firebase '
-                  'Crashlytics) samler tekniske data, ikke profilen din.'),
+              'Vi selger ikke data og viser ikke personrettet reklame. Databasen drives av Supabase og varslene av Google (Firebase). Når appen ser etter en ny versjon, kontaktes GitHub, som da ser IP-adressen din slik et vanlig nettsted gjør. Feilrapportering og ytelsesmåling (planlagt via Firebase Crashlytics) vil samle tekniske data, ikke profilen din.'),
           _Section('Dine rettigheter',
-              'Du kan når som helst se, rette og slette dataene dine. '
-                  'I Innstillinger kan du velge «Slett all min data», som '
-                  'fjerner alt fra denne enheten. Er dataene dine lastet opp, '
-                  'sletter vi dem også fra serveren. Du har rett til å klage '
-                  'til Datatilsynet.'),
+              'Du kan når som helst se, rette og slette dataene dine. «Slett all min data» i Innstillinger fjerner alt fra telefonen, og sletter profilen, poengene, kampene og klubbmedlemskapene dine fra serveren. Den anonyme innloggings-ID-en, uten navn eller e-post, kan bli liggende. Du har rett til å klage til Datatilsynet.'),
           _Section('Lagring og sletting',
-              'Data lagres så lenge du bruker appen. Slettes appen eller '
-                  'dataene dine, forsvinner de lokale dataene med en gang.'),
+              'Data lagres så lenge du bruker appen. Sletter du appen, forsvinner det som ligger på telefonen. Velg «Slett all min data» først hvis du også vil ha det bort fra serveren.'),
           _Section('Kontakt',
-              'Spørsmål om personvern kan sendes til utvikleren via '
-                  'kontaktadressen på appens side i App Store og Google Play.'),
+              'Spørsmål om personvern kan sendes til utvikleren via kontaktadressen på appens side i App Store og Google Play.'),
         ],
       );
 }
@@ -128,9 +106,7 @@ class TermsScreen extends StatelessWidget {
         intro: 'Ved å bruke Ball Brain godtar du disse vilkårene.',
         sections: [
           _Section('Bruk av appen',
-              'Ball Brain er et fotballquiz-spill for underholdning. Du kan '
-                  'bruke appen privat og gratis. Du må ikke forsøke å jukse, '
-                  'bryte inn i systemet, eller forstyrre andre spillere.'),
+              'Ball Brain er et fotballquiz-spill for underholdning. Du kan bruke appen gratis, også til quizkvelder på puben eller i supporterklubben. Ball Brain Pro er foreløpig en test uten betaling. Du må ikke forsøke å jukse, bryte inn i systemet, eller forstyrre andre spillere.'),
           _Section('Kallenavn og oppførsel',
               'Kallenavn skal ikke være krenkende, støtende, ulovlige eller '
                   'utgi seg for å være andre. Vi kan endre eller fjerne '

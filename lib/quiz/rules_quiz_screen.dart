@@ -24,7 +24,7 @@ class RulesQuizScreen extends ConsumerWidget {
         ? 'Dagens utfordring'
         : practice
             ? 'Øving'
-            : 'Regler-quiz';
+            : 'Fotballquiz';
 
     return PitchScaffold(
       title: title,

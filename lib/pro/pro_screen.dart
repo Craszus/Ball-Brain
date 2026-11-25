@@ -152,7 +152,7 @@ class TopicStatsScreen extends ConsumerWidget {
         padding: const EdgeInsets.all(16),
         children: [
           if (topics.isEmpty)
-            const Text('Spill noen runder med regler-quiz, så kommer statistikken her.',
+            const Text('Spill noen runder med fotballquiz, så kommer statistikken her.',
                 textAlign: TextAlign.center),
           if (ranked.length > 1) ...[
             Text('Sterkest: ${ranked.last.key}',

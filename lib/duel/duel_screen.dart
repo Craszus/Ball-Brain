@@ -38,7 +38,10 @@ String duelError(String key) => switch (key) {
 
 /// 1v1: to spillere får de samme ti spørsmålene. Serveren styrer tid, poeng og vinner.
 class DuelScreen extends ConsumerStatefulWidget {
-  const DuelScreen({super.key});
+  const DuelScreen({super.key, this.initialTab = 0});
+
+  /// 0 = 1v1, 1 = klubber, 2 = quizkveld.
+  final int initialTab;
 
   @override
   ConsumerState<DuelScreen> createState() => _DuelScreenState();
@@ -46,7 +49,7 @@ class DuelScreen extends ConsumerStatefulWidget {
 
 class _DuelScreenState extends ConsumerState<DuelScreen> {
   _Phase _phase = _Phase.menu;
-  int _tab = 0; // 0 = 1v1, 1 = klubber, 2 = quizkveld
+  late int _tab = widget.initialTab; // 0 = 1v1, 1 = klubber, 2 = quizkveld
   DuelSummary? _d;
   List<DuelQuestion> _qs = const [];
   int _qi = 0;

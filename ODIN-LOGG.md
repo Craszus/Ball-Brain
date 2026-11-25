@@ -309,3 +309,11 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 - Ball Brain Pro klargjort (testmodus): Pro-skjerm, ingen annonser, statistikk per tema, tren på bommene, 4 pakker à 15 spørsmål, 4 nye klubbskjold (club_set_look oppdatert i Supabase), avatarrammer og titler. 81 tester grønne, installert på telefonen. Ikke committet eller gitt ut.
 - Quizkveld bygget (lib/party/, supabase/quiznight.sql kjørt, python tools/test_quiznight.py ALT OK) og prøvd på telefonen med to testdeltakere. 16 nye pokaler, «Ny pokal» og «Til hovedmenyen» på resultatskjermen, innstillinger i grupper, ryddet menyer. 87 tester grønne. Ikke committet eller gitt ut.
 - Gitt ut bygg 5 (25.11) via GitHub «siste-bygg»: quizkveld, Ball Brain Pro (testmodus), strammere testreklame, nye pokaler, ryddigere innstillinger og menyer. Analyse uten feil, 87 tester grønne.
+- Etter bygg 5: personvernteksten og vilkårene oppdatert (norsk og engelsk), 16 pokalbilder laget i Blender, dagens utfordring på forsiden, «Fotballquiz», varsel på «Kamper» (prøvd på telefonen med testutfordring, slettet etterpå), og appen sjekker utfordringer hvert 30. sekund. 90 tester grønne. Ikke committet eller gitt ut.
+- Merk: sanntidsvarslingen ga ikke utslag da testutfordringen ble lagt inn mens appen var åpen; årsaken er ikke undersøkt.
+
+## 2026-11-25 (utgivelse bygg 6)
+- Gitt ut bygg 6 på GitHub (`siste-bygg`): oppdatert personverntekst og vilkår, 16 nye pokalbilder, dagens utfordring på forsiden, «Fotballquiz» og gult kort på «Kamper» ved utfordringer.
+- Før utgivelsen: analyse uten feil, 90 tester grønne, ingen treff på nøkler eller passord i endringene.
+- Ikke prøvd på telefon: personvernteksten, de nye pokalene i appen, varsel om klubbkamp og oppdatering via «Last ned».
+- Neste: prøve oppdateringen på telefonen; juridisk gjennomgang og kontaktadresse før lansering (#271).
