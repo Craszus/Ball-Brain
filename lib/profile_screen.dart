@@ -3,11 +3,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'avatar_picker_screen.dart';
 import 'edit_profile_screen.dart';
+import 'services/ads.dart';
 import 'services/levels.dart';
 import 'services/scoring.dart';
 import 'services/profile.dart';
 import 'services/stats.dart';
 import 'settings_screen.dart';
+import 'ui/ad_flow.dart';
 import 'ui/ranking_card.dart';
 import 'ui/avatar_view.dart';
 import 'ui/football.dart';
@@ -267,6 +269,8 @@ class ResultPanel extends ConsumerStatefulWidget {
 class _ResultPanelState extends ConsumerState<ResultPanel> {
   late bool _celebrate;
   late final int _xpBefore;
+  bool _offerAd = false;
+  bool _bonus = false;
 
   @override
   void initState() {
@@ -274,6 +278,31 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
     final total = ref.read(statsProvider).totalPoints;
     _xpBefore = (total - widget.score).clamp(0, total);
     _celebrate = leveledUp(_xpBefore, total);
+    if (widget.score > 0) {
+      Ads.available().then((v) {
+        if (mounted) setState(() => _offerAd = v);
+      });
+    }
+  }
+
+  /// Dobbel XP etter en annonse. Gjelder bare nivået mitt, ikke rangeringene.
+  Future<void> _watchAd() async {
+    final watched = await showRewardedAd(context);
+    if (!mounted) return;
+    if (!watched) {
+      // slått av i samtykkevinduet: fjern tilbudet
+      final still = await Ads.available();
+      if (mounted) setState(() => _offerAd = still);
+      return;
+    }
+    final before = ref.read(statsProvider).totalPoints;
+    await ref.read(statsProvider.notifier).addBonus(widget.score);
+    if (!mounted) return;
+    setState(() {
+      _bonus = true;
+      _offerAd = false;
+      _celebrate = leveledUp(before, before + widget.score);
+    });
   }
 
   @override
@@ -306,6 +335,10 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                 Text('${signed(widget.score)} XP',
                     style: const TextStyle(
                         fontWeight: FontWeight.w900, color: AppColors.gold)),
+                if (_bonus)
+                  Text('+${widget.score} XP i bonus',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900, color: AppColors.gold)),
                 const SizedBox(height: 14),
                 LevelCard(xp: total, fromXp: _xpBefore),
                 const SizedBox(height: 8),
@@ -319,6 +352,13 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                       style: const TextStyle(fontWeight: FontWeight.w800)),
                 ],
                 const SizedBox(height: 20),
+                if (_offerAd) ...[
+                  OutlinedButton.icon(
+                      onPressed: _watchAd,
+                      icon: const Icon(Icons.play_circle_outline),
+                      label: const Text('Se en annonse: dobbel XP')),
+                  const SizedBox(height: 8),
+                ],
                 if (widget.onRanking != null) ...[
                   FilledButton(
                       onPressed: widget.onRanking, child: const Text('Se rangeringen')),

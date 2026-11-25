@@ -301,3 +301,6 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 - Ny push-test 25.11: FCM_SERVICE_ACCOUNT inneholdt bare private_key-feltet, ikke hele nøkkelfilen (JSON.parse feiler). Neste: legg inn hele .json-filen (starter med {) og test igjen. Testdata ryddet bort.
 - Push virker (25.11): hele nøkkelfilen er lagt inn, og varselet «Du er utfordret!» kom fram til telefonen med appen lukket. Testdata slettet. #291 krysset av. Ikke testet: klubbkamp-varsler. Ikke utgitt til brukere ennå.
 - Gitt ut bygg 3 (25.11) til brukerne via GitHub «siste-bygg»: kamphistorikk, daglig utfordring, klubber og klubbkamp, «Kamper»-menyen og pushvarsler. Analyse uten feil, 69 tester grønne. Kildekoden lagt på GitHub.
+- Klubbtabell og klubbserie (#293) bygget: supabase/leagues.sql kjørt, python tools/test_clubs.py ALT OK. Testreklame lagt inn (lib/services/ads.dart, lib/ui/ad_flow.dart): dobbel XP på resultatskjermen. Analyse uten feil, 73 tester grønne. Installert på telefonen; ikke committet eller gitt ut. #270 står åpen (premium og ekte annonser mangler).
+- App-ikonet har fått ca. 30 % større logo (assets/brand, Android og iOS regenerert). Installert på telefonen; ikke committet eller gitt ut.
+- Gitt ut bygg 4 (25.11) via GitHub «siste-bygg»: klubbtabell, klubbserie, testreklame (dobbel XP) og større logo på app-ikonet. Analyse uten feil, 73 tester grønne.

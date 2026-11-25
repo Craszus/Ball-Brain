@@ -190,6 +190,56 @@ class ClubAnswer {
   final String right;
 }
 
+/// En linje i klubbtabellen eller klubbserien (seier 3 poeng, uavgjort 1).
+class StandingRow {
+  const StandingRow(
+      {required this.rank,
+      required this.name,
+      this.played = 0,
+      this.wins = 0,
+      this.draws = 0,
+      this.losses = 0,
+      this.points = 0,
+      this.diff = 0,
+      this.mine = false,
+      this.userId = '',
+      this.club});
+
+  final int rank;
+  final String name;
+  final int played;
+  final int wins;
+  final int draws;
+  final int losses;
+  final int points;
+  final int diff;
+
+  /// Min klubb (tabellen) eller meg selv (serien).
+  final bool mine;
+
+  /// Bare i serien.
+  final String userId;
+
+  /// Bare i tabellen: skjoldet til klubben.
+  final ClubInfo? club;
+
+  factory StandingRow.fromJson(Map<String, dynamic> j) {
+    int n(String k) => (j[k] as num?)?.toInt() ?? 0;
+    return StandingRow(
+        rank: n('rank'),
+        name: (j['name'] as String?) ?? '?',
+        played: n('played'),
+        wins: n('w'),
+        draws: n('d'),
+        losses: n('l'),
+        points: n('points'),
+        diff: n('diff'),
+        mine: j['mine'] == true || j['me'] == true,
+        userId: (j['user_id'] as String?) ?? '',
+        club: j['id'] == null ? null : ClubInfo.fromJson(j));
+  }
+}
+
 class ClubApi {
   static const _known = [
     'not_found', 'own_club', 'too_few', 'opp_too_few', 'already', 'too_many', 'bad_time',
@@ -217,6 +267,19 @@ class ClubApi {
         for (final j in await _rpc('club_game_list') as List)
           ClubGame.fromJson(j as Map<String, dynamic>)
       ];
+
+  static Future<List<StandingRow>> _standings(String fn, Map<String, dynamic> params) async => [
+        for (final j in await _rpc(fn, params) as List)
+          StandingRow.fromJson(j as Map<String, dynamic>)
+      ];
+
+  /// Alle klubber rangert etter klubbkampene. [period]: `month` eller `all`.
+  static Future<List<StandingRow>> table(String period) =>
+      _standings('club_table', {'p_period': period});
+
+  /// Medlemmene i klubben rangert etter 1v1 mot hverandre.
+  static Future<List<StandingRow>> league(String club, String period) =>
+      _standings('club_league', {'p_club': club, 'p_period': period});
 
   static Future<void> setLook(String club, int color1, int color2, int emblem) => _rpc(
       'club_set_look', {'p_club': club, 'p_color1': color1, 'p_color2': color2, 'p_emblem': emblem});

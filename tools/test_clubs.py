@@ -149,6 +149,36 @@ try:
     s, r = call('GET', '/rest/v1/club_games?select=*', None, h)
     check('tabellen kan ikke leses direkte', s in (401, 403), s)
 
+    # Klubbtabellen (se supabase/leagues.sql)
+    for period in ('month', 'all'):
+        s, table = rpc('club_table', {'p_period': period}, h)
+        rows = {x['id']: x for x in table} if s == 200 else {}
+        check('tabellen (%s): vinneren har 3 poeng og står over taperen' % period,
+              hid in rows and rows[hid]['points'] == 3 and rows[hid]['mine'] and rows[aid]['points'] == 0
+              and rows[aid]['l'] == 1 and rows[hid]['rank'] < rows[aid]['rank'], table)
+    check('tabellen viser ikke utfordringskoder', all('match_code' not in x for x in table))
+    s, r = rpc('club_table', {'p_period': 'all'}, None)
+    check('tabellen krever innlogging', s in (401, 403), s)
+
+    # Klubbserien: to 1v1 mellom de samme samme dag teller bare én gang
+    for _ in range(2):
+        s, d = rpc('create_challenge', {'p_user': home[1][1]}, h)
+        check('1v1 i klubben opprettes', s == 200, d)
+        for t in (h, home[1][0]):
+            rpc('duel_start_mine', {'p_id': d['id']}, t)
+        time.sleep(5)
+        for i in range(10):
+            for t in (h, home[1][0]):
+                rpc('duel_answer', {'p_id': d['id'], 'p_idx': i, 'p_answer': 'feil svar'}, t)
+    s, league = rpc('club_league', {'p_club': hid, 'p_period': 'month'}, h)
+    rows = {x['user_id']: x for x in league} if s == 200 else {}
+    check('serien har alle medlemmene', len(rows) == 4, league)
+    one, two = rows.get(home[0][1], {}), rows.get(home[1][1], {})
+    check('bare ett oppgjør pr. par pr. dag teller', one.get('played') == 1 and two.get('played') == 1, league)
+    check('seier gir 3 poeng (uavgjort 1 hver)', one.get('points', 0) + two.get('points', 0) in (2, 3), league)
+    s, r = rpc('club_league', {'p_club': hid, 'p_period': 'month'}, a)
+    check('utenforstående ser ikke serien', s == 400 and 'not_member' in r, r)
+
     # En spiller kan ikke hoppe til en annen klubb samme uke
     s, g3 = rpc('create_group', {'p_name': 'Testklubb Tredje'}, home[0][0])
     for t, _ in (home[1], home[2]):

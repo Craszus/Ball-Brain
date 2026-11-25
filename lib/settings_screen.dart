@@ -6,6 +6,7 @@ import 'avatar_picker_screen.dart';
 import 'duel/duel_prefs.dart';
 import 'legal_screens.dart';
 import 'media/credits_screen.dart';
+import 'services/ads.dart';
 import 'services/push.dart';
 import 'services/feedback.dart';
 import 'services/update_check.dart';
@@ -65,6 +66,10 @@ class SettingsScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           const Card(child: _PushSwitch()),
+          if (adMode != 'off') ...const [
+            SizedBox(height: 8),
+            Card(child: _AdSwitch()),
+          ],
           const SizedBox(height: 8),
           Card(
             child: ListTile(
@@ -267,6 +272,37 @@ class SettingsScreen extends ConsumerWidget {
       }
     }
   }
+}
+
+class _AdSwitch extends StatefulWidget {
+  const _AdSwitch();
+
+  @override
+  State<_AdSwitch> createState() => _AdSwitchState();
+}
+
+class _AdSwitchState extends State<_AdSwitch> {
+  bool _on = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Ads.consent().then((v) {
+      if (mounted) setState(() => _on = v != 'no');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => SwitchListTile(
+        secondary: const Icon(Icons.campaign_outlined),
+        title: const Text('Annonser'),
+        subtitle: const Text('Frivillige annonser som gir bonus (test)'),
+        value: _on,
+        onChanged: (v) {
+          setState(() => _on = v);
+          Ads.setConsent(v);
+        },
+      );
 }
 
 class _PushSwitch extends StatefulWidget {

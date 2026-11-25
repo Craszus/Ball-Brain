@@ -8,6 +8,7 @@ import '../ui/theme.dart';
 import 'club_api.dart';
 import 'club_badge.dart';
 import 'club_game_screen.dart';
+import 'club_table_screen.dart';
 
 /// Øverst på klubbskjermen: skjold, resultater, utfordringskode og klubbkampene.
 class ClubSection extends StatefulWidget {
@@ -169,6 +170,8 @@ class _ClubSectionState extends State<ClubSection> {
               icon: const Icon(Icons.sports_soccer),
               label: const Text('Utfordre en klubb'),
             ),
+            const SizedBox(height: 6),
+            const ClubTableButton(),
             if (c.members < 3)
               const Padding(
                 padding: EdgeInsets.only(top: 6),

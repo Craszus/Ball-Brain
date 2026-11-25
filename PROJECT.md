@@ -24,7 +24,7 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Plan (11/26 ferdige)
+## Plan (12/26 ferdige)
 
 **Fase 1: Grunnmur & MVP-prototyp**
 - [x] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
@@ -58,7 +58,7 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [x] Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
 - [x] Pushvarsler: Firebase-app og nøkkel (Jon), deretter utgi funksjonen og teste (docs/PUSH.md)
 - [ ] Test klubbkamp på minst seks telefoner
-- [ ] Klubbtabell mot andre klubber og klubbserie innad i klubben
+- [x] Klubbtabell mot andre klubber og klubbserie innad i klubben
 
 ## Andre filer i mappen
 - `LICENSE` (1 kB)
@@ -145,3 +145,5 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Dagens utfordring (2026-11-24): egen rangering for dagen og ukessum (mandag–søndag, norsk døgn); kun første forsøk teller; flest riktige, deretter kortest tid.
 - Klubber (2026-11-24): vennegjeng-klubber med eget skjold (ingen ekte logoer). Klubbkamp 3v3 eller 5v5 (ikke 7v7), frist maks 5 min (3 eller 5), 10 sek pr. spørsmål, lagkamerater får ulike spørsmål, samlet pott avgjør. Man kan ikke spille for to klubber samme uke.
 - Push-varsler (2026-11-24): settes opp som i Logica (Firebase Cloud Messaging).
+- Klubbtabell og klubbserie (2026-11-25): tabellen rangerer alle klubber etter klubbkampene, klubbserien rangerer medlemmene etter 1v1 mot hverandre. Seier 3 poeng, uavgjort 1; bare første oppgjør mellom de samme teller hver dag; visning for måneden og totalt.
+- Reklame (2026-11-25): testannonser som i Logica (frivillig, samtykke første gang, maks 13 per dag, kan slås av). Belønningen er dobbel XP, som ikke påvirker rangeringene. Ekte leverandør, samtykkeløsning, aldersregler og personverntekst må på plass før butikklansering.

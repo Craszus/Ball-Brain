@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart';
 
+import 'club/club_league.dart';
 import 'club/club_section.dart';
+import 'club/club_table_screen.dart';
 import 'duel/duel_api.dart';
 import 'duel/duel_screen.dart' show duelError;
 import 'l10n/l10n.dart';
@@ -97,6 +99,8 @@ class _GroupsViewState extends State<GroupsView> {
                 ),
               ),
             ]),
+            const SizedBox(height: 8),
+            const ClubTableButton(),
             const SizedBox(height: 12),
             if (groups == null)
               Column(children: [
@@ -149,12 +153,13 @@ class GroupScreen extends StatefulWidget {
 
 class _GroupScreenState extends State<GroupScreen> {
   late final Future<List<LeaderboardRow>?> _future = Cloud.groupLeaderboard(widget.group.id);
+  bool _league = true; // klubbserien, ellers poeng totalt
 
-  Future<void> _challenge(LeaderboardRow r) async {
+  Future<void> _challenge(String userId, String name) async {
     final messenger = ScaffoldMessenger.of(context);
     try {
-      await DuelApi.createChallenge(r.userId);
-      messenger.showSnackBar(SnackBar(content: Text('Utfordring sendt til ${r.username}.')));
+      await DuelApi.createChallenge(userId);
+      messenger.showSnackBar(SnackBar(content: Text('Utfordring sendt til $name.')));
     } on DuelError catch (e) {
       messenger.showSnackBar(SnackBar(content: Text(duelError(e.key))));
     }
@@ -206,7 +211,22 @@ class _GroupScreenState extends State<GroupScreen> {
               ),
             ),
           ),
-          FutureBuilder<List<LeaderboardRow>?>(
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: SegmentedButton<bool>(
+              showSelectedIcon: false,
+              expandedInsets: EdgeInsets.zero,
+              segments: const [
+                ButtonSegment(value: true, label: Text('Klubbserien')),
+                ButtonSegment(value: false, label: Text('Poeng totalt')),
+              ],
+              selected: {_league},
+              onSelectionChanged: (v) => setState(() => _league = v.first),
+            ),
+          ),
+          if (_league) ClubLeague(clubId: g.id, onChallenge: _challenge),
+          if (!_league)
+            FutureBuilder<List<LeaderboardRow>?>(
             future: _future,
             builder: (context, snap) {
               if (snap.connectionState != ConnectionState.done) {
@@ -226,7 +246,7 @@ class _GroupScreenState extends State<GroupScreen> {
                           : IconButton(
                               icon: const Icon(Icons.sports_mma, color: AppColors.gold),
                               tooltip: 'Utfordre til 1v1'.tr,
-                              onPressed: () => _challenge(r),
+                              onPressed: () => _challenge(r.userId, r.username),
                             )),
               ]);
             },

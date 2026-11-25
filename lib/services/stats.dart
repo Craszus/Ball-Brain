@@ -75,6 +75,19 @@ class Stats {
         pvpBestStreak: pvpBestStreak,
       );
 
+  /// Ekstra XP (fra annonse): teller ikke som runde eller rekord.
+  Stats withBonus(int points) => Stats(
+        bestRules: bestRules,
+        bestSort: bestSort,
+        games: games,
+        totalPoints: totalPoints + points,
+        modes: modes,
+        pvpGames: pvpGames,
+        pvpWins: pvpWins,
+        pvpStreak: pvpStreak,
+        pvpBestStreak: pvpBestStreak,
+      );
+
   /// Registrerer et ferdig 1v1-oppgjør.
   Stats withPvp({required bool won}) => Stats(
         bestRules: bestRules,
@@ -248,6 +261,14 @@ class StatsController extends Notifier<Stats> {
           }));
     } catch (_) {}
     return up;
+  }
+
+  Future<void> addBonus(int points) async {
+    state = state.withBonus(points);
+    try {
+      final p = await SharedPreferences.getInstance();
+      await p.setInt('totalPoints', state.totalPoints);
+    } catch (_) {}
   }
 
   /// Registrerer et ferdig 1v1-oppgjør (brukes når 1v1 er på plass).

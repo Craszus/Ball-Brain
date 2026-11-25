@@ -35,4 +35,4 @@ Kryss av `[x]` når noe er ferdig. Nye oppgaver legges nederst som `- [ ] tekst`
 - [x] (#281) Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
 - [x] (#291) Pushvarsler: Firebase-app og nøkkel (Jon), deretter utgi funksjonen og teste (docs/PUSH.md)
 - [ ] (#292) Test klubbkamp på minst seks telefoner
-- [ ] (#293) Klubbtabell mot andre klubber og klubbserie innad i klubben
+- [x] (#293) Klubbtabell mot andre klubber og klubbserie innad i klubben

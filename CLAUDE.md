@@ -26,7 +26,7 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Oppgaver (11/26 ferdige) – se ODIN-OPPGAVER.md
+## Oppgaver (12/26 ferdige) – se ODIN-OPPGAVER.md
 **Fase 1: Grunnmur & MVP-prototyp:** ✓ Oppsett Flutter-prosjekt og Supabase-konto; ✓ Design database-schema (brukere, highscores, spørsmål) i Supabase; ✓ Implementer base-API for å hente spørsmål og lagre poeng; ✓ Bygg UI med Flutter for bildesortering (drag-and-drop); ✓ Implementer logikk for regler-quiz og scoring
 **Fase 2: Sosialt & Konkurranse:** ✓ Legg til seed-database med ~100 spørsmål fra ulike epoker/regler; ✓ Implementer lokal rangering (leaderboard) per nasjon via Supabase Edge Functions; ✓ Bygg profil-side med visuell trofé-tilstand og highscore-visning; Implementer 1v1-modus med tidsbegrensning og real-time scoring (Supabase Realtime)
 **Fase 3: Polering, Testing & Lansering:** Beta-test med 50–100 brukere, samle bugger og fikse UX; Oppsett personvern (GDPR), vilkår, datadeling og monetisering (annonser/premium); App Store Connect / Google Play Console oppsett og lansering
