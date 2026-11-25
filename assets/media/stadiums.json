@@ -147,27 +147,6 @@
   "file": "assets/media/img/stadiums/st-james-park.jpg"
  },
  {
-  "id": "goodison-park",
-  "name": "Goodison Park",
-  "club": "Everton",
-  "country": "England",
-  "lat": 53.4389,
-  "lon": -2.9664,
-  "photo": {
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/2023_07_31_arne_mueseler_00023-Verbessert-RR_%2853105680992%29.jpg/960px-2023_07_31_arne_mueseler_00023-Verbessert-RR_%2853105680992%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "title": "2023 07 31 arne mueseler 00023-Verbessert-RR (53105680992).jpg",
-   "author": "Arne Müseler from Salzburg, AT",
-   "license": "CC BY-SA 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:2023_07_31_arne_mueseler_00023-Verbessert-RR_(53105680992).jpg",
-   "width": 900,
-   "height": 674,
-   "origWidth": 3299,
-   "origHeight": 2470
-  },
-  "file": "assets/media/img/stadiums/goodison-park.jpg"
- },
- {
   "id": "villa-park",
   "name": "Villa Park",
   "club": "Aston Villa",
@@ -397,27 +376,6 @@
    "origHeight": 3152
   },
   "file": "assets/media/img/stadiums/san-siro.jpg"
- },
- {
-  "id": "allianz-stadium",
-  "name": "Allianz Stadium",
-  "club": "Juventus",
-  "country": "Italia",
-  "lat": 45.10944444,
-  "lon": 7.64111111,
-  "photo": {
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/2021%E2%80%9322_UEFA_Women%27s_Champions_League_Final_in_Turin%2C_Italy_1.jpg/960px-2021%E2%80%9322_UEFA_Women%27s_Champions_League_Final_in_Turin%2C_Italy_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "title": "2021–22 UEFA Women's Champions League Final in Turin, Italy 1.jpg",
-   "author": "Sebleouf",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:2021%E2%80%9322_UEFA_Women%27s_Champions_League_Final_in_Turin,_Italy_1.jpg",
-   "width": 900,
-   "height": 675,
-   "origWidth": 4032,
-   "origHeight": 3024
-  },
-  "file": "assets/media/img/stadiums/allianz-stadium.jpg"
  },
  {
   "id": "stadio-diego-armando-maradona",
@@ -2374,7 +2332,7 @@
  },
  {
   "id": "alfheim-stadion",
-  "name": "Alfheim stadion",
+  "name": "Romssa Arena (Alfheim)",
   "club": "Tromsø",
   "country": "Norge",
   "lat": 69.648954,

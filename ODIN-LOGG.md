@@ -325,3 +325,22 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 ## 2026-11-25 (utgivelse bygg 7)
 - Bygg 7: logoen fjernet etter dagens utfordring, og «Slik fungerer det» er sammenfoldet. 90 tester grønne.
 - GitHubs utgave-API ga serverfeil (500/502) i en periode. APK og beskrivelse for bygg 7 kom opp i `siste-bygg` på et senere forsøk; filen er kontrollert mot lokal bygging (samme SHA-256).
+
+## 2026-11-25 (opprydding i oppgaver og frister)
+- Krysset av det som er laget: #250, #272, #278, #279, #294, #298, #299, #304 (resten av den ligger i #305) og #306.
+- Nye frister: #252 2026-12-16, #251 2026-12-17, #253 2026-12-21. MVP-målet 21. desember; målet i Odin må endres der.
+- #277 står åpen: 593 spørsmål av målet «over 600».
+- Senere samme dag: MVP-målet flyttet til 15. januar 2027. Odin tok med avkryssningene, men satte fristene tilbake til de gamle datoene, så mål og frister må endres i Odin.
+
+## 2026-11-26 (gjennomgang med to Fable-agenter)
+- Faktasjekk: 9 sikre feil, 11 tvilsomme og 17 småting (docs/granskning/FAKTASJEKK.md, utenfor git). Mange skyldes VM 2026.
+- Kodegjennomgang: docs/granskning/KODEGJENNOMGANG.md. Kontroll mot databasen avkreftet K2, K3 og K4. Gjenstår bl.a.: SQL som mangler i repoet, GitHub-oppdateringssjekken må ut av Play-bygget, 1v1-utkasting av treg spiller, dobbelttrykk i quizen.
+- Ingenting er rettet ennå. Neste: velge hva som skal rettes.
+- Rettet etter gjennomgangen: 9 sikre og de fleste tvilsomme spørsmålsfeilene (23 spørsmål utgår i Supabase, 24 nye eller endrede, 593 aktive), to stadionbilder fjernet (Goodison Park og Allianz Stadium), Alfheim heter Romssa Arena (Alfheim).
+- Fem spillerfeil rettet: fasit vises og dobbelttrykk teller ikke (fotballquiz og sortering), treg 1v1-spiller kastes ikke ut (kontrollert mot serveren), tilbake under «Finn motstander» rydder, tapt kvittering i 1v1 avbryter ikke kampen, varsel før man går ut av dagens utfordring. SQL i supabase/fixes_2026_11_26.sql er kjørt.
+- 92 tester og supabase-testen for 1v1 grønne. Ikke gitt ut og ikke lagret på GitHub.
+- Ikke gjort: småting i faktasjekken (kategorier, nesten-duplikater m.m.), Estadio Azteca, og kodefunnene utover de fem (bl.a. GitHub-oppdateringssjekken før Google Play).
+
+## 2026-11-26 (utgivelse bygg 8)
+- Bygg 8 gitt ut: rettede spørsmål og de fem spillerfeilene. `tools/release.py` virket igjen. 92 tester grønne.
+- Neste: prøve oppdateringen på telefonen; fjerne GitHub-oppdateringssjekken fra Play-versjonen før lukket test.

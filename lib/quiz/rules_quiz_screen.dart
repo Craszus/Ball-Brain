@@ -26,7 +26,8 @@ class RulesQuizScreen extends ConsumerWidget {
             ? 'Øving'
             : 'Fotballquiz';
 
-    return PitchScaffold(
+    final atStake = state.atStake && !state.finished;
+    final screen = PitchScaffold(
       title: title,
       actions: [ScoreChip(state.score)],
       body: Builder(builder: (_) {
@@ -104,11 +105,41 @@ class RulesQuizScreen extends ConsumerWidget {
               AnswerButton(
                 letter: String.fromCharCode(65 + i),
                 label: q.options[i],
+                mark: state.picked == null
+                    ? null
+                    : q.isCorrect(i)
+                        ? AnswerMark.correct
+                        : state.picked == i
+                            ? AnswerMark.wrong
+                            : null,
                 onTap: () => controller.answer(i),
               ),
           ],
         );
       }),
     );
+    return PopScope(
+      canPop: !atStake,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) _confirmLeaveDaily(context);
+      },
+      child: screen,
+    );
+  }
+
+  /// Bare første forsøk teller, så man får et varsel før det går tapt.
+  Future<void> _confirmLeaveDaily(BuildContext context) async {
+    final leave = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Gå ut av dagens utfordring?'),
+        content: const Text('Forsøket ditt i dag går tapt.'),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Bli her')),
+          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Gå ut')),
+        ],
+      ),
+    );
+    if (leave == true && context.mounted) Navigator.of(context).pop();
   }
 }

@@ -284,7 +284,7 @@
  {
   "type": "rules_quiz",
   "era": "Regler",
-  "prompt": "Hva er straffen når en utespiller bevisst håndsfeste ballen i eget straffefelt?",
+  "prompt": "Hva er straffen når en utespiller bevisst tar ballen med hånden i eget straffefelt?",
   "options": [
    "Innkast",
    "Straffespark",
@@ -293,7 +293,7 @@
   ],
   "correct": 1,
   "difficulty": 1,
-  "key": "fee7a4611611"
+  "key": "3a3bc7cdd05c"
  },
  {
   "type": "rules_quiz",
@@ -331,11 +331,11 @@
    "Stå én meter foran mållinja",
    "Stå i målfeltet",
    "Begge føttene på mållinja",
-   "Minst én fot på eller over mållinja"
+   "Minst én fot på, på linje med eller bak mållinja"
   ],
   "correct": 3,
   "difficulty": 3,
-  "key": "1ace3a988f12"
+  "key": "c1f42947a8e4"
  },
  {
   "type": "rules_quiz",
@@ -493,14 +493,14 @@
   "era": "Regler",
   "prompt": "Hvilken situasjon kan VAR ikke gripe inn i?",
   "options": [
-   "Vanlig gult kort",
+   "Et innkast",
    "Direkte rødt kort",
    "Straffespark",
    "Mål"
   ],
   "correct": 0,
   "difficulty": 3,
-  "key": "4e7eea632f71"
+  "key": "e76185d9d381"
  },
  {
   "type": "rules_quiz",
@@ -792,16 +792,16 @@
  {
   "type": "rules_quiz",
   "era": "VM-historie",
-  "prompt": "Hvem er VM-historiens toppscorer hos menn med 16 mål?",
+  "prompt": "Hvem er VM-historiens toppscorer hos menn?",
   "options": [
-   "Ronaldo Nazário",
-   "Gerd Müller",
    "Miroslav Klose",
-   "Lionel Messi"
+   "Lionel Messi",
+   "Kylian Mbappé",
+   "Ronaldo Nazário"
   ],
   "correct": 2,
   "difficulty": 3,
-  "key": "bddf3bc1c553"
+  "key": "00ed820c3a15"
  },
  {
   "type": "rules_quiz",
@@ -820,7 +820,7 @@
  {
   "type": "rules_quiz",
   "era": "VM-historie",
-  "prompt": "Hvilke land er VM-verter i 2026?",
+  "prompt": "Hvilke land var VM-verter i 2026?",
   "options": [
    "Mexico, Brasil og Argentina",
    "USA, Canada og Costa Rica",
@@ -829,7 +829,7 @@
   ],
   "correct": 3,
   "difficulty": 2,
-  "key": "1e5ceec1d449"
+  "key": "ee0268175ee0"
  },
  {
   "type": "rules_quiz",
@@ -1440,12 +1440,12 @@
   "options": [
    "Italia",
    "Ungarn",
-   "Vest-Tyskland",
+   "Tyskland",
    "Tsjekkoslovakia"
   ],
   "correct": 0,
   "difficulty": 4,
-  "key": "214bd61c7bb1"
+  "key": "b44541f37817"
  },
  {
   "type": "rules_quiz",
@@ -2167,12 +2167,12 @@
   "prompt": "Hvor mange VM-titler har Spania for menn?",
   "options": [
    "0",
-   "1",
    "2",
+   "1",
    "3"
   ],
   "correct": 1,
-  "difficulty": 1,
+  "difficulty": 2,
   "key": "a9841fa38712"
  },
  {
@@ -6588,7 +6588,7 @@
  {
   "type": "rules_quiz",
   "era": "Stadioner",
-  "prompt": "I hvilken by ligger Alfheim stadion?",
+  "prompt": "I hvilken by ligger Romssa Arena (Alfheim)?",
   "options": [
    "Tromsø",
    "Bodø",
@@ -6597,7 +6597,7 @@
   ],
   "correct": 0,
   "difficulty": 1,
-  "key": "6d27eb4b285b"
+  "key": "170717df0a1c"
  },
  {
   "type": "rules_quiz",
@@ -6910,7 +6910,7 @@
  {
   "type": "rules_quiz",
   "era": "Visste du at?",
-  "prompt": "Hvor mange lag deltar i VM 2026?",
+  "prompt": "Hvor mange lag deltok i VM 2026?",
   "options": [
    "48",
    "32",
@@ -6919,7 +6919,7 @@
   ],
   "correct": 0,
   "difficulty": 1,
-  "key": "7cd260c7bfe1"
+  "key": "e37cf23a4c2e"
  },
  {
   "type": "rules_quiz",
@@ -7522,14 +7522,14 @@
   "era": "Regler",
   "prompt": "Hvilke situasjoner kan VAR gripe inn i?",
   "options": [
-   "Hjørnespark, gule kort og innkast",
+   "Innkast, frispark på midtbanen og tilleggstid",
    "Alle frispark og innkast",
    "Bare mål",
-   "Mål, straffespark, direkte rødt kort og feil spiller"
+   "Mål, straffespark, røde kort og feil spiller"
   ],
   "correct": 3,
   "difficulty": 2,
-  "key": "82ba0b7ee465"
+  "key": "2cd7907c909f"
  },
  {
   "type": "rules_quiz",
@@ -7731,11 +7731,11 @@
    "Hjemmelaget",
    "Laget som ligger under",
    "Begge lag kjemper om den",
-   "En spiller fra laget som sist berørte ballen"
+   "Laget som hadde eller ville ha fått ballen"
   ],
   "correct": 3,
   "difficulty": 4,
-  "key": "8f1f635b0c55"
+  "key": "892ccdb0778b"
  },
  {
   "type": "rules_quiz",
@@ -7752,7 +7752,7 @@
  {
   "type": "rules_quiz",
   "era": "Regler",
-  "prompt": "Hva får en spiller som bevisst forlater banen uten dommerens tillatelse?",
+  "prompt": "Hva får en spiller som bevisst forlater banen uten dommerens tillatelse (ikke i protest)?",
   "options": [
    "Rødt kort",
    "Ingenting",
@@ -7761,7 +7761,7 @@
   ],
   "correct": 3,
   "difficulty": 3,
-  "key": "9055dfc1dd84"
+  "key": "76b57a4178d0"
  },
  {
   "type": "rules_quiz",
@@ -7780,14 +7780,14 @@
  {
   "type": "rules_quiz",
   "era": "Regler",
-  "prompt": "Kan dommeren endre en avgjørelse etter at spillet er satt i gang igjen?",
+  "prompt": "Kan dommeren endre hvordan spillet skal settes i gang etter at det er satt i gang igjen?",
   "options": [
    "Ja",
    "Nei"
   ],
   "correct": 1,
   "difficulty": 3,
-  "key": "12e858f1dcda"
+  "key": "cea72be012e3"
  },
  {
   "type": "rules_quiz",
@@ -7871,11 +7871,11 @@
   "era": "Klubbfotball",
   "prompt": "Sorter Champions League-finalene fra eldst til nyest",
   "options": [
-   "Man City – Inter",
+   "Real Madrid – Dortmund",
    "Bayern – PSG",
    "Liverpool – Tottenham",
    "Chelsea – Man City",
-   "Real Madrid – Liverpool"
+   "Man City – Inter"
   ],
   "correct": [
    2,
@@ -7885,18 +7885,18 @@
    0
   ],
   "difficulty": 3,
-  "key": "c9bc5bc18a2b"
+  "key": "e836f1a525ed"
  },
  {
   "type": "image_sort",
   "era": "Klubbfotball",
-  "prompt": "Sorter Ballon d'Or-vinnerne fra eldst til nyest",
+  "prompt": "Sorter Ballon d'Or-vinnerne etter året de vant (tidligst først)",
   "options": [
    "Kaká",
-   "Cristiano Ronaldo",
+   "Luka Modrić",
+   "Ousmane Dembélé",
    "Karim Benzema",
-   "Lionel Messi",
-   "Luka Modrić"
+   "Rodri"
   ],
   "correct": [
    0,
@@ -7906,16 +7906,16 @@
    2
   ],
   "difficulty": 3,
-  "key": "7e2bef67fcfd"
+  "key": "0df3f0bcba35"
  },
  {
   "type": "image_sort",
   "era": "Klubbfotball",
-  "prompt": "Sorter Premier League-mesterne fra eldst til nyest",
+  "prompt": "Sorter Premier League-mesterne etter året de vant (tidligst først)",
   "options": [
+   "Chelsea (Conte)",
    "Leicester (eventyret)",
-   "Chelsea (Mourinho)",
-   "Man City (Guardiola)",
+   "Liverpool (Slot)",
    "Liverpool (Klopp)",
    "Man United (Ferguson tar farvel)"
   ],
@@ -7927,37 +7927,35 @@
    2
   ],
   "difficulty": 3,
-  "key": "aa3da96b7a23"
+  "key": "5abc0c8fcfe2"
  },
  {
   "type": "image_sort",
   "era": "VM-historie",
   "prompt": "Sorter VM-vertene fra eldst til nyest",
   "options": [
-   "USA",
-   "Sør-Afrika",
-   "Tyskland",
-   "Frankrike",
-   "Russland"
+   "Sør-Korea og Japan",
+   "Qatar",
+   "Russland",
+   "Sør-Afrika"
   ],
   "correct": [
    0,
    3,
    2,
-   1,
-   4
+   1
   ],
   "difficulty": 2,
-  "key": "d5249138f71c"
+  "key": "c90bdab17909"
  },
  {
   "type": "image_sort",
   "era": "Stadioner",
   "prompt": "Sorter stadionene fra størst til minst kapasitet",
   "options": [
-   "Wembley",
+   "Signal Iduna Park",
    "Anfield",
-   "Camp Nou",
+   "Wembley",
    "Old Trafford"
   ],
   "correct": [
@@ -7967,7 +7965,7 @@
    1
   ],
   "difficulty": 3,
-  "key": "7212df3bdacf"
+  "key": "7c77632211bb"
  },
  {
   "type": "image_sort",
@@ -8141,7 +8139,7 @@
    "Real Madrid – Dortmund",
    "Man United – Chelsea",
    "Chelsea – Bayern",
-   "Real Madrid – Juventus"
+   "Real Madrid – Liverpool"
   ],
   "correct": [
    1,
@@ -8150,12 +8148,12 @@
    0
   ],
   "difficulty": 3,
-  "key": "e5e77f557e28"
+  "key": "d5c9baf2edc5"
  },
  {
   "type": "image_sort",
   "era": "Spillere og rekorder",
-  "prompt": "Sorter Ballon d'Or-vinnerne fra eldst til nyest",
+  "prompt": "Sorter Ballon d'Or-vinnerne etter året de vant (tidligst først)",
   "options": [
    "George Weah",
    "Pavel Nedvěd",
@@ -8171,12 +8169,12 @@
    4
   ],
   "difficulty": 4,
-  "key": "7aa09dcd9044"
+  "key": "31aa3fed373d"
  },
  {
   "type": "image_sort",
   "era": "Spillere og rekorder",
-  "prompt": "Sorter Ballon d'Or-vinnerne fra eldst til nyest",
+  "prompt": "Sorter Ballon d'Or-vinnerne etter året de vant (tidligst først)",
   "options": [
    "Kaká",
    "Michael Owen",
@@ -8192,16 +8190,16 @@
    3
   ],
   "difficulty": 3,
-  "key": "1144f18e303b"
+  "key": "1c47c6e3a265"
  },
  {
   "type": "image_sort",
   "era": "Ligaer",
-  "prompt": "Sorter Premier League-mesterne fra eldst til nyest",
+  "prompt": "Sorter Premier League-mesterne etter året de vant (tidligst først)",
   "options": [
    "Blackburn Rovers",
-   "Man City (første tittel)",
-   "Chelsea (første tittel)",
+   "Man City (første PL-tittel)",
+   "Chelsea (første PL-tittel)",
    "Arsenal (de ubeseirede)",
    "Leicester City"
   ],
@@ -8213,7 +8211,7 @@
    4
   ],
   "difficulty": 3,
-  "key": "f1d034e4fac4"
+  "key": "1fa7c4e2efcd"
  },
  {
   "type": "image_sort",
@@ -8265,7 +8263,7 @@
    "Brasil",
    "Argentina",
    "Frankrike",
-   "Spania"
+   "England"
   ],
   "correct": [
    0,
@@ -8274,7 +8272,7 @@
    3
   ],
   "difficulty": 2,
-  "key": "39ca6171dbd3"
+  "key": "0fc7390b5c92"
  },
  {
   "type": "image_sort",
@@ -8437,7 +8435,7 @@
  {
   "type": "image_sort",
   "era": "EM-historie",
-  "prompt": "Sorter EM-vinnerne fra eldst til nyest",
+  "prompt": "Sorter EM-vinnerne etter året de vant (tidligst først)",
   "options": [
    "Hellas",
    "Danmark",
@@ -8453,7 +8451,7 @@
    2
   ],
   "difficulty": 3,
-  "key": "1a7c4b78d9df"
+  "key": "959939cab251"
  },
  {
   "type": "image_sort",

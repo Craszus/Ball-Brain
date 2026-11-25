@@ -24,7 +24,7 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Plan (14/39 ferdige)
+## Plan (23/39 ferdige)
 
 **Fase 1: Grunnmur & MVP-prototyp**
 - [x] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
@@ -37,7 +37,7 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [x] Legg til seed-database med ~100 spørsmål fra ulike epoker/regler (frist 2026-11-25)
 - [x] Implementer lokal rangering (leaderboard) per nasjon via Supabase Edge Functions (frist 2026-11-24)
 - [x] Bygg profil-side med visuell trofé-tilstand og highscore-visning (frist 2026-11-24)
-- [ ] Implementer 1v1-modus med tidsbegrensning og real-time scoring (Supabase Realtime) (frist 2026-11-27)
+- [x] Implementer 1v1-modus med tidsbegrensning og real-time scoring (Supabase Realtime) (frist 2026-11-27)
 
 **Fase 3: Polering, Testing & Lansering**
 - [ ] Beta-test med 50–100 brukere, samle bugger og fikse UX (frist 2026-11-26)
@@ -48,30 +48,30 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [x] Personvernerklæring, vilkår og «Slett all min data» i appen (del av #252)
 - [ ] Monetisering (annonser/premium) og datadeling – resten av #252
 - [ ] Juridisk gjennomgang av personvern/vilkår og kontaktadresse før lansering
-- [ ] Språkstøtte etter land: norsk, engelsk, svensk, dansk, tysk, spansk, fransk (menyer og seed-spørsmål)
+- [x] Språkstøtte etter land: norsk, engelsk, svensk, dansk, tysk, spansk, fransk (menyer og seed-spørsmål)
 - [ ] Språk: juridisk tekst (personvern/vilkår) på sv/da/de/es/fr, og fagspråk gjennomgått av morsmålsbrukere
 - [ ] Språk: spørsmål og stedsnavn fra Supabase/nye spørsmål må få oversettelser
 - [ ] Flere spørsmål (over 600, 11 temaer) og flere bilder (spillere/målvakter/stadioner) mot repetisjon
-- [ ] Mindre repetisjon: husk viste spørsmål/bilder lokalt, stokk svar og startrekkefølge
-- [ ] Mer spenning: dagens utfordring, «på rad»-merke, vanskelighetsprogresjon og nye bildespørsmål
+- [x] Mindre repetisjon: husk viste spørsmål/bilder lokalt, stokk svar og startrekkefølge
+- [x] Mer spenning: dagens utfordring, «på rad»-merke, vanskelighetsprogresjon og nye bildespørsmål
 - [ ] Faktasjekk av de nye spørsmålene (særlig 2025–26-fakta) av en fotballkyndig før lansering
 - [x] Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
 - [x] Pushvarsler: Firebase-app og nøkkel (Jon), deretter utgi funksjonen og teste (docs/PUSH.md)
 - [ ] Test klubbkamp på minst seks telefoner
 - [x] Klubbtabell mot andre klubber og klubbserie innad i klubben
-- [ ] Ball Brain Pro klargjort i testmodus: ingen annonser, statistikk per tema, bom-trening, 4 spørsmålspakker, klubbskjold, rammer og titler
+- [x] Ball Brain Pro klargjort i testmodus: ingen annonser, statistikk per tema, bom-trening, 4 spørsmålspakker, klubbskjold, rammer og titler
 - [ ] Ball Brain Pro: ekte kjøp i App Store / Google Play, vilkår og personverntekst før publisering
 - [ ] Faktasjekk de 60 pakkespørsmålene og oversett dem til svensk, dansk, tysk, spansk og fransk
 - [ ] Nye avatarbilder som bare Pro får
-- [ ] Quizkveld: verten starter en quiz, alle svarer på mobilen (under «Kamper»)
-- [ ] Nye pokaler for dagens utfordring, klubbkamp, quizkveld og øving, og ryddigere innstillinger og menyer
+- [x] Quizkveld: verten starter en quiz, alle svarer på mobilen (under «Kamper»)
+- [x] Nye pokaler for dagens utfordring, klubbkamp, quizkveld og øving, og ryddigere innstillinger og menyer
 - [ ] Test quizkveld med flere ekte telefoner (gjerne en pubkveld)
 - [x] Tegne pokalbilder til de 16 nye pokalene (viser et enkelt ikon nå)
 - [x] Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
 - [ ] Quizkveld i nettleser, så pubgjester slipper å installere appen
-- [ ] Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
+- [x] Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
 - [ ] Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
-- [ ] Dagens utfordring på forsiden, «Regler-quiz» heter «Fotballquiz», varsel med gult kort på «Kamper»
+- [x] Dagens utfordring på forsiden, «Regler-quiz» heter «Fotballquiz», varsel med gult kort på «Kamper»
 
 ## Andre filer i mappen
 - `LICENSE` (1 kB)
@@ -165,3 +165,5 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Menyer (2026-11-25): gjennomgått av en egen agent. Innstillinger delt i grupper, handlingsknappene øverst i 1v1, reglene under valgene, «Klubber»-fanen i rangeringen byttet med klubbtabellen.
 - Forside (2026-11-25): «Regler-quiz» heter nå «Fotballquiz». Dagens utfordring ligger som en gullstripe over spillknappene (overskriften «SPILLMODE» fjernet for å få plass). Ved utfordring viser «Kamper» et gult kort med antall og pulserer i gull.
 - Pokaler lages i Blender (tools/make_trophies.py + tools/compose_trophies.py), så nye kan lages i samme stil.
+- Frister utsatt tre uker (2026-11-25): MVP-målet flyttes fra 30. november til 21. desember 2026. Personvern/monetisering 16. des., betatest 17. des., lansering 21. des. (satt etter betatesten). Google Play krever lukket test i 14 dager, så testen må starte senest rundt 1. desember.
+- MVP-målet flyttet til 15. januar 2027 (2026-11-25, erstatter 21. desember). Lansering (#253) har samme frist; forslag: personvern/monetisering 16. des. og betatest 17. des. Frister og mål må endres i Odin.

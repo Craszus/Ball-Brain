@@ -84,18 +84,6 @@
   "lon": -1.62166667
  },
  {
-  "id": "goodison-park",
-  "prompt": "Hvor ligger Everton?",
-  "kind": "club",
-  "subject": "Everton",
-  "badge": "E",
-  "stadium": "Goodison Park",
-  "city": "Liverpool",
-  "country": "England",
-  "lat": 53.4389,
-  "lon": -2.9664
- },
- {
   "id": "villa-park",
   "prompt": "Hvor ligger Aston Villa?",
   "kind": "club",
@@ -1361,7 +1349,7 @@
   "kind": "club",
   "subject": "Tromsø",
   "badge": "T",
-  "stadium": "Alfheim stadion",
+  "stadium": "Romssa Arena (Alfheim)",
   "city": "Tromsø",
   "country": "Norge",
   "lat": 69.648954,

@@ -34,6 +34,8 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
   final _answers = <Map<String, Object?>>[];
   late List<int> _order; // indekser i brukerens nåværende rekkefølge
   bool? _lastCorrect;
+  bool _revealed = false; // fasiten vises før neste oppgave
+  DateTime _checkedAt = DateTime.now();
   final _stopwatch = Stopwatch();
   final _rnd = math.Random();
 
@@ -50,6 +52,7 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
       _score = 0;
       _answers.clear();
       _lastCorrect = null;
+      _revealed = false;
     });
     final all = await ref
         .read(questionRepositoryProvider)
@@ -78,6 +81,7 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
   }
 
   void _check() {
+    if (_revealed) return;
     final q = _questions![_index];
     final correct = q.isCorrect(_order);
     _answers.add({'key': q.key, 'answer': [for (final i in _order) q.options[i]]});
@@ -90,11 +94,12 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
     setState(() {
       _score += points;
       _lastCorrect = correct;
-      _index++;
+      _revealed = true;
+      _checkedAt = DateTime.now();
+      if (!correct) _order = [for (final i in q.correct as List) (i as num).toInt()];
     });
-    if (_index < _questions!.length) {
-      _startQuestion();
-    } else {
+    // siste oppgave: lagre med en gang, i tilfelle man går ut mens fasiten vises
+    if (_index == _questions!.length - 1) {
       ref
           .read(statsProvider.notifier)
           .record('image_sort', _score,
@@ -108,6 +113,17 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
               }));
       Cloud.submitRound('image_sort', List.of(_answers));
     }
+  }
+
+  void _next() {
+    // et dobbelttrykk på «Sjekk rekkefølge» skal ikke hoppe over fasiten
+    if (DateTime.now().difference(_checkedAt) < const Duration(milliseconds: 600)) return;
+    setState(() {
+      _revealed = false;
+      _lastCorrect = null;
+      _index++;
+      if (_index < _questions!.length) _startQuestion();
+    });
   }
 
   @override
@@ -146,6 +162,7 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
         const SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          spacing: 8,
           children: [
             Text('OPPGAVE ${_index + 1} AV $total',
                 style: TextStyle(
@@ -154,13 +171,16 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
                     fontWeight: FontWeight.w700,
                     color: Colors.white.withValues(alpha: 0.7))),
             if (_lastCorrect != null)
-              Text(_lastCorrect! ? 'FORRIGE: RIKTIG' : 'FORRIGE: FEIL',
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w800,
-                      color: _lastCorrect!
-                          ? AppColors.grass
-                          : Colors.redAccent)),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(_lastCorrect! ? 'RIKTIG!' : 'RIKTIG REKKEFØLGE:',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w800,
+                          color: _lastCorrect! ? AppColors.grass : AppColors.gold)),
+                ),
+              ),
           ],
         ),
         const SizedBox(height: 12),
@@ -178,6 +198,7 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
           child: ReorderableListView(
             buildDefaultDragHandles: false,
             onReorderItem: (oldIndex, newIndex) {
+              if (_revealed) return;
               setState(() {
                 _order.insert(newIndex, _order.removeAt(oldIndex));
               });
@@ -188,7 +209,9 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
                 ReorderableDragStartListener(
                   key: ValueKey(_order[pos]),
                   index: pos,
+                  enabled: !_revealed,
                   child: Card(
+                    color: _revealed ? const Color(0xFF1F6B3A) : null,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 12, vertical: 10),
@@ -206,7 +229,7 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w700, fontSize: 16)),
                           ),
-                          const Icon(Icons.drag_handle, color: AppColors.gold),
+                          Icon(_revealed ? Icons.check : Icons.drag_handle, color: AppColors.gold),
                         ],
                       ),
                     ),
@@ -216,7 +239,9 @@ class _ImageSortScreenState extends ConsumerState<ImageSortScreen> {
           ),
         ),
         const SizedBox(height: 8),
-        FilledButton(onPressed: _check, child: const Text('Sjekk rekkefølge')),
+        FilledButton(
+            onPressed: _revealed ? _next : _check,
+            child: Text(_revealed ? 'Neste' : 'Sjekk rekkefølge')),
       ],
     );
   }

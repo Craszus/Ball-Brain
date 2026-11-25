@@ -93,7 +93,8 @@ begin
   select * into d from duels where id = p_id and (p1 = me or p2 = me);
   if not found then raise exception 'not_found'; end if;
   if d.mode = 'live' and d.status = 'active' and (d.p1_done_at is null) <> (d.p2_done_at is null)
-     and now() - coalesce(d.p1_done_at, d.p2_done_at) > interval '60 seconds' then
+     -- avslutt bare når den som ikke er ferdig har sluttet å svare (en aktiv spiller svarer innen ca. 17 s)
+     and now() - (case when d.p1_done_at is null then d.p1_last else d.p2_last end) > interval '30 seconds' then
     perform duel_finalize(p_id);
     select * into d from duels where id = p_id;
   elsif d.mode = 'challenge' and d.status = 'active' and d.expires_at < now() then

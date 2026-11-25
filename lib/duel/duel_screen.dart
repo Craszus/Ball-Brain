@@ -175,6 +175,11 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
   }
 
   Future<void> _enter(DuelSummary d) async {
+    if (!mounted) {
+      // gikk tilbake mens vi søkte: ikke la en motstander bli koblet til en tom plass
+      if (d.status == 'waiting') await DuelApi.cancel(d.id);
+      return;
+    }
     _d = d;
     _unwatch?.call();
     _unwatch = DuelApi.watch(d.id, _refresh);
@@ -292,6 +297,10 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
       } on DuelError catch (e) {
         if (e.key == 'offline' && attempt < 2) {
           await Future.delayed(const Duration(seconds: 1));
+        } else if (e.key == 'bad_index' || e.key == 'not_active') {
+          // svaret kom fram selv om kvitteringen ble borte: hent status og fortsett
+          await _resume(d.id);
+          return;
         } else {
           _toMenu(e.key == 'offline' ? 'offline' : 'cancelled');
           return;
@@ -311,6 +320,31 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
     } else {
       setState(() => _phase = _Phase.waitOpp);
       _refresh();
+    }
+  }
+
+  /// Fortsetter der serveren sier vi er.
+  Future<void> _resume(String id) async {
+    try {
+      final d = await DuelApi.get(id);
+      if (!mounted) return;
+      if (d.status == 'cancelled') {
+        _toMenu('cancelled');
+        return;
+      }
+      setState(() {
+        _d = d;
+        _myScore = d.me.score;
+      });
+      if (d.isFinished) {
+        _finish();
+      } else if (d.me.answered >= _qs.length) {
+        setState(() => _phase = _Phase.waitOpp);
+      } else {
+        _showQuestion(d.me.answered);
+      }
+    } on DuelError catch (e) {
+      _toMenu(e.key);
     }
   }
 

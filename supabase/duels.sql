@@ -83,6 +83,9 @@ begin
   if not found then return; end if;
   if d.p1_score > d.p2_score then w := d.p1;
   elsif d.p2_score > d.p1_score then w := d.p2;
+  -- likt, men bare én har spilt ferdig: den vinner (den andre har ikke «brukt» noe tid)
+  elsif d.p1_done_at is not null and d.p2_done_at is null then w := d.p1;
+  elsif d.p2_done_at is not null and d.p1_done_at is null then w := d.p2;
   elsif d.p1_ms < d.p2_ms then w := d.p1;
   elsif d.p2_ms < d.p1_ms then w := d.p2;
   else w := null; end if;

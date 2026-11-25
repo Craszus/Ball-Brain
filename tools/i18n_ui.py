@@ -204,6 +204,12 @@ UI = [
     ("Barn", "Children", "Barn", "Børn", "Kinder", "Niños", "Enfants"),
     ("Forrige", "Previous", "Föregående", "Forrige", "Zurück", "Anterior", "Précédent"),
     ("Neste", "Next", "Nästa", "Næste", "Weiter", "Siguiente", "Suivant"),
+    ("RIKTIG!", "CORRECT!", "RÄTT!", "RIGTIGT!", "RICHTIG!", "¡CORRECTO!", "CORRECT !"),
+    ("RIKTIG REKKEFØLGE:", "CORRECT ORDER:", "RÄTT ORDNING:", "RIGTIG RÆKKEFØLGE:", "RICHTIGE REIHENFOLGE:", "ORDEN CORRECTO:", "BON ORDRE :"),
+    ("Gå ut av dagens utfordring?", "Leave the daily challenge?", "Lämna dagens utmaning?", "Forlad dagens udfordring?", "Tagesaufgabe verlassen?", "¿Salir del reto del día?", "Quitter le défi du jour ?"),
+    ("Forsøket ditt i dag går tapt.", "Your attempt for today will be lost.", "Dagens försök går förlorat.", "Dagens forsøg går tabt.", "Dein heutiger Versuch geht verloren.", "Perderás tu intento de hoy.", "Votre essai du jour sera perdu."),
+    ("Bli her", "Stay", "Stanna", "Bliv her", "Bleiben", "Quedarme", "Rester"),
+    ("Gå ut", "Leave", "Lämna", "Forlad", "Verlassen", "Salir", "Quitter"),
     ("Tilfeldig", "Random", "Slumpa", "Tilfældig", "Zufall", "Aleatorio", "Aléatoire"),
 
     # --- Innstillinger ---

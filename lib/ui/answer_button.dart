@@ -4,6 +4,9 @@ import 'icon_tile.dart';
 import 'theme.dart';
 import '../l10n/l10n.dart';
 
+/// Fasiten etter at man har svart.
+enum AnswerMark { correct, wrong }
+
 /// Svaralternativ: kort med gullkant, bokstavbrikke (A, B, C, D) og tekst.
 class AnswerButton extends StatelessWidget {
   const AnswerButton({
@@ -11,7 +14,10 @@ class AnswerButton extends StatelessWidget {
     required this.letter,
     required this.label,
     required this.onTap,
+    this.mark,
   });
+
+  final AnswerMark? mark;
 
   final String letter;
   final String label;
@@ -19,13 +25,20 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final marked = switch (mark) {
+      AnswerMark.correct => const Color(0xFF2E9E4F),
+      AnswerMark.wrong => const Color(0xFFC0392B),
+      null => null,
+    };
     return Card(
+      color: marked,
       clipBehavior: Clip.antiAlias,
       elevation: 6,
       margin: const EdgeInsets.symmetric(vertical: 6),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: const BorderSide(color: AppColors.gold),
+        side: BorderSide(
+            color: mark == null ? AppColors.gold : Colors.white, width: mark == null ? 1 : 2),
       ),
       child: InkWell(
         onTap: onTap,
@@ -50,7 +63,15 @@ class AnswerButton extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: 58), // balanserer bokstavbrikken så teksten er midtstilt
+              // balanserer bokstavbrikken så teksten er midtstilt; viser også riktig/feil
+              SizedBox(
+                width: 58,
+                child: switch (mark) {
+                  AnswerMark.correct => const Icon(Icons.check_circle, color: Colors.white),
+                  AnswerMark.wrong => const Icon(Icons.cancel, color: Colors.white),
+                  null => null,
+                },
+              ),
             ],
           ),
         ),

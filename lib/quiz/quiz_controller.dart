@@ -17,6 +17,9 @@ import '../services/stats.dart';
 /// Antall spørsmål i en regler-runde.
 const quizLength = 10;
 
+/// Hvor lenge riktig svar vises før neste spørsmål.
+const revealTime = Duration(milliseconds: 1100);
+
 /// Verdi for [quizEraProvider] som betyr «Dagens utfordring».
 const dailyChallenge = '__daily__';
 
@@ -75,6 +78,8 @@ class QuizState {
     this.saved = false,
     this.streak = 0,
     this.dailyNote,
+    this.picked,
+    this.atStake = false,
   });
 
   final List<Question> questions;
@@ -90,6 +95,12 @@ class QuizState {
   /// Dagens utfordring: om resultatet ble med i rangeringen (vises på resultatskjermen).
   final String? dailyNote;
 
+  /// Valgt alternativ mens fasiten vises (null = venter på svar).
+  final int? picked;
+
+  /// Dagens forsøk i rangeringen går tapt hvis man går ut nå.
+  final bool atStake;
+
   bool get finished => !loading && index >= questions.length;
   Question? get current => finished || loading ? null : questions[index];
 
@@ -102,6 +113,9 @@ class QuizState {
     bool? saved,
     int? streak,
     String? dailyNote,
+    int? picked,
+    bool clearPicked = false,
+    bool? atStake,
   }) =>
       QuizState(
         questions: questions ?? this.questions,
@@ -112,6 +126,8 @@ class QuizState {
         saved: saved ?? this.saved,
         streak: streak ?? this.streak,
         dailyNote: dailyNote ?? this.dailyNote,
+        picked: clearPicked ? null : picked ?? this.picked,
+        atStake: atStake ?? this.atStake,
       );
 }
 
@@ -120,6 +136,7 @@ class QuizController extends Notifier<QuizState> {
   final _answers = <Map<String, Object?>>[];
   String? _dailyToken;
   String? _dailyNote;
+  int _run = 0; // øker for hver runde, så en gammel pause ikke flytter den nye
 
   @override
   QuizState build() {
@@ -128,6 +145,7 @@ class QuizController extends Notifier<QuizState> {
   }
 
   Future<void> start() async {
+    _run++;
     _answers.clear();
     _dailyToken = null;
     _dailyNote = null;
@@ -177,7 +195,7 @@ class QuizController extends Notifier<QuizState> {
       final rng = math.Random();
       questions = [for (final q in easyToHard(picked)) q.withShuffledOptions(rng)];
     }
-    state = QuizState(questions: questions, loading: false);
+    state = QuizState(questions: questions, loading: false, atStake: _dailyToken != null);
     _stopwatch
       ..reset()
       ..start();
@@ -185,7 +203,8 @@ class QuizController extends Notifier<QuizState> {
 
   Future<void> answer(Object answer) async {
     final q = state.current;
-    if (q == null) return;
+    if (q == null || state.picked != null) return; // dobbelttrykk teller ikke
+    final run = _run;
     final correct = q.isCorrect(answer);
     ref.read(learningProvider.notifier).record(q, correct);
     if (answer is int && answer >= 0 && answer < q.options.length) {
@@ -198,11 +217,14 @@ class QuizController extends Notifier<QuizState> {
       elapsed: _stopwatch.elapsed,
     );
     state = state.copyWith(
-      index: state.index + 1,
+      picked: answer is int ? answer : -1,
       score: state.score + points,
       lastAnswerCorrect: correct,
       streak: correct ? state.streak + 1 : 0,
     );
+    await Future<void>.delayed(revealTime);
+    if (!ref.mounted || run != _run) return;
+    state = state.copyWith(index: state.index + 1, clearPicked: true);
     _stopwatch
       ..reset()
       ..start();
@@ -231,6 +253,7 @@ class QuizController extends Notifier<QuizState> {
       final token = _dailyToken;
       if (token != null) {
         _dailyToken = null;
+        state = state.copyWith(atStake: false);
         final correct = await DailyApi.submit(token, List.of(_answers));
         _dailyNote = correct == null
             ? 'Ikke med i rangeringen. Sjekk nettet.'

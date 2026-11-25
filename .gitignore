@@ -58,3 +58,6 @@ supabase.env.json
 
 # Firebase
 android/app/google-services.json
+
+# Granskningsrapporter: kan beskrive svakheter, holdes utenfor det offentlige repoet
+docs/granskning/
