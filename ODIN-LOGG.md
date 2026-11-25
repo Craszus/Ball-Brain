@@ -324,5 +324,4 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 
 ## 2026-11-25 (utgivelse bygg 7)
 - Bygg 7: logoen fjernet etter dagens utfordring, og «Slik fungerer det» er sammenfoldet. 90 tester grønne.
-- GitHub ga serverfeil da den gamle APK-en i `siste-bygg` skulle erstattes. Bygg 7 er derfor lagt ut som egen utgave `bygg-7`, merket «latest». `siste-bygg` har fortsatt bygg 6.
-- Neste: se om `tools/release.py` virker ved neste utgivelse; hvis ikke, må `siste-bygg` ryddes.
+- GitHubs utgave-API ga serverfeil (500/502) i en periode. APK og beskrivelse for bygg 7 kom opp i `siste-bygg` på et senere forsøk; filen er kontrollert mot lokal bygging (samme SHA-256).
