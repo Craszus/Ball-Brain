@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Text;
 
 import 'football.dart';
+import 'rules_card.dart';
 import 'theme.dart';
 import '../l10n/l10n.dart';
 
@@ -26,7 +27,7 @@ class ChoiceScreen extends StatelessWidget {
   final String heading;
   final List<Choice> choices;
 
-  /// Regler og forklaring: vises i en «Slik fungerer det»-boks øverst.
+  /// Regler og forklaring: ligger sammenfoldet under «Slik fungerer det».
   final List<String> rules;
 
   /// Kalles med valgt verdi (null = alt). Åpner selve spillet.
@@ -84,46 +85,8 @@ class ChoiceScreen extends StatelessWidget {
             ),
           // reglene står under valgene, så man slipper å rulle for å starte
           const SizedBox(height: 8),
-          if (rules.isNotEmpty) _RulesCard(rules: rules),
+          if (rules.isNotEmpty) RulesCard(rules: rules),
         ],
-      ),
-    );
-  }
-}
-
-class _RulesCard extends StatelessWidget {
-  const _RulesCard({required this.rules});
-  final List<String> rules;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 4),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: AppColors.gold.withValues(alpha: 0.6)),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-        child: Column(
-          children: [
-            const Text('SLIK FUNGERER DET',
-                style: TextStyle(
-                    color: AppColors.gold,
-                    fontSize: 13,
-                    letterSpacing: 1.5,
-                    fontWeight: FontWeight.w900)),
-            const SizedBox(height: 8),
-            for (final r in rules)
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 3),
-                child: Text(r,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                        color: Colors.white, fontSize: 14.5, height: 1.3)),
-              ),
-          ],
-        ),
       ),
     );
   }

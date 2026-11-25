@@ -1,4 +1,5 @@
 import 'package:ball_brain/home_screen.dart';
+import 'package:ball_brain/ui/rules_card.dart';
 import 'package:ball_brain/ui/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -61,7 +62,15 @@ void main() {
     expect(find.text('Klubber'), findsOneWidget);
     await tester.scrollUntilVisible(find.text('Stadioner og arenaer'), 200);
     expect(find.text('Stadioner og arenaer'), findsOneWidget);
-    expect(find.text('SLIK FUNGERER DET', skipOffstage: false), findsOneWidget);
+    // reglene er sammenfoldet til man trykker
+    await tester.scrollUntilVisible(find.text('SLIK FUNGERER DET'), 200);
+    expect(find.byType(RulesCard), findsOneWidget);
+    final before = tester.getSize(find.byType(RulesCard)).height;
+    expect(before, lessThan(60));
+    await tester.ensureVisible(find.text('SLIK FUNGERER DET'));
+    await tester.tap(find.text('SLIK FUNGERER DET'));
+    await tester.pump();
+    expect(tester.getSize(find.byType(RulesCard)).height, greaterThan(before));
     await tester.pumpWidget(const SizedBox());
   });
 

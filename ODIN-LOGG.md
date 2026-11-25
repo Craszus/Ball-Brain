@@ -317,3 +317,12 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 - Før utgivelsen: analyse uten feil, 90 tester grønne, ingen treff på nøkler eller passord i endringene.
 - Ikke prøvd på telefon: personvernteksten, de nye pokalene i appen, varsel om klubbkamp og oppdatering via «Last ned».
 - Neste: prøve oppdateringen på telefonen; juridisk gjennomgang og kontaktadresse før lansering (#271).
+
+## 2026-11-25 (etter bygg 6)
+- Fjernet Ball Brain-logoen fra resultatskjermen etter dagens utfordring (de andre spillmodusene har den fortsatt). 90 tester grønne. Ikke lagret på GitHub eller gitt ut.
+- «Slik fungerer det» ligger nå sammenfoldet i alle modusmenyene og på 1v1-fanen i «Kamper» (lib/ui/rules_card.dart). 90 tester grønne, sett på telefonen. Ikke lagret på GitHub eller gitt ut.
+
+## 2026-11-25 (utgivelse bygg 7)
+- Bygg 7: logoen fjernet etter dagens utfordring, og «Slik fungerer det» er sammenfoldet. 90 tester grønne.
+- GitHub ga serverfeil da den gamle APK-en i `siste-bygg` skulle erstattes. Bygg 7 er derfor lagt ut som egen utgave `bygg-7`, merket «latest». `siste-bygg` har fortsatt bygg 6.
+- Neste: se om `tools/release.py` virker ved neste utgivelse; hvis ikke, må `siste-bygg` ryddes.

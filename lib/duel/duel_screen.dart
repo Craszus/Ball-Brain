@@ -13,6 +13,7 @@ import '../ui/football.dart';
 import '../ui/gold_button.dart';
 import '../ui/icon_tile.dart';
 import '../ui/theme.dart';
+import '../ui/rules_card.dart';
 import 'duel_api.dart';
 import 'duel_history.dart';
 import 'duel_sync.dart';
@@ -424,21 +425,7 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
         ),
         const SizedBox(height: 18),
         ..._challengeSection(),
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              for (final r in rules)
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 3),
-                  child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    const Text('•  ', style: TextStyle(color: AppColors.gold)),
-                    Expanded(child: Text(r, style: const TextStyle(height: 1.3))),
-                  ]),
-                ),
-            ]),
-          ),
-        ),
+        RulesCard(rules: rules),
       ],
     );
   }

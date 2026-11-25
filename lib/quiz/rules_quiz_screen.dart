@@ -45,6 +45,7 @@ class RulesQuizScreen extends ConsumerWidget {
         if (q == null) {
           return ResultPanel(
             practice: practice,
+            logo: selection != dailyChallenge,
             score: state.score,
             note: practice
                 ? 'Øvingsrunder: gir ikke XP eller rangeringspoeng.'

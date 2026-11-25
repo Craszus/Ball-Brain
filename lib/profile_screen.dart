@@ -273,7 +273,11 @@ class ResultPanel extends ConsumerStatefulWidget {
     this.dailyNote,
     this.onRanking,
     this.practice = false,
+    this.logo = true,
   });
+
+  /// Ball Brain-merket øverst (utelates på dagens utfordring).
+  final bool logo;
 
   /// Øvingsrunde: ingen XP, nivå eller annonse.
   final bool practice;
@@ -341,8 +345,7 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const BrandMark(width: 80),
-                const SizedBox(height: 10),
+                if (widget.logo) ...const [BrandMark(width: 80), SizedBox(height: 10)],
                 const TrophyBadge(
                     tier: TrophyTier.gold,
                     asset: 'assets/trophies/fulltime.png',
