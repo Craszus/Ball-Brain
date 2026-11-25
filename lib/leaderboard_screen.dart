@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'daily_board_screen.dart';
 import 'groups_view.dart';
 import 'l10n/l10n.dart';
 import 'services/cloud.dart';
@@ -38,6 +39,16 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
       title: 'Rangering',
       body: Column(children: [
         Padding(
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+          child: OutlinedButton.icon(
+            icon: const Icon(Icons.today, size: 18),
+            style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(44)),
+            onPressed: () => Navigator.of(context)
+                .push(MaterialPageRoute<void>(builder: (_) => const DailyBoardScreen())),
+            label: const Text('Dagens rangering'),
+          ),
+        ),
+        Padding(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
           child: SegmentedButton<int>(
             showSelectedIcon: false,
@@ -46,7 +57,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
                   value: 0,
                   label: Text(countryName(country), maxLines: 1, overflow: TextOverflow.ellipsis)),
               const ButtonSegment(value: 1, label: Text('Verden')),
-              const ButtonSegment(value: 2, label: Text('Venner')),
+              const ButtonSegment(value: 2, label: Text('Klubber')),
             ],
             selected: {_tab},
             onSelectionChanged: (s) => setState(() {

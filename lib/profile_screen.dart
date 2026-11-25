@@ -8,6 +8,7 @@ import 'services/scoring.dart';
 import 'services/profile.dart';
 import 'services/stats.dart';
 import 'settings_screen.dart';
+import 'ui/ranking_card.dart';
 import 'ui/avatar_view.dart';
 import 'ui/football.dart';
 import 'ui/icon_tile.dart';
@@ -124,6 +125,7 @@ class StatsScreen extends ConsumerWidget {
           const SizedBox(height: 8),
           LevelCard(xp: stats.totalPoints),
           const SizedBox(height: 8),
+          RankingCard(country: ref.watch(profileProvider).country),
           Row(children: [
             stat(Icons.sports_soccer, 'Runder spilt', stats.games),
             const SizedBox(width: 8),
@@ -246,11 +248,17 @@ class ResultPanel extends ConsumerStatefulWidget {
     required this.score,
     required this.note,
     required this.onAgain,
+    this.dailyNote,
+    this.onRanking,
   });
 
   final int score;
   final String note;
   final VoidCallback onAgain;
+
+  /// Bare for dagens utfordring: merknad om rangeringen og knapp til den.
+  final String? dailyNote;
+  final VoidCallback? onRanking;
 
   @override
   ConsumerState<ResultPanel> createState() => _ResultPanelState();
@@ -304,9 +312,21 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                 Text(widget.note,
                     textAlign: TextAlign.center,
                     style: const TextStyle(color: AppColors.textSecondary)),
+                if (widget.dailyNote != null) ...[
+                  const SizedBox(height: 6),
+                  Text(widget.dailyNote!,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontWeight: FontWeight.w800)),
+                ],
                 const SizedBox(height: 20),
-                FilledButton(
-                    onPressed: widget.onAgain, child: const Text('Spill igjen')),
+                if (widget.onRanking != null) ...[
+                  FilledButton(
+                      onPressed: widget.onRanking, child: const Text('Se rangeringen')),
+                  const SizedBox(height: 8),
+                  OutlinedButton(onPressed: widget.onAgain, child: const Text('Spill igjen')),
+                ] else
+                  FilledButton(
+                      onPressed: widget.onAgain, child: const Text('Spill igjen')),
               ],
             ),
           ),

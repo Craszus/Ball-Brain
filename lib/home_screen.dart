@@ -5,7 +5,6 @@ import 'geo/geo_quiz_screen.dart';
 import 'quiz/photo_quiz_screen.dart';
 import 'duel/challenge_gate.dart';
 import 'duel/duel_screen.dart';
-import 'leaderboard_screen.dart';
 import 'profile_screen.dart';
 import 'quiz/image_sort_screen.dart';
 import 'quiz/rules_quiz_screen.dart';
@@ -63,7 +62,7 @@ class HomeScreen extends ConsumerWidget {
                 Row(children: [
                   _GearButton(
                       icon: Icons.emoji_events_outlined,
-                      onTap: () => open(const LeaderboardScreen())),
+                      onTap: () => open(const StatsScreen())),
                   const SizedBox(width: 10),
                   _GearButton(onTap: () => open(const SettingsScreen())),
                 ]),
@@ -135,6 +134,7 @@ class HomeScreen extends ConsumerWidget {
                       '10 spørsmål per runde. Velg riktig av fire alternativer.',
                       'Riktig svar gir +2 poeng, feil svar gir −1 poeng.',
                       'Poengene blir XP og gir nye nivåer. Du faller aldri under nivået du har nådd.',
+                      'I dagens utfordring teller bare første forsøk i rangeringen.',
                       'Spørsmålene blir vanskeligere utover i runden, og du får ikke de samme igjen før du har vært gjennom alle.',
                     ],
                     choices: const [
@@ -229,7 +229,7 @@ class HomeScreen extends ConsumerWidget {
                 ),
                 _ModeCard(
                   icon: const Icon(Icons.sports_mma),
-                  title: '1v1',
+                  title: 'Kamper',
                   onTap: () => open(const DuelScreen()),
                 ),
                 ],
@@ -282,7 +282,7 @@ class _ModeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 2),
+        padding: const EdgeInsets.symmetric(vertical: 4),
         child: SizedBox.expand(
           child: Card(
             clipBehavior: Clip.antiAlias,
@@ -301,12 +301,17 @@ class _ModeCard extends StatelessWidget {
                     IconTile(size: 44, iconSize: 26, radius: 12, child: icon),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: Text(title,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 21,
-                              fontWeight: FontWeight.w900)),
+                      // Lange navn skaleres ned i stedet for å brytes på små skjermer
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(title,
+                            maxLines: 1,
+                            softWrap: false,
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 21,
+                                fontWeight: FontWeight.w900)),
+                      ),
                     ),
                     const Icon(Icons.chevron_right,
                         color: AppColors.gold, size: 36),

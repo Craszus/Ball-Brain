@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../daily_board_screen.dart';
 import '../profile_screen.dart' show ResultPanel;
 import '../ui/answer_button.dart';
 import '../ui/football.dart';
@@ -34,6 +35,11 @@ class RulesQuizScreen extends ConsumerWidget {
                 ? 'Poengene er lagret.'
                 : 'Ikke lagret ennå (innlogging kommer).',
             onAgain: controller.start,
+            dailyNote: state.dailyNote,
+            onRanking: ref.watch(quizEraProvider) == dailyChallenge
+                ? () => Navigator.of(context)
+                    .push(MaterialPageRoute<void>(builder: (_) => const DailyBoardScreen()))
+                : null,
           );
         }
         return ListView(

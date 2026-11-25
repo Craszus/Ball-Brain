@@ -55,3 +55,6 @@ supabase.env.json
 
 # Gradle-rapporter
 /android/build/
+
+# Firebase
+android/app/google-services.json

@@ -7,6 +7,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'avatar_picker_screen.dart';
 import 'home_screen.dart';
 import 'l10n/l10n.dart';
+import 'services/push.dart';
 import 'services/cloud.dart';
 import 'services/language.dart';
 import 'services/profile.dart';
@@ -71,6 +72,7 @@ class _BallBrainAppState extends ConsumerState<BallBrainApp> {
       lang: _lang,
       child: MaterialApp(
         title: 'Ball Brain',
+        scaffoldMessengerKey: appMessengerKey,
         theme: buildTheme(),
         locale: Locale(_lang == 'nb' ? 'nb' : _lang),
         supportedLocales: [for (final c in L10n.supported) Locale(c)],

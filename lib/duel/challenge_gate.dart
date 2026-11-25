@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/l10n.dart';
+import '../services/push.dart';
 import '../services/cloud.dart';
 import 'duel_api.dart';
 import 'duel_prefs.dart';
@@ -50,6 +51,7 @@ class _ChallengeGateState extends ConsumerState<ChallengeGate> {
   void initState() {
     super.initState();
     _start();
+    Push.start();
   }
 
   @override

@@ -1,6 +1,7 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'profile.dart';
+import 'push.dart';
 
 class LeaderboardRow {
   const LeaderboardRow(
@@ -85,6 +86,7 @@ class Cloud {
     final user = c?.auth.currentUser;
     if (c == null || user == null) return;
     try {
+      await Push.stop();
       await c.from('scores').delete().eq('user_id', user.id);
       await c.from('profiles').delete().eq('id', user.id);
       await c.auth.signOut();

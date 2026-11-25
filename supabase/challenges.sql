@@ -199,6 +199,8 @@ begin
       'id', d.id, 'mode', d.mode, 'status', d.status,
       'incoming', (d.p2 = me and d.mode = 'challenge'),
       'opponent', coalesce(o.username, '?'), 'country', o.country_code,
+      'opponent_id', case when d.p1 = me then d.p2 else d.p1 end,
+      'finished_ms', case when d.finished_at is null then null else (extract(epoch from d.finished_at) * 1000)::bigint end,
       'my_score', case when d.p1 = me then d.p1_score else d.p2_score end,
       'their_score', case when d.p1 = me then d.p2_score else d.p1_score end,
       'my_answered', case when d.p1 = me then d.p1_answered else d.p2_answered end,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart';
 
+import 'club/club_section.dart';
 import 'duel/duel_api.dart';
 import 'duel/duel_screen.dart' show duelError;
 import 'l10n/l10n.dart';
@@ -10,10 +11,10 @@ import 'ui/football.dart';
 import 'ui/theme.dart';
 
 String groupError(String key) => switch (key) {
-      'not_found' => 'Fant ingen gruppe med den koden.',
-      'too_many_groups' => 'Du kan være med i maks 10 grupper.',
-      'group_full' => 'Gruppen er full (maks 50 medlemmer).',
-      'bad_name' => 'Gruppenavnet må ha 2–30 tegn.',
+      'not_found' => 'Fant ingen klubb med den koden.',
+      'too_many_groups' => 'Du kan være med i maks 10 klubber.',
+      'group_full' => 'Klubben er full (maks 50 medlemmer).',
+      'bad_name' => 'Klubbnavnet må ha 2–30 tegn.',
       'no_profile' => 'Lagre profilen din først.',
       _ => 'Kunne ikke nå serveren. Sjekk nettet.',
     };
@@ -36,14 +37,14 @@ class _GroupsViewState extends State<GroupsView> {
     final text = await showDialog<String>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(create ? 'Lag gruppe' : 'Bli med i gruppe'),
+        title: Text(create ? 'Lag klubb' : 'Bli med i klubb'),
         content: TextField(
           controller: ctrl,
           autofocus: true,
           maxLength: create ? 30 : 6,
           textCapitalization:
               create ? TextCapitalization.sentences : TextCapitalization.characters,
-          decoration: InputDecoration(labelText: (create ? 'Gruppenavn' : 'Invitasjonskode').tr),
+          decoration: InputDecoration(labelText: (create ? 'Klubbnavn' : 'Invitasjonskode').tr),
         ),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Avbryt')),
@@ -84,7 +85,7 @@ class _GroupsViewState extends State<GroupsView> {
                 child: FilledButton.icon(
                   onPressed: groups == null ? null : () => _ask(create: true),
                   icon: const Icon(Icons.add),
-                  label: const Text('Lag gruppe'),
+                  label: const Text('Lag klubb'),
                 ),
               ),
               const SizedBox(width: 10),
@@ -110,7 +111,7 @@ class _GroupsViewState extends State<GroupsView> {
               const Padding(
                 padding: EdgeInsets.only(top: 24),
                 child: Text(
-                  'Lag en gruppe og del koden med vennene dine, så ser dere hvem som kan mest.',
+                  'Lag en klubb med vennegjengen og del koden, så ser dere hvem som kan mest.',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: AppColors.textSecondary, fontSize: 16),
                 ),
@@ -163,7 +164,7 @@ class _GroupScreenState extends State<GroupScreen> {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Forlate gruppen?'),
+        title: const Text('Forlate klubben?'),
         content: const Text('Du kan bli med igjen med koden.'),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Avbryt')),
@@ -181,29 +182,31 @@ class _GroupScreenState extends State<GroupScreen> {
     final g = widget.group;
     return PitchScaffold(
       title: g.name,
-      body: Column(children: [
-        Card(
-          margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-          child: ListTile(
-            leading: const Icon(Icons.vpn_key_outlined, color: AppColors.gold),
-            title: Text(g.code,
-                style: const TextStyle(
-                    fontSize: 24, fontWeight: FontWeight.w900, letterSpacing: 4)),
-            subtitle: const Text('Invitasjonskode – del den med vennene dine'),
-            trailing: IconButton(
-              icon: const Icon(Icons.copy),
-              tooltip: 'Kopier'.tr,
-              onPressed: () {
-                Clipboard.setData(ClipboardData(
-                    text: '${'Bli med i gruppen min i Ball Brain!'.tr} ${'Kode'.tr}: ${g.code}'));
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('Kopiert')));
-              },
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+        children: [
+          ClubSection(clubId: g.id),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.vpn_key_outlined, color: AppColors.gold),
+              title: Text(g.code,
+                  style: const TextStyle(
+                      fontSize: 24, fontWeight: FontWeight.w900, letterSpacing: 4)),
+              subtitle: const Text('Invitasjonskode – del den med vennene dine'),
+              trailing: IconButton(
+                icon: const Icon(Icons.copy),
+                tooltip: 'Kopier'.tr,
+                onPressed: () {
+                  Clipboard.setData(ClipboardData(
+                      text:
+                          '${'Bli med i klubben min i Ball Brain!'.tr} ${'Kode'.tr}: ${g.code}'));
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(SnackBar(content: Text('Kopiert')));
+                },
+              ),
             ),
           ),
-        ),
-        Expanded(
-          child: FutureBuilder<List<LeaderboardRow>?>(
+          FutureBuilder<List<LeaderboardRow>?>(
             future: _future,
             builder: (context, snap) {
               if (snap.connectionState != ConnectionState.done) {
@@ -215,30 +218,26 @@ class _GroupScreenState extends State<GroupScreen> {
                     child: Text(groupError('offline'),
                         style: const TextStyle(color: AppColors.textSecondary)));
               }
-              return ListView(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                children: [
-                  for (final r in rows)
-                    LeaderboardTile(r,
-                        trailingAction: r.isMe || r.userId.isEmpty
-                            ? null
-                            : IconButton(
-                                icon: const Icon(Icons.sports_mma, color: AppColors.gold),
-                                tooltip: 'Utfordre til 1v1'.tr,
-                                onPressed: () => _challenge(r),
-                              )),
-                ],
-              );
+              return Column(children: [
+                for (final r in rows)
+                  LeaderboardTile(r,
+                      trailingAction: r.isMe || r.userId.isEmpty
+                          ? null
+                          : IconButton(
+                              icon: const Icon(Icons.sports_mma, color: AppColors.gold),
+                              tooltip: 'Utfordre til 1v1'.tr,
+                              onPressed: () => _challenge(r),
+                            )),
+              ]);
             },
           ),
-        ),
-        TextButton.icon(
-          onPressed: _leave,
-          icon: const Icon(Icons.logout, size: 18),
-          label: const Text('Forlat gruppen'),
-        ),
-        const SizedBox(height: 8),
-      ]),
+          TextButton.icon(
+            onPressed: _leave,
+            icon: const Icon(Icons.logout, size: 18),
+            label: const Text('Forlat klubben'),
+          ),
+        ],
+      ),
     );
   }
 }

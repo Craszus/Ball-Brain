@@ -24,11 +24,11 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Plan (6/23 ferdige)
+## Plan (11/26 ferdige)
 
 **Fase 1: Grunnmur & MVP-prototyp**
-- [ ] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
-- [ ] Design database-schema (brukere, highscores, spørsmål) i Supabase (frist 2026-11-24)
+- [x] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
+- [x] Design database-schema (brukere, highscores, spørsmål) i Supabase (frist 2026-11-24)
 - [x] Implementer base-API for å hente spørsmål og lagre poeng (frist 2026-11-25)
 - [x] Bygg UI med Flutter for bildesortering (drag-and-drop) (frist 2026-11-26)
 - [x] Implementer logikk for regler-quiz og scoring (frist 2026-11-24)
@@ -45,7 +45,7 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [ ] App Store Connect / Google Play Console oppsett og lansering (frist 2026-11-24)
 
 **Fra Claude**
-- [ ] Personvernerklæring, vilkår og «Slett all min data» i appen (del av #252)
+- [x] Personvernerklæring, vilkår og «Slett all min data» i appen (del av #252)
 - [ ] Monetisering (annonser/premium) og datadeling – resten av #252
 - [ ] Juridisk gjennomgang av personvern/vilkår og kontaktadresse før lansering
 - [ ] Språkstøtte etter land: norsk, engelsk, svensk, dansk, tysk, spansk, fransk (menyer og seed-spørsmål)
@@ -55,13 +55,17 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [ ] Mindre repetisjon: husk viste spørsmål/bilder lokalt, stokk svar og startrekkefølge
 - [ ] Mer spenning: dagens utfordring, «på rad»-merke, vanskelighetsprogresjon og nye bildespørsmål
 - [ ] Faktasjekk av de nye spørsmålene (særlig 2025–26-fakta) av en fotballkyndig før lansering
-- [ ] Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
+- [x] Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
+- [x] Pushvarsler: Firebase-app og nøkkel (Jon), deretter utgi funksjonen og teste (docs/PUSH.md)
+- [ ] Test klubbkamp på minst seks telefoner
+- [ ] Klubbtabell mot andre klubber og klubbserie innad i klubben
 
 ## Andre filer i mappen
 - `LICENSE` (1 kB)
 - `README.md` (1 kB)
 - `analysis_options.yaml` (2 kB)
 - `android/app/build.gradle.kts` (3 kB)
+- `android/app/google-services.json` (1 kB)
 - `android/ball_brain_android.iml` (2 kB)
 - `android/build.gradle.kts` (1 kB)
 - `android/gradle.properties` (1 kB)
@@ -113,9 +117,8 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - `assets/avatars/avatar_41.png` (309 kB)
 - `assets/avatars/avatar_42.png` (296 kB)
 - `assets/avatars/avatar_43.png` (305 kB)
-- `assets/avatars/avatar_44.png` (281 kB)
 - `ball_brain.iml` (1 kB)
-- `pubspec.lock` (31 kB)
+- `pubspec.lock` (32 kB)
 - `pubspec.yaml` (5 kB)
 - `supabase.env.json` (1 kB)
 
@@ -139,3 +142,6 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 
 - Lisens (2026-11-24): ingen åpen lisens; alle rettigheter forbeholdt (filen LICENSE), med unntak for bilder (Wikimedia Commons, egne lisenser) og landegrenser (Natural Earth).
 - Utgivelser (2026-11-24): som i Logica, bygges lokalt og legges ut med `python tools/release.py` (ingen hemmeligheter på GitHub).
+- Dagens utfordring (2026-11-24): egen rangering for dagen og ukessum (mandag–søndag, norsk døgn); kun første forsøk teller; flest riktige, deretter kortest tid.
+- Klubber (2026-11-24): vennegjeng-klubber med eget skjold (ingen ekte logoer). Klubbkamp 3v3 eller 5v5 (ikke 7v7), frist maks 5 min (3 eller 5), 10 sek pr. spørsmål, lagkamerater får ulike spørsmål, samlet pott avgjør. Man kan ikke spille for to klubber samme uke.
+- Push-varsler (2026-11-24): settes opp som i Logica (Firebase Cloud Messaging).

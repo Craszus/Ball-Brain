@@ -162,6 +162,7 @@ try:
     check('kan ikke spille samme utfordring to ganger', s == 400)
     s, ml = rpc('my_duels', {}, ta)
     check('ferdig utfordring står i listen med resultat', any(x['id'] == cid and x['result'] == 'win' for x in ml))
+    check('listen har motstander-id og sluttidspunkt', any(x['id'] == cid and x.get('opponent_id') == ub and x.get('finished_ms') for x in ml))
     rpc('duel_remove', {'p_id': cid}, ta)
     s, ml = rpc('my_duels', {}, ta)
     s2, mlb = rpc('my_duels', {}, tb)

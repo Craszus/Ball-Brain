@@ -26,7 +26,8 @@ void main() {
     expect(find.text('Regler-quiz'), findsOneWidget);
     expect(find.text('Sorter rekkefølgen'), findsOneWidget);
     expect(find.text('Geografi-quiz'), findsOneWidget);
-    expect(find.text('1v1'), findsOneWidget);
+    expect(find.text('Kamper'), findsOneWidget);
+    expect(find.text('1v1 og klubbkamp'), findsNothing); // ingen tekst under navnet
     expect(find.text('Profil og trofeer'), findsNothing); // profil via avataren
     // Ingen layoutfeil (overflow) ved mobilbredde
     expect(tester.takeException(), isNull);
@@ -77,8 +78,8 @@ void main() {
     final scroll = tester.state<ScrollableState>(find.byType(Scrollable).first);
     expect(scroll.position.maxScrollExtent, 0, reason: 'menyen må ikke trenge scrolling');
     // Spillknappene fyller helt ned til bunnen av skjermen
-    final last = tester.getRect(find.text('1v1').first);
-    final cards = tester.getRect(find.ancestor(of: find.text('1v1'), matching: find.byType(Card)).first);
+    final last = tester.getRect(find.text('Kamper').first);
+    final cards = tester.getRect(find.ancestor(of: find.text('Kamper'), matching: find.byType(Card)).first);
     expect(cards.bottom, greaterThan(700));
     expect(cards.height, greaterThan(56));
     expect(last.height, greaterThan(0));

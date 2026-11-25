@@ -6,6 +6,11 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+// Push-varsler: slås på når google-services.json ligger her (se docs/PUSH.md).
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
+}
+
 android {
     namespace = "no.ballbrain.ball_brain"
     compileSdk = flutter.compileSdkVersion

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../groups_view.dart' show GroupsView;
 import '../l10n/l10n.dart';
 import '../services/feedback.dart';
 import '../services/profile.dart';
@@ -12,6 +13,7 @@ import '../ui/gold_button.dart';
 import '../ui/icon_tile.dart';
 import '../ui/theme.dart';
 import 'duel_api.dart';
+import 'duel_history.dart';
 import 'duel_sync.dart';
 
 const _secondsPerQuestion = 15;
@@ -43,6 +45,7 @@ class DuelScreen extends ConsumerStatefulWidget {
 
 class _DuelScreenState extends ConsumerState<DuelScreen> {
   _Phase _phase = _Phase.menu;
+  int _tab = 0; // 0 = 1v1, 1 = klubbkamp
   DuelSummary? _d;
   List<DuelQuestion> _qs = const [];
   int _qi = 0;
@@ -354,10 +357,10 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
         if (!didPop) _confirmLeave();
       },
       child: PitchScaffold(
-        title: '1v1',
+        title: 'Kamper',
         actions: _phase == _Phase.play ? [ScoreChip(_myScore)] : null,
         body: switch (_phase) {
-          _Phase.menu => _menu(),
+          _Phase.menu => _tabs(),
           _Phase.joining => const Center(child: CircularProgressIndicator()),
           _Phase.lobby => _lobby(),
           _Phase.countdown => _countdownView(),
@@ -368,6 +371,23 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
       ),
     );
   }
+
+  Widget _tabs() => Column(children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
+          child: SegmentedButton<int>(
+            showSelectedIcon: false,
+            expandedInsets: EdgeInsets.zero,
+            segments: const [
+              ButtonSegment(value: 0, icon: Icon(Icons.sports_mma), label: Text('1v1')),
+              ButtonSegment(value: 1, icon: Icon(Icons.shield_outlined), label: Text('Klubbkamp')),
+            ],
+            selected: {_tab},
+            onSelectionChanged: (v) => setState(() => _tab = v.first),
+          ),
+        ),
+        Expanded(child: _tab == 0 ? _menu() : const GroupsView()),
+      ]);
 
   Widget _menu() {
     final rules = const [
@@ -419,13 +439,25 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
 
   List<Widget> _challengeSection() {
     if (_items.isEmpty) return const [];
+    // Her vises bare det som pågår; ferdige kamper oppsummeres i ett kort.
+    final open = _items.where((i) => !i.isFinished).take(8).toList();
     return [
-      const Text('Utfordringer',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: AppColors.gold)),
-      const SizedBox(height: 6),
-      for (final i in _items.take(8)) _challengeTile(i),
+      if (open.isNotEmpty) ...[
+        const Text('Utfordringer',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: AppColors.gold)),
+        const SizedBox(height: 6),
+        for (final i in open) _challengeTile(i),
+      ],
+      LastOpponentCard(items: _items, onOpenHistory: _openHistory),
       const SizedBox(height: 18),
     ];
+  }
+
+  void _openHistory() {
+    Navigator.of(context).push(MaterialPageRoute<void>(
+      builder: (_) =>
+          DuelHistoryScreen(items: _items, onRemove: _removeChallenge, reload: () => _items),
+    ));
   }
 
   Widget _challengeTile(DuelListItem i) {
@@ -438,14 +470,6 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
 
     if (i.isDeclined) {
       title = '${i.opponent} avslo utfordringen.';
-      actions.add(btn('Fjern', () => _removeChallenge(i)));
-    } else if (i.isFinished) {
-      title = switch (i.result) {
-        'win' => 'Seier mot ${i.opponent}',
-        'loss' => 'Tap mot ${i.opponent}',
-        _ => 'Uavgjort mot ${i.opponent}',
-      };
-      sub = '${i.myScore} – ${i.theirScore}';
       actions.add(btn('Fjern', () => _removeChallenge(i)));
     } else if (i.needsMyAnswer) {
       title = '${i.opponent} utfordrer deg';

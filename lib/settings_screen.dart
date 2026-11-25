@@ -6,6 +6,7 @@ import 'avatar_picker_screen.dart';
 import 'duel/duel_prefs.dart';
 import 'legal_screens.dart';
 import 'media/credits_screen.dart';
+import 'services/push.dart';
 import 'services/feedback.dart';
 import 'services/update_check.dart';
 import 'share_screen.dart';
@@ -57,11 +58,13 @@ class SettingsScreen extends ConsumerWidget {
             child: SwitchListTile(
               secondary: const Icon(Icons.sports_mma),
               title: const Text('Ta imot 1v1-utfordringer'),
-              subtitle: const Text('Venner i gruppene dine kan utfordre deg'),
+              subtitle: const Text('Folk i klubbene dine kan utfordre deg'),
               value: ref.watch(acceptsChallengesProvider),
               onChanged: (v) => ref.read(acceptsChallengesProvider.notifier).set(v),
             ),
           ),
+          const SizedBox(height: 8),
+          const Card(child: _PushSwitch()),
           const SizedBox(height: 8),
           Card(
             child: ListTile(
@@ -264,4 +267,35 @@ class SettingsScreen extends ConsumerWidget {
       }
     }
   }
+}
+
+class _PushSwitch extends StatefulWidget {
+  const _PushSwitch();
+
+  @override
+  State<_PushSwitch> createState() => _PushSwitchState();
+}
+
+class _PushSwitchState extends State<_PushSwitch> {
+  bool _on = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Push.isEnabled().then((v) {
+      if (mounted) setState(() => _on = v);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => SwitchListTile(
+        secondary: const Icon(Icons.notifications_outlined),
+        title: const Text('Varsler'),
+        subtitle: const Text('Utfordringer og klubbkamper'),
+        value: _on,
+        onChanged: (v) {
+          setState(() => _on = v);
+          Push.setEnabled(v);
+        },
+      );
 }

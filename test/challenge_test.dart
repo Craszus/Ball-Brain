@@ -1,5 +1,6 @@
 import 'package:ball_brain/duel/challenge_gate.dart';
 import 'package:ball_brain/duel/duel_api.dart';
+import 'package:ball_brain/duel/duel_history.dart';
 import 'package:ball_brain/duel/duel_screen.dart';
 import 'package:ball_brain/l10n/l10n.dart';
 import 'package:ball_brain/ui/theme.dart';
@@ -74,6 +75,73 @@ void main() {
     await tester.tap(find.text('Avslå'));
     await tester.pump(const Duration(milliseconds: 400));
     expect(choice, 'decline');
+  });
+
+  DuelListItem done(String name, String result, int mine, int theirs, int at) =>
+      DuelListItem.fromJson({
+        ...item(status: 'finished', result: result),
+        'id': '$at',
+        'opponent': name,
+        'opponent_id': 'id-$name',
+        'my_score': mine,
+        'their_score': theirs,
+        'finished_ms': at,
+      });
+
+  List<DuelListItem> history() => [
+        done('Ola', 'loss', 62, 118, 1),
+        done('Kari', 'loss', 97, 131, 2),
+        done('Kari', 'win', 140, 84, 4),
+        done('Per', 'draw', 100, 100, 3),
+      ];
+
+  test('historikken samles per motstander, siste først', () {
+    final groups = duelsByOpponent([DuelListItem.fromJson(item()), ...history()]);
+    expect(groups.map((g) => g.first.opponent), ['Kari', 'Per', 'Ola']);
+    expect(groups.first.map((g) => g.myScore), [140, 97]);
+  });
+
+  testWidgets('menykortet viser bare siste motstander, resten ligger i eget vindu', (tester) async {
+    tester.view.physicalSize = const Size(360, 800);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    var items = history();
+    await tester.pumpWidget(MaterialApp(
+      theme: buildTheme(),
+      home: Builder(
+        builder: (ctx) => Scaffold(
+          body: ListView(children: [
+            LastOpponentCard(
+              items: items,
+              onOpenHistory: () => Navigator.of(ctx).push(MaterialPageRoute<void>(
+                builder: (_) => DuelHistoryScreen(
+                  items: items,
+                  onRemove: (g) async => items = items.where((i) => i.id != g.id).toList(),
+                  reload: () => items,
+                ),
+              )),
+            ),
+          ]),
+        ),
+      ),
+    ));
+    expect(find.text('Siste motstander'), findsOneWidget);
+    expect(find.text('Kari'), findsOneWidget);
+    expect(find.text('Ola'), findsNothing);
+    expect(find.text('Siste kamp: 140 – 84'), findsOneWidget);
+
+    await tester.tap(find.text('Se historikken'));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+    expect(find.text('Ola'), findsOneWidget);
+    expect(find.text('Seier 1 · Uavgjort 0 · Tap 1'), findsOneWidget);
+    expect(find.text('97 – 131'), findsOneWidget);
+
+    await tester.tap(find.byTooltip('Fjern').first);
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+    expect(find.text('140 – 84'), findsNothing);
+    expect(tester.takeException(), isNull);
   });
 
   test('utfordringstekster med navn oversettes', () async {

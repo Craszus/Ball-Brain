@@ -70,12 +70,13 @@ class PrivacyScreen extends StatelessWidget {
                   'telefonnummer, posisjon eller bilder av deg. Når du spiller 1v1, '
                   'lagres også resultatet av kampen.'),
           _Section('Hvor dataene ligger',
-              'Kallenavn, land og poeng (også resultater fra 1v1) lagres hos vår '
+              'Kallenavn, land og poeng (også resultater fra 1v1, klubbkamper og dagens utfordring) lagres hos vår '
                   'databaseleverandør (Supabase) på servere i London (Storbritannia). '
                   'Avataren, XP, nivå og troféer ligger bare på din egen enhet. Appen '
                   'logger deg inn anonymt, uten e-post eller passord. «Slett all min '
                   'data» i Innstillinger sletter profilen din, poengene og kampene '
-                  'dine på serveren, og alt på enheten.'),
+                  'dine på serveren, og alt på enheten. Slår du på varsler, lagres '
+                  'også enhetens varsel-id, og varslene sendes via Google (Firebase).'),
           _Section('Hvorfor vi lagrer det',
               'For at spillet skal fungere: å vise profilen din, holde '
                   'styr på framgang og troféer, og vise deg på '

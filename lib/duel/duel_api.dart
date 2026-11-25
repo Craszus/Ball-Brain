@@ -125,6 +125,8 @@ class DuelListItem {
     required this.theirDone,
     required this.result,
     required this.expiresMs,
+    this.opponentId,
+    this.finishedMs,
   });
 
   final String id;
@@ -138,6 +140,8 @@ class DuelListItem {
   final bool theirDone;
   final String? result;
   final int? expiresMs;
+  final String? opponentId;
+  final int? finishedMs;
 
   bool get isActive => status == 'active';
   bool get isFinished => status == 'finished';
@@ -163,6 +167,8 @@ class DuelListItem {
         theirDone: j['their_done'] == true,
         result: j['result'] as String?,
         expiresMs: (j['expires_ms'] as num?)?.toInt(),
+        opponentId: j['opponent_id'] as String?,
+        finishedMs: (j['finished_ms'] as num?)?.toInt(),
       );
 }
 

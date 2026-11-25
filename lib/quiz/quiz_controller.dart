@@ -6,6 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../data/question_repository.dart';
 import '../models/question.dart';
 import '../services/cloud.dart';
+import '../services/daily.dart';
 import '../services/feedback.dart';
 import '../services/scoring.dart';
 import '../services/seen_history.dart';
@@ -38,6 +39,10 @@ List<Question> dailyQuestions(List<Question> all, DateTime day) {
   return [for (final q in easyToHard(picked)) q.withShuffledOptions(rng)];
 }
 
+/// Samme spørsmål, men egen rekkefølge på spørsmål og svar for hver spiller.
+List<Question> shuffledForPlayer(List<Question> qs, math.Random rng) =>
+    [for (final q in [...qs]..shuffle(rng)) q.withShuffledOptions(rng)];
+
 final questionRepositoryProvider = Provider<QuestionRepository>((ref) {
   SupabaseClient? client;
   try {
@@ -57,6 +62,7 @@ class QuizState {
     this.loading = true,
     this.saved = false,
     this.streak = 0,
+    this.dailyNote,
   });
 
   final List<Question> questions;
@@ -69,6 +75,9 @@ class QuizState {
   /// Riktige svar på rad akkurat nå (vises som «3 PÅ RAD!», gir ikke ekstra poeng).
   final int streak;
 
+  /// Dagens utfordring: om resultatet ble med i rangeringen (vises på resultatskjermen).
+  final String? dailyNote;
+
   bool get finished => !loading && index >= questions.length;
   Question? get current => finished || loading ? null : questions[index];
 
@@ -80,6 +89,7 @@ class QuizState {
     bool? loading,
     bool? saved,
     int? streak,
+    String? dailyNote,
   }) =>
       QuizState(
         questions: questions ?? this.questions,
@@ -89,12 +99,15 @@ class QuizState {
         loading: loading ?? this.loading,
         saved: saved ?? this.saved,
         streak: streak ?? this.streak,
+        dailyNote: dailyNote ?? this.dailyNote,
       );
 }
 
 class QuizController extends Notifier<QuizState> {
   final _stopwatch = Stopwatch();
   final _answers = <Map<String, Object?>>[];
+  String? _dailyToken;
+  String? _dailyNote;
 
   @override
   QuizState build() {
@@ -104,12 +117,25 @@ class QuizController extends Notifier<QuizState> {
 
   Future<void> start() async {
     _answers.clear();
+    _dailyToken = null;
+    _dailyNote = null;
     state = const QuizState();
     final era = ref.read(quizEraProvider);
     final repo = ref.read(questionRepositoryProvider);
     final List<Question> questions;
     if (era == dailyChallenge) {
-      questions = dailyQuestions(await repo.fetchQuestions(limit: 100000), DateTime.now());
+      // Serveren velger dagens spørsmål; uten nett brukes de lokale (uten rangering).
+      final remote = await DailyApi.start();
+      if (remote != null) {
+        _dailyToken = remote.token;
+        if (remote.token == null) _dailyNote = 'Bare første forsøk teller i rangeringen.';
+        questions = shuffledForPlayer(remote.questions, math.Random());
+      } else {
+        _dailyNote = 'Ikke med i rangeringen. Sjekk nettet.';
+        questions = shuffledForPlayer(
+            dailyQuestions(await repo.fetchQuestions(limit: 100000), DateTime.now()),
+            math.Random());
+      }
     } else {
       // Hele puljen hentes, og uviste spørsmål velges først (huskes mellom rundene).
       final all = await repo.fetchQuestions(era: era, limit: 100000);
@@ -157,6 +183,15 @@ class QuizController extends Notifier<QuizState> {
               () => ref
                   .read(feedbackProvider)
                   .play(up ? Effect.levelUp : Effect.finish)));
+      final token = _dailyToken;
+      if (token != null) {
+        _dailyToken = null;
+        final correct = await DailyApi.submit(token, List.of(_answers));
+        _dailyNote = correct == null
+            ? 'Ikke med i rangeringen. Sjekk nettet.'
+            : 'Med i dagens rangering: $correct av 10 riktige.';
+      }
+      state = state.copyWith(dailyNote: _dailyNote);
       // Serveren regner ut poengene fra svarene (se supabase/validate_rounds.sql)
       final saved = await Cloud.submitRound('rules_quiz', List.of(_answers));
       state = state.copyWith(saved: saved);

@@ -4,8 +4,8 @@ Kryss av `[x]` når noe er ferdig. Nye oppgaver legges nederst som `- [ ] tekst`
 
 
 ## Fase 1: Grunnmur & MVP-prototyp
-- [ ] (#242) Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
-- [ ] (#243) Design database-schema (brukere, highscores, spørsmål) i Supabase (frist 2026-11-24)
+- [x] (#242) Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
+- [x] (#243) Design database-schema (brukere, highscores, spørsmål) i Supabase (frist 2026-11-24)
 - [x] (#244) Implementer base-API for å hente spørsmål og lagre poeng (frist 2026-11-25)
 - [x] (#245) Bygg UI med Flutter for bildesortering (drag-and-drop) (frist 2026-11-26)
 - [x] (#246) Implementer logikk for regler-quiz og scoring (frist 2026-11-24)
@@ -22,7 +22,7 @@ Kryss av `[x]` når noe er ferdig. Nye oppgaver legges nederst som `- [ ] tekst`
 - [ ] (#253) App Store Connect / Google Play Console oppsett og lansering (frist 2026-11-24)
 
 ## Fra Claude
-- [ ] (#269) Personvernerklæring, vilkår og «Slett all min data» i appen (del av #252)
+- [x] (#269) Personvernerklæring, vilkår og «Slett all min data» i appen (del av #252)
 - [ ] (#270) Monetisering (annonser/premium) og datadeling – resten av #252
 - [ ] (#271) Juridisk gjennomgang av personvern/vilkår og kontaktadresse før lansering
 - [ ] (#272) Språkstøtte etter land: norsk, engelsk, svensk, dansk, tysk, spansk, fransk (menyer og seed-spørsmål)
@@ -32,4 +32,7 @@ Kryss av `[x]` når noe er ferdig. Nye oppgaver legges nederst som `- [ ] tekst`
 - [ ] (#278) Mindre repetisjon: husk viste spørsmål/bilder lokalt, stokk svar og startrekkefølge
 - [ ] (#279) Mer spenning: dagens utfordring, «på rad»-merke, vanskelighetsprogresjon og nye bildespørsmål
 - [ ] (#280) Faktasjekk av de nye spørsmålene (særlig 2025–26-fakta) av en fotballkyndig før lansering
-- [ ] (#281) Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
+- [x] (#281) Vurder ukentlig/daglig utfordring med egen rangering når Supabase er på plass
+- [x] (#291) Pushvarsler: Firebase-app og nøkkel (Jon), deretter utgi funksjonen og teste (docs/PUSH.md)
+- [ ] (#292) Test klubbkamp på minst seks telefoner
+- [ ] (#293) Klubbtabell mot andre klubber og klubbserie innad i klubben

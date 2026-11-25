@@ -36,3 +36,8 @@ end;
 $$;
 revoke all on function public.unregister_push_token() from public, anon;
 grant execute on function public.unregister_push_token() to authenticated;
+
+-- Edge-funksjonen (service_role) får bare det den trenger (nye prosjekter gir ingen rettigheter av seg selv).
+grant select, update on public.duels, public.club_games to service_role;
+grant select on public.profiles, public.groups, public.group_members to service_role;
+grant select, delete on public.push_tokens to service_role;

@@ -258,3 +258,46 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 
 ## 2026-11-24 (økt 18)
 - Utgivelser gjøres nå som i Logica: `python tools/release.py` øker byggnummeret, bygger signert APK lokalt og oppdaterer GitHub-utgaven «siste-bygg» med gh. Appen varsler om ny versjon. GitHub Actions-flyten og hemmelighetsskriptet er fjernet (ingen nøkler trenger å ligge på GitHub). Erstatter punktet om automatisk bygg ved push i økt 16.
+
+## 2026-11-24 (økt 19)
+- 1v1: ferdige utfordringer vises nå som resultatkort med farge og ikon: SEIER (gull, pokal), TAP (rødt, pil ned) og UAVGJORT (grå, håndtrykk), motstanderen under og stillingen stort til høyre (egen poengsum først).
+- Analysen er uten feil og 59 tester går gjennom. Ikke sett på telefon ennå, ikke committet og ikke sendt ut.
+- Neste: Jon ser kortene på telefonen; ny utgave sendes ut når Jon ber om det.
+
+## 2026-11-24 (økt 20)
+- 1v1-historikken er gjort om etter Jons valg (forslag C, men bare siste motstander): 1v1-menyen viser ett kort med stillingen mot siste motstander, formmerker og siste resultat. «Se historikken» åpner et eget vindu med alle kamper samlet per motstander (lib/duel/duel_history.dart). Erstatter resultatkortene fra økt 19.
+- Server: my_duels gir nå også motstander-id og sluttidspunkt (supabase/challenges.sql, kjørt i SQL Editor), så like kallenavn ikke blandes. Historikken dekker de siste 14 dagene.
+- Analyse uten feil, 60 tester og python tools/test_duel.py OK. Ikke prøvd på telefon, ikke committet eller sendt ut.
+
+## 2026-11-24 (økt 21)
+- Dagens utfordring har fått egen rangering (#281): daglig liste og ukessum (mandag–søndag), for landet, verden og venner (alle i gruppene dine). Rangert etter antall riktige, deretter kortest tid. Bare første forsøk teller; norsk døgn.
+- Serveren (supabase/daily.sql, kjørt i SQL Editor) velger dagens ti spørsmål, gir ett forsøksmerke pr. dag og teller de riktige selv. python tools/test_daily.py: alle kontroller OK.
+- Appen: lib/services/daily.dart, lib/daily_board_screen.dart, knapp på resultatskjermen og i Rangering. Uten nett spilles lokale spørsmål uten rangering. Personvernteksten nevner nå resultatene.
+- Ikke prøvd på telefon, ikke committet eller sendt ut.
+
+## 2026-11-24 (økt 22)
+- Klubber og klubbkamp bygget: gruppene heter nå klubber, med eget skjold og farger (lib/club/). Klubbkamp 3 mot 3 eller 5 mot 5: utfordringskode, avspark, frist 3 eller 5 min, 10 sek pr. spørsmål, lagkamerater får forskjellige spørsmål, størst samlet pott vinner. Inngang fra 1v1-menyen og Rangering → Klubber.
+- Server: supabase/clubs.sql kjørt. python tools/test_clubs.py (tar vel ett minutt): alle kontroller OK med to klubber à 3.
+- Dagens utfordring: hver spiller får egen rekkefølge på spørsmål og svar.
+- Push-varsler som i Logica: appkoden, bryteren «Varsler», push_tokens (supabase/push.sql kjørt), utvidet Edge-funksjon og SQL for klubbvarsler. IKKE aktivt: Jon må lage Firebase-app og legge inn nøkkelen selv (docs/PUSH.md); funksjonen er ikke utgitt og ikke testet.
+- Analyse uten feil, 68 tester grønne, release-APK bygger. Ikke installert på telefon, ikke committet eller sendt ut.
+- Rydding: noen tomme testklubber fra tidligere testkjøringer ligger igjen i databasen (uten medlemmer).
+- Neste: Firebase, installere og teste med flere telefoner, deretter klubbtabell og klubbserie innad.
+
+## 2026-11-24 (økt 23)
+- Firebase-prosjektet «Ball Brain» (ball-brain) opprettet uten Analytics og Gemini, Android-appen no.ballbrain.ball_brain registrert. google-services.json ligger i android/app/ (utelatt fra git), og release-APK bygger med den.
+- Gjenstår: Jon lager tjenestekontonøkkelen og legger den inn som FCM_SERVICE_ACCOUNT i Supabase. Deretter utgir Claude notify-duel, kjører utløserne og tester på telefon.
+- Nøkkelen er lagt inn av Jon. Edge-funksjonen notify-duel er utgitt (JWT-krav står på). Utløser-SQL (supabase/push_triggers.sql) venter på at Jon limer inn anon-nøkkelen og kjører den.
+
+## 2026-11-25
+- 1v1-knappen heter nå «Kamper» (undertekst «1v1 og klubbkamp»); skjermen har 1v1 og Klubbkamp som to valg øverst.
+- Rangeringen ligger inne i «Statistikk og troféer» (din plass i landet og verden + lister); pokalknappen åpner statistikken.
+- Spillknappene på hovedmenyen er litt lavere, med mer luft mellom.
+- 69 tester grønne, analyse uten feil. Ikke committet eller sendt ut. Varslene venter fortsatt på anon-nøkkelen i push_triggers.sql.
+- Underteksten på «Kamper»-knappen er fjernet (ingen tekst under navnene i hovedmenyen). Installert på telefonen.
+
+- 2026-11-25: Utløserne er på. Prøvevarsel: databasen kaller funksjonen (service_role manglet tabellrettigheter, nå gitt i supabase/push.sql), men sendingen feiler fordi FCM_SERVICE_ACCOUNT ikke inneholder nøkkelfilen. Jon må legge den inn på nytt; deretter ny test.
+- 2026-11-25: Nytt prøvevarsel: hemmeligheten var oppdatert, men inneholdt kodeeksemplet fra Firebase-siden («var admin …») i stedet for nøkkelfilen. Testdata slettet. Venter på at Jon laster ned nøkkelfilen og limer inn innholdet.
+- Ny push-test 25.11: FCM_SERVICE_ACCOUNT inneholdt bare private_key-feltet, ikke hele nøkkelfilen (JSON.parse feiler). Neste: legg inn hele .json-filen (starter med {) og test igjen. Testdata ryddet bort.
+- Push virker (25.11): hele nøkkelfilen er lagt inn, og varselet «Du er utfordret!» kom fram til telefonen med appen lukket. Testdata slettet. #291 krysset av. Ikke testet: klubbkamp-varsler. Ikke utgitt til brukere ennå.
+- Gitt ut bygg 3 (25.11) til brukerne via GitHub «siste-bygg»: kamphistorikk, daglig utfordring, klubber og klubbkamp, «Kamper»-menyen og pushvarsler. Analyse uten feil, 69 tester grønne. Kildekoden lagt på GitHub.
