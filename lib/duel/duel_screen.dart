@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../groups_view.dart' show GroupsView;
 import '../l10n/l10n.dart';
+import '../party/quiz_night_screen.dart';
 import '../services/feedback.dart';
 import '../services/profile.dart';
 import '../ui/football.dart';
@@ -27,7 +28,7 @@ String duelError(String key) => switch (key) {
       'no_profile' => 'Lagre profilen din først.',
       'cancelled' => 'Kampen ble avbrutt.',
       'self' => 'Du kan ikke utfordre deg selv.',
-      'not_shared' => 'Dere må være i samme gruppe for å utfordre.',
+      'not_shared' => 'Dere må være i samme klubb for å utfordre.',
       'not_accepting' => 'Spilleren tar ikke imot utfordringer.',
       'too_many' => 'Du har allerede fem åpne utfordringer.',
       'already' => 'Du har allerede en åpen utfordring til denne spilleren.',
@@ -45,7 +46,7 @@ class DuelScreen extends ConsumerStatefulWidget {
 
 class _DuelScreenState extends ConsumerState<DuelScreen> {
   _Phase _phase = _Phase.menu;
-  int _tab = 0; // 0 = 1v1, 1 = klubbkamp
+  int _tab = 0; // 0 = 1v1, 1 = klubber, 2 = quizkveld
   DuelSummary? _d;
   List<DuelQuestion> _qs = const [];
   int _qi = 0;
@@ -379,14 +380,20 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
             showSelectedIcon: false,
             expandedInsets: EdgeInsets.zero,
             segments: const [
-              ButtonSegment(value: 0, icon: Icon(Icons.sports_mma), label: Text('1v1')),
-              ButtonSegment(value: 1, icon: Icon(Icons.shield_outlined), label: Text('Klubbkamp')),
+              ButtonSegment(value: 0, label: Text('1v1')),
+              ButtonSegment(value: 1, label: Text('Klubber')),
+              ButtonSegment(value: 2, label: Text('Quizkveld')),
             ],
             selected: {_tab},
             onSelectionChanged: (v) => setState(() => _tab = v.first),
           ),
         ),
-        Expanded(child: _tab == 0 ? _menu() : const GroupsView()),
+        Expanded(
+            child: switch (_tab) {
+          0 => _menu(),
+          1 => const GroupsView(),
+          _ => const QuizNightView(),
+        }),
       ]);
 
   Widget _menu() {
@@ -399,11 +406,21 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
     return ListView(
       padding: const EdgeInsets.all(20),
       children: [
+        GoldButton(label: 'Finn motstander', onPressed: () => _begin(DuelApi.find)),
+        const SizedBox(height: 12),
+        OutlinedButton(
+          onPressed: () => _begin(DuelApi.createPrivate),
+          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(52)),
+          child: const Text('Utfordre en venn'),
+        ),
+        const SizedBox(height: 12),
+        OutlinedButton(
+          onPressed: _askCode,
+          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(52)),
+          child: const Text('Bli med med kode'),
+        ),
+        const SizedBox(height: 18),
         ..._challengeSection(),
-        const Text('Utfordre en annen spiller',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
-        const SizedBox(height: 14),
         Card(
           child: Padding(
             padding: const EdgeInsets.all(14),
@@ -418,20 +435,6 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
                 ),
             ]),
           ),
-        ),
-        const SizedBox(height: 18),
-        GoldButton(label: 'Finn motstander', onPressed: () => _begin(DuelApi.find)),
-        const SizedBox(height: 12),
-        OutlinedButton(
-          onPressed: () => _begin(DuelApi.createPrivate),
-          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-          child: const Text('Utfordre en venn'),
-        ),
-        const SizedBox(height: 12),
-        OutlinedButton(
-          onPressed: _askCode,
-          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-          child: const Text('Bli med med kode'),
         ),
       ],
     );

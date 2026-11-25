@@ -39,6 +39,8 @@ void main() {
     await _pump(tester, const SettingsScreen());
     await tester.scrollUntilVisible(find.text('Slett all min data'), 200,
         scrollable: find.byType(Scrollable).first);
+    await tester.ensureVisible(find.text('Slett all min data'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Slett all min data'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Slett alt'));

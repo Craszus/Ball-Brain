@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart' hide Text;
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/l10n.dart';
+import '../services/stats.dart';
 import '../ui/answer_button.dart';
 import '../ui/football.dart';
 import '../ui/theme.dart';
@@ -79,9 +81,24 @@ class _ClubGameScreenState extends State<ClubGameScreen> {
         _game = games.where((g) => g.id == widget.gameId).firstOrNull ?? _game;
         _loading = false;
       });
+      _record();
     } on ClubError {
       if (mounted) setState(() => _loading = false);
     }
+  }
+
+  /// Teller en ferdig kamp jeg spilte i, én gang (pokalene for klubbkamp).
+  void _record() {
+    final g = _game;
+    if (g == null || g.status != 'finished') return;
+    final me = g.players.where((p) => p.isMe).firstOrNull;
+    if (me == null) return;
+    try {
+      final stats = ProviderScope.containerOf(context, listen: false).read(statsProvider.notifier);
+      stats.bump('clubPlayed', once: 'club-play-${g.id}').then((_) {
+        if (g.winner == me.club) stats.bump('clubWins', once: 'club-win-${g.id}');
+      });
+    } catch (_) {}
   }
 
   Future<void> _act(Future<void> Function() action) async {

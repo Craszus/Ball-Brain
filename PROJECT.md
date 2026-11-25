@@ -24,7 +24,7 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Plan (12/26 ferdige)
+## Plan (12/37 ferdige)
 
 **Fase 1: Grunnmur & MVP-prototyp**
 - [x] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
@@ -59,6 +59,17 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [x] Pushvarsler: Firebase-app og nøkkel (Jon), deretter utgi funksjonen og teste (docs/PUSH.md)
 - [ ] Test klubbkamp på minst seks telefoner
 - [x] Klubbtabell mot andre klubber og klubbserie innad i klubben
+- [ ] Ball Brain Pro klargjort i testmodus: ingen annonser, statistikk per tema, bom-trening, 4 spørsmålspakker, klubbskjold, rammer og titler
+- [ ] Ball Brain Pro: ekte kjøp i App Store / Google Play, vilkår og personverntekst før publisering
+- [ ] Faktasjekk de 60 pakkespørsmålene og oversett dem til svensk, dansk, tysk, spansk og fransk
+- [ ] Nye avatarbilder som bare Pro får
+- [ ] Quizkveld: verten starter en quiz, alle svarer på mobilen (under «Kamper»)
+- [ ] Nye pokaler for dagens utfordring, klubbkamp, quizkveld og øving, og ryddigere innstillinger og menyer
+- [ ] Test quizkveld med flere ekte telefoner (gjerne en pubkveld)
+- [ ] Tegne pokalbilder til de 16 nye pokalene (viser et enkelt ikon nå)
+- [ ] Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
+- [ ] Quizkveld i nettleser, så pubgjester slipper å installere appen
+- [ ] Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
 
 ## Andre filer i mappen
 - `LICENSE` (1 kB)
@@ -146,4 +157,7 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Klubber (2026-11-24): vennegjeng-klubber med eget skjold (ingen ekte logoer). Klubbkamp 3v3 eller 5v5 (ikke 7v7), frist maks 5 min (3 eller 5), 10 sek pr. spørsmål, lagkamerater får ulike spørsmål, samlet pott avgjør. Man kan ikke spille for to klubber samme uke.
 - Push-varsler (2026-11-24): settes opp som i Logica (Firebase Cloud Messaging).
 - Klubbtabell og klubbserie (2026-11-25): tabellen rangerer alle klubber etter klubbkampene, klubbserien rangerer medlemmene etter 1v1 mot hverandre. Seier 3 poeng, uavgjort 1; bare første oppgjør mellom de samme teller hver dag; visning for måneden og totalt.
-- Reklame (2026-11-25): testannonser som i Logica (frivillig, samtykke første gang, maks 13 per dag, kan slås av). Belønningen er dobbel XP, som ikke påvirker rangeringene. Ekte leverandør, samtykkeløsning, aldersregler og personverntekst må på plass før butikklansering.
+- Reklame (2026-11-25): testannonser som i Logica (frivillig, samtykke første gang, kan slås av). Strammet inn samme dag: tilbys bare etter hver 3. runde med poeng, maks 3 annonser og 60 bonus-XP per dag. Bonusen er rundens poeng (opp til taket) og påvirker ikke rangeringene. Ekte leverandør, samtykkeløsning, aldersregler og personverntekst må på plass før butikklansering.
+- Ball Brain Pro (2026-11-25): klargjort i testmodus (`proMode` i lib/services/pro.dart), prøves uten betaling. Planlagt pris 39 kr/mnd eller 249 kr/år (forslag). Pro gir aldri fordeler på rangeringene: øvingsrunder gir verken XP eller poeng. Statistikk og bom lagres bare på telefonen. Spørsmålspakkene (tools/make_packs.py) finnes på norsk og engelsk.
+- Quizkveld (2026-11-25): ligger under «Kamper». Serveren (supabase/quiznight.sql) styrer spørsmål, tid og poeng; verten går videre mellom spørsmålene; opptil 100 deltakere; gratis for alle foreløpig. Poengene teller ikke på rangeringene.
+- Menyer (2026-11-25): gjennomgått av en egen agent. Innstillinger delt i grupper, handlingsknappene øverst i 1v1, reglene under valgene, «Klubber»-fanen i rangeringen byttet med klubbtabellen.

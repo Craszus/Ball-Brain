@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import '../l10n/l10n.dart';
 import '../ui/theme.dart';
+import '../services/pro.dart';
 import 'club_api.dart';
 import 'club_badge.dart';
 import 'club_game_screen.dart';
@@ -67,6 +68,9 @@ class _ClubSectionState extends State<ClubSection> {
 
   Future<void> _editLook(ClubInfo club) async {
     var c1 = club.color1, c2 = club.color2, emblem = club.emblem;
+    final pro = proMode != 'off' && await isProActive();
+    if (!mounted) return;
+    var locked = false;
     final save = await showDialog<bool>(
       context: context,
       builder: (ctx) => StatefulBuilder(builder: (ctx, set) {
@@ -95,14 +99,26 @@ class _ClubSectionState extends State<ClubSection> {
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               ClubBadge(preview(emblem), size: 72),
               const SizedBox(height: 12),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                for (var e = 0; e < 4; e++)
+              Wrap(alignment: WrapAlignment.center, spacing: 10, runSpacing: 8, children: [
+                for (var e = 0; e < clubEmblems; e++)
                   GestureDetector(
-                    onTap: () => set(() => emblem = e),
-                    child: Opacity(
-                        opacity: e == emblem ? 1 : 0.45, child: ClubBadge(preview(e), size: 38)),
+                    onTap: () => set(() {
+                      locked = !pro && e >= freeEmblems;
+                      if (!locked) emblem = e;
+                    }),
+                    child: Stack(alignment: Alignment.center, children: [
+                      Opacity(
+                          opacity: e == emblem ? 1 : 0.45, child: ClubBadge(preview(e), size: 38)),
+                      if (!pro && e >= freeEmblems)
+                        const Icon(Icons.lock, size: 18, color: AppColors.gold),
+                    ]),
                   ),
               ]),
+              if (locked) ...[
+                const SizedBox(height: 6),
+                const Text('Krever Ball Brain Pro',
+                    style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w800)),
+              ],
               const SizedBox(height: 14),
               colors(c1, (i) => c1 = i),
               const SizedBox(height: 10),

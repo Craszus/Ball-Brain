@@ -1,0 +1,744 @@
+[
+ {
+  "id": "cl",
+  "title": "Champions League",
+  "subtitle": "Finaler, helter og rekorder i Europa",
+  "questions": [
+   {
+    "key": "pack-cl-01",
+    "prompt": "Hvilken klubb har vunnet Serievinnercupen/Champions League flest ganger?",
+    "options": [
+     "Real Madrid",
+     "AC Milan",
+     "Liverpool",
+     "Bayern München"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-cl-02",
+    "prompt": "Hvilket år skiftet Serievinnercupen navn til Champions League?",
+    "options": [
+     "1992",
+     "1989",
+     "1995",
+     "1999"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-cl-03",
+    "prompt": "Hvilket lag vant den aller første Serievinnercupen i 1956?",
+    "options": [
+     "Real Madrid",
+     "Stade de Reims",
+     "Benfica",
+     "AC Milan"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-cl-04",
+    "prompt": "Hvem scoret det berømte vinnermålet på volley i finalen i 2002?",
+    "options": [
+     "Zinedine Zidane",
+     "Raúl",
+     "Roberto Carlos",
+     "Luís Figo"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-cl-05",
+    "prompt": "Hvilket lag hentet inn 0–3 fra pause og vant finalen i 2005?",
+    "options": [
+     "Liverpool",
+     "AC Milan",
+     "Chelsea",
+     "Porto"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-cl-06",
+    "prompt": "Hvem trente Porto da de vant Champions League i 2004?",
+    "options": [
+     "José Mourinho",
+     "André Villas-Boas",
+     "Jorge Jesus",
+     "Fernando Santos"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-cl-07",
+    "prompt": "Hvilken norsk spiller scoret vinnermålet for Manchester United i finalen i 1999?",
+    "options": [
+     "Ole Gunnar Solskjær",
+     "Ronny Johnsen",
+     "Henning Berg",
+     "Tore André Flo"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-cl-08",
+    "prompt": "Hvem er tidenes toppscorer i Champions League?",
+    "options": [
+     "Cristiano Ronaldo",
+     "Lionel Messi",
+     "Robert Lewandowski",
+     "Karim Benzema"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-cl-09",
+    "prompt": "Hvilken engelsk klubb vant Serievinnercupen to år på rad i 1979 og 1980?",
+    "options": [
+     "Nottingham Forest",
+     "Aston Villa",
+     "Liverpool",
+     "Leeds United"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-cl-10",
+    "prompt": "Hvilken skotsk klubb vant Serievinnercupen i 1967?",
+    "options": [
+     "Celtic",
+     "Rangers",
+     "Aberdeen",
+     "Dundee United"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-cl-11",
+    "prompt": "Hvem scoret etter under ett minutt i finalen i 2005?",
+    "options": [
+     "Paolo Maldini",
+     "Hernán Crespo",
+     "Kaká",
+     "Steven Gerrard"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-cl-12",
+    "prompt": "Hvilken klubb vant Champions League for første gang i 2023?",
+    "options": [
+     "Manchester City",
+     "Inter",
+     "Paris Saint-Germain",
+     "Arsenal"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-cl-13",
+    "prompt": "I hvilken by ble finalen i 2005 spilt?",
+    "options": [
+     "Istanbul",
+     "Athen",
+     "Moskva",
+     "Gelsenkirchen"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-cl-14",
+    "prompt": "Hvor mange lag er med i ligafasen fra sesongen 2024–25?",
+    "options": [
+     "36",
+     "32",
+     "24",
+     "40"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-cl-15",
+    "prompt": "Hvilken norsk klubb slo AC Milan på San Siro i 1996?",
+    "options": [
+     "Rosenborg",
+     "Molde",
+     "Brann",
+     "Lillestrøm"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   }
+  ]
+ },
+ {
+  "id": "pl",
+  "title": "Premier League",
+  "subtitle": "Mestere, mål og managere",
+  "questions": [
+   {
+    "key": "pack-pl-01",
+    "prompt": "Hvilket år startet Premier League?",
+    "options": [
+     "1992",
+     "1988",
+     "1990",
+     "1995"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-pl-02",
+    "prompt": "Hvem vant den første Premier League-sesongen (1992–93)?",
+    "options": [
+     "Manchester United",
+     "Blackburn Rovers",
+     "Arsenal",
+     "Leeds United"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-pl-03",
+    "prompt": "Hvilket lag gikk ubeseiret gjennom sesongen 2003–04?",
+    "options": [
+     "Arsenal",
+     "Chelsea",
+     "Manchester United",
+     "Liverpool"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-pl-04",
+    "prompt": "Hvem er tidenes toppscorer i Premier League?",
+    "options": [
+     "Alan Shearer",
+     "Harry Kane",
+     "Wayne Rooney",
+     "Thierry Henry"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-pl-05",
+    "prompt": "Hvilken klubb vant overraskende ligaen i 2015–16?",
+    "options": [
+     "Leicester City",
+     "Tottenham",
+     "West Ham",
+     "Southampton"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-pl-06",
+    "prompt": "Hvem vant Premier League i 1994–95?",
+    "options": [
+     "Blackburn Rovers",
+     "Manchester United",
+     "Newcastle United",
+     "Liverpool"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-pl-07",
+    "prompt": "Hvem har flest målgivende pasninger i Premier League gjennom tidene?",
+    "options": [
+     "Ryan Giggs",
+     "Cesc Fàbregas",
+     "Kevin De Bruyne",
+     "Frank Lampard"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-pl-08",
+    "prompt": "Hvem scoret målet på overtid som ga Manchester City tittelen i 2012?",
+    "options": [
+     "Sergio Agüero",
+     "Edin Džeko",
+     "David Silva",
+     "Mario Balotelli"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-pl-09",
+    "prompt": "Hvor mange poeng tok Manchester City i rekordsesongen 2017–18?",
+    "options": [
+     "100",
+     "95",
+     "98",
+     "106"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-pl-10",
+    "prompt": "Hvilken keeper har holdt nullen flest ganger i Premier League?",
+    "options": [
+     "Petr Čech",
+     "David James",
+     "David de Gea",
+     "Edwin van der Sar"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-pl-11",
+    "prompt": "Hva heter hjemmebanen til Liverpool?",
+    "options": [
+     "Anfield",
+     "Goodison Park",
+     "Old Trafford",
+     "Villa Park"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-pl-12",
+    "prompt": "Hvem var manager for Arsenal i den ubeseirede sesongen?",
+    "options": [
+     "Arsène Wenger",
+     "George Graham",
+     "Unai Emery",
+     "Bruce Rioch"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-pl-13",
+    "prompt": "Hvor mange lag spiller i Premier League?",
+    "options": [
+     "20",
+     "18",
+     "22",
+     "24"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-pl-14",
+    "prompt": "Hvilken klubb har kallenavnet «The Toffees»?",
+    "options": [
+     "Everton",
+     "Fulham",
+     "Burnley",
+     "Brentford"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-pl-15",
+    "prompt": "Hvor mange ligamål scoret Erling Haaland i debutsesongen 2022–23?",
+    "options": [
+     "36",
+     "32",
+     "34",
+     "38"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   }
+  ]
+ },
+ {
+  "id": "nor",
+  "title": "Norsk fotball",
+  "subtitle": "Landslaget, klubbene og de store øyeblikkene",
+  "questions": [
+   {
+    "key": "pack-nor-01",
+    "prompt": "Hvilken klubb har vunnet flest seriemesterskap i Norge for herrer?",
+    "options": [
+     "Rosenborg",
+     "Fredrikstad",
+     "Viking",
+     "Brann"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-nor-02",
+    "prompt": "Hvilket år slo Norge Brasil 2–1 i VM?",
+    "options": [
+     "1998",
+     "1994",
+     "2002",
+     "1990"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-nor-03",
+    "prompt": "Hvem satte inn straffesparket mot Brasil i VM 1998?",
+    "options": [
+     "Kjetil Rekdal",
+     "Tore André Flo",
+     "Øyvind Leonhardsen",
+     "Håvard Flo"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-nor-04",
+    "prompt": "Hvem trente herrelandslaget i VM 1994 og 1998?",
+    "options": [
+     "Egil «Drillo» Olsen",
+     "Nils Johan Semb",
+     "Ingvar Stadheim",
+     "Åge Hareide"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-nor-05",
+    "prompt": "Hva heter nasjonalarenaen for fotball i Norge?",
+    "options": [
+     "Ullevaal Stadion",
+     "Lerkendal Stadion",
+     "Brann Stadion",
+     "Intility Arena"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-nor-06",
+    "prompt": "Hvilken norsk klubb nådde semifinalen i Europaligaen i 2025?",
+    "options": [
+     "Bodø/Glimt",
+     "Molde",
+     "Rosenborg",
+     "Brann"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-nor-07",
+    "prompt": "Hvilken medalje tok Norge i OL-fotballen i 1936?",
+    "options": [
+     "Bronse",
+     "Sølv",
+     "Gull",
+     "Ingen medalje"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-nor-08",
+    "prompt": "Hvilken by kommer Brann fra?",
+    "options": [
+     "Bergen",
+     "Stavanger",
+     "Trondheim",
+     "Drammen"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-nor-09",
+    "prompt": "Hva heter hjemmebanen til Bodø/Glimt?",
+    "options": [
+     "Aspmyra Stadion",
+     "Romssa Arena",
+     "Aker Stadion",
+     "Color Line Stadion"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-nor-10",
+    "prompt": "Hvilket år spilte Norges herrer sist i EM?",
+    "options": [
+     "2000",
+     "1996",
+     "2004",
+     "2008"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-nor-11",
+    "prompt": "Hvem scoret Norges vinnermål mot Spania i EM 2000?",
+    "options": [
+     "Steffen Iversen",
+     "Ole Gunnar Solskjær",
+     "John Carew",
+     "Tore André Flo"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-nor-12",
+    "prompt": "Hvem er tidenes toppscorer på herrelandslaget?",
+    "options": [
+     "Erling Haaland",
+     "Jørgen Juve",
+     "Einar Gundersen",
+     "John Carew"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-nor-13",
+    "prompt": "Hvem hadde målrekorden på herrelandslaget med 33 mål i flere tiår?",
+    "options": [
+     "Jørgen Juve",
+     "Einar Gundersen",
+     "Harald Hennum",
+     "Odd Iversen"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-nor-14",
+    "prompt": "Hvilken klubb vant både serien og cupen i 2014?",
+    "options": [
+     "Molde",
+     "Rosenborg",
+     "Strømsgodset",
+     "Odd"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-nor-15",
+    "prompt": "Hvilken klubb spiller hjemmekampene på Lerkendal?",
+    "options": [
+     "Rosenborg",
+     "Ranheim",
+     "Molde",
+     "Kristiansund"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   }
+  ]
+ },
+ {
+  "id": "ref",
+  "title": "Dommerskolen",
+  "subtitle": "Vanskelige situasjoner fra regelboka",
+  "questions": [
+   {
+    "key": "pack-ref-01",
+    "prompt": "Hvor langt unna ballen må motspillerne stå ved frispark?",
+    "options": [
+     "9,15 meter",
+     "7,32 meter",
+     "11 meter",
+     "5,5 meter"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-ref-02",
+    "prompt": "Hva er de offisielle målene på et fotballmål (bredde × høyde)?",
+    "options": [
+     "7,32 × 2,44 m",
+     "7,50 × 2,50 m",
+     "7,00 × 2,40 m",
+     "6,32 × 2,24 m"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-ref-03",
+    "prompt": "Hvor få spillere kan et lag ha uten at kampen må stoppes?",
+    "options": [
+     "7",
+     "6",
+     "8",
+     "9"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-ref-04",
+    "prompt": "Et direkte frispark sparkes rett i eget mål. Hva dømmes?",
+    "options": [
+     "Hjørnespark",
+     "Mål",
+     "Frisparket tas om",
+     "Indirekte frispark"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-ref-05",
+    "prompt": "Hva dømmes når keeperen holder ballen i hendene i mer enn åtte sekunder (regel fra 2025)?",
+    "options": [
+     "Hjørnespark til motstanderen",
+     "Indirekte frispark",
+     "Straffespark",
+     "Dommerball"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-ref-06",
+    "prompt": "Kan en spiller bli dømt for offside direkte fra målspark?",
+    "options": [
+     "Ja",
+     "Nei"
+    ],
+    "correct": 1,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-ref-07",
+    "prompt": "Kan en spiller være i offsideposisjon på egen banehalvdel?",
+    "options": [
+     "Ja",
+     "Nei"
+    ],
+    "correct": 1,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-ref-08",
+    "prompt": "Ballen treffer dommeren, og motstanderen får ballen. Hva skjer?",
+    "options": [
+     "Dommerball",
+     "Spillet fortsetter",
+     "Indirekte frispark",
+     "Innkast"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-ref-09",
+    "prompt": "Hva kreves av keeperen idet et straffespark tas?",
+    "options": [
+     "Del av minst én fot på, over eller bak mållinjen",
+     "Begge føtter foran mållinjen",
+     "Stå helt i ro",
+     "Stå minst en meter bak mållinjen"
+    ],
+    "correct": 0,
+    "difficulty": 3
+   },
+   {
+    "key": "pack-ref-10",
+    "prompt": "En spiller tar av seg trøya for å feire et mål. Hva skal dommeren gjøre?",
+    "options": [
+     "Gi gult kort",
+     "Gi rødt kort",
+     "Annullere målet",
+     "Ingenting"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-ref-11",
+    "prompt": "Hvor langt er det fra straffemerket til mållinjen?",
+    "options": [
+     "11 meter",
+     "9,15 meter",
+     "12 meter",
+     "16,5 meter"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-ref-12",
+    "prompt": "Keeperen tar med hendene et bevisst tilbakespill med foten fra en medspiller. Hva dømmes?",
+    "options": [
+     "Indirekte frispark",
+     "Direkte frispark",
+     "Straffespark",
+     "Hjørnespark"
+    ],
+    "correct": 0,
+    "difficulty": 2
+   },
+   {
+    "key": "pack-ref-13",
+    "prompt": "En takling med overdreven kraft setter motstanderen i fare. Hva er riktig reaksjon?",
+    "options": [
+     "Rødt kort",
+     "Gult kort",
+     "Bare frispark",
+     "Muntlig advarsel"
+    ],
+    "correct": 0,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-ref-14",
+    "prompt": "Kan det scores mål direkte fra et innkast?",
+    "options": [
+     "Ja",
+     "Nei"
+    ],
+    "correct": 1,
+    "difficulty": 1
+   },
+   {
+    "key": "pack-ref-15",
+    "prompt": "Hvor høyt må hjørneflaggstangen minst være?",
+    "options": [
+     "1,5 meter",
+     "1 meter",
+     "1,2 meter",
+     "2 meter"
+    ],
+    "correct": 0,
+    "difficulty": 4
+   }
+  ]
+ }
+]

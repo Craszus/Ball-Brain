@@ -46,8 +46,6 @@ class ChoiceScreen extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
-          if (rules.isNotEmpty) _RulesCard(rules: rules),
-          const SizedBox(height: 4),
           for (final c in choices)
             Card(
               clipBehavior: Clip.antiAlias,
@@ -84,6 +82,9 @@ class ChoiceScreen extends StatelessWidget {
                 ),
               ),
             ),
+          // reglene står under valgene, så man slipper å rulle for å starte
+          const SizedBox(height: 8),
+          if (rules.isNotEmpty) _RulesCard(rules: rules),
         ],
       ),
     );

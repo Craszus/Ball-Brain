@@ -14,7 +14,12 @@ const clubColors = [
   Color(0xFFEF6C00), // oransje
 ];
 
-/// Eget klubbskjold (ingen ekte klubblogoer): ensfarget, midtstripe, skråbånd eller delt.
+/// Antall skjoldmønstre. De fra [freeEmblems] og oppover krever Ball Brain Pro.
+const clubEmblems = 8;
+const freeEmblems = 4;
+
+/// Eget klubbskjold (ingen ekte klubblogoer): ensfarget, midtstripe, skråbånd, delt,
+/// og i Pro tverrbånd, vinkel, firedelt og kors.
 class ClubBadge extends StatelessWidget {
   const ClubBadge(this.club, {super.key, this.size = 56});
 
@@ -80,6 +85,25 @@ class _ShieldPainter extends CustomPainter {
             second);
       case 3:
         canvas.drawRect(Rect.fromLTWH(w * 0.5, 0, w * 0.5, h), second);
+      case 4: // tverrbånd
+        canvas.drawRect(Rect.fromLTWH(0, h * 0.33, w, h * 0.28), second);
+      case 5: // vinkel
+        canvas.drawPath(
+            Path()
+              ..moveTo(0, h * 0.72)
+              ..lineTo(w * 0.5, h * 0.36)
+              ..lineTo(w, h * 0.72)
+              ..lineTo(w, h * 0.95)
+              ..lineTo(w * 0.5, h * 0.6)
+              ..lineTo(0, h * 0.95)
+              ..close(),
+            second);
+      case 6: // firedelt
+        canvas.drawRect(Rect.fromLTWH(w * 0.5, 0, w * 0.5, h * 0.5), second);
+        canvas.drawRect(Rect.fromLTWH(0, h * 0.5, w * 0.5, h * 0.5), second);
+      case 7: // kors
+        canvas.drawRect(Rect.fromLTWH(w * 0.4, 0, w * 0.2, h), second);
+        canvas.drawRect(Rect.fromLTWH(0, h * 0.34, w, h * 0.2), second);
     }
     canvas.restore();
     canvas.drawPath(

@@ -3,9 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'avatar_picker_screen.dart';
 import 'edit_profile_screen.dart';
+import 'pro/pro_screen.dart';
 import 'services/ads.dart';
 import 'services/levels.dart';
 import 'services/scoring.dart';
+import 'services/pro.dart';
 import 'services/profile.dart';
 import 'services/stats.dart';
 import 'settings_screen.dart';
@@ -16,6 +18,7 @@ import 'ui/football.dart';
 import 'ui/icon_tile.dart';
 import 'ui/level_card.dart';
 import 'ui/level_up.dart';
+import 'ui/pro_frame.dart';
 import 'ui/theme.dart';
 import 'ui/trophy_badge.dart';
 import 'l10n/l10n.dart';
@@ -28,6 +31,7 @@ class ProfileScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final stats = ref.watch(statsProvider);
     final profile = ref.watch(profileProvider);
+    final pro = ref.watch(proProvider);
 
     return PitchScaffold(
       title: 'Profil',
@@ -53,13 +57,20 @@ class ProfileScreen extends ConsumerWidget {
                   GestureDetector(
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
                         builder: (_) => const AvatarPickerScreen())),
-                    child: AvatarView(profile.avatar, size: 140),
+                    child: ProFrame(
+                        frame: pro.shownFrame,
+                        child: AvatarView(profile.avatar, size: 140)),
                   ),
                   const SizedBox(height: 12),
                   Text(profile.name,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                           fontSize: 26, fontWeight: FontWeight.w900)),
+                  if (pro.shownTitle.isNotEmpty)
+                    Text(pro.shownTitle,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            color: AppColors.gold, fontWeight: FontWeight.w900)),
                   Text('${profile.country} · ${countryName(profile.country)}',
                       textAlign: TextAlign.center,
                       style: const TextStyle(color: AppColors.textSecondary)),
@@ -85,6 +96,8 @@ class ProfileScreen extends ConsumerWidget {
                 .push(MaterialPageRoute(builder: (_) => const StatsScreen())),
             child: LevelCard(xp: stats.totalPoints),
           ),
+          const SizedBox(height: 8),
+          const ProButton(),
         ],
       ),
     );
@@ -98,7 +111,8 @@ class StatsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final stats = ref.watch(statsProvider);
-    final earned = trophies.where((t) => t.earned(stats)).length;
+    final shown = trophiesFor(pro: ref.watch(proProvider).active);
+    final earned = shown.where((t) => t.earned(stats)).length;
 
     Widget stat(IconData icon, String label, int value) => Expanded(
           child: Card(
@@ -147,11 +161,12 @@ class StatsScreen extends ConsumerWidget {
               const Text('Troféskap',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
               const Spacer(),
-              ScoreChipText('$earned/${trophies.length}'),
+              ScoreChipText('$earned/${shown.length}'),
             ],
           ),
           const SizedBox(height: 10),
-          for (final g in TrophyGroup.values) ...[
+          for (final g in TrophyGroup.values)
+            if (shown.any((t) => t.group == g)) ...[
             Padding(
               padding: const EdgeInsets.only(top: 14, bottom: 8),
               child: Text(groupTitles[g]!.toUpperCase(),
@@ -169,11 +184,13 @@ class StatsScreen extends ConsumerWidget {
               crossAxisSpacing: 8,
               childAspectRatio: 0.74,
               children: [
-                for (final t in trophies.where((t) => t.group == g))
+                for (final t in shown.where((t) => t.group == g))
                   _TrophyCard(trophy: t, got: t.earned(stats)),
               ],
             ),
           ],
+          const SizedBox(height: 16),
+          const ProButton(),
         ],
       ),
     );
@@ -221,7 +238,11 @@ class _TrophyCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TrophyBadge(
-                tier: trophy.tier, asset: trophy.asset, earned: got, size: 92),
+                tier: trophy.tier,
+                asset: trophy.asset,
+                icon: trophy.icon,
+                earned: got,
+                size: 92),
             const SizedBox(height: 8),
             Text(trophy.title,
                 textAlign: TextAlign.center,
@@ -252,7 +273,11 @@ class ResultPanel extends ConsumerStatefulWidget {
     required this.onAgain,
     this.dailyNote,
     this.onRanking,
+    this.practice = false,
   });
+
+  /// Øvingsrunde: ingen XP, nivå eller annonse.
+  final bool practice;
 
   final int score;
   final String note;
@@ -269,45 +294,46 @@ class ResultPanel extends ConsumerStatefulWidget {
 class _ResultPanelState extends ConsumerState<ResultPanel> {
   late bool _celebrate;
   late final int _xpBefore;
-  bool _offerAd = false;
-  bool _bonus = false;
+  int _offer = 0; // bonus-XP som tilbys for en annonse
+  int _bonus = 0; // bonus-XP som er hentet
 
   @override
   void initState() {
     super.initState();
     final total = ref.read(statsProvider).totalPoints;
     _xpBefore = (total - widget.score).clamp(0, total);
-    _celebrate = leveledUp(_xpBefore, total);
-    if (widget.score > 0) {
-      Ads.available().then((v) {
-        if (mounted) setState(() => _offerAd = v);
-      });
-    }
+    _celebrate = !widget.practice && leveledUp(_xpBefore, total);
+    if (widget.practice) return;
+    Ads.offer(widget.score).then((v) {
+      if (mounted && v > 0) setState(() => _offer = v);
+    });
   }
 
-  /// Dobbel XP etter en annonse. Gjelder bare nivået mitt, ikke rangeringene.
+  /// Bonus-XP etter en annonse. Gjelder bare nivået mitt, ikke rangeringene.
   Future<void> _watchAd() async {
-    final watched = await showRewardedAd(context);
+    final bonus = _offer;
+    final watched = await showRewardedAd(context, bonus);
     if (!mounted) return;
     if (!watched) {
       // slått av i samtykkevinduet: fjern tilbudet
       final still = await Ads.available();
-      if (mounted) setState(() => _offerAd = still);
+      if (mounted && !still) setState(() => _offer = 0);
       return;
     }
     final before = ref.read(statsProvider).totalPoints;
-    await ref.read(statsProvider.notifier).addBonus(widget.score);
+    await ref.read(statsProvider.notifier).addBonus(bonus);
     if (!mounted) return;
     setState(() {
-      _bonus = true;
-      _offerAd = false;
-      _celebrate = leveledUp(before, before + widget.score);
+      _bonus = bonus;
+      _offer = 0;
+      _celebrate = leveledUp(before, before + bonus);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     final total = ref.watch(statsProvider).totalPoints;
+    final unlocked = ref.read(statsProvider.notifier).lastUnlocked;
     return Stack(
       children: [
         Center(
@@ -332,15 +358,16 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                 Text('${widget.score} poeng',
                     style: const TextStyle(
                         fontSize: 40, fontWeight: FontWeight.w900)),
-                Text('${signed(widget.score)} XP',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w900, color: AppColors.gold)),
-                if (_bonus)
-                  Text('+${widget.score} XP i bonus',
+                if (!widget.practice)
+                  Text('${signed(widget.score)} XP',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900, color: AppColors.gold)),
+                if (_bonus > 0)
+                  Text('+$_bonus XP i bonus',
                       style: const TextStyle(
                           fontWeight: FontWeight.w900, color: AppColors.gold)),
                 const SizedBox(height: 14),
-                LevelCard(xp: total, fromXp: _xpBefore),
+                if (!widget.practice) LevelCard(xp: total, fromXp: _xpBefore),
                 const SizedBox(height: 8),
                 Text(widget.note,
                     textAlign: TextAlign.center,
@@ -351,12 +378,23 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                       textAlign: TextAlign.center,
                       style: const TextStyle(fontWeight: FontWeight.w800)),
                 ],
+                for (final t in unlocked.take(3)) ...[
+                  const SizedBox(height: 10),
+                  Row(mainAxisSize: MainAxisSize.min, children: [
+                    TrophyBadge(tier: t.tier, asset: t.asset, icon: t.icon, size: 48),
+                    const SizedBox(width: 10),
+                    Flexible(
+                        child: Text('Ny pokal: ${t.title}',
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w900, color: AppColors.gold))),
+                  ]),
+                ],
                 const SizedBox(height: 20),
-                if (_offerAd) ...[
+                if (_offer > 0) ...[
                   OutlinedButton.icon(
                       onPressed: _watchAd,
                       icon: const Icon(Icons.play_circle_outline),
-                      label: const Text('Se en annonse: dobbel XP')),
+                      label: Text('Se en annonse: +$_offer XP')),
                   const SizedBox(height: 8),
                 ],
                 if (widget.onRanking != null) ...[
@@ -367,6 +405,10 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                 ] else
                   FilledButton(
                       onPressed: widget.onAgain, child: const Text('Spill igjen')),
+                const SizedBox(height: 4),
+                TextButton(
+                    onPressed: () => Navigator.of(context).popUntil((r) => r.isFirst),
+                    child: const Text('Til hovedmenyen')),
               ],
             ),
           ),

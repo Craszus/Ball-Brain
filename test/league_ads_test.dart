@@ -70,7 +70,7 @@ void main() {
     final day = DateTime(2026, 11, 25);
     expect(await Ads.available(day), isTrue);
     for (var i = 0; i < adDailyLimit; i++) {
-      await Ads.recordWatched(day);
+      await Ads.recordWatched(1, day);
     }
     expect(await Ads.available(day), isFalse);
     expect(await Ads.available(DateTime(2026, 11, 26)), isTrue);
@@ -78,8 +78,24 @@ void main() {
     expect(await Ads.available(DateTime(2026, 11, 26)), isFalse);
   });
 
-  testWidgets('se en testannonse gir dobbel XP, én gang', (tester) async {
-    SharedPreferences.setMockInitialValues({'totalPoints': 20});
+  test('annonser: tilbys bare hver tredje runde, og bonus-XP har et dagstak', () async {
+    SharedPreferences.setMockInitialValues({});
+    final day = DateTime(2026, 11, 25);
+    expect(await Ads.offer(50, day), 0);
+    expect(await Ads.offer(0, day), 0); // runder uten poeng teller ikke
+    expect(await Ads.offer(50, day), 0);
+    expect(await Ads.offer(50, day), 50);
+    await Ads.recordWatched(50, day);
+    expect(await Ads.offer(50, day), 0);
+    expect(await Ads.offer(50, day), 0);
+    expect(await Ads.offer(50, day), adDailyXp - 50);
+    await Ads.recordWatched(adDailyXp - 50, day);
+    expect(await Ads.available(day), isFalse);
+    expect(await Ads.bonusLeft(DateTime(2026, 11, 26)), adDailyXp);
+  });
+
+  testWidgets('se en testannonse gir bonus-XP, én gang', (tester) async {
+    SharedPreferences.setMockInitialValues({'totalPoints': 20, 'ads.rounds': adEveryRounds - 1});
     phone(tester);
     final container = ProviderContainer();
     addTearDown(container.dispose);
@@ -92,8 +108,8 @@ void main() {
       ),
     ));
     await tester.pumpAndSettle();
-    await tester.ensureVisible(find.text('Se en annonse: dobbel XP'));
-    await tester.tap(find.text('Se en annonse: dobbel XP'));
+    await tester.ensureVisible(find.text('Se en annonse: +12 XP'));
+    await tester.tap(find.text('Se en annonse: +12 XP'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Ja'));
     await tester.pumpAndSettle();
@@ -105,6 +121,6 @@ void main() {
     await tester.pumpAndSettle();
     expect(container.read(statsProvider).totalPoints, 32);
     expect(find.text('+12 XP i bonus'), findsOneWidget);
-    expect(find.text('Se en annonse: dobbel XP'), findsNothing);
+    expect(find.text('Se en annonse: +12 XP'), findsNothing);
   });
 }

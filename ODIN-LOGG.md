@@ -304,3 +304,8 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 - Klubbtabell og klubbserie (#293) bygget: supabase/leagues.sql kjørt, python tools/test_clubs.py ALT OK. Testreklame lagt inn (lib/services/ads.dart, lib/ui/ad_flow.dart): dobbel XP på resultatskjermen. Analyse uten feil, 73 tester grønne. Installert på telefonen; ikke committet eller gitt ut. #270 står åpen (premium og ekte annonser mangler).
 - App-ikonet har fått ca. 30 % større logo (assets/brand, Android og iOS regenerert). Installert på telefonen; ikke committet eller gitt ut.
 - Gitt ut bygg 4 (25.11) via GitHub «siste-bygg»: klubbtabell, klubbserie, testreklame (dobbel XP) og større logo på app-ikonet. Analyse uten feil, 73 tester grønne.
+
+- Testreklamen strammet inn: tilbys hver 3. runde med poeng, maks 3 per dag og maks 60 bonus-XP per dag; knappen viser hvor mye XP man får. 74 tester grønne. Ikke gitt ut ennå.
+- Ball Brain Pro klargjort (testmodus): Pro-skjerm, ingen annonser, statistikk per tema, tren på bommene, 4 pakker à 15 spørsmål, 4 nye klubbskjold (club_set_look oppdatert i Supabase), avatarrammer og titler. 81 tester grønne, installert på telefonen. Ikke committet eller gitt ut.
+- Quizkveld bygget (lib/party/, supabase/quiznight.sql kjørt, python tools/test_quiznight.py ALT OK) og prøvd på telefonen med to testdeltakere. 16 nye pokaler, «Ny pokal» og «Til hovedmenyen» på resultatskjermen, innstillinger i grupper, ryddet menyer. 87 tester grønne. Ikke committet eller gitt ut.
+- Gitt ut bygg 5 (25.11) via GitHub «siste-bygg»: quizkveld, Ball Brain Pro (testmodus), strammere testreklame, nye pokaler, ryddigere innstillinger og menyer. Analyse uten feil, 87 tester grønne.

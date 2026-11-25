@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart' show IconData, Icons;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -40,6 +41,7 @@ class Stats {
     this.pvpWins = 0,
     this.pvpStreak = 0,
     this.pvpBestStreak = 0,
+    this.counts = const {},
   });
 
   final int bestRules;
@@ -57,6 +59,24 @@ class Stats {
   final int pvpStreak;
   final int pvpBestStreak;
 
+  /// Tellere for dagens utfordring, klubbkamp, quizkveld og øving (se [StatsController.bump]).
+  final Map<String, int> counts;
+
+  int count(String key) => counts[key] ?? 0;
+
+  Stats withCounts(Map<String, int> next) => Stats(
+        bestRules: bestRules,
+        bestSort: bestSort,
+        games: games,
+        totalPoints: totalPoints,
+        modes: modes,
+        pvpGames: pvpGames,
+        pvpWins: pvpWins,
+        pvpStreak: pvpStreak,
+        pvpBestStreak: pvpBestStreak,
+        counts: next,
+      );
+
   ModeStat mode(String m) => modes[m] ?? const ModeStat();
   int get perfects => modes.values.fold(0, (a, m) => a + m.perfects);
   int get photoGames => modes.entries
@@ -73,6 +93,7 @@ class Stats {
         pvpWins: pvpWins,
         pvpStreak: pvpStreak,
         pvpBestStreak: pvpBestStreak,
+        counts: counts,
       );
 
   /// Ekstra XP (fra annonse): teller ikke som runde eller rekord.
@@ -86,6 +107,7 @@ class Stats {
         pvpWins: pvpWins,
         pvpStreak: pvpStreak,
         pvpBestStreak: pvpBestStreak,
+        counts: counts,
       );
 
   /// Registrerer et ferdig 1v1-oppgjør.
@@ -100,14 +122,19 @@ class Stats {
         pvpStreak: won ? pvpStreak + 1 : 0,
         pvpBestStreak:
             won && pvpStreak + 1 > pvpBestStreak ? pvpStreak + 1 : pvpBestStreak,
+        counts: counts,
       );
 }
 
-enum TrophyGroup { general, levels, rules, sort, photo, geo, pvp }
+enum TrophyGroup { general, levels, rules, sort, photo, geo, pvp, daily, club, party, practice }
 
 class Trophy {
-  const Trophy(this.id, this.title, this.description, this.tier, this.group, this.earned);
+  const Trophy(this.id, this.title, this.description, this.tier, this.group, this.earned,
+      {this.icon});
   final String id; // = filnavn i assets/trophies/
+
+  /// Vises i ringen for pokaler som ikke har fått eget bilde ennå.
+  final IconData? icon;
   final String title;
   final String description;
   final TrophyTier tier;
@@ -124,7 +151,15 @@ const groupTitles = {
   TrophyGroup.photo: 'Gjett fra bilde',
   TrophyGroup.geo: 'Geografi',
   TrophyGroup.pvp: '1v1',
+  TrophyGroup.daily: 'Dagens utfordring',
+  TrophyGroup.club: 'Klubbkamp',
+  TrophyGroup.party: 'Quizkveld',
+  TrophyGroup.practice: 'Øving (Pro)',
 };
+
+/// Pokalene i Pro-gruppen telles ikke for dem uten Pro.
+List<Trophy> trophiesFor({required bool pro}) =>
+    [for (final t in trophies) if (pro || t.group != TrophyGroup.practice) t];
 
 const _g = TrophyGroup.general;
 const _b = TrophyTier.bronze;
@@ -140,7 +175,7 @@ final trophies = <Trophy>[
   Trophy('points_1000', 'Ballkjenner', 'Samle 1 000 poeng totalt', _s, _g, (s) => s.totalPoints >= 1000),
   Trophy('perfect_any', 'Perfekt runde', 'Svar riktig på alt i én runde', _gold, _g,
       (s) => s.perfects >= 1),
-  Trophy('allrounder', 'Allrounder', 'Spill alle fire spillmodiene', _s, _g,
+  Trophy('allrounder', 'Allrounder', 'Spill regler, sortering, bilde og geografi', _s, _g,
       (s) => ['rules_quiz', 'image_sort', 'geo'].every((m) => s.mode(m).games > 0) && s.photoGames > 0),
   Trophy('lvl_5', 'Kaptein', 'Nå nivå 5', _s, TrophyGroup.levels,
       (s) => levelFor(s.totalPoints).level >= 5),
@@ -187,6 +222,39 @@ final trophies = <Trophy>[
       (s) => s.pvpBestStreak >= 3),
   Trophy('pvp_king', 'Kongen av banen', 'Vinn 25 oppgjør', _gold, TrophyGroup.pvp,
       (s) => s.pvpWins >= 25),
+  Trophy('geo_20', 'Stamgjest på kartet', 'Spill 20 geografi-runder', _s, TrophyGroup.geo,
+      (s) => s.mode('geo').games >= 20, icon: Icons.map),
+  Trophy('photo_perfect', 'Feilfri linse', 'Alt riktig i en bilderunde', _gold, TrophyGroup.photo,
+      (s) => s.modes.entries.any((e) => e.key.startsWith('photo_') && e.value.perfects > 0),
+      icon: Icons.camera),
+  Trophy('daily_first', 'Dagens mann', 'Spill dagens utfordring', _b, TrophyGroup.daily,
+      (s) => s.count('dailyPlayed') >= 1, icon: Icons.today),
+  Trophy('daily_7', 'Ukesform', '7 dager på rad', _s, TrophyGroup.daily,
+      (s) => s.count('dailyBestStreak') >= 7, icon: Icons.local_fire_department),
+  Trophy('daily_30', 'Fast i startelleveren', '30 dager på rad', _gold, TrophyGroup.daily,
+      (s) => s.count('dailyBestStreak') >= 30, icon: Icons.calendar_month),
+  Trophy('daily_perfect', 'Ti av ti', 'Alt riktig i dagens utfordring', _gold, TrophyGroup.daily,
+      (s) => s.count('dailyPerfect') >= 1, icon: Icons.star),
+  Trophy('club_joined', 'Signert', 'Bli med i en klubb', _b, TrophyGroup.club,
+      (s) => s.count('clubJoined') >= 1, icon: Icons.draw),
+  Trophy('club_first', 'Debutant', 'Spill din første klubbkamp', _b, TrophyGroup.club,
+      (s) => s.count('clubPlayed') >= 1, icon: Icons.shield),
+  Trophy('club_win', 'Tre poeng', 'Vinn en klubbkamp', _s, TrophyGroup.club,
+      (s) => s.count('clubWins') >= 1, icon: Icons.military_tech),
+  Trophy('club_10', 'Lagspiller', 'Spill 10 klubbkamper', _gold, TrophyGroup.club,
+      (s) => s.count('clubPlayed') >= 10, icon: Icons.groups),
+  Trophy('party_join', 'På gjestelisten', 'Bli med på en quizkveld', _b, TrophyGroup.party,
+      (s) => s.count('partyPlayed') >= 1, icon: Icons.celebration),
+  Trophy('party_win', 'Kveldens vinner', 'Vinn en quizkveld med minst 3 deltakere', _gold,
+      TrophyGroup.party, (s) => s.count('partyWins') >= 1, icon: Icons.emoji_events),
+  Trophy('party_host', 'Kveldens vert', 'Arranger en quizkveld med minst 3 deltakere', _s,
+      TrophyGroup.party, (s) => s.count('partyHosted') >= 1, icon: Icons.mic),
+  Trophy('party_host_10', 'Stamvert', 'Arranger 10 quizkvelder', _gold, TrophyGroup.party,
+      (s) => s.count('partyHosted') >= 10, icon: Icons.sports_bar),
+  Trophy('practice_5', 'Ekstratrening', 'Fullfør 5 øvingsrunder', _b, TrophyGroup.practice,
+      (s) => s.count('practiceRounds') >= 5, icon: Icons.fitness_center),
+  Trophy('practice_packs', 'Pakkesamler', 'Spill alle fire spørsmålspakkene', _s,
+      TrophyGroup.practice, (s) => s.count('packsPlayed') >= 4, icon: Icons.library_books),
 ];
 
 class StatsController extends Notifier<Stats> {
@@ -199,7 +267,81 @@ class StatsController extends Notifier<Stats> {
   static const _keys = [
     'bestRules', 'bestSort', 'games', 'totalPoints', 'modes',
     'pvpGames', 'pvpWins', 'pvpStreak', 'pvpBestStreak',
+    'counts', 'countedOnce', 'dailyLastDay',
   ];
+
+  /// Pokalene som ble låst opp i den siste runden (vises på resultatskjermen).
+  List<Trophy> lastUnlocked = const [];
+
+  Set<String> _earned() => {for (final t in trophies) if (t.earned(state)) t.id};
+
+  void _addUnlocked(Set<String> before) {
+    lastUnlocked = [
+      ...lastUnlocked,
+      for (final t in trophies)
+        if (t.earned(state) && !before.contains(t.id)) t,
+    ];
+  }
+
+  /// Starter en ny runde uten XP (øving), så gamle pokaler ikke vises igjen.
+  void clearUnlocked() => lastUnlocked = const [];
+
+  /// Øker en teller med 1. Med [once] telles samme hendelse bare én gang.
+  Future<void> bump(String key, {String? once}) async {
+    try {
+      final p = await SharedPreferences.getInstance();
+      if (once != null) {
+        final done = p.getStringList('countedOnce') ?? [];
+        if (done.contains(once)) return;
+        final next = [...done, once];
+        await p.setStringList(
+            'countedOnce', next.length > 300 ? next.sublist(next.length - 300) : next);
+      }
+      final before = _earned();
+      // lagrede tellere kan mangle i minnet rett etter oppstart
+      final counts = {..._decodeCounts(p.getString('counts')), ...state.counts};
+      counts[key] = (counts[key] ?? 0) + 1;
+      state = state.withCounts(counts);
+      _addUnlocked(before);
+      await p.setString('counts', jsonEncode(counts));
+    } catch (_) {}
+  }
+
+  /// Dagens utfordring: teller én gang pr. dag, med antall dager på rad.
+  Future<void> recordDaily({required bool perfect, DateTime? now}) async {
+    try {
+      final p = await SharedPreferences.getInstance();
+      final t = now ?? DateTime.now();
+      final day = DateTime.utc(t.year, t.month, t.day);
+      final last = DateTime.tryParse(p.getString('dailyLastDay') ?? '');
+      if (last == day) return;
+      await p.setString('dailyLastDay', day.toIso8601String());
+      final before = _earned();
+      final counts = {..._decodeCounts(p.getString('counts')), ...state.counts};
+      final streak = last != null && day.difference(last).inDays == 1
+          ? (counts['dailyStreak'] ?? 0) + 1
+          : 1;
+      counts['dailyPlayed'] = (counts['dailyPlayed'] ?? 0) + 1;
+      counts['dailyStreak'] = streak;
+      if (streak > (counts['dailyBestStreak'] ?? 0)) counts['dailyBestStreak'] = streak;
+      if (perfect) counts['dailyPerfect'] = (counts['dailyPerfect'] ?? 0) + 1;
+      state = state.withCounts(counts);
+      _addUnlocked(before);
+      await p.setString('counts', jsonEncode(counts));
+    } catch (_) {}
+  }
+
+  static Map<String, int> _decodeCounts(String? raw) {
+    if (raw == null) return {};
+    try {
+      return {
+        for (final e in (jsonDecode(raw) as Map<String, dynamic>).entries)
+          e.key: (e.value as num).toInt()
+      };
+    } catch (_) {
+      return {};
+    }
+  }
 
   Future<void> _load() async {
     try {
@@ -214,6 +356,7 @@ class StatsController extends Notifier<Stats> {
         pvpWins: p.getInt('pvpWins') ?? 0,
         pvpStreak: p.getInt('pvpStreak') ?? 0,
         pvpBestStreak: p.getInt('pvpBestStreak') ?? 0,
+        counts: _decodeCounts(p.getString('counts')),
       );
     } catch (_) {}
   }
@@ -246,7 +389,10 @@ class StatsController extends Notifier<Stats> {
   /// full pott gir «perfekt runde». Returnerer true hvis spilleren gikk opp et nivå.
   Future<bool> record(String mode, int points, {int? max}) async {
     final before = state.totalPoints;
+    final earnedBefore = _earned();
     state = state.withResult(mode, points, perfect: max != null && points >= max);
+    lastUnlocked = const [];
+    _addUnlocked(earnedBefore);
     final up = leveledUp(before, state.totalPoints);
     try {
       final p = await SharedPreferences.getInstance();

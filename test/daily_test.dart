@@ -34,7 +34,7 @@ void main() {
     await tester.tap(find.text('Uka'));
     await tester.pump();
     await tester.pump();
-    await tester.tap(find.text('Venner'));
+    await tester.tap(find.text('Klubbene mine'));
     await tester.pump();
     await tester.pump();
     expect(calls, ['day/world', 'week/world', 'week/friends']);

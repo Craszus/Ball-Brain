@@ -17,21 +17,38 @@ class RulesQuizScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(quizControllerProvider);
     final controller = ref.read(quizControllerProvider.notifier);
+    final selection = ref.watch(quizEraProvider);
+    final practice = isPractice(selection);
+    // temanavnet står over spørsmålet, så overskriften holdes kort
+    final title = selection == dailyChallenge
+        ? 'Dagens utfordring'
+        : practice
+            ? 'Øving'
+            : 'Regler-quiz';
 
     return PitchScaffold(
-      title: ref.watch(quizEraProvider) == dailyChallenge
-          ? 'Dagens utfordring'
-          : 'Regler-quiz',
+      title: title,
       actions: [ScoreChip(state.score)],
       body: Builder(builder: (_) {
         if (state.loading) {
           return const Center(child: CircularProgressIndicator());
         }
         final q = state.current;
+        if (q == null && practice && state.questions.isEmpty) {
+          return const Center(
+            child: Padding(
+              padding: EdgeInsets.all(24),
+              child: Text('Du har ingen bom å øve på', textAlign: TextAlign.center),
+            ),
+          );
+        }
         if (q == null) {
           return ResultPanel(
+            practice: practice,
             score: state.score,
-            note: state.saved
+            note: practice
+                ? 'Øvingsrunder: gir ikke XP eller rangeringspoeng.'
+                : state.saved
                 ? 'Poengene er lagret.'
                 : 'Ikke lagret ennå (innlogging kommer).',
             onAgain: controller.start,

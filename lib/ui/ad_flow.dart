@@ -8,7 +8,7 @@ import 'theme.dart';
 
 /// Spør om samtykke første gang og viser testannonsen. Sant når den er sett ferdig.
 /// En ekte annonseleverandør kobles på her, i stedet for [_TestAd].
-Future<bool> showRewardedAd(BuildContext context) async {
+Future<bool> showRewardedAd(BuildContext context, int xp) async {
   if (await Ads.consent() == null) {
     if (!context.mounted) return false;
     final yes = await showDialog<bool>(
@@ -34,7 +34,7 @@ Future<bool> showRewardedAd(BuildContext context) async {
         builder: (_) => const _TestAd(),
       ) ??
       false;
-  if (watched) await Ads.recordWatched();
+  if (watched) await Ads.recordWatched(xp);
   return watched;
 }
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'club/club_table_screen.dart';
 import 'daily_board_screen.dart';
-import 'groups_view.dart';
 import 'l10n/l10n.dart';
 import 'services/cloud.dart';
 import 'services/profile.dart';
@@ -18,7 +18,7 @@ class LeaderboardScreen extends ConsumerStatefulWidget {
 }
 
 class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
-  int _tab = 0; // 0 land, 1 verden, 2 grupper
+  int _tab = 0; // 0 land, 1 verden, 2 klubbtabellen
   late Future<LeaderboardData?> _future;
 
   @override
@@ -66,7 +66,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
             }),
           ),
         ),
-        if (_tab == 2) const Expanded(child: GroupsView()) else Expanded(
+        if (_tab == 2) const Expanded(child: ClubTableView()) else Expanded(
           child: FutureBuilder<LeaderboardData?>(
             future: _future,
             builder: (context, snap) {

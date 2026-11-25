@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'club/club_league.dart';
 import 'club/club_section.dart';
@@ -7,6 +8,7 @@ import 'club/club_table_screen.dart';
 import 'duel/duel_api.dart';
 import 'duel/duel_screen.dart' show duelError;
 import 'l10n/l10n.dart';
+import 'services/stats.dart';
 import 'leaderboard_screen.dart';
 import 'services/cloud.dart';
 import 'ui/football.dart';
@@ -79,6 +81,14 @@ class _GroupsViewState extends State<GroupsView> {
           return const Center(child: CircularProgressIndicator());
         }
         final groups = snap.data;
+        if (groups != null && groups.isNotEmpty) {
+          // pokalen «Signert»
+          try {
+            final stats =
+                ProviderScope.containerOf(context, listen: false).read(statsProvider.notifier);
+            Future.microtask(() => stats.bump('clubJoined', once: 'club-joined'));
+          } catch (_) {}
+        }
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
           children: [

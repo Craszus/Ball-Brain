@@ -8,6 +8,7 @@ import 'duel/duel_screen.dart';
 import 'profile_screen.dart';
 import 'quiz/image_sort_screen.dart';
 import 'quiz/rules_quiz_screen.dart';
+import 'services/pro.dart';
 import 'services/profile.dart';
 import 'services/stats.dart';
 import 'settings_screen.dart';
@@ -17,6 +18,7 @@ import 'ui/choice_screen.dart';
 import 'ui/football.dart';
 import 'ui/icon_tile.dart';
 import 'ui/level_card.dart';
+import 'ui/pro_frame.dart';
 import 'ui/theme.dart';
 import 'update_prompt.dart';
 import 'l10n/l10n.dart';
@@ -57,7 +59,9 @@ class HomeScreen extends ConsumerWidget {
               children: [
                 GestureDetector(
                   onTap: () => open(const ProfileScreen()),
-                  child: AvatarView(profile.avatar, size: 62),
+                  child: ProFrame(
+                      frame: ref.watch(proProvider).shownFrame,
+                      child: AvatarView(profile.avatar, size: 62)),
                 ),
                 Row(children: [
                   _GearButton(

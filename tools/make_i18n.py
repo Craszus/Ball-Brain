@@ -92,6 +92,12 @@ def main():
         for r in q.QUESTIONS:
             add(r, 'Spørsmål')
 
+    packs = load('make_packs')
+    if packs is not None:
+        # spørsmålspakkene finnes foreløpig bare på engelsk (de andre språkene viser engelsk)
+        for nb, en in packs.english().items():
+            data['en'].setdefault(nb, en)
+
     problems += seed_check(data['en'])
 
     for l in LANGS:

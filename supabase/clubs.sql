@@ -106,7 +106,7 @@ begin
   if not club_is_member(p_club) then raise exception 'not_member'; end if;
   if exists (select 1 from groups g join group_members o on o.group_id = g.id and o.user_id = g.owner_id
              where g.id = p_club and g.owner_id <> auth.uid()) then raise exception 'not_owner'; end if;
-  if p_color1 not between 0 and 7 or p_color2 not between 0 and 7 or p_emblem not between 0 and 3 then
+  if p_color1 not between 0 and 7 or p_color2 not between 0 and 7 or p_emblem not between 0 and 7 then
     raise exception 'bad_look'; end if;
   update groups set color1 = p_color1, color2 = p_color2, emblem = p_emblem where id = p_club;
 end $$;

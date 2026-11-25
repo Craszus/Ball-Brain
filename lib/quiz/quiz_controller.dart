@@ -3,11 +3,13 @@ import 'dart:math' as math;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import '../data/pack_repository.dart';
 import '../data/question_repository.dart';
 import '../models/question.dart';
 import '../services/cloud.dart';
 import '../services/daily.dart';
 import '../services/feedback.dart';
+import '../services/learning.dart';
 import '../services/scoring.dart';
 import '../services/seen_history.dart';
 import '../services/stats.dart';
@@ -17,6 +19,16 @@ const quizLength = 10;
 
 /// Verdi for [quizEraProvider] som betyr «Dagens utfordring».
 const dailyChallenge = '__daily__';
+
+/// Verdi for [quizEraProvider]: tren på spørsmålene jeg har bommet på.
+const missedTraining = '__missed__';
+
+/// Verdi for [quizEraProvider]: en spørsmålspakke (prefiks + pakkens id).
+const packPrefix = '__pack__:';
+
+/// Øvingsrunder (Pro) gir ikke XP og sendes ikke til serveren.
+bool isPractice(String? selection) =>
+    selection == missedTraining || (selection?.startsWith(packPrefix) ?? false);
 
 /// Rekkefølge i en runde: lettest først, så stadig vanskeligere (stabil sortering).
 List<Question> easyToHard(List<Question> qs) {
@@ -123,7 +135,27 @@ class QuizController extends Notifier<QuizState> {
     final era = ref.read(quizEraProvider);
     final repo = ref.read(questionRepositoryProvider);
     final List<Question> questions;
-    if (era == dailyChallenge) {
+    // les inn læringsdataene før første svar
+    await ref.read(learningProvider.notifier).ready;
+    if (era == missedTraining) {
+      final missed = ref.read(learningProvider).missed.toSet();
+      final pool = [
+        ...await repo.fetchQuestions(limit: 100000),
+        for (final p in await loadPacks()) ...p.questions,
+      ].where((q) => missed.contains(q.uid)).toList()
+        ..shuffle();
+      final rng = math.Random();
+      questions = [for (final q in pool.take(quizLength)) q.withShuffledOptions(rng)];
+    } else if (era != null && era.startsWith(packPrefix)) {
+      final id = era.substring(packPrefix.length);
+      final pack = (await loadPacks()).where((p) => p.id == id);
+      final all = pack.isEmpty ? const <Question>[] : pack.first.questions;
+      final picked = await ref
+          .read(seenHistoryProvider)
+          .pick('pack_$id', all, quizLength, (q) => q.uid);
+      final rng = math.Random();
+      questions = [for (final q in easyToHard(picked)) q.withShuffledOptions(rng)];
+    } else if (era == dailyChallenge) {
       // Serveren velger dagens spørsmål; uten nett brukes de lokale (uten rangering).
       final remote = await DailyApi.start();
       if (remote != null) {
@@ -155,6 +187,7 @@ class QuizController extends Notifier<QuizState> {
     final q = state.current;
     if (q == null) return;
     final correct = q.isCorrect(answer);
+    ref.read(learningProvider.notifier).record(q, correct);
     if (answer is int && answer >= 0 && answer < q.options.length) {
       _answers.add({'key': q.key, 'answer': q.options[answer]});
     }
@@ -174,6 +207,14 @@ class QuizController extends Notifier<QuizState> {
       ..reset()
       ..start();
     if (state.finished) {
+      final selection = ref.read(quizEraProvider);
+      if (isPractice(selection)) {
+        final stats = ref.read(statsProvider.notifier)..clearUnlocked();
+        stats.bump('practiceRounds');
+        if (selection!.startsWith(packPrefix)) stats.bump('packsPlayed', once: selection);
+        ref.read(feedbackProvider).play(Effect.finish);
+        return;
+      }
       ref
           .read(statsProvider.notifier)
           .record('rules_quiz', state.score,
@@ -183,6 +224,10 @@ class QuizController extends Notifier<QuizState> {
               () => ref
                   .read(feedbackProvider)
                   .play(up ? Effect.levelUp : Effect.finish)));
+      if (selection == dailyChallenge) {
+        ref.read(statsProvider.notifier).recordDaily(
+            perfect: state.score >= state.questions.length * Scoring.correctPoints);
+      }
       final token = _dailyToken;
       if (token != null) {
         _dailyToken = null;

@@ -36,3 +36,14 @@ Kryss av `[x]` når noe er ferdig. Nye oppgaver legges nederst som `- [ ] tekst`
 - [x] (#291) Pushvarsler: Firebase-app og nøkkel (Jon), deretter utgi funksjonen og teste (docs/PUSH.md)
 - [ ] (#292) Test klubbkamp på minst seks telefoner
 - [x] (#293) Klubbtabell mot andre klubber og klubbserie innad i klubben
+- [ ] (#294) Ball Brain Pro klargjort i testmodus: ingen annonser, statistikk per tema, bom-trening, 4 spørsmålspakker, klubbskjold, rammer og titler
+- [ ] (#295) Ball Brain Pro: ekte kjøp i App Store / Google Play, vilkår og personverntekst før publisering
+- [ ] (#296) Faktasjekk de 60 pakkespørsmålene og oversett dem til svensk, dansk, tysk, spansk og fransk
+- [ ] (#297) Nye avatarbilder som bare Pro får
+- [ ] (#298) Quizkveld: verten starter en quiz, alle svarer på mobilen (under «Kamper»)
+- [ ] (#299) Nye pokaler for dagens utfordring, klubbkamp, quizkveld og øving, og ryddigere innstillinger og menyer
+- [ ] (#300) Test quizkveld med flere ekte telefoner (gjerne en pubkveld)
+- [ ] (#301) Tegne pokalbilder til de 16 nye pokalene (viser et enkelt ikon nå)
+- [ ] (#302) Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
+- [ ] (#303) Quizkveld i nettleser, så pubgjester slipper å installere appen
+- [ ] (#304) Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»

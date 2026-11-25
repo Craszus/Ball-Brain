@@ -80,15 +80,25 @@ class StandingTile extends StatelessWidget {
 }
 
 /// Alle klubber rangert etter klubbkampene.
-class ClubTableScreen extends StatefulWidget {
+class ClubTableScreen extends StatelessWidget {
   const ClubTableScreen({super.key, this.load = ClubApi.table});
   final Future<List<StandingRow>> Function(String period) load;
 
   @override
-  State<ClubTableScreen> createState() => _ClubTableScreenState();
+  Widget build(BuildContext context) =>
+      PitchScaffold(title: 'Klubbtabellen', body: ClubTableView(load: load));
 }
 
-class _ClubTableScreenState extends State<ClubTableScreen> {
+/// Selve tabellen (brukes også som fane i rangeringen).
+class ClubTableView extends StatefulWidget {
+  const ClubTableView({super.key, this.load = ClubApi.table});
+  final Future<List<StandingRow>> Function(String period) load;
+
+  @override
+  State<ClubTableView> createState() => _ClubTableViewState();
+}
+
+class _ClubTableViewState extends State<ClubTableView> {
   String _period = 'month';
   late Future<List<StandingRow>> _future = widget.load(_period);
 
@@ -105,9 +115,7 @@ class _ClubTableScreenState extends State<ClubTableScreen> {
       );
 
   @override
-  Widget build(BuildContext context) => PitchScaffold(
-        title: 'Klubbtabellen',
-        body: ListView(
+  Widget build(BuildContext context) => ListView(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
           children: [
             PeriodPicker(period: _period, onChanged: _pick),
@@ -131,6 +139,5 @@ class _ClubTableScreenState extends State<ClubTableScreen> {
               },
             ),
           ],
-        ),
       );
 }

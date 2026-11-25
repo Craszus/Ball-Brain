@@ -6,7 +6,10 @@ import 'avatar_picker_screen.dart';
 import 'duel/duel_prefs.dart';
 import 'legal_screens.dart';
 import 'media/credits_screen.dart';
+import 'pro/pro_screen.dart';
 import 'services/ads.dart';
+import 'services/learning.dart';
+import 'services/pro.dart';
 import 'services/push.dart';
 import 'services/feedback.dart';
 import 'services/update_check.dart';
@@ -17,6 +20,7 @@ import 'services/profile.dart';
 import 'services/settings.dart';
 import 'services/stats.dart';
 import 'ui/football.dart';
+import 'ui/theme.dart';
 import 'l10n/l10n.dart';
 
 class SettingsScreen extends ConsumerWidget {
@@ -30,49 +34,39 @@ class SettingsScreen extends ConsumerWidget {
     return PitchScaffold(
       title: 'Innstillinger',
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
         children: [
-          Card(
-            child: Column(children: [
-              SwitchListTile(
-                secondary: const Icon(Icons.volume_up),
-                title: const Text('Lydeffekter'),
-                subtitle: const Text('Lyd ved riktig og feil svar'),
-                value: s.sound,
-                onChanged: (v) async {
-                  await ctrl.update(s.copyWith(sound: v));
-                  if (v) ref.read(feedbackProvider).play(Effect.correct);
-                },
-              ),
-              const Divider(height: 1),
-              SwitchListTile(
-                secondary: const Icon(Icons.vibration),
-                title: const Text('Vibrasjon'),
-                subtitle: const Text('Kort vibrasjon på svar'),
-                value: s.haptics,
-                onChanged: (v) => ctrl.update(s.copyWith(haptics: v)),
-              ),
-            ]),
-          ),
-          const SizedBox(height: 16),
-          Card(
-            child: SwitchListTile(
+          _group('Lyd og vibrasjon', [
+            SwitchListTile(
+              secondary: const Icon(Icons.volume_up),
+              title: const Text('Lydeffekter'),
+              subtitle: const Text('Lyd ved riktig og feil svar'),
+              value: s.sound,
+              onChanged: (v) async {
+                await ctrl.update(s.copyWith(sound: v));
+                if (v) ref.read(feedbackProvider).play(Effect.correct);
+              },
+            ),
+            SwitchListTile(
+              secondary: const Icon(Icons.vibration),
+              title: const Text('Vibrasjon'),
+              subtitle: const Text('Kort vibrasjon på svar'),
+              value: s.haptics,
+              onChanged: (v) => ctrl.update(s.copyWith(haptics: v)),
+            ),
+          ]),
+          _group('Varsler og kamper', [
+            const _PushSwitch(),
+            SwitchListTile(
               secondary: const Icon(Icons.sports_mma),
               title: const Text('Ta imot 1v1-utfordringer'),
               subtitle: const Text('Folk i klubbene dine kan utfordre deg'),
               value: ref.watch(acceptsChallengesProvider),
               onChanged: (v) => ref.read(acceptsChallengesProvider.notifier).set(v),
             ),
-          ),
-          const SizedBox(height: 8),
-          const Card(child: _PushSwitch()),
-          if (adMode != 'off') ...const [
-            SizedBox(height: 8),
-            Card(child: _AdSwitch()),
-          ],
-          const SizedBox(height: 8),
-          Card(
-            child: ListTile(
+          ]),
+          _group('Språk', [
+            ListTile(
               leading: const Icon(Icons.language),
               title: const Text('Språk'),
               subtitle: Text(ref.watch(languageProvider) == null
@@ -80,10 +74,22 @@ class SettingsScreen extends ConsumerWidget {
                   : L10n.nativeNames[ref.watch(languageProvider)]!),
               onTap: () => _pickLanguage(context, ref),
             ),
-          ),
-          const SizedBox(height: 8),
-          Card(
-            child: FutureBuilder<String?>(
+          ]),
+          if (proMode != 'off' || adMode != 'off') ...[
+            const _Heading('Pro og annonser'),
+            const ProButton(),
+            if (adMode != 'off' && !ref.watch(proProvider).active)
+              const Card(child: _AdSwitch()),
+          ],
+          _group('Om appen', [
+            ListTile(
+              leading: const Icon(Icons.qr_code_2),
+              title: const Text('Del appen'),
+              subtitle: const Text('Vis en QR-kode vennene kan skanne'),
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => const ShareScreen())),
+            ),
+            FutureBuilder<String?>(
               future: installedVersionLabel(),
               builder: (context, snap) => ListTile(
                 leading: const Icon(Icons.system_update),
@@ -94,76 +100,65 @@ class SettingsScreen extends ConsumerWidget {
                 onTap: () => _checkUpdate(context),
               ),
             ),
-          ),
-          const SizedBox(height: 8),
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.qr_code_2),
-              title: const Text('Del appen'),
-              subtitle: const Text('Vis en QR-kode vennene kan skanne'),
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => const ShareScreen())),
-            ),
-          ),
-          const SizedBox(height: 8),
-          Card(
-            child: ListTile(
+            ListTile(
               leading: const Icon(Icons.photo_library_outlined),
               title: const Text('Bildekreditering'),
               subtitle: const Text('Fotografer og lisenser for bildene i appen'),
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => const CreditsScreen())),
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => const CreditsScreen())),
             ),
-          ),
-          const SizedBox(height: 8),
-          Card(
-            child: Column(children: [
-              ListTile(
-                leading: const Icon(Icons.privacy_tip_outlined),
-                title: const Text('Personvern'),
-                subtitle: const Text('Hva vi lagrer og dine rettigheter'),
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const PrivacyScreen())),
-              ),
-              const Divider(height: 1),
-              ListTile(
-                leading: const Icon(Icons.description_outlined),
-                title: const Text('Vilkår'),
-                subtitle: const Text('Regler for bruk av Ball Brain'),
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const TermsScreen())),
-              ),
-            ]),
-          ),
-          const SizedBox(height: 8),
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.delete_forever, color: Colors.redAccent),
-              title: const Text('Slett all min data'),
-              subtitle: const Text(
-                  'Fjerner profil, avatar, poeng og troféer fra denne enheten'),
-              onTap: () => _confirmDeleteAll(context, ref),
+          ]),
+          _group('Personvern og vilkår', [
+            ListTile(
+              leading: const Icon(Icons.privacy_tip_outlined),
+              title: const Text('Personvern'),
+              subtitle: const Text('Hva vi lagrer og dine rettigheter'),
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => const PrivacyScreen())),
             ),
-          ),
-          const SizedBox(height: 8),
-          Card(
-            child: ListTile(
+            ListTile(
+              leading: const Icon(Icons.description_outlined),
+              title: const Text('Vilkår'),
+              subtitle: const Text('Regler for bruk av Ball Brain'),
+              onTap: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => const TermsScreen())),
+            ),
+          ]),
+          // det mest ødeleggende står nederst
+          _group('Nullstill og slett', [
+            ListTile(
               leading: const Icon(Icons.restart_alt, color: Colors.redAccent),
               title: const Text('Nullstill fremgang'),
-              subtitle:
-                  const Text('Sletter XP, rekorder og troféer på denne enheten'),
+              subtitle: const Text('Sletter XP, rekorder og troféer på denne enheten'),
               onTap: () => _confirmReset(context, ref),
             ),
-          ),
-          const SizedBox(height: 24),
-          Center(
-            child: Text('Ball Brain · versjon 1.0.0',
-                style: TextStyle(color: Colors.white.withValues(alpha: 0.5))),
-          ),
+            ListTile(
+              leading: const Icon(Icons.delete_forever, color: Colors.redAccent),
+              title: const Text('Slett all min data'),
+              subtitle: const Text('Fjerner profil, avatar, poeng og troféer fra denne enheten'),
+              onTap: () => _confirmDeleteAll(context, ref),
+            ),
+          ]),
         ],
       ),
     );
   }
+
+  /// En overskrift med et kort under, delt med streker.
+  Widget _group(String title, List<Widget> tiles) => Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _Heading(title),
+          Card(
+            child: Column(children: [
+              for (var i = 0; i < tiles.length; i++) ...[
+                if (i > 0) const Divider(height: 1),
+                tiles[i],
+              ],
+            ]),
+          ),
+        ],
+      );
 
   Future<void> _checkUpdate(BuildContext context) async {
     final messenger = ScaffoldMessenger.of(context);
@@ -234,6 +229,8 @@ class SettingsScreen extends ConsumerWidget {
     if (ok != true) return;
     await ref.read(profileProvider.notifier).deleteAll();
     await ref.read(statsProvider.notifier).reset();
+    await ref.read(learningProvider.notifier).reset();
+    ref.invalidate(proProvider);
     await ref.read(settingsProvider.notifier).update(const Settings());
     // update() skrev innstillingene på nytt; fjern dem igjen så ingenting ligger igjen
     await ref.read(profileProvider.notifier).deleteAll();
@@ -266,12 +263,29 @@ class SettingsScreen extends ConsumerWidget {
     );
     if (ok == true) {
       await ref.read(statsProvider.notifier).reset();
+      await ref.read(learningProvider.notifier).reset();
       if (context.mounted) {
         ScaffoldMessenger.of(context)
             .showSnackBar(const SnackBar(content: Text('Fremgangen er nullstilt')));
       }
     }
   }
+}
+
+class _Heading extends StatelessWidget {
+  const _Heading(this.title);
+  final String title;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
+        child: Text(title.tr.toUpperCase(),
+            style: const TextStyle(
+                letterSpacing: 2,
+                fontSize: 13,
+                fontWeight: FontWeight.w900,
+                color: AppColors.gold)),
+      );
 }
 
 class _AdSwitch extends StatefulWidget {

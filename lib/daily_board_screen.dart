@@ -55,7 +55,7 @@ class _DailyBoardScreenState extends ConsumerState<DailyBoardScreen> {
       title: 'Dagens rangering'.tr,
       body: Column(children: [
         _pick(const {'day': 'I dag', 'week': 'Uka'}, _period, (v) => _period = v),
-        _pick({'country': countryName(country), 'world': 'Verden', 'friends': 'Venner'}, _scope,
+        _pick({'country': countryName(country), 'world': 'Verden', 'friends': 'Klubbene mine'}, _scope,
             (v) => _scope = v),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
