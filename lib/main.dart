@@ -11,6 +11,7 @@ import 'services/push.dart';
 import 'services/cloud.dart';
 import 'services/language.dart';
 import 'services/profile.dart';
+import 'ui/tablet.dart';
 import 'ui/theme.dart';
 
 // Gis ved kjøring: flutter run --dart-define=SUPABASE_URL=... --dart-define=SUPABASE_ANON_KEY=...
@@ -74,6 +75,7 @@ class _BallBrainAppState extends ConsumerState<BallBrainApp> {
         title: 'Ball Brain',
         scaffoldMessengerKey: appMessengerKey,
         theme: buildTheme(),
+        builder: tabletBuilder,
         locale: Locale(_lang == 'nb' ? 'nb' : _lang),
         supportedLocales: [for (final c in L10n.supported) Locale(c)],
         localizationsDelegates: GlobalMaterialLocalizations.delegates,

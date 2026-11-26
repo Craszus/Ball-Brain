@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../data/pack_repository.dart';
@@ -32,6 +33,10 @@ const packPrefix = '__pack__:';
 /// Øvingsrunder (Pro) gir ikke XP og sendes ikke til serveren.
 bool isPractice(String? selection) =>
     selection == missedTraining || (selection?.startsWith(packPrefix) ?? false);
+
+/// Dagen man sist svarte i dagens utfordring. Etter det har man sett fasiten,
+/// så nye forsøk samme dag gir verken XP eller poeng.
+const dailyAnsweredKey = 'daily.answeredDay';
 
 /// Rekkefølge i en runde: lettest først, så stadig vanskeligere (stabil sortering).
 List<Question> easyToHard(List<Question> qs) {
@@ -80,6 +85,7 @@ class QuizState {
     this.dailyNote,
     this.picked,
     this.atStake = false,
+    this.replay = false,
   });
 
   final List<Question> questions;
@@ -100,6 +106,9 @@ class QuizState {
 
   /// Dagens forsøk i rangeringen går tapt hvis man går ut nå.
   final bool atStake;
+
+  /// Nytt forsøk på dagens utfordring: bare øving.
+  final bool replay;
 
   bool get finished => !loading && index >= questions.length;
   Question? get current => finished || loading ? null : questions[index];
@@ -128,6 +137,7 @@ class QuizState {
         dailyNote: dailyNote ?? this.dailyNote,
         picked: clearPicked ? null : picked ?? this.picked,
         atStake: atStake ?? this.atStake,
+        replay: replay,
       );
 }
 
@@ -150,6 +160,7 @@ class QuizController extends Notifier<QuizState> {
     _dailyToken = null;
     _dailyNote = null;
     state = const QuizState();
+    var replay = false;
     final era = ref.read(quizEraProvider);
     final repo = ref.read(questionRepositoryProvider);
     final List<Question> questions;
@@ -176,12 +187,13 @@ class QuizController extends Notifier<QuizState> {
     } else if (era == dailyChallenge) {
       // Serveren velger dagens spørsmål; uten nett brukes de lokale (uten rangering).
       final remote = await DailyApi.start();
+      // Allerede spilt: svart her i dag, eller serveren gir ikke noe nytt forsøk
+      replay = await _answeredToday() || (remote != null && remote.token == null);
       if (remote != null) {
-        _dailyToken = remote.token;
-        if (remote.token == null) _dailyNote = 'Bare første forsøk teller i rangeringen.';
+        _dailyToken = replay ? null : remote.token;
         questions = shuffledForPlayer(remote.questions, math.Random());
       } else {
-        _dailyNote = 'Ikke med i rangeringen. Sjekk nettet.';
+        if (!replay) _dailyNote = 'Ikke med i rangeringen. Sjekk nettet.';
         questions = shuffledForPlayer(
             dailyQuestions(await repo.fetchQuestions(limit: 100000), DateTime.now()),
             math.Random());
@@ -195,10 +207,28 @@ class QuizController extends Notifier<QuizState> {
       final rng = math.Random();
       questions = [for (final q in easyToHard(picked)) q.withShuffledOptions(rng)];
     }
-    state = QuizState(questions: questions, loading: false, atStake: _dailyToken != null);
+    state = QuizState(
+        questions: questions, loading: false, atStake: _dailyToken != null, replay: replay);
     _stopwatch
       ..reset()
       ..start();
+  }
+
+  Future<bool> _answeredToday() async {
+    final today = StatsController.dayNumber(DateTime.now());
+    if (ref.read(statsProvider).count('dailyDay') == today) return true;
+    try {
+      return (await SharedPreferences.getInstance()).getInt(dailyAnsweredKey) == today;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  Future<void> _markAnswered() async {
+    try {
+      await (await SharedPreferences.getInstance())
+          .setInt(dailyAnsweredKey, StatsController.dayNumber(DateTime.now()));
+    } catch (_) {}
   }
 
   Future<void> answer(Object answer) async {
@@ -206,6 +236,7 @@ class QuizController extends Notifier<QuizState> {
     if (q == null || state.picked != null) return; // dobbelttrykk teller ikke
     final run = _run;
     final correct = q.isCorrect(answer);
+    if (ref.read(quizEraProvider) == dailyChallenge && !state.replay) _markAnswered();
     ref.read(learningProvider.notifier).record(q, correct);
     if (answer is int && answer >= 0 && answer < q.options.length) {
       _answers.add({'key': q.key, 'answer': q.options[answer]});
@@ -234,6 +265,12 @@ class QuizController extends Notifier<QuizState> {
         final stats = ref.read(statsProvider.notifier)..clearUnlocked();
         stats.bump('practiceRounds');
         if (selection!.startsWith(packPrefix)) stats.bump('packsPlayed', once: selection);
+        ref.read(feedbackProvider).play(Effect.finish);
+        return;
+      }
+      // Nytt forsøk på dagens utfordring: ingen XP, rekorder, pokaler eller poeng
+      if (state.replay) {
+        ref.read(statsProvider.notifier).clearUnlocked();
         ref.read(feedbackProvider).play(Effect.finish);
         return;
       }

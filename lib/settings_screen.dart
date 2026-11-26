@@ -77,7 +77,7 @@ class SettingsScreen extends ConsumerWidget {
           ]),
           if (proMode != 'off' || adMode != 'off') ...[
             const _Heading('Pro og annonser'),
-            const ProButton(),
+            const ProSwitch(),
             if (adMode != 'off' && !ref.watch(proProvider).active)
               const Card(child: _AdSwitch()),
           ],

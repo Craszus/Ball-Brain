@@ -6,6 +6,7 @@ import 'package:ball_brain/pro/pro_screen.dart';
 import 'package:ball_brain/profile_screen.dart';
 import 'package:ball_brain/services/ads.dart';
 import 'package:ball_brain/services/learning.dart';
+import 'package:ball_brain/ui/level_card.dart';
 import 'package:ball_brain/ui/theme.dart';
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -89,6 +90,39 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Statistikk per tema'), findsOneWidget);
     expect((await SharedPreferences.getInstance()).getBool('pro.active'), isTrue);
+  });
+
+  testWidgets('bryteren i Innstillinger viser Pro-innholdet i menyene', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    phone(tester);
+    await tester.pumpWidget(app(const Scaffold(
+        body: Column(children: [
+      ProSwitch(),
+      ProQuizTools(whenActive: true),
+      ProStatsEntry(),
+      ProProfileEntry(),
+      ProQuizTools(whenActive: false),
+    ]))));
+    await tester.pumpAndSettle();
+    expect(find.text('Tren på bommene'), findsNothing);
+    expect(find.text('Statistikk per tema'), findsNothing);
+    expect(find.textContaining('Med Pro:'), findsOneWidget);
+    await tester.tap(find.byType(Switch));
+    await tester.pumpAndSettle();
+    expect(find.text('Tren på bommene'), findsOneWidget);
+    expect(find.text('Spørsmålspakker'), findsOneWidget);
+    expect(find.text('Statistikk per tema'), findsOneWidget);
+    expect(find.text('Tittel og ramme'), findsOneWidget);
+    expect(find.textContaining('Med Pro:'), findsNothing);
+  });
+
+  testWidgets('nivåkortet viser PRO-merket bare med Pro', (tester) async {
+    phone(tester);
+    for (final pro in [false, true]) {
+      await tester.pumpWidget(app(Scaffold(body: LevelCard(xp: 20, pro: pro))));
+      await tester.pumpAndSettle();
+      expect(find.text('PRO'), pro ? findsOneWidget : findsNothing);
+    }
   });
 
   testWidgets('statistikken viser sterkest og svakest tema', (tester) async {

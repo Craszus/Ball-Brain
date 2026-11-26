@@ -5,6 +5,7 @@ import 'geo/geo_quiz_screen.dart';
 import 'quiz/photo_quiz_screen.dart';
 import 'duel/challenge_gate.dart';
 import 'duel/duel_screen.dart';
+import 'pro/pro_screen.dart';
 import 'profile_screen.dart';
 import 'quiz/image_sort_screen.dart';
 import 'quiz/rules_quiz_screen.dart';
@@ -37,13 +38,10 @@ class HomeScreen extends ConsumerWidget {
     void open(Widget screen) =>
         Navigator.of(context).push(MaterialPageRoute(builder: (_) => screen));
 
-    return UpdateGate(
-      child: ChallengeGate(
-      child: PitchScaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: Column(children: [
+    final size = MediaQuery.sizeOf(context);
+    // stående nettbrett: større logo og nivåkort, ellers ser de små ut
+    final tallTablet = size.height > size.width && size.width >= 500;
+    final top = Column(children: [
           // Toppfelt: avatar (gullring) og tannhjul
           Container(
             decoration: BoxDecoration(
@@ -81,13 +79,13 @@ class HomeScreen extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Center(child: BrandMark(width: 56)),
+                Center(child: BrandMark(width: tallTablet ? 82 : 56)),
                 const SizedBox(height: 8),
-                const Text(
+                Text(
                   'BALL BRAIN',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 33,
+                    fontSize: tallTablet ? 46 : 33,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0.5,
                     color: Colors.white,
@@ -95,19 +93,22 @@ class HomeScreen extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: 6),
-                const Text(
+                Text(
                   'Fotballkunnskap. Raskere. Skarpere.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: AppColors.textSecondary,
-                    fontSize: 15,
+                    fontSize: tallTablet ? 19 : 15,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 const SizedBox(height: 10),
                 GestureDetector(
                   onTap: () => open(const StatsScreen()),
-                  child: LevelCard(xp: stats.totalPoints),
+                  child: LevelCard(
+                      xp: stats.totalPoints,
+                      large: tallTablet,
+                      pro: ref.watch(proProvider).active),
                 ),
                 const SizedBox(height: 8),
                 _DailyStrip(
@@ -122,26 +123,25 @@ class HomeScreen extends ConsumerWidget {
               ],
             ),
           ),
-            ]),
-          ),
-          // Spillknappene fyller resten av skjermen under det gule XP-kortet
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(20, 2, 20, 12),
-              child: Column(
-                children: [
+            ]);
+    // Spillknappene deler høyden som er igjen (litt lavere på stående nettbrett)
+    final modes = Padding(
+      padding: EdgeInsets.fromLTRB(20, 2, 20, tallTablet ? 30 : 12),
+      child: Column(
+        children: [
                 _ModeCard(
                   icon: const Icon(Icons.assignment_turned_in_outlined),
                   title: 'Fotballquiz',
                   onTap: () => open(ChoiceScreen(
                     title: 'Fotballquiz',
                     heading: 'Test fotballkunnskapen din.',
+                    before: const ProQuizTools(whenActive: true),
+                    after: const ProQuizTools(whenActive: false),
                     rules: const [
                       '10 spørsmål per runde. Velg riktig av fire alternativer.',
                       'Riktig svar gir +2 poeng, feil svar gir −1 poeng.',
                       'Poengene blir XP og gir nye nivåer. Du faller aldri under nivået du har nådd.',
-                      'I dagens utfordring teller bare første forsøk i rangeringen.',
+                      'I dagens utfordring gir bare første forsøk XP og rangeringspoeng.',
                       'Spørsmålene blir vanskeligere utover i runden, og du får ikke de samme igjen før du har vært gjennom alle.',
                     ],
                     choices: const [
@@ -240,14 +240,38 @@ class HomeScreen extends ConsumerWidget {
                   alerts: alerts.total,
                   onTap: () => open(DuelScreen(initialTab: alerts.tab)),
                 ),
-                ],
-              ),
-            ),
-          ),
         ],
       ),
-    ),
-    ),
+    );
+    // Liggende (nettbrett): toppen til venstre og spillknappene til høyre
+    final sideBySide = size.width > size.height && size.width >= 700;
+
+    return UpdateGate(
+      child: ChallengeGate(
+        child: PitchScaffold(
+          wide: sideBySide,
+          body: sideBySide
+              ? Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 960),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Expanded(child: Center(child: SingleChildScrollView(child: top))),
+                        Expanded(child: Padding(padding: const EdgeInsets.only(top: 8), child: modes)),
+                      ],
+                    ),
+                  ),
+                )
+              : CustomScrollView(
+                  slivers: [
+                    SliverToBoxAdapter(child: top),
+                    // Spillknappene fyller resten av skjermen under det gule XP-kortet
+                    SliverFillRemaining(hasScrollBody: false, child: modes),
+                  ],
+                ),
+        ),
+      ),
     );
   }
 }
@@ -292,9 +316,11 @@ class _ModeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+    final tallTablet = size.height > size.width && size.width >= 500;
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4),
+        padding: EdgeInsets.symmetric(vertical: tallTablet ? 6 : 4),
         child: SizedBox.expand(
           child: ChallengeAlert(
             count: alerts,

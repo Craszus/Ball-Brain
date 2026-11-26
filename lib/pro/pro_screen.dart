@@ -21,6 +21,112 @@ void _practice(BuildContext context, WidgetRef ref, String selection) {
   _open(context, const RulesQuizScreen());
 }
 
+/// En Pro-funksjon som rad i en meny.
+Widget _proTile(IconData icon, String title, String subtitle, VoidCallback onTap) => Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(color: AppColors.gold),
+      ),
+      child: ListTile(
+        leading: Icon(icon, color: AppColors.gold),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.w900)),
+        subtitle: Text(subtitle),
+        trailing: const Icon(Icons.chevron_right, color: AppColors.gold),
+        onTap: onTap,
+      ),
+    );
+
+String _missedText(int missed) =>
+    missed == 0 ? 'Du har ingen bom å øve på' : '$missed spørsmål å øve på';
+
+/// Av/på-bryteren i Innstillinger. Skrur man på Pro, dukker innholdet opp i menyene.
+class ProSwitch extends ConsumerWidget {
+  const ProSwitch({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    if (proMode == 'off') return const SizedBox.shrink();
+    final active = ref.watch(proProvider).active;
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(color: AppColors.gold),
+      ),
+      child: Column(children: [
+        SwitchListTile(
+          secondary: const Icon(Icons.workspace_premium, color: AppColors.gold, size: 30),
+          title: const Text('Ball Brain Pro', style: TextStyle(fontWeight: FontWeight.w900)),
+          subtitle: const Text('Test: ingen betaling'),
+          value: active,
+          onChanged: (v) => ref.read(proProvider.notifier).setActive(v),
+        ),
+        ListTile(
+          leading: const Icon(Icons.info_outline),
+          title: const Text('Se hva du får med Pro'),
+          trailing: const Icon(Icons.chevron_right, color: AppColors.gold),
+          onTap: () => _open(context, const ProScreen()),
+        ),
+      ]),
+    );
+  }
+}
+
+/// I Fotballquiz-menyen: verktøyene øverst når Pro er på ([whenActive]),
+/// ellers én kort linje nederst om hva Pro gir.
+class ProQuizTools extends ConsumerWidget {
+  const ProQuizTools({super.key, required this.whenActive});
+
+  final bool whenActive;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    if (proMode == 'off' || ref.watch(proProvider).active != whenActive) {
+      return const SizedBox.shrink();
+    }
+    if (!whenActive) {
+      return TextButton.icon(
+        onPressed: () => _open(context, const ProScreen()),
+        icon: const Icon(Icons.workspace_premium, color: AppColors.gold),
+        label: const Text('Med Pro: tren på bommene og få spørsmålspakker',
+            textAlign: TextAlign.center, style: TextStyle(color: AppColors.gold)),
+      );
+    }
+    final missed = ref.watch(learningProvider).missed.length;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Column(children: [
+        _proTile(Icons.replay, 'Tren på bommene', _missedText(missed),
+            () => _practice(context, ref, missedTraining)),
+        _proTile(Icons.library_books, 'Spørsmålspakker', 'Champions League, Premier League og mer',
+            () => _open(context, const PacksScreen())),
+      ]),
+    );
+  }
+}
+
+/// På statistikksiden.
+class ProStatsEntry extends ConsumerWidget {
+  const ProStatsEntry({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    if (!ref.watch(proProvider).active) return const SizedBox.shrink();
+    return _proTile(Icons.query_stats, 'Statistikk per tema', 'Hva du er god og svak på',
+        () => _open(context, const TopicStatsScreen()));
+  }
+}
+
+/// På profilsiden: tittel og ramme med Pro, ellers veien til Pro.
+class ProProfileEntry extends ConsumerWidget {
+  const ProProfileEntry({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => ref.watch(proProvider).active
+      ? _proTile(Icons.palette, 'Tittel og ramme', 'Vises på profilen din',
+          () => _open(context, const StyleScreen()))
+      : const ProButton();
+}
+
 /// Knappen som leder til Pro (skjules når Pro er slått av i bygget).
 class ProButton extends ConsumerWidget {
   const ProButton({super.key});
@@ -124,7 +230,7 @@ class ProScreen extends ConsumerWidget {
       tile(
           Icons.replay,
           'Tren på bommene',
-          missed == 0 ? 'Du har ingen bom å øve på' : '$missed spørsmål å øve på',
+          _missedText(missed),
           () => _practice(context, ref, missedTraining)),
       tile(Icons.library_books, 'Spørsmålspakker', 'Champions League, Premier League og mer',
           () => _open(context, const PacksScreen())),

@@ -4,6 +4,9 @@ import 'icon_tile.dart';
 import 'theme.dart';
 import '../l10n/l10n.dart';
 
+/// Lave mobiler (f.eks. 360 × 640): mindre knapper og luft, så alle fire svarene vises.
+bool shortScreen(BuildContext context) => MediaQuery.sizeOf(context).height < 700;
+
 /// Fasiten etter at man har svart.
 enum AnswerMark { correct, wrong }
 
@@ -30,11 +33,12 @@ class AnswerButton extends StatelessWidget {
       AnswerMark.wrong => const Color(0xFFC0392B),
       null => null,
     };
+    final short = shortScreen(context);
     return Card(
       color: marked,
       clipBehavior: Clip.antiAlias,
       elevation: 6,
-      margin: const EdgeInsets.symmetric(vertical: 6),
+      margin: EdgeInsets.symmetric(vertical: short ? 3 : 6),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
@@ -43,29 +47,29 @@ class AnswerButton extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.all(short ? 6 : 10),
           child: Row(
             children: [
               IconTile(
-                size: 44,
+                size: short ? 36 : 44,
                 radius: 12,
-                child: Text(letter, style: const TextStyle(fontSize: 20)),
+                child: Text(letter, style: TextStyle(fontSize: short ? 17 : 20)),
               ),
-              const SizedBox(width: 14),
+              SizedBox(width: short ? 10 : 14),
               Expanded(
                 child: Text(
                   label,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
-                    fontSize: 17,
+                    fontSize: short ? 15 : 17,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
               // balanserer bokstavbrikken så teksten er midtstilt; viser også riktig/feil
               SizedBox(
-                width: 58,
+                width: short ? 46 : 58,
                 child: switch (mark) {
                   AnswerMark.correct => const Icon(Icons.check_circle, color: Colors.white),
                   AnswerMark.wrong => const Icon(Icons.cancel, color: Colors.white),

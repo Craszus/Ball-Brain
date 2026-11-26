@@ -344,3 +344,36 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 ## 2026-11-26 (utgivelse bygg 8)
 - Bygg 8 gitt ut: rettede spørsmål og de fem spillerfeilene. `tools/release.py` virket igjen. 92 tester grønne.
 - Neste: prøve oppdateringen på telefonen; fjerne GitHub-oppdateringssjekken fra Play-versjonen før lukket test.
+
+## 2026-11-26 (liten skjerm)
+- Tester med Huawei P10 Lite måtte rulle for å se fjerde svaralternativ og så tilbake for å se bildet.
+- Bildequizen får nå plass på én skjerm: svarene står to og to, og bildet tilpasser seg høyden som er igjen.
+- Svarknappene i Fotballquiz, 1v1, klubbkamp og quizkveld er mindre på lave skjermer.
+- 95 tester grønne. Kontrollert med tegnede skjermbilder i 360 × 640, ikke på en slik telefon.
+- Neste: gi ut ny utgave når Jon sier ja, og la testeren prøve.
+
+## 2026-11-26 (nettbrett)
+- Nettbrett (korteste side minst 600): hele appen tegnes større (opptil 1,5 ganger), og innholdet holdes samlet midt på skjermen (lib/ui/tablet.dart). Mobiler er uendret.
+- Forsiden har to kolonner når skjermen ligger på tvers. Kartet bruker fortsatt hele bredden. Troféene står tre i bredden.
+- 100 tester grønne. Kontrollert med tegnede skjermbilder, ikke på et ekte nettbrett (kartet er ikke tegnet).
+- Ikke gitt ut ennå (sammen med rettingen for små skjermer).
+- Justert etter ønske: mer luft mot kantene på stående nettbrett og litt lavere knapper på forsiden der. 100 tester grønne.
+- Forsiden på stående nettbrett: større logo, tittel og gult nivåkort, og dermed lavere grønne knapper. 100 tester grønne.
+
+## 2026-11-26 (ny tidsplan)
+- Alle frister flyttet til 1. kvartal 2027. Forslag: #252 29. januar, #251 26. februar, #253 og MVP-mål 31. mars. Ført i PROJECT.md; må endres i Odin.
+
+## 2026-11-26 (Pro i menyene og fotballskole)
+- Pro har fått av/på-bryter i Innstillinger. «Tren på bommene» og spørsmålspakkene ligger nå i Fotballquiz-menyen, statistikk per tema under Statistikk, tittel og ramme på profilen (#305).
+- 101 tester grønne. Ikke prøvd på telefon og ikke gitt ut.
+- Fotballskolen er ført som fire nye oppgaver. Neste: lage en liten prøveleksjon (offside på banen) som Jon kan se på.
+- PRO-merke øverst til høyre på det gule nivåkortet (forsiden og profilen) når Pro er på. 102 tester grønne.
+- Fotballskolen vurdert av en Fable-agent: forslag i docs/FOTBALLSKOLE.md (fem leksjoner, banen som scene for alle oppgaver, «Du er dommeren», prøveleksjon om offside). Ikke vedtatt ennå.
+
+## 2026-11-26 (dagens utfordring)
+- Feil: nye forsøk på dagens utfordring ga XP, så man kunne få full pott etter å ha sett fasiten. Nå er alle forsøk etter det første bare øving: ingen XP, rekorder, pokaler eller poeng til serveren.
+- Regnes som spilt når man har svart på ett spørsmål, eller når serveren ikke gir nytt forsøk. Gamle appversjoner har fortsatt feilen til de oppdateres.
+
+## 2026-11-26 (bygg 9)
+- Gitt ut bygg 9: rettingen for dagens utfordring, Pro-bryter og PRO-merke, nettbrett og små skjermer. 103 tester grønne, ingen nøkler funnet i endringene.
+- Neste: testeren med P10 Lite prøver igjen, et nettbrett prøves, og eventuelt prøveleksjonen i Fotballskolen.

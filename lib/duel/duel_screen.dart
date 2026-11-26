@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../groups_view.dart' show GroupsView;
 import '../l10n/l10n.dart';
+import '../ui/answer_button.dart' show shortScreen;
 import '../party/quiz_night_screen.dart';
 import '../services/feedback.dart';
 import '../services/profile.dart';
@@ -616,8 +617,9 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
     final profile = ref.watch(profileProvider);
     final right = _result?.right;
     final left = _remainingMs / (_secondsPerQuestion * 1000);
+    final short = shortScreen(context);
     return ListView(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(short ? 10 : 16),
       children: [
         Row(children: [
           _scoreBox(profile.name.isEmpty ? 'Deg'.tr : profile.name, _myScore,
@@ -653,10 +655,10 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
             side: BorderSide(color: AppColors.gold.withValues(alpha: 0.6)),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(18),
+            padding: EdgeInsets.all(short ? 10 : 18),
             child: Text(q.prompt,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, height: 1.25)),
+                style: TextStyle(fontSize: short ? 17 : 20, fontWeight: FontWeight.w900, height: 1.25)),
           ),
         ),
         const SizedBox(height: 8),
@@ -775,22 +777,23 @@ class _Option extends StatelessWidget {
       _OptionState.dim => (AppColors.gold.withValues(alpha: 0.25), null),
       _OptionState.idle => (AppColors.gold, null),
     };
+    final short = shortScreen(context);
     return Opacity(
       opacity: state == _OptionState.dim ? 0.55 : 1,
       child: Card(
         clipBehavior: Clip.antiAlias,
         color: fill,
         elevation: 6,
-        margin: const EdgeInsets.symmetric(vertical: 5),
+        margin: EdgeInsets.symmetric(vertical: short ? 3 : 5),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16), side: BorderSide(color: border, width: 1.5)),
         child: InkWell(
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(short ? 6 : 10),
             child: Row(children: [
               IconTile(
-                size: 40,
+                size: short ? 34 : 40,
                 radius: 12,
                 child: Text(letter, style: const TextStyle(fontSize: 18)),
               ),
@@ -801,7 +804,7 @@ class _Option extends StatelessWidget {
                     style: const TextStyle(
                         color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700)),
               ),
-              const SizedBox(width: 52),
+              SizedBox(width: short ? 40 : 52),
             ]),
           ),
         ),

@@ -244,42 +244,82 @@ class _PhotoQuizScreenState extends ConsumerState<PhotoQuizScreen> {
     );
   }
 
-  Widget _question(_PhotoQuestion q, int total) {
-    final isPlayer = q.item.kind == MediaKind.player;
-    return ListView(
-      padding: const EdgeInsets.all(20),
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: LinearProgressIndicator(
-            value: _index / total,
-            minHeight: 8,
-            backgroundColor: Colors.black38,
-            color: AppColors.gold,
+  /// Alt får plass uten rulling: bildet får den høyden som blir igjen, svarene står to og to.
+  Widget _question(_PhotoQuestion q, int total) => LayoutBuilder(builder: (context, c) {
+        final short = c.maxHeight < 600;
+        // Veldig lav skjerm eller veldig stor tekst: da må man heller kunne rulle.
+        final scroll = c.maxHeight < 380 * MediaQuery.textScalerOf(context).scale(1);
+        final gap = SizedBox(height: short ? 8 : 12);
+        final head = <Widget>[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: LinearProgressIndicator(
+              value: _index / total,
+              minHeight: 8,
+              backgroundColor: Colors.black38,
+              color: AppColors.gold,
+            ),
           ),
+          const SizedBox(height: 8),
+          Text('BILDE ${_index + 1} AV $total',
+              style: const TextStyle(
+                  fontSize: 12,
+                  letterSpacing: 1.5,
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.textSecondary)),
+          StreakBadge(_streak),
+          gap,
+          Text(q.prompt,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: short ? 19 : 22, fontWeight: FontWeight.w900)),
+          gap,
+        ];
+        final options = <Widget>[
+          for (var i = 0; i < q.labels.length; i += 2)
+            IntrinsicHeight(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(child: _option(q, i)),
+                  const SizedBox(width: 8),
+                  Expanded(child: i + 1 < q.labels.length ? _option(q, i + 1) : const SizedBox()),
+                ],
+              ),
+            ),
+        ];
+        final padding = EdgeInsets.fromLTRB(16, short ? 10 : 20, 16, short ? 8 : 16);
+        if (scroll) {
+          return ListView(padding: padding, children: [
+            ...head,
+            SizedBox(height: 180, child: _photo(q)),
+            gap,
+            ...options,
+          ]);
+        }
+        return Padding(
+          padding: padding,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [...head, Expanded(child: _photo(q)), gap, ...options],
+          ),
+        );
+      });
+
+  /// Bildet så stort det får plass til. Blir det lavt, gjøres det også smalere,
+  /// så ansiktet ikke kuttes.
+  Widget _photo(_PhotoQuestion q) {
+    final isPlayer = q.item.kind == MediaKind.player;
+    return LayoutBuilder(builder: (context, c) {
+      final aspect = isPlayer ? 1.1 : 1.5; // bredde / høyde
+      final height = math.min(c.maxHeight, math.min(c.maxWidth / aspect, 460.0));
+      final width = math.min(c.maxWidth, height * aspect);
+      return Center(
+        child: SizedBox(
+          width: width,
+          child: CreditedPhoto(key: ValueKey(q.item.id), photo: q.item.photo, height: height),
         ),
-        const SizedBox(height: 8),
-        Text('BILDE ${_index + 1} AV $total',
-            style: const TextStyle(
-                fontSize: 12,
-                letterSpacing: 1.5,
-                fontWeight: FontWeight.w800,
-                color: AppColors.textSecondary)),
-        StreakBadge(_streak),
-        const SizedBox(height: 12),
-        Text(q.prompt,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
-        const SizedBox(height: 12),
-        CreditedPhoto(
-          key: ValueKey(q.item.id),
-          photo: q.item.photo,
-          height: isPlayer ? 300 : 220,
-        ),
-        const SizedBox(height: 10),
-        for (var i = 0; i < q.labels.length; i++) _option(q, i),
-      ],
-    );
+      );
+    });
   }
 
   Widget _option(_PhotoQuestion q, int i) {
@@ -299,19 +339,24 @@ class _PhotoQuizScreenState extends ConsumerState<PhotoQuizScreen> {
       clipBehavior: Clip.antiAlias,
       elevation: 6,
       color: fill,
-      margin: const EdgeInsets.symmetric(vertical: 6),
+      margin: const EdgeInsets.symmetric(vertical: 4),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(14),
         side: BorderSide(color: border, width: answered && (isRight || isPicked) ? 2 : 1),
       ),
       child: InkWell(
         onTap: answered ? null : () => _answer(i),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
-          child: Text(q.labels[i],
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  color: Colors.white, fontSize: 18, fontWeight: FontWeight.w800)),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(minHeight: 56),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            child: Center(
+              child: Text(q.labels[i],
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                      color: Colors.white, fontSize: 16, fontWeight: FontWeight.w800)),
+            ),
+          ),
         ),
       ),
     );

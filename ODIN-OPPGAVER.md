@@ -47,5 +47,9 @@ Kryss av `[x]` når noe er ferdig. Nye oppgaver legges nederst som `- [ ] tekst`
 - [x] (#302) Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
 - [ ] (#303) Quizkveld i nettleser, så pubgjester slipper å installere appen
 - [x] (#304) Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
-- [ ] (#305) Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
+- [x] (#305) Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
 - [x] (#306) Dagens utfordring på forsiden, «Regler-quiz» heter «Fotballquiz», varsel med gult kort på «Kamper»
+- [ ] (#382) Fotballskole del 1: egen meny med korte, morsomme leksjoner om spillet, der man setter merke på en bane sett ovenfra (ingen XP)
+- [ ] (#383) Fotballskole del 2: VAR forklart og dommertrening (hva ville du dømt?)
+- [ ] (#384) Fotballskole del 3: viktige historiske øyeblikk som går igjen i quizspørsmålene
+- [ ] (#385) Fotballskole: faktasjekk og oversettelser til alle språk før betatesten

@@ -6,8 +6,15 @@ import '../l10n/l10n.dart';
 
 /// Nivåkortet på hovedmenyen: alltid gull, alltid med LVL-skjold, XP-bar og % til høyre.
 class LevelCard extends StatelessWidget {
-  const LevelCard({super.key, required this.xp, this.fromXp, this.dark = false});
+  const LevelCard(
+      {super.key, required this.xp, this.fromXp, this.dark = false, this.large = false, this.pro = false});
   final int xp;
+
+  /// Vis «PRO»-merket øverst til høyre.
+  final bool pro;
+
+  /// Høyere kort (forsiden på stående nettbrett).
+  final bool large;
 
   /// Mørk variant (kortfarge #145A42 med gullkant) brukt på avatarskjermen.
   final bool dark;
@@ -26,7 +33,7 @@ class LevelCard extends StatelessWidget {
     }
     final onCard = dark ? Colors.white : AppColors.ink;
     return Container(
-      padding: const EdgeInsets.all(14),
+      padding: EdgeInsets.symmetric(horizontal: 14, vertical: large ? 24 : 14),
       decoration: BoxDecoration(
         gradient: dark ? null : AppColors.goldGradient,
         color: dark ? AppColors.card : null,
@@ -48,23 +55,28 @@ class LevelCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          LevelShield(level: info.level, width: 58),
+          LevelShield(level: info.level, width: large ? 70 : 58),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  info.title,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: onCard,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w900,
-                    height: 1.1,
+                Row(children: [
+                  Expanded(
+                    child: Text(
+                      info.title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: onCard,
+                        fontSize: large ? 28 : 24,
+                        fontWeight: FontWeight.w900,
+                        height: 1.1,
+                      ),
+                    ),
                   ),
-                ),
+                  if (pro) const _ProBadge(),
+                ]),
                 const SizedBox(height: 2),
                 Text(
                   info.isMax
@@ -72,7 +84,7 @@ class LevelCard extends StatelessWidget {
                       : '${info.xpIntoLevel} / ${info.xpForNext} XP',
                   style: TextStyle(
                     color: dark ? AppColors.textSecondary : AppColors.ink,
-                    fontSize: 15,
+                    fontSize: large ? 17 : 15,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -85,6 +97,31 @@ class LevelCard extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Mørkt merke med gullskrift, så det synes på det gule kortet.
+class _ProBadge extends StatelessWidget {
+  const _ProBadge();
+
+  @override
+  Widget build(BuildContext context) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+        decoration: BoxDecoration(
+          color: AppColors.ink,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: AppColors.goldLighter),
+        ),
+        child: const Row(mainAxisSize: MainAxisSize.min, children: [
+          Icon(Icons.workspace_premium, color: AppColors.goldLight, size: 16),
+          SizedBox(width: 4),
+          Text('PRO',
+              style: TextStyle(
+                  color: AppColors.goldLight,
+                  fontSize: 13,
+                  letterSpacing: 1.5,
+                  fontWeight: FontWeight.w900)),
+        ]),
+      );
 }
 
 class _XpTrack extends StatelessWidget {

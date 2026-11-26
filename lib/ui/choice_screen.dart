@@ -21,7 +21,13 @@ class ChoiceScreen extends StatelessWidget {
     required this.choices,
     required this.onPick,
     this.rules = const [],
+    this.before,
+    this.after,
   });
+
+  /// Ekstra innhold over og under valgene.
+  final Widget? before;
+  final Widget? after;
 
   final String title;
   final String heading;
@@ -47,6 +53,7 @@ class ChoiceScreen extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
+          ?before,
           for (final c in choices)
             Card(
               clipBehavior: Clip.antiAlias,
@@ -83,6 +90,7 @@ class ChoiceScreen extends StatelessWidget {
                 ),
               ),
             ),
+          ?after,
           // reglene står under valgene, så man slipper å rulle for å starte
           const SizedBox(height: 8),
           if (rules.isNotEmpty) RulesCard(rules: rules),

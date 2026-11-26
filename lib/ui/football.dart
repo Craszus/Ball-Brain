@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart' hide Text;
 
+import 'tablet.dart';
 import 'theme.dart';
 import '../l10n/l10n.dart';
 
@@ -153,7 +154,11 @@ class BrandMark extends StatelessWidget {
 
 /// Scaffold med banebakgrunn og gjennomsiktig toppfelt.
 class PitchScaffold extends StatelessWidget {
-  const PitchScaffold({super.key, this.title, this.actions, required this.body});
+  const PitchScaffold(
+      {super.key, this.title, this.actions, required this.body, this.wide = false});
+
+  /// Bruk hele bredden (kartet). Ellers holdes innholdet samlet midt på brede skjermer.
+  final bool wide;
 
   final String? title;
   final List<Widget>? actions;
@@ -168,7 +173,7 @@ class PitchScaffold extends StatelessWidget {
             appBar: title == null
                 ? null
                 : AppBar(title: Text(title!.toUpperCase()), actions: actions),
-            body: SafeArea(child: body),
+            body: SafeArea(child: wide ? body : CenteredContent(child: body)),
           ),
         ],
       );

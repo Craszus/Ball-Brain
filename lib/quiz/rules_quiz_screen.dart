@@ -18,11 +18,11 @@ class RulesQuizScreen extends ConsumerWidget {
     final state = ref.watch(quizControllerProvider);
     final controller = ref.read(quizControllerProvider.notifier);
     final selection = ref.watch(quizEraProvider);
-    final practice = isPractice(selection);
+    final practice = isPractice(selection) || state.replay;
     // temanavnet står over spørsmålet, så overskriften holdes kort
     final title = selection == dailyChallenge
         ? 'Dagens utfordring'
-        : practice
+        : isPractice(selection)
             ? 'Øving'
             : 'Fotballquiz';
 
@@ -61,8 +61,9 @@ class RulesQuizScreen extends ConsumerWidget {
                 : null,
           );
         }
+        final short = shortScreen(context);
         return ListView(
-          padding: const EdgeInsets.all(20),
+          padding: EdgeInsets.all(short ? 12 : 20),
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
@@ -83,24 +84,30 @@ class RulesQuizScreen extends ConsumerWidget {
                   fontWeight: FontWeight.w800,
                   color: AppColors.textSecondary),
             ),
+            if (state.replay)
+              const Padding(
+                padding: EdgeInsets.only(top: 4),
+                child: Text('Du har spilt i dag. Dette er bare øving, uten XP.',
+                    style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w700)),
+              ),
             StreakBadge(state.streak),
-            const SizedBox(height: 14),
+            SizedBox(height: short ? 8 : 14),
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
                 side: BorderSide(color: AppColors.gold.withValues(alpha: 0.6)),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(short ? 12 : 20),
                 child: Text(q.prompt,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                        fontSize: 21,
+                    style: TextStyle(
+                        fontSize: short ? 18 : 21,
                         fontWeight: FontWeight.w900,
                         height: 1.25)),
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: short ? 6 : 12),
             for (var i = 0; i < q.options.length; i++)
               AnswerButton(
                 letter: String.fromCharCode(65 + i),

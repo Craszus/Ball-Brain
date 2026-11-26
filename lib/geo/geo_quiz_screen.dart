@@ -14,6 +14,7 @@ import '../services/seen_history.dart';
 import '../services/stats.dart';
 import '../ui/football.dart';
 import '../ui/icon_tile.dart';
+import '../ui/tablet.dart';
 import '../ui/theme.dart';
 import 'geo_logic.dart';
 import 'map_widgets.dart';
@@ -273,12 +274,13 @@ class _GeoQuizScreenState extends ConsumerState<GeoQuizScreen>
     final guessing = _phase == _Phase.guess;
     return PitchScaffold(
       title: '${_index + 1}/${_places.length}',
+      wide: true, // kartet får hele bredden
       actions: [_TimerPill(seconds: _remaining, urgent: _remaining <= 10 && guessing)],
       body: Column(
         children: [
-          if (guessing) _QuestionCard(place: _place),
+          if (guessing) CenteredContent(child: _QuestionCard(place: _place)),
           Expanded(key: _mapKey, child: _buildMap()),
-          if (guessing) _guessFooter() else _resultCard(),
+          CenteredContent(child: guessing ? _guessFooter() : _resultCard()),
         ],
       ),
     );

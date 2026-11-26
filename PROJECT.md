@@ -24,7 +24,7 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Plan (23/39 ferdige)
+## Plan (24/43 ferdige)
 
 **Fase 1: Grunnmur & MVP-prototyp**
 - [x] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
@@ -70,8 +70,12 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [x] Personvernteksten må nevne quizkveld (kallenavn og poeng lagres i opptil 7 dager)
 - [ ] Quizkveld i nettleser, så pubgjester slipper å installere appen
 - [x] Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
-- [ ] Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
+- [x] Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
 - [x] Dagens utfordring på forsiden, «Regler-quiz» heter «Fotballquiz», varsel med gult kort på «Kamper»
+- [ ] Fotballskole del 1: egen meny med korte, morsomme leksjoner om spillet, der man setter merke på en bane sett ovenfra (ingen XP)
+- [ ] Fotballskole del 2: VAR forklart og dommertrening (hva ville du dømt?)
+- [ ] Fotballskole del 3: viktige historiske øyeblikk som går igjen i quizspørsmålene
+- [ ] Fotballskole: faktasjekk og oversettelser til alle språk før betatesten
 
 ## Andre filer i mappen
 - `LICENSE` (1 kB)
@@ -167,3 +171,6 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Pokaler lages i Blender (tools/make_trophies.py + tools/compose_trophies.py), så nye kan lages i samme stil.
 - Frister utsatt tre uker (2026-11-25): MVP-målet flyttes fra 30. november til 21. desember 2026. Personvern/monetisering 16. des., betatest 17. des., lansering 21. des. (satt etter betatesten). Google Play krever lukket test i 14 dager, så testen må starte senest rundt 1. desember.
 - MVP-målet flyttet til 15. januar 2027 (2026-11-25, erstatter 21. desember). Lansering (#253) har samme frist; forslag: personvern/monetisering 16. des. og betatest 17. des. Frister og mål må endres i Odin.
+- Alle frister flyttet til første kvartal 2027 (2026-11-26, erstatter 15. januar). Forslag til datoer: personvern/monetisering (#252) 29. januar, betatest (#251) 26. februar, lansering (#253) og MVP-mål 31. mars 2027. Frister og mål må endres i Odin.
+- Pro (2026-11-26): av/på-bryter i Innstillinger (test, ingen betaling). Når Pro er på, ligger verktøyene i menyene der de hører hjemme: Fotballquiz, Statistikk og Profil.
+- Fotballskole (2026-11-26): egen meny for nye fotballinteresserte, med bane sett ovenfra der man setter merke, VAR-forklaringer, dommertrening og historiske øyeblikk. Gir ingen XP; bare for læring.

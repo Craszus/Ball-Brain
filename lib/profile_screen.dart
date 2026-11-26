@@ -94,10 +94,10 @@ class ProfileScreen extends ConsumerWidget {
           GestureDetector(
             onTap: () => Navigator.of(context)
                 .push(MaterialPageRoute(builder: (_) => const StatsScreen())),
-            child: LevelCard(xp: stats.totalPoints),
+            child: LevelCard(xp: stats.totalPoints, pro: pro.active),
           ),
           const SizedBox(height: 8),
-          const ProButton(),
+          const ProProfileEntry(),
         ],
       ),
     );
@@ -141,6 +141,7 @@ class StatsScreen extends ConsumerWidget {
           const SizedBox(height: 8),
           LevelCard(xp: stats.totalPoints),
           const SizedBox(height: 8),
+          const ProStatsEntry(),
           RankingCard(country: ref.watch(profileProvider).country),
           Row(children: [
             stat(Icons.sports_soccer, 'Runder spilt', stats.games),
@@ -177,7 +178,8 @@ class StatsScreen extends ConsumerWidget {
                       color: AppColors.gold)),
             ),
             GridView.count(
-              crossAxisCount: 2,
+              // tre i bredden på nettbrett
+              crossAxisCount: MediaQuery.sizeOf(context).width >= 500 ? 3 : 2,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               mainAxisSpacing: 8,
@@ -190,7 +192,7 @@ class StatsScreen extends ConsumerWidget {
             ),
           ],
           const SizedBox(height: 16),
-          const ProButton(),
+          if (!ref.watch(proProvider).active) const ProButton(),
         ],
       ),
     );
