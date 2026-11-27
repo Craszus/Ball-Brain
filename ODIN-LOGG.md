@@ -423,3 +423,6 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 - Byttet sju spillerbilder med ukjent fotograf eller tvilsom «public domain»-merking (Maradona, Pelé, Gerd Müller, Beckenbauer, Eusébio, Bobby Moore, Chilavert) til CC-lisensierte bilder fra Wikimedia Commons med oppgitt fotograf. Utsnitt satt for hånd. Ikke kjør tools/fetch_commons.py uten å ta vare på disse (den skriver players.json på nytt).
 - Installert på telefonen med oversatt Fotballskole og de nye spillerbildene. Ikke gitt ut.
 - Gitt ut som bygg 10 (2026-11-27): Fotballskolen med oversettelser og tegneserier, annonsevindu og nye spillerbilder. 123 tester grønne.
+- Strøm: nettsjekkene på tidtaker (1v1, klubb, quizkveld, forsiden) hoppes over når appen ligger i bakgrunnen, og pulseringen på «Kamper» stopper etter fem pulser. 125 tester grønne. Ikke installert eller gitt ut. Målt før endringen: ca. 0,5 % av én kjerne på forsiden i ro, nær null i bakgrunnen.
+- Strømendringene installert på telefonen. Ikke gitt ut.
+- Gitt ut som bygg 11 (2026-11-27): strømendringene. 125 tester grønne.

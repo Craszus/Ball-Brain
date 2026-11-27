@@ -18,6 +18,7 @@ import '../ui/rules_card.dart';
 import 'duel_api.dart';
 import 'duel_history.dart';
 import 'duel_sync.dart';
+import '../services/visibility.dart';
 
 const _secondsPerQuestion = 15;
 
@@ -75,7 +76,7 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
     _loadList();
     // Utfordringer kan komme eller bli ferdige mens menyen er åpen
     _listTimer = Timer.periodic(const Duration(seconds: 6), (_) {
-      if (_phase == _Phase.menu) _loadList();
+      if (_phase == _Phase.menu && appVisible()) _loadList();
     });
   }
 
@@ -185,7 +186,9 @@ class _DuelScreenState extends ConsumerState<DuelScreen> {
     _unwatch?.call();
     _unwatch = DuelApi.watch(d.id, _refresh);
     _poll?.cancel();
-    _poll = Timer.periodic(const Duration(seconds: 2), (_) => _refresh());
+    _poll = Timer.periodic(const Duration(seconds: 2), (_) {
+      if (appVisible()) _refresh();
+    });
     if (d.isActive) {
       await _countdown(d);
     } else if (d.isFinished) {

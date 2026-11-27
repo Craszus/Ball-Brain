@@ -13,6 +13,7 @@ import '../ui/football.dart';
 import '../ui/gold_button.dart';
 import '../ui/theme.dart';
 import 'quiz_night_api.dart';
+import '../services/visibility.dart';
 
 String nightError(String key) => switch (key) {
       'not_found' => 'Fant ingen quizkveld med den koden.',
@@ -241,7 +242,7 @@ class _QuizNightScreenState extends ConsumerState<QuizNightScreen> {
     _record();
     _tick = Timer.periodic(const Duration(milliseconds: 500), (_) {
       if (!mounted || _s.over) return;
-      if (++_ticks % 3 == 0) _refresh();
+      if (++_ticks % 3 == 0 && appVisible()) _refresh();
       if (_s.status == 'question') setState(() {});
     });
   }

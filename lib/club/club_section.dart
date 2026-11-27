@@ -10,6 +10,7 @@ import 'club_api.dart';
 import 'club_badge.dart';
 import 'club_game_screen.dart';
 import 'club_table_screen.dart';
+import '../services/visibility.dart';
 
 /// Øverst på klubbskjermen: skjold, resultater, utfordringskode og klubbkampene.
 class ClubSection extends StatefulWidget {
@@ -36,7 +37,9 @@ class _ClubSectionState extends State<ClubSection> {
   void initState() {
     super.initState();
     _load();
-    _timer = Timer.periodic(const Duration(seconds: 8), (_) => _load());
+    _timer = Timer.periodic(const Duration(seconds: 8), (_) {
+      if (appVisible()) _load();
+    });
   }
 
   @override

@@ -12,6 +12,7 @@ import 'duel_api.dart';
 import 'duel_prefs.dart';
 import 'duel_screen.dart';
 import 'duel_sync.dart';
+import '../services/visibility.dart';
 
 /// «Du er utfordret»-dialogen: [names] er de som venter på svar fra deg.
 Future<String?> showChallengeDialog(BuildContext context, List<String> names) {
@@ -84,7 +85,10 @@ class _ChallengeGateState extends ConsumerState<ChallengeGate> with WidgetsBindi
       _debounce = Timer(const Duration(milliseconds: 500), _check);
     });
     await _check();
-    if (mounted) _poll = Timer.periodic(const Duration(seconds: 30), (_) => _check());
+    if (!mounted) return;
+    _poll = Timer.periodic(const Duration(seconds: 30), (_) {
+      if (appVisible()) _check();
+    });
   }
 
   Future<void> _check() async {

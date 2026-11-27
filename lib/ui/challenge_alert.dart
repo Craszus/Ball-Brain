@@ -5,7 +5,8 @@ import 'package:flutter/material.dart' hide Text;
 import '../l10n/l10n.dart';
 
 /// Varselet på «Kamper»-knappen: dommeren holder opp et gult kort med antall utfordringer,
-/// og knappen pulserer i gull. Vises bare når [count] er over null.
+/// og knappen pulserer i gull. Vises bare når [count] er over null. Pulseringen stopper etter
+/// noen sekunder (sparer strøm); kortet og gløden blir stående. Nye utfordringer starter den igjen.
 class ChallengeAlert extends StatefulWidget {
   const ChallengeAlert({super.key, required this.count, required this.child});
 
@@ -22,6 +23,12 @@ class _ChallengeAlertState extends State<ChallengeAlert> with SingleTickerProvid
   late final AnimationController _c =
       AnimationController(vsync: this, duration: const Duration(milliseconds: 1600));
 
+  /// Antall pulser før varselet står stille.
+  static const pulses = 5;
+
+  /// Antallet det sist ble pulsert for, så vanlige oppdateringer ikke starter på nytt.
+  int _pulsed = 0;
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -37,11 +44,15 @@ class _ChallengeAlertState extends State<ChallengeAlert> with SingleTickerProvid
   /// Animerer bare når det er noe å si fra om (og telefonen tillater animasjoner).
   void _run() {
     final animate = widget.count > 0 && !MediaQuery.disableAnimationsOf(context);
-    if (animate && !_c.isAnimating) {
-      _c.repeat();
-    } else if (!animate) {
+    if (!animate) {
+      _pulsed = 0;
       _c.stop();
       _c.value = 0;
+    } else if (widget.count > _pulsed) {
+      _pulsed = widget.count;
+      _c.repeat(count: pulses);
+    } else {
+      _pulsed = widget.count;
     }
   }
 

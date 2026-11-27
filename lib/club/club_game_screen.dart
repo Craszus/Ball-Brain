@@ -10,6 +10,7 @@ import '../ui/football.dart';
 import '../ui/theme.dart';
 import 'club_api.dart';
 import 'club_badge.dart';
+import '../services/visibility.dart';
 
 String clockText(int ms) {
   final s = (ms / 1000).ceil().clamp(0, 1 << 30);
@@ -62,7 +63,7 @@ class _ClubGameScreenState extends State<ClubGameScreen> {
     // Nedtellingen tegnes hvert sekund; stillingen hentes hvert tredje.
     _tick = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
-      if (++_ticks % 3 == 0 && !(_game?.over ?? false)) _load();
+      if (++_ticks % 3 == 0 && !(_game?.over ?? false) && appVisible()) _load();
       setState(() {});
     });
   }
