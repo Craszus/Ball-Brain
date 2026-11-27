@@ -87,6 +87,11 @@ def main():
             # kun engelsk foreløpig; de andre språkene faller tilbake til engelsk
             data['en'].setdefault(nb, en)
 
+    school = load('i18n_school')
+    if school is not None:
+        for r in school.SCHOOL:
+            add(r, 'Fotballskolen')
+
     q = load('i18n_questions')
     if q is not None:
         for r in q.QUESTIONS:

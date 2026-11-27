@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../daily_board_screen.dart';
 import '../profile_screen.dart' show ResultPanel;
+import '../school/lessons.dart';
+import '../school/school_screen.dart';
 import '../ui/answer_button.dart';
 import '../ui/football.dart';
 import '../ui/streak_badge.dart';
@@ -54,6 +56,11 @@ class RulesQuizScreen extends ConsumerWidget {
                 ? 'Poengene er lagret.'
                 : 'Ikke lagret ennå (innlogging kommer).',
             onAgain: controller.start,
+            onSchool: state.lesson == null
+                ? null
+                : () => Navigator.of(context).push(MaterialPageRoute<void>(
+                    builder: (_) => LessonScreen(
+                        lesson: lessons.firstWhere((l) => l.id == state.lesson)))),
             dailyNote: state.dailyNote,
             onRanking: ref.watch(quizEraProvider) == dailyChallenge
                 ? () => Navigator.of(context)

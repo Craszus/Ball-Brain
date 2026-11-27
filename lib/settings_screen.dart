@@ -7,6 +7,7 @@ import 'duel/duel_prefs.dart';
 import 'legal_screens.dart';
 import 'media/credits_screen.dart';
 import 'pro/pro_screen.dart';
+import 'school/school_progress.dart';
 import 'services/ads.dart';
 import 'services/learning.dart';
 import 'services/pro.dart';
@@ -231,6 +232,7 @@ class SettingsScreen extends ConsumerWidget {
     await ref.read(statsProvider.notifier).reset();
     await ref.read(learningProvider.notifier).reset();
     ref.invalidate(proProvider);
+    ref.invalidate(schoolProvider);
     await ref.read(settingsProvider.notifier).update(const Settings());
     // update() skrev innstillingene på nytt; fjern dem igjen så ingenting ligger igjen
     await ref.read(profileProvider.notifier).deleteAll();

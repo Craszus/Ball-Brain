@@ -6,6 +6,26 @@ import '../l10n/l10n.dart';
 import '../services/ads.dart';
 import 'theme.dart';
 
+/// Eget vindu som tilbyr annonsen når den dukker opp. Sant når man vil se den.
+Future<bool> askForAd(BuildContext context, int xp) async =>
+    await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        icon: const Icon(Icons.card_giftcard, size: 44, color: AppColors.gold),
+        title: const Text('Vil du ha bonus-XP?', textAlign: TextAlign.center),
+        content: const Text('Annonsen er frivillig, og du får bonusen når den er ferdig.',
+            textAlign: TextAlign.center),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Ikke nå')),
+          FilledButton.icon(
+              onPressed: () => Navigator.pop(ctx, true),
+              icon: const Icon(Icons.play_circle_outline),
+              label: Text('Se en annonse: +$xp XP')),
+        ],
+      ),
+    ) ??
+    false;
+
 /// Spør om samtykke første gang og viser testannonsen. Sant når den er sett ferdig.
 /// En ekte annonseleverandør kobles på her, i stedet for [_TestAd].
 Future<bool> showRewardedAd(BuildContext context, int xp) async {

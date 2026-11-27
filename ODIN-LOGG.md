@@ -377,3 +377,49 @@ Claude: legg til en oppføring etter hver arbeidsøkt (`## ÅÅÅÅ-MM-DD`, så 
 ## 2026-11-26 (bygg 9)
 - Gitt ut bygg 9: rettingen for dagens utfordring, Pro-bryter og PRO-merke, nettbrett og små skjermer. 103 tester grønne, ingen nøkler funnet i endringene.
 - Neste: testeren med P10 Lite prøver igjen, et nettbrett prøves, og eventuelt prøveleksjonen i Fotballskolen.
+
+## 2026-11-26 (Fotballskolen)
+- Laget «Fotballskolen – Forstå spillet»: fem leksjoner (Banen, Ute eller inne?, Offside, Frispark/straffe/kort, Dommerteamet og VAR) med bane sett ovenfra, trykk på spiller, sett merke og velg svar. Ingen XP; stempel og fløytemerke lagres på telefonen.
+- Nytt fra 2026/27 (nedtelling ved innkast/målspark, VAR på andre gule kort og valgfritt hjørnespark) kontrollert mot theifab.com. Resten av reglene bør leses av en regelkyndig.
+- 110 tester grønne. Ikke prøvd på telefon, ikke gitt ut. Leksjonene finnes foreløpig bare på norsk.
+
+## 2026-11-27 (Fotballskolen på forsiden)
+- Flyttet Fotballskolen til et rundt symbol øverst, ved siden av pokalen. «Kamper» har full bredde igjen. 110 tester grønne.
+- Gjort de tre symbolene øverst på forsiden mindre (44 px) og tettere.
+- Avataren på forsiden er 20 % større (62 til 74).
+- Stripen bak symbolene øverst på forsiden er 25 % lavere.
+- Installert på telefonen (2026-11-27). Forsiden og Fotballskolen (meny og første oppgave i «Ute eller inne?») kontrollert med skjermbilder.
+
+## 2026-11-27 (mer i Fotballskolen)
+- Seks nye leksjoner: Keeperen, Hands, Posisjoner, Tabell og turnering, Fotballspråket og Store øyeblikk (nå 11 i alt).
+- Pasningen spilles av som animasjon etter svaret (trykk på banen for å se den igjen).
+- «Dagens tre»: tre gamle oppgaver, bom først. Lagres bare på telefonen.
+- Etter en quizrunde med bom på et regelspørsmål: «Lær dette i Fotballskolen».
+- Svarene stokkes nå (riktig svar sto ofte øverst). 113 tester grønne. Ikke installert eller gitt ut, ikke oversatt, og regler og historiske fakta er ikke kontrollert av en fagkyndig.
+
+## 2026-11-27 (tegneserieprøve)
+- Prøve på tegneserieanimasjon: Maradonas raid i 1986 (lib/school/moment_scene.dart), vises etter svaret i «Store øyeblikk». Generiske figurer uten ansiktslikhet eller merker. Ikke vedtatt, ikke installert, teksten i scenen bare på norsk.
+- Installert på telefonen med tegneserieprøven (2026-11-27).
+- Stilprøve (2026-11-27): én tegneserierute (mellom humorstripe og superheltstil), vist som bilde. Ikke lagt inn i appen.
+- Fire tegneserieruter av Maradona-raidet laget lokalt med ComfyUI (Qwen Image Edit 2511, forbilde fra Jon), lagret i docs/tegneserie/. Ikke lagt inn i appen ennå.
+- Samme fire ruter laget på nytt med Krea 2 Turbo, med fartsstreker (docs/tegneserie/maradona_krea_*.webp). Jon har ikke valgt mellom Qwen og Krea ennå.
+- Krea-rutene laget på nytt med bare lette bevegelsesstreker (erstatter de forrige maradona_krea_*.webp).
+
+## 2026-11-27 (levende tegneserie)
+- Maradona-raidet satt sammen til en tegneserie i fire ruter (lib/school/comic_screen.dart, assets/comics/): rutene smeller inn, kameraet zoomer sakte, med tekstrute, snakkebobler og lydord på 7 språk. Åpnes etter svaret i «Store øyeblikk».
+- Den tidligere tegnede animasjonen er fjernet. 115 tester grønne. Ikke installert eller gitt ut.
+- Tegneserien vises nå som en stripe: alle fire rutene på én side på «avispapir», trykk på en rute for å se den stor. 115 tester grønne.
+- Knappen «Se den virkelige spilleren» under tegneserien viser Maradona-bildet fra Gjett spilleren, med kreditering. Bildet er merket «Public domain» med ukjent fotograf på Commons: kontroller dette i den juridiske gjennomgangen. 115 tester grønne, ikke installert.
+- Rettet: bildet av den virkelige spilleren ble kuttet på sidene (halve ansiktet). Vinduet viser nå hele det kvadratiske bildet. 115 tester grønne.
+- Installert på telefonen (2026-11-27) med tegneseriestripen, bildeknappen og Fotballskolen.
+- Laget de fem andre tegneseriene i «Store øyeblikk» (Norge–Brasil 1998, CL-finalen 1999, Panenka 1976, Iniesta 2010, Brasil–Tyskland 2014), fire ruter hver, så alle seks historiske spørsmål har sin egen (lib/school/comics.dart). Tekster på 7 språk. Ekte bilde lenkes for Maradona, Flo, Solskjær og Iniesta (bildene fulgte allerede med appen). 118 tester grønne. Ikke installert eller gitt ut.
+- Neste: Jon ser over rutene og tekstene; faktasjekk (#385) og juridisk vurdering av likhet med virkelige spillere.
+
+- Annonsetilbudet kommer nå som eget popup-vindu på resultatskjermen (etter eventuell nivåfeiring). «Ikke nå» lukker vinduet, og knappen blir liggende. Hyppigheten er uendret (hver tredje runde). Fortsatt bare testannonse. 120 tester grønne; ikke testet på telefonen.
+- Installert på telefonen 2026-11-27 (popup-annonse og de fem nye tegneseriene). Ikke gitt ut.
+- Fotballskolen (#385): leksjonstekstene oversatt til en, sv, da, de, es og fr (tools/i18n_school.py). Faktasjekk gjort av Claude: ingen feil funnet; 2026/27-endringene sjekket mot søk, resten mot egen kunnskap. Gjenstår: fotballkyndig og morsmålsbrukere. 123 tester grønne, også tysk og fransk på liten skjerm.
+- Tegneseriene: foreløpig vurdering av rettigheter i docs/granskning/ (ikke i git). Ikke avgjort om de skal med i neste utgave.
+- Beslutning: tegneseriene tas med i neste utgave. Ikke gitt ut ennå.
+- Byttet sju spillerbilder med ukjent fotograf eller tvilsom «public domain»-merking (Maradona, Pelé, Gerd Müller, Beckenbauer, Eusébio, Bobby Moore, Chilavert) til CC-lisensierte bilder fra Wikimedia Commons med oppgitt fotograf. Utsnitt satt for hånd. Ikke kjør tools/fetch_commons.py uten å ta vare på disse (den skriver players.json på nytt).
+- Installert på telefonen med oversatt Fotballskole og de nye spillerbildene. Ikke gitt ut.
+- Gitt ut som bygg 10 (2026-11-27): Fotballskolen med oversettelser og tegneserier, annonsevindu og nye spillerbilder. 123 tester grønne.

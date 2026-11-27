@@ -7,6 +7,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../data/pack_repository.dart';
 import '../data/question_repository.dart';
 import '../models/question.dart';
+import '../school/lesson_hint.dart';
 import '../services/cloud.dart';
 import '../services/daily.dart';
 import '../services/feedback.dart';
@@ -86,7 +87,11 @@ class QuizState {
     this.picked,
     this.atStake = false,
     this.replay = false,
+    this.lesson,
   });
+
+  /// Leksjon i Fotballskolen som passer til et regelspørsmål man bommet på.
+  final String? lesson;
 
   final List<Question> questions;
   final int index;
@@ -125,6 +130,7 @@ class QuizState {
     int? picked,
     bool clearPicked = false,
     bool? atStake,
+    String? lesson,
   }) =>
       QuizState(
         questions: questions ?? this.questions,
@@ -138,6 +144,7 @@ class QuizState {
         picked: clearPicked ? null : picked ?? this.picked,
         atStake: atStake ?? this.atStake,
         replay: replay,
+        lesson: lesson ?? this.lesson,
       );
 }
 
@@ -252,6 +259,7 @@ class QuizController extends Notifier<QuizState> {
       score: state.score + points,
       lastAnswerCorrect: correct,
       streak: correct ? state.streak + 1 : 0,
+      lesson: !correct && q.era == 'Regler' && state.lesson == null ? lessonFor(q.prompt) : null,
     );
     await Future<void>.delayed(revealTime);
     if (!ref.mounted || run != _run) return;

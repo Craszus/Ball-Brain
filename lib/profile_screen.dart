@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -276,7 +278,11 @@ class ResultPanel extends ConsumerStatefulWidget {
     this.onRanking,
     this.practice = false,
     this.logo = true,
+    this.onSchool,
   });
+
+  /// Knappen «Lær dette i Fotballskolen».
+  final VoidCallback? onSchool;
 
   /// Ball Brain-merket øverst (utelates på dagens utfordring).
   final bool logo;
@@ -301,6 +307,7 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
   late final int _xpBefore;
   int _offer = 0; // bonus-XP som tilbys for en annonse
   int _bonus = 0; // bonus-XP som er hentet
+  Timer? _popup;
 
   @override
   void initState() {
@@ -310,7 +317,27 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
     _celebrate = !widget.practice && leveledUp(_xpBefore, total);
     if (widget.practice) return;
     Ads.offer(widget.score).then((v) {
-      if (mounted && v > 0) setState(() => _offer = v);
+      if (!mounted || v <= 0) return;
+      setState(() => _offer = v);
+      if (!_celebrate) _showOfferSoon();
+    });
+  }
+
+  @override
+  void dispose() {
+    _popup?.cancel();
+    super.dispose();
+  }
+
+  /// Tilbudet kommer som eget vindu, etter at resultatet har rukket å vises.
+  /// Knappen blir stående for den som sier «Ikke nå».
+  void _showOfferSoon() {
+    _popup?.cancel();
+    _popup = Timer(const Duration(milliseconds: 900), () async {
+      // ikke oppå en annen skjerm man har gått videre til
+      if (!mounted || _offer <= 0 || ModalRoute.of(context)?.isCurrent == false) return;
+      final yes = await askForAd(context, _offer);
+      if (yes && mounted) await _watchAd();
     });
   }
 
@@ -393,6 +420,13 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
                                 fontWeight: FontWeight.w900, color: AppColors.gold))),
                   ]),
                 ],
+                if (widget.onSchool != null) ...[
+                  const SizedBox(height: 14),
+                  OutlinedButton.icon(
+                      onPressed: widget.onSchool,
+                      icon: const Icon(Icons.school_outlined),
+                      label: const Text('Lær dette i Fotballskolen')),
+                ],
                 const SizedBox(height: 20),
                 if (_offer > 0) ...[
                   OutlinedButton.icon(
@@ -421,7 +455,11 @@ class _ResultPanelState extends ConsumerState<ResultPanel> {
           Positioned.fill(
             child: LevelUpOverlay(
               info: levelFor(total),
-              onClose: () => setState(() => _celebrate = false),
+              onClose: () {
+                setState(() => _celebrate = false);
+                // tilbudet venter til nivåfeiringen er lukket
+                if (_offer > 0) _showOfferSoon();
+              },
             ),
           ),
       ],

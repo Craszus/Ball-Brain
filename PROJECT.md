@@ -24,7 +24,7 @@ Ball Brain skal føles konkurransepreget, sosialt og givende på samme tid.
 Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret.
 - Mål: Lanse MVP (Minimum Viable Product) av Ball Brain på App Store og Google Play med bildesortering, regler-kunnskap, lokal rangering og 1v1-modus innen 30. november 2026.
 
-## Plan (24/43 ferdige)
+## Plan (27/44 ferdige)
 
 **Fase 1: Grunnmur & MVP-prototyp**
 - [x] Oppsett Flutter-prosjekt og Supabase-konto (frist 2026-11-23)
@@ -72,10 +72,11 @@ Brukerne skal oppleve at fotballkunnskapen deres blir målt, anerkjent og feiret
 - [x] Menyforslag som venter på valg: dagens utfordring på forsiden, nytt navn på «Regler-quiz», Pro-verktøy rett i quizmenyen, varselprikk på «Kamper»
 - [x] Menyforslag som venter på valg: Pro-verktøy rett i quizmenyen
 - [x] Dagens utfordring på forsiden, «Regler-quiz» heter «Fotballquiz», varsel med gult kort på «Kamper»
-- [ ] Fotballskole del 1: egen meny med korte, morsomme leksjoner om spillet, der man setter merke på en bane sett ovenfra (ingen XP)
-- [ ] Fotballskole del 2: VAR forklart og dommertrening (hva ville du dømt?)
-- [ ] Fotballskole del 3: viktige historiske øyeblikk som går igjen i quizspørsmålene
+- [x] Fotballskole del 1: egen meny med korte, morsomme leksjoner om spillet, der man setter merke på en bane sett ovenfra (ingen XP)
+- [x] Fotballskole del 2: VAR forklart og dommertrening (hva ville du dømt?)
+- [x] Fotballskole del 3: viktige historiske øyeblikk som går igjen i quizspørsmålene
 - [ ] Fotballskole: faktasjekk og oversettelser til alle språk før betatesten
+- [ ] PRO-merket skal synes for andre (rangeringer, 1v1 og klubber) når Pro lanseres
 
 ## Andre filer i mappen
 - `LICENSE` (1 kB)
@@ -174,3 +175,8 @@ Skriv beslutninger som punkter her (`- Valgte X fordi Y`). Odin henter dem inn s
 - Alle frister flyttet til første kvartal 2027 (2026-11-26, erstatter 15. januar). Forslag til datoer: personvern/monetisering (#252) 29. januar, betatest (#251) 26. februar, lansering (#253) og MVP-mål 31. mars 2027. Frister og mål må endres i Odin.
 - Pro (2026-11-26): av/på-bryter i Innstillinger (test, ingen betaling). Når Pro er på, ligger verktøyene i menyene der de hører hjemme: Fotballquiz, Statistikk og Profil.
 - Fotballskole (2026-11-26): egen meny for nye fotballinteresserte, med bane sett ovenfra der man setter merke, VAR-forklaringer, dommertrening og historiske øyeblikk. Gir ingen XP; bare for læring.
+- PRO-merket (2026-11-26): vises bare for brukeren selv nå. Ved lansering med Pro skal det også synes i rangeringer, 1v1 og klubber.
+- Fotballskolen (2026-11-26): laget som «Fotballskolen – Forstå spillet» med fem leksjoner (lib/school/). Knappen deler nederste rad på forsiden med «Kamper». Leksjonstekstene oversettes når den norske teksten er godkjent.
+- Fotballskolen (2026-11-27): åpnes med et rundt symbol øverst på forsiden, ved siden av pokalen, ikke med en knapp i lista.
+- Tegneserier (2026-11-27): lages lokalt med Krea 2 i ComfyUI, uten tekst i bildene; appen legger på tekst. Likhet med virkelige spillere må vurderes juridisk før butikklansering.
+- 2026-11-27: Tegneseriene i «Store øyeblikk» skal være med i neste utgave. Rettighetene rundt navn og likhet er ikke juridisk avklart.

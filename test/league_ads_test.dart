@@ -5,6 +5,7 @@ import 'package:ball_brain/profile_screen.dart';
 import 'package:ball_brain/services/ads.dart';
 import 'package:ball_brain/services/stats.dart';
 import 'package:ball_brain/ui/theme.dart';
+import 'package:ball_brain/ui/level_up.dart';
 import 'package:flutter/material.dart' hide Text;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -108,8 +109,11 @@ void main() {
       ),
     ));
     await tester.pumpAndSettle();
-    await tester.ensureVisible(find.text('Se en annonse: +12 XP'));
-    await tester.tap(find.text('Se en annonse: +12 XP'));
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pumpAndSettle();
+    expect(find.text('Vil du ha bonus-XP?'), findsOneWidget);
+    await tester.tap(find.descendant(
+        of: find.byType(AlertDialog), matching: find.text('Se en annonse: +12 XP')));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Ja'));
     await tester.pumpAndSettle();
@@ -122,5 +126,50 @@ void main() {
     expect(container.read(statsProvider).totalPoints, 32);
     expect(find.text('+12 XP i bonus'), findsOneWidget);
     expect(find.text('Se en annonse: +12 XP'), findsNothing);
+  });
+
+  testWidgets('«Ikke nå» lukker vinduet, men knappen blir stående', (tester) async {
+    SharedPreferences.setMockInitialValues({'totalPoints': 20, 'ads.rounds': adEveryRounds - 1});
+    phone(tester);
+    await tester.pumpWidget(ProviderScope(
+      child: MaterialApp(
+        theme: buildTheme(),
+        home: Scaffold(body: ResultPanel(score: 12, note: 'n', onAgain: () {})),
+      ),
+    ));
+    await tester.pumpAndSettle();
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Ikke nå'));
+    await tester.pumpAndSettle();
+    await tester.pump(const Duration(seconds: 2));
+    expect(find.text('Vil du ha bonus-XP?'), findsNothing);
+    expect(find.text('Se en annonse: +12 XP'), findsOneWidget);
+  });
+
+  testWidgets('tilbudet venter til nivåfeiringen er lukket', (tester) async {
+    SharedPreferences.setMockInitialValues({'totalPoints': 1000, 'ads.rounds': adEveryRounds - 1});
+    phone(tester);
+    final container = ProviderContainer();
+    addTearDown(container.dispose);
+    container.read(statsProvider);
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
+    await tester.pumpWidget(UncontrolledProviderScope(
+      container: container,
+      child: MaterialApp(
+        theme: buildTheme(),
+        home: Scaffold(body: ResultPanel(score: 1000, note: 'n', onAgain: () {})),
+      ),
+    ));
+    await tester.pump(const Duration(seconds: 2));
+    await tester.pump(const Duration(seconds: 2));
+    expect(find.byType(LevelUpOverlay), findsOneWidget);
+    expect(find.text('Vil du ha bonus-XP?'), findsNothing);
+    await tester.ensureVisible(find.text('Fortsett'));
+    await tester.tap(find.text('Fortsett'));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pump(const Duration(seconds: 1));
+    expect(find.text('Vil du ha bonus-XP?'), findsOneWidget);
   });
 }

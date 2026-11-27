@@ -89,6 +89,10 @@ void main() {
     // Spillknappene fyller helt ned til bunnen av skjermen
     final last = tester.getRect(find.text('Kamper').first);
     final cards = tester.getRect(find.ancestor(of: find.text('Kamper'), matching: find.byType(Card)).first);
+    // Fotballskolen er et symbol øverst, ikke en knapp i lista
+    expect(find.text('Fotballskolen'), findsNothing);
+    expect(tester.getCenter(find.byIcon(Icons.school_outlined)).dy,
+        closeTo(tester.getCenter(find.byIcon(Icons.emoji_events_outlined)).dy, 1));
     expect(cards.bottom, greaterThan(700));
     expect(cards.height, greaterThan(56));
     expect(last.height, greaterThan(0));

@@ -532,48 +532,48 @@
   "name": "Pelé",
   "nationality": "Brasil",
   "photo": {
-   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Pele_con_brasil_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "title": "Pele con brasil (cropped).jpg",
-   "author": "Unknown authorUnknown author",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:Pele_con_brasil_(cropped).jpg",
-   "width": 388,
-   "height": 526,
-   "origWidth": 388,
-   "origHeight": 526
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Pel%C3%A9_Schiphol_1962_%28cropped%29.jpg/960px-Pel%C3%A9_Schiphol_1962_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "title": "Pelé Schiphol 1962 (cropped).jpg",
+   "author": "Joop van Bilsen / Anefo",
+   "license": "CC BY-SA 3.0 nl",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Pel%C3%A9_Schiphol_1962_(cropped).jpg",
+   "width": 960,
+   "height": 1301,
+   "origWidth": 1192,
+   "origHeight": 1616
   },
+  "pos": "UT",
   "crop": {
-   "cx": 0.45,
-   "cy": 0.3,
-   "s": 0.8
+   "cx": 0.53,
+   "cy": 0.38,
+   "s": 0.85
   },
-  "file": "assets/media/img/players/pele.jpg",
-  "pos": "UT"
+  "file": "assets/media/img/players/pele.jpg"
  },
  {
   "id": "diego-maradona",
   "name": "Diego Maradona",
   "nationality": "Argentina",
   "photo": {
-   "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Argentina_celebrando_copa_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "title": "Argentina celebrando copa (cropped).jpg",
-   "author": "Unknown authorUnknown author",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:Argentina_celebrando_copa_(cropped).jpg",
-   "width": 365,
-   "height": 572,
-   "origWidth": 365,
-   "origHeight": 572
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Diego_Maradona_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "title": "Diego Maradona 2017 (cropped).jpg",
+   "author": "Дмитрий Садовников",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Diego_Maradona_2017_(cropped).jpg",
+   "width": 960,
+   "height": 1180,
+   "origWidth": 611,
+   "origHeight": 751
   },
+  "pos": "UT",
   "crop": {
-   "cx": 0.32,
-   "cy": 0.16,
-   "s": 0.5
+   "cx": 0.5,
+   "cy": 0.45,
+   "s": 1.0
   },
-  "file": "assets/media/img/players/diego-maradona.jpg",
-  "pos": "UT"
+  "file": "assets/media/img/players/diego-maradona.jpg"
  },
  {
   "id": "zinedine-zidane",
@@ -1012,24 +1012,24 @@
   "name": "Franz Beckenbauer",
   "nationality": "Tyskland",
   "photo": {
-   "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Franz_Beckenbauer_%281975%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "title": "Franz Beckenbauer (1975).jpg",
-   "author": "Panini Group",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:Franz_Beckenbauer_(1975).jpg",
-   "width": 707,
-   "height": 967,
-   "origWidth": 707,
-   "origHeight": 967
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Beckenbauer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "title": "Beckenbauer.jpg",
+   "author": "Елена Рыбакова",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Beckenbauer.jpg",
+   "width": 960,
+   "height": 931,
+   "origWidth": 460,
+   "origHeight": 446
   },
+  "pos": "UT",
   "crop": {
-   "cx": 0.5693,
-   "cy": 0.3252,
-   "s": 0.8518
+   "cx": 0.52,
+   "cy": 0.45,
+   "s": 0.85
   },
-  "file": "assets/media/img/players/franz-beckenbauer.jpg",
-  "pos": "UT"
+  "file": "assets/media/img/players/franz-beckenbauer.jpg"
  },
  {
   "id": "alisson",
@@ -3748,22 +3748,22 @@
   "name": "José Luis Chilavert",
   "nationality": "Paraguay",
   "photo": {
-   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Chilavert_sanlorenzo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "title": "Chilavert sanlorenzo.jpg",
-   "author": "Unknown authorUnknown author",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:Chilavert_sanlorenzo.jpg",
-   "width": 900,
-   "height": 971,
-   "origWidth": 293,
-   "origHeight": 316
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Chilavert_2014_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "title": "Chilavert 2014 (cropped).jpg",
+   "author": "Prensa TV Pública",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Chilavert_2014_(cropped).jpg",
+   "width": 960,
+   "height": 1184,
+   "origWidth": 802,
+   "origHeight": 989
   },
   "pos": "GK",
   "crop": {
-   "cx": 0.4522,
-   "cy": 0.2567,
-   "s": 0.5537
+   "cx": 0.49,
+   "cy": 0.42,
+   "s": 0.88
   },
   "file": "assets/media/img/players/jose-luis-chilavert.jpg"
  },
@@ -3940,22 +3940,22 @@
   "name": "Bobby Moore",
   "nationality": "England",
   "photo": {
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Bobby_moore_elgrafico_1970.jpg/960px-Bobby_moore_elgrafico_1970.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "title": "Bobby moore elgrafico 1970.jpg",
-   "author": "Unknown authorUnknown author",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:Bobby_moore_elgrafico_1970.jpg",
-   "width": 900,
-   "height": 1017,
-   "origWidth": 1140,
-   "origHeight": 1288
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Bobby_Moore_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "title": "Bobby Moore 1969.jpg",
+   "author": "Eric Koch / Anefo",
+   "license": "CC BY-SA 3.0 nl",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Bobby_Moore_1969.jpg",
+   "width": 960,
+   "height": 1806,
+   "origWidth": 724,
+   "origHeight": 1362
   },
   "pos": "UT",
   "crop": {
-   "cx": 0.4802,
-   "cy": 0.2663,
-   "s": 0.6019
+   "cx": 0.52,
+   "cy": 0.17,
+   "s": 0.48
   },
   "file": "assets/media/img/players/bobby-moore.jpg"
  },
@@ -4132,22 +4132,22 @@
   "name": "Gerd Müller",
   "nationality": "Tyskland",
   "photo": {
-   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gerd_M%C3%BCller_c1973_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "title": "Gerd Müller c1973 (cropped).jpg",
-   "author": "Unknown authorUnknown author",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:Gerd_M%C3%BCller_c1973_(cropped).jpg",
-   "width": 900,
-   "height": 1197,
-   "origWidth": 494,
-   "origHeight": 657
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Gerd_M%C3%BCller_1974.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "title": "Gerd Müller 1974.jpg",
+   "author": "Anefo / Nationaal Archief",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Gerd_M%C3%BCller_1974.jpg",
+   "width": 960,
+   "height": 2149,
+   "origWidth": 385,
+   "origHeight": 862
   },
   "pos": "UT",
   "crop": {
-   "cx": 0.5,
-   "cy": 0.376,
-   "s": 1.0
+   "cx": 0.52,
+   "cy": 0.45,
+   "s": 0.52
   },
   "file": "assets/media/img/players/gerd-muller.jpg"
  },
@@ -4516,22 +4516,22 @@
   "name": "Eusébio",
   "nationality": "Portugal",
   "photo": {
-   "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Eusebio_en_1973.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "title": "Eusebio en 1973.jpg",
-   "author": "Panini",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File:Eusebio_en_1973.jpg",
-   "width": 900,
-   "height": 1195,
-   "origWidth": 531,
-   "origHeight": 705
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Eusebio_%281963%29.jpg/960px-Eusebio_%281963%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "title": "Eusebio (1963).jpg",
+   "author": "Harry Pot / Anefo",
+   "license": "CC BY-SA 3.0 nl",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Eusebio_(1963).jpg",
+   "width": 960,
+   "height": 1313,
+   "origWidth": 1822,
+   "origHeight": 2492
   },
   "pos": "UT",
   "crop": {
-   "cx": 0.5,
-   "cy": 0.3766,
-   "s": 1.0
+   "cx": 0.52,
+   "cy": 0.31,
+   "s": 0.78
   },
   "file": "assets/media/img/players/eusebio.jpg"
  },

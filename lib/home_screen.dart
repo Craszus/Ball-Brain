@@ -9,6 +9,7 @@ import 'pro/pro_screen.dart';
 import 'profile_screen.dart';
 import 'quiz/image_sort_screen.dart';
 import 'quiz/rules_quiz_screen.dart';
+import 'school/school_screen.dart';
 import 'services/pro.dart';
 import 'services/profile.dart';
 import 'services/stats.dart';
@@ -42,19 +43,29 @@ class HomeScreen extends ConsumerWidget {
     // stående nettbrett: større logo og nivåkort, ellers ser de små ut
     final tallTablet = size.height > size.width && size.width >= 500;
     final top = Column(children: [
-          // Toppfelt: avatar (gullring) og tannhjul
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  AppColors.card.withValues(alpha: 0.55),
-                  AppColors.card.withValues(alpha: 0.25),
-                ],
+          // Toppfelt: avatar (gullring) og tannhjul, med en smal stripe bak
+          Stack(children: [
+            // stripen er 25 % lavere enn avataren, som stikker litt ut over og under
+            Positioned(
+              left: 0,
+              right: 0,
+              top: 9,
+              bottom: 9,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      AppColors.card.withValues(alpha: 0.55),
+                      AppColors.card.withValues(alpha: 0.25),
+                    ],
+                  ),
+                ),
               ),
             ),
-            padding: const EdgeInsets.fromLTRB(16, 2, 16, 2),
+            Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -62,25 +73,31 @@ class HomeScreen extends ConsumerWidget {
                   onTap: () => open(const ProfileScreen()),
                   child: ProFrame(
                       frame: ref.watch(proProvider).shownFrame,
-                      child: AvatarView(profile.avatar, size: 62)),
+                      child: AvatarView(profile.avatar, size: 74)),
                 ),
                 Row(children: [
                   _GearButton(
+                    icon: Icons.school_outlined,
+                    label: 'Fotballskolen',
+                    onTap: () => open(const SchoolScreen())),
+                  const SizedBox(width: 6),
+                  _GearButton(
                       icon: Icons.emoji_events_outlined,
                       onTap: () => open(const StatsScreen())),
-                  const SizedBox(width: 10),
+                  const SizedBox(width: 6),
                   _GearButton(onTap: () => open(const SettingsScreen())),
                 ]),
               ],
             ),
           ),
+          ]),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Center(child: BrandMark(width: tallTablet ? 82 : 56)),
-                const SizedBox(height: 8),
+                const SizedBox(height: 4),
                 Text(
                   'BALL BRAIN',
                   textAlign: TextAlign.center,
@@ -102,7 +119,7 @@ class HomeScreen extends ConsumerWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 7),
                 GestureDetector(
                   onTap: () => open(const StatsScreen()),
                   child: LevelCard(
@@ -110,7 +127,7 @@ class HomeScreen extends ConsumerWidget {
                       large: tallTablet,
                       pro: ref.watch(proProvider).active),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 6),
                 _DailyStrip(
                   done: stats.count('dailyDay') == StatsController.dayNumber(DateTime.now()),
                   streak: stats.count('dailyStreak'),
@@ -277,16 +294,20 @@ class HomeScreen extends ConsumerWidget {
 }
 
 class _GearButton extends StatelessWidget {
-  const _GearButton({required this.onTap, this.icon = Icons.settings_outlined});
+  const _GearButton({required this.onTap, this.icon = Icons.settings_outlined, this.label});
+
+  /// Navnet leses opp og vises når man holder fingeren på symbolet.
+  final String? label;
   final VoidCallback onTap;
   final IconData icon;
 
   @override
-  Widget build(BuildContext context) => GestureDetector(
+  Widget build(BuildContext context) {
+    final button = GestureDetector(
         onTap: onTap,
         child: Container(
-          width: 54,
-          height: 54,
+          width: 44,
+          height: 44,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.black.withValues(alpha: 0.18),
@@ -294,9 +315,11 @@ class _GearButton extends StatelessWidget {
                 Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
           ),
           child: Icon(icon,
-              size: 30, color: AppColors.gold.withValues(alpha: 0.7)),
+              size: 24, color: AppColors.gold.withValues(alpha: 0.7)),
         ),
       );
+    return label == null ? button : Tooltip(message: label!.tr, child: button);
+  }
 }
 
 class _ModeCard extends StatelessWidget {
